@@ -2,24 +2,813 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Latarr Addon Repository</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATARR CINEMA — Addon Nativo de Streaming P2P para Kodi</title>
+    <meta name="description" content="Latarr Cinema: Addon nativo para Kodi con streaming P2P en alta velocidad, sin necesidad de Debrid y con catálogo 100% verificado en Español Latino.">
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f1015; color: #fff; padding: 40px; }
-        h1 { color: #30d158; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 15px 0; }
-        a { color: #58a6ff; font-size: 18px; text-decoration: none; padding: 10px 16px; background: #1b1e2e; border-radius: 8px; display: inline-block; }
-        a:hover { background: #262a40; color: #79c0ff; }
+        :root {
+            --bg-body: #07090e;
+            --bg-surface: #0e121d;
+            --bg-card: #141a29;
+            --bg-card-hover: #1b2337;
+            --cyan: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.25);
+            --orange: #ff5722;
+            --orange-glow: rgba(255, 87, 34, 0.35);
+            --green: #10b981;
+            --text-title: #ffffff;
+            --text-body: #cbd5e1;
+            --text-muted: #8292a6;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(0, 229, 255, 0.4);
+            --radius-lg: 18px;
+            --radius-md: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-title);
+            font-weight: 800;
+        }
+
+        /* Ambient Lighting Background */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1100px;
+            height: 550px;
+            background: radial-gradient(ellipse at top, rgba(0, 229, 255, 0.09) 0%, rgba(255, 87, 34, 0.05) 45%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px var(--cyan-glow);
+        }
+
+        .brand-name {
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span {
+            color: var(--cyan);
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: var(--orange);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: -3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        .btn-nav-donate {
+            background: rgba(255, 87, 34, 0.12);
+            color: var(--orange) !important;
+            border: 1px solid rgba(255, 87, 34, 0.3);
+            padding: 7px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-nav-donate:hover {
+            background: var(--orange);
+            color: #fff !important;
+        }
+
+        /* Common Tag Pill */
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 14px;
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid var(--cyan-glow);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .pill-orange {
+            background: rgba(255, 87, 34, 0.1);
+            border-color: rgba(255, 87, 34, 0.3);
+            color: var(--orange);
+        }
+
+        .pill-green {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: var(--green);
+        }
+
+        /* Action Buttons */
+        .btn-download-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+            color: #fff;
+            padding: 16px 30px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 25px var(--orange-glow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-download-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(255, 87, 34, 0.55);
+        }
+
+        .btn-download-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-card);
+            color: #fff;
+            padding: 16px 28px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .btn-download-secondary:hover {
+            border-color: var(--cyan);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 26px;
+        }
+
+        /* Bloques Horizontales (Zig-Zag) */
+        .block-section {
+            padding: 70px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .block-row {
+            display: flex;
+            align-items: center;
+            gap: 56px;
+        }
+
+        .block-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .block-content {
+            flex: 1;
+        }
+
+        .block-content h2 {
+            font-size: clamp(30px, 3.4vw, 44px);
+            line-height: 1.18;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .block-content p {
+            font-size: 17px;
+            color: var(--text-body);
+            margin-bottom: 18px;
+        }
+
+        .feature-bullets {
+            list-style: none;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .bullet-icon {
+            color: var(--cyan);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .block-media {
+            flex: 1.15;
+            position: relative;
+        }
+
+        .media-frame {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .media-frame:hover {
+            transform: scale(1.015);
+            border-color: var(--border-hover);
+        }
+
+        .media-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Pestañas de Selección (Tabs) */
+        .catalog-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--cyan);
+            border-color: var(--cyan-glow);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Terminal styling for crawlers */
+        .terminal-badge {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #141724;
+            padding: 8px 16px;
+            border-top-left-radius: var(--radius-lg);
+            border-top-right-radius: var(--radius-lg);
+            border-bottom: 1px solid var(--border);
+            font-family: monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        /* Installation Grid */
+        .install-section {
+            padding: 80px 0;
+            background: #090c14;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-center {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 50px;
+        }
+
+        .section-center h2 {
+            font-size: clamp(30px, 4vw, 42px);
+            margin-bottom: 14px;
+        }
+
+        .install-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .install-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 34px 30px;
+            position: relative;
+        }
+
+        .install-num {
+            position: absolute;
+            top: 24px;
+            right: 26px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 34px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.07);
+        }
+
+        .install-card h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--cyan);
+        }
+
+        .install-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Center Download & Donation */
+        .support-section {
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        .support-box {
+            background: linear-gradient(145deg, rgba(255, 87, 34, 0.08) 0%, rgba(20, 26, 41, 0.95) 100%);
+            border: 1px solid rgba(255, 87, 34, 0.25);
+            border-radius: 24px;
+            padding: 56px 36px;
+            max-width: 840px;
+            margin: 0 auto;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .support-box h3 {
+            font-size: clamp(28px, 3.5vw, 40px);
+            margin-bottom: 16px;
+        }
+
+        .support-box p {
+            max-width: 660px;
+            margin: 0 auto 32px;
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .btn-paypal-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #0070ba;
+            color: #fff;
+            padding: 16px 38px;
+            border-radius: var(--radius-md);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 112, 186, 0.35);
+            transition: all 0.2s;
+        }
+
+        .btn-paypal-large:hover {
+            transform: translateY(-2px);
+            background: #005ea6;
+            box-shadow: 0 14px 30px rgba(0, 112, 186, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 968px) {
+            .block-row, .block-row.reverse {
+                flex-direction: column;
+                gap: 36px;
+            }
+            .block-media, .block-content {
+                width: 100%;
+                flex: none;
+            }
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn-download-primary, .btn-download-secondary {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
-<body>
-    <h1>🍿 Latarr - Instalación para Kodi</h1>
-    <p>Descarga los archivos directamente o agrega esta fuente en tu Kodi:</p>
-    <ul>
-        <li><a href="descargas/plugin.video.latarr-2.0.0.zip">📦 plugin.video.latarr-2.0.0.zip (Addon Latarr v2.0)</a></li>
-        <li><a href="descargas/repository.elementumorg-0.0.7.zip">⚡ repository.elementumorg-0.0.7.zip (Elementum)</a></li>
-        <li><a href="descargas/script.module.requests-2.31.0.zip">🔧 script.module.requests-2.31.0.zip</a></li>
-        <li><a href="descargas/script.module.routing-0.2.3+matrix.1.zip">🔧 script.module.routing-0.2.3+matrix.1.zip</a></li>
-    </ul>
+<body id="top">
+
+    <div class="ambient-glow"></div>
+
+    <!-- Navegación Superior -->
+    <header class="container">
+        <a href="#top" class="brand-logo">
+            <img src="icon.png" alt="Logo Latarr">
+            <div>
+                <span class="brand-font brand-name">LATARR <span>CINEMA</span></span>
+                <span class="brand-sub">Addon Nativo de Streaming P2P</span>
+            </div>
+        </a>
+        <nav>
+            <a href="#top">Inicio</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#actores">Actores</a>
+            <a href="#crawlers">Tecnología</a>
+            <a href="#fuentes">Fuentes</a>
+            <a href="https://paypal.me/multicajafull" target="_blank" class="btn-nav-donate">❤️ Donar</a>
+        </nav>
+    </header>
+
+    <!-- BLOQUE 1: HERO PRINCIPAL (FANART + DESCARGAS) -->
+    <section class="block-section">
+        <div class="container block-row">
+            <div class="block-content">
+                <div class="pill">🚀 Versión 2.0.0 Oficial Disponible</div>
+                <h2>El Streaming en Kodi al Revés.<br><span style="color: var(--cyan);">Lo que ves, se reproduce.</span></h2>
+                <p>
+                    Dile adiós a esperar raspeos eternos de enlaces caídos. <strong>LATARR CINEMA</strong> cambia el paradigma tradicional: no mostramos carátulas ciegas para luego rezar por un enlace; nuestro catálogo en la nube te muestra <strong>únicamente títulos con fuentes vivas y verificadas</strong> listas para reproducir en segundos.
+                </p>
+                <p style="font-size: 15px; color: var(--text-muted);">
+                    Cine, series y anime enfocados en audio <strong>Español Latino</strong> y subtitulado sincronizado, sin necesidad de cuentas ni mensualidades Debrid.
+                </p>
+
+                <!-- Los 2 Botones de Descarga Principales -->
+                <div class="btn-group">
+                    <a href="descargas/plugin.video.latarr-2.0.0.zip" class="btn-download-primary" download>
+                        <span>📦</span> Descargar Addon Latarr v2.0
+                    </a>
+                    <a href="descargas/repository.elementumorg-0.0.7.zip" class="btn-download-secondary" download>
+                        <span>⚡</span> Repositorio Elementum
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-media">
+                <div class="media-frame">
+                    <img src="img_bloque1.jpg" alt="Latarr Fanart Oficial">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 2: EXPERIENCIA APPLE TV (PANTALLA DE INICIO) -->
+    <section class="block-section" id="experiencia" style="background: #0a0d16;">
+        <div class="container block-row reverse">
+            <div class="block-content">
+                <div class="pill pill-orange">🎨 Experiencia Visual Premium</div>
+                <h2>Diseño Inspirado en Apple TV Cinema</h2>
+                <p>
+                    Olvídate de las aburridas listas verticales de texto del Kodi de hace 15 años. Latarr incorpora una interfaz moderna de ventanas fluidas optimizada para mandos a distancia.
+                </p>
+                <ul class="feature-bullets">
+                    <li><span class="bullet-icon">✔</span> Carruseles dinámicos con <em>Lo Mejor en Películas</em> y <em>Lo Mejor en Series</em>.</li>
+                    <li><span class="bullet-icon">✔</span> Sinopsis instantánea y carátulas de alta definición con fondos cinematográficos.</li>
+                    <li><span class="bullet-icon">✔</span> Acceso en un toque a Historial, Búsqueda directa y Colecciones exclusivas.</li>
+                </ul>
+            </div>
+
+            <div class="block-media">
+                <div class="media-frame">
+                    <img src="img_bloque2.png" alt="Pantalla de Inicio Latarr Cinema">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 3: EL CATÁLOGO COMPLETO (PELÍCULAS, SERIES, ANIME) -->
+    <section class="block-section" id="catalogo">
+        <div class="container block-row">
+            <div class="block-content">
+                <div class="pill pill-green">📚 Catálogo 100% Curado</div>
+                <h2>Miles de Títulos con Filtros Inteligentes</h2>
+                <p>
+                    Explora un universo multimedia organizado milimétricamente. Filtra en segundos por <strong>Año de estreno</strong> o <strong>Género</strong> sin tiempos de espera.
+                </p>
+                <ul class="feature-bullets">
+                    <li><span class="bullet-icon">🎬</span> <strong>Películas:</strong> Desde los últimos estrenos hasta grandes clásicos retro del cine.</li>
+                    <li><span class="bullet-icon">📺</span> <strong>Series:</strong> Temporadas completas y episodios organizados para maratonear.</li>
+                    <li><span class="bullet-icon">🍙</span> <strong>Anime:</strong> Emisiones simultáneas y series consagradas con alta valoración.</li>
+                </ul>
+            </div>
+
+            <div class="block-media">
+                <!-- Selector de pestañas para ver las capturas de catálogo -->
+                <div class="catalog-tabs">
+                    <button class="tab-btn active" onclick="switchTab('cat-tab', 'tab-peliculas', this)">Películas</button>
+                    <button class="tab-btn" onclick="switchTab('cat-tab', 'tab-series', this)">Series</button>
+                    <button class="tab-btn" onclick="switchTab('cat-tab', 'tab-anime', this)">Anime</button>
+                </div>
+
+                <div id="tab-peliculas" class="tab-content cat-tab active media-frame">
+                    <img src="cat_peliculas.jpg" alt="Catálogo de Películas">
+                </div>
+                <div id="tab-series" class="tab-content cat-tab media-frame">
+                    <img src="cat_series.png" alt="Catálogo de Series">
+                </div>
+                <div id="tab-anime" class="tab-content cat-tab media-frame">
+                    <img src="cat_anime.jpg" alt="Catálogo de Anime">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 4: COLECCIONES POR ACTOR (FUNCIÓN EXCLUSIVA - PESTAÑAS GRANDES) -->
+    <section class="block-section" id="actores" style="background: #090c14;">
+        <div class="container block-row reverse">
+            <div class="block-content">
+                <div class="pill">🌟 Función Exclusiva</div>
+                <h2>Colecciones por Actor en un Solo Clic</h2>
+                <p>
+                    ¿Te gusta un actor? No tienes que buscar película por película. Latarr incluye un panel exclusivo con una amplia selección de los actores más icónicos del cine mundial, en constante expansión.
+                </p>
+                <p>
+                    Selecciona a <em>Samuel L. Jackson, Robert De Niro, Keanu Reeves o Scarlett Johansson</em> y accede al instante a toda su filmografía disponible en el addon, ordenada y lista para ver.
+                </p>
+                <ul class="feature-bullets">
+                    <li><span class="bullet-icon">✔</span> Fotos de perfil de alta calidad de cada artista.</li>
+                    <li><span class="bullet-icon">✔</span> Información del personaje interpretado y calificación TMDb en cada título.</li>
+                </ul>
+            </div>
+
+            <div class="block-media">
+                <!-- Pestañas para que las fotos de actores se vean en tamaño grande -->
+                <div class="catalog-tabs">
+                    <button class="tab-btn active" onclick="switchTab('actor-tab', 'tab-actor-grid', this)">🎭 Galería de Actores</button>
+                    <button class="tab-btn" onclick="switchTab('actor-tab', 'tab-actor-movies', this)">🎬 Filmografía del Actor</button>
+                </div>
+
+                <div id="tab-actor-grid" class="tab-content actor-tab active media-frame">
+                    <img src="cat_actores.png" alt="Colecciones por Actor">
+                </div>
+                <div id="tab-actor-movies" class="tab-content actor-tab media-frame">
+                    <img src="actor_peliculas.png" alt="Filmografía Samuel L. Jackson">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 5: EL MOTOR DETRÁS DE ESCENA (CRAWLERS PROPIOS) -->
+    <section class="block-section" id="crawlers">
+        <div class="container block-row">
+            <div class="block-content">
+                <div class="pill pill-orange">⚙️ Detrás de Escena</div>
+                <h2>Nuestro Motor de Rastreo e Indexación Propio</h2>
+                <p>
+                    La gran diferencia de Latarr es su tecnología previa: nuestros robots e indexadores escanean continuamente la red antes de que tú enciendas tu televisor.
+                </p>
+                <ul class="feature-bullets">
+                    <li>
+                        <span class="bullet-icon">🚫</span>
+                        <div>
+                            <strong>Filtro Inteligente de Idioma:</strong>
+                            <div style="font-size: 14px;">Descarta automáticamente cualquier archivo que no contenga pista de audio en Español/Latino comprobada.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="bullet-icon">⚡</span>
+                        <div>
+                            <strong>Auditoría de Semillas Vivas:</strong>
+                            <div style="font-size: 14px;">Verifica la disponibilidad real de semillas activas para asegurar que el contenido descargue con fluidez.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="bullet-icon">🤖</span>
+                        <div>
+                            <strong>Enriquecedor de Metadata:</strong>
+                            <div style="font-size: 14px;">Empareja cada torrent con sinopsis oficiales, calificaciones reales y carátulas en alta resolución.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="block-media">
+                <div class="media-frame">
+                    <div class="terminal-badge">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span>crawler_latarr_engine.py</span>
+                    </div>
+                    <img src="crawler_filtro.png" alt="Consola del Crawler Latarr filtrando idiomas y semillas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 6: PANTALLA DE FUENTES Y STREAMING 4K / 1080P -->
+    <section class="block-section" id="fuentes" style="background: #080b12;">
+        <div class="container block-row reverse">
+            <div class="block-content">
+                <div class="pill pill-green">💎 Calidad y Rendimiento</div>
+                <h2>Fuentes Ordenadas por Salud de Red</h2>
+                <p>
+                    Cuando seleccionas un título, la pantalla de fuentes te presenta las mejores opciones disponibles ordenadas por velocidad y cantidad de semillas conectadas, tanto en <strong>4K UHD</strong> como en <strong>1080p</strong> según la disponibilidad de cada obra.
+                </p>
+                <ul class="feature-bullets">
+                    <li><span class="bullet-icon">⚡</span> <strong>Streaming en Búfer:</strong> Conexión directa a enjambres saludables para iniciar la reproducción con fluidez.</li>
+                    <li><span class="bullet-icon">🆓</span> <strong>Sin Cuentas Debrid:</strong> El motor nativo de Elementum procesa el contenido directamente sin requerir pagos mensuales a terceros.</li>
+                    <li><span class="bullet-icon">🔊</span> <strong>Audio y Subtítulos:</strong> Variedad de pistas con sonido envolvente y subtítulos en español seleccionables.</li>
+                </ul>
+            </div>
+
+            <div class="block-media">
+                <div class="media-frame">
+                    <img src="img_fuentes.png" alt="Pantalla de Fuentes y Detalles">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUÍA DE INSTALACIÓN RÁPIDA -->
+    <section class="install-section" id="instalacion">
+        <div class="container">
+            <div class="section-center">
+                <h2>Instalación Súper Fácil en 3 Pasos</h2>
+                <p>Compatible con Smart TVs, TV Box Android, Google TV, Amazon Firestick, Windows y Mac</p>
+            </div>
+
+            <div class="install-grid">
+                <div class="install-card">
+                    <span class="install-num">01</span>
+                    <h4>Descarga los 2 Archivos</h4>
+                    <p>Baja el <strong>Addon Latarr</strong> y el <strong>Repositorio Elementum</strong> desde los botones superiores a un pendrive (o a la carpeta de descargas de tu equipo).</p>
+                </div>
+
+                <div class="install-card">
+                    <span class="install-num">02</span>
+                    <h4>Instala en Kodi</h4>
+                    <p>En Kodi ve a <strong>Ajustes ⚙️ > Add-ons > Instalar desde un archivo .zip</strong>. Primero instala Elementum y luego el Addon Latarr. ¡Ambos se activan al instante!</p>
+                </div>
+
+                <div class="install-card">
+                    <span class="install-num">03</span>
+                    <h4>¡A Disfrutar!</h4>
+                    <p>Abre <strong>LATARR CINEMA</strong> en tu Kodi. El catálogo completo se sincronizará automáticamente desde nuestra red global en la nube sin configurar nada más.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE APOYO Y DONACIONES -->
+    <section class="support-section container" id="donar">
+        <div class="support-box">
+            <div class="pill pill-orange">☕ Proyecto Independiente</div>
+            <h3>Apoya el Mantenimiento de Latarr</h3>
+            <p>
+                Latarr es un desarrollo latino libre, gratuito y sin suscripciones mensuales. Si disfrutas del catálogo y quieres colaborar para mantener los servidores activos y seguir indexando películas y series nuevas periódicamente, ¡tu apoyo hace una gran diferencia!
+            </p>
+            <a href="https://paypal.me/multicajafull" target="_blank" class="btn-paypal-large">
+                <span>💙</span> Donar con PayPal (multicajafull)
+            </a>
+            <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted);">
+                También puedes escanear el código QR que aparece dentro del addon en la esquina inferior izquierda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 <strong>LATARR CINEMA</strong> — Addon Nativo de Streaming P2P para Kodi.</p>
+            <p style="margin-top: 8px; font-size: 13px;">Desarrollado con dedicación para toda la comunidad hispanohablante. Alojado en <a href="https://latarr.shop">latarr.shop</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Script para alternar pestañas por grupo (Catálogo y Actores) -->
+    <script>
+        function switchTab(groupClass, tabId, btn) {
+            document.querySelectorAll('.' + groupClass).forEach(function(content) {
+                content.classList.remove('active');
+            });
+            btn.parentElement.querySelectorAll('.tab-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+    <!-- Monetización Adsterra (Popunder & Social Bar) -->
+    <script data-cfasync="false" src="https://aarems.org/1/d7bf4e3e79adc4304995b2fb8c564403"></script>
+    <script data-cfasync="false" src="https://bancadeltempoidea.org/14/98b67dc6e6ada4ba8886e3073c38dfdf"></script>
+
 </body>
 </html>
