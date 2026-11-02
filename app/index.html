@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATARR CINEMA — Portal Web de Descargas P2P (4K / 1080p)</title>
+    <meta name="description" content="Portal oficial de descargas P2P de Latarr Cinema. Explora miles de películas, series y anime en 4K y 1080p con subtítulos al español y audio Latino. Descarga directa vía Magnet.">
+    <link rel="icon" type="image/png" href="../icon.png">
+    
+    <style>
+        :root {
+            --bg-deep: #07090e;
+            --bg-card: #0d121d;
+            --bg-card-hover: #131a2a;
+            --border: #1b2438;
+            --border-hover: #293856;
+            --cyan: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.25);
+            --orange: #ff5722;
+            --gold: #ffb300;
+            --green: #00e676;
+            --text-main: #f0f4fc;
+            --text-muted: #8b9bb4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* BARRA SUPERIOR */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 9, 14, 0.95);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand-box img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #fff 0%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-badge {
+            font-size: 10px;
+            padding: 2px 7px;
+            background: rgba(0, 229, 255, 0.15);
+            color: var(--cyan);
+            border: 1px solid var(--cyan);
+            border-radius: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* PESTAÑAS PRINCIPALES */
+        .nav-tabs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 4px 0;
+        }
+
+        .nav-tab {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-tab:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-tab.active {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        .nav-right-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-kodi-addon {
+            background: rgba(255, 87, 34, 0.15);
+            color: #ff784e;
+            border: 1px solid #ff5722;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-kodi-addon:hover {
+            background: #ff5722;
+            color: #fff;
+        }
+
+        /* BARRA DE CONTROLES: BUSCADOR Y FILTROS */
+        .controls-bar {
+            background: #090d16;
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+        }
+
+        .controls-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 260px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 11px 16px 11px 42px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 0 12px var(--cyan-glow);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            fill: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .filter-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 11px 14px;
+            color: var(--text-main);
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .filter-select:focus {
+            border-color: var(--cyan);
+        }
+
+        .counter-badge {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        main {
+            flex: 1;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* HERO CAROUSEL DESTACADO (PANTALLA DE INICIO) */
+        .hero-banner {
+            position: relative;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 34px;
+            display: flex;
+            align-items: flex-end;
+            padding: 36px;
+            background-size: cover;
+            background-position: center top;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(7, 9, 14, 0.2) 0%, rgba(7, 9, 14, 0.95) 90%);
+        }
+
+        .hero-info {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 87, 34, 0.25);
+            border: 1px solid var(--orange);
+            color: #ff784e;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .hero-meta .rating {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .hero-meta .quality-badge {
+            background: var(--cyan);
+            color: #000;
+            font-weight: 800;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .hero-overview {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #cfd8dc;
+            margin-bottom: 18px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-hero-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--cyan) 0%, #0091ea 100%);
+            color: #000;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 6px 20px var(--cyan-glow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-hero-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4);
+        }
+
+        /* SECCIONES Y ENCABEZADOS */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title span {
+            color: var(--cyan);
+        }
+
+        /* GRILLA DE POSTERS */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.28s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            outline: none;
+        }
+
+        .card:hover,
+        .card:focus,
+        .card.focused {
+            transform: translateY(-8px) scale(1.04);
+            border-color: var(--cyan) !important;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5), 0 16px 36px rgba(0, 0, 0, 0.8) !important;
+            z-index: 10;
+        }
+
+        .card-poster {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background: #111622;
+            overflow: hidden;
+        }
+
+        .card-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-poster img,
+        .card:focus .card-poster img,
+        .card.focused .card-poster img {
+            transform: scale(1.06);
+        }
+
+        /* SCROLLBAR OSCURO ELEGANTE */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07090e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--cyan);
+        }
+
+        .badge-quality {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 7px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+        }
+
+        .badge-4k {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .badge-1080p {
+            background: var(--cyan);
+            color: #000;
+        }
+
+        .badge-hd {
+            background: #90a4ae;
+            color: #000;
+        }
+
+        .badge-rating {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 7px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-body {
+            padding: 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 6px;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* BOTÓN CARGAR MÁS */
+        .load-more-box {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        .btn-load-more {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px 32px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-load-more:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            box-shadow: 0 0 16px var(--cyan-glow);
+        }
+
+        /* MODAL DE DETALLES Y ENLACES (DESCARGAS DIRECTAS) */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 3000; /* Por encima de la barra de navegación para que no la tape */
+            background: rgba(4, 6, 10, 0.90);
+            backdrop-filter: blur(14px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            max-width: 860px;
+            width: 100%;
+            max-height: 86vh;
+            margin: auto;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+            overscroll-behavior: contain;
+            outline: none;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 20;
+            background: rgba(13, 18, 29, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-close-btn:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            transform: scale(1.08);
+        }
+
+        .modal-header-hero {
+            position: relative;
+            padding: 36px 32px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-header-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(13, 18, 29, 0.4) 0%, rgba(13, 18, 29, 0.96) 90%);
+        }
+
+        .modal-poster {
+            position: relative;
+            z-index: 2;
+            width: 140px;
+            min-width: 140px;
+            aspect-ratio: 2 / 3;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-details {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .modal-title {
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .modal-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .modal-meta-row .rating {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .modal-overview {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #b0bec5;
+        }
+
+        /* SELECTORES DE TEMPORADA Y CAPÍTULOS (SERIES / ANIME) */
+        .season-selector-box {
+            padding: 16px 24px;
+            background: #0a0e17;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .selector-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+
+        .pill-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .pill-btn.active {
+            background: var(--cyan);
+            color: #000;
+            border-color: var(--cyan);
+            font-weight: 700;
+        }
+
+        /* LISTA DE ENLACES DE DESCARGA */
+        .modal-links-body {
+            padding: 24px;
+        }
+
+        .links-header-text {
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .link-row-card {
+            background: #090d16;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            transition: border-color 0.2s;
+        }
+
+        .link-row-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .link-left-info {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .link-badges {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .badge-pill-quality {
+            background: rgba(0, 229, 255, 0.15);
+            color: var(--cyan);
+            border: 1px solid rgba(0, 229, 255, 0.4);
+        }
+
+        .badge-pill-audio {
+            background: rgba(0, 230, 118, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(0, 230, 118, 0.4);
+        }
+
+        .badge-pill-source {
+            background: rgba(255, 255, 255, 0.08);
+            color: #b0bec5;
+        }
+
+        .link-release-name {
+            font-size: 13px;
+            color: #cfd8dc;
+            word-break: break-all;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .link-extra-stats {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-seeds {
+            color: var(--green);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .link-right-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-action-torrent {
+            background: linear-gradient(135deg, #00e676 0%, #00b0ff 100%);
+            color: #000;
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .btn-action-torrent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0, 230, 118, 0.4);
+        }
+
+        .btn-action-copy {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 9px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-action-copy:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ESPACIO PARA BANNER PASIVO PUBLICITARIO */
+        .sponsor-banners-container {
+            margin: 24px auto 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .sponsor-banner-box {
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            max-width: 100%;
+            overflow-x: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sponsor-banner-box iframe {
+            max-width: 100%;
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            background: #05070a;
+            padding: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        /* TOAST NOTIFICACIÓN */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 300;
+            background: #00e676;
+            color: #000;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+            display: none;
+            align-items: center;
+            gap: 8px;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-backdrop {
+            display: none;
+        }
+
+        .nav-menu-wrap {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 860px) {
+            header {
+                padding: 10px 16px;
+                position: sticky;
+                top: 0;
+                z-index: 2000;
+            }
+
+            .brand-box {
+                gap: 8px;
+            }
+
+            .brand-box img {
+                width: 34px;
+                height: 34px;
+            }
+
+            .brand-title {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+            }
+
+            .brand-badge {
+                font-size: 9px;
+                padding: 2px 5px;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: nowrap !important;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+                background: #111726 !important;
+                border: 1px solid rgba(0, 229, 255, 0.4) !important;
+                border-radius: 10px;
+                cursor: pointer;
+                z-index: 1003;
+                transition: all 0.2s;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 22px;
+                height: 2.5px;
+                background: #ffffff;
+                border-radius: 2px;
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(7.5px) rotate(45deg);
+                background: var(--cyan);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-7.5px) rotate(-45deg);
+                background: var(--cyan);
+            }
+
+            .nav-backdrop {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.75);
+                z-index: 1000;
+            }
+
+            .nav-backdrop.active {
+                display: block;
+            }
+
+            .nav-menu-wrap {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 82%;
+                max-width: 320px;
+                height: 100vh;
+                height: 100dvh;
+                background: #0d121f !important; /* Fondo solido de alta opacidad y nitidez */
+                border-left: 1px solid rgba(0, 229, 255, 0.3);
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 85px 20px 30px;
+                gap: 16px;
+                z-index: 1002;
+                transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95);
+                overflow-y: auto;
+            }
+
+            .nav-menu-wrap.active {
+                right: 0;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+                align-items: stretch;
+                background: transparent;
+                border: none;
+                padding: 0;
+                gap: 10px;
+            }
+
+            .nav-tab {
+                width: 100%;
+                font-size: 16px !important;
+                font-weight: 700 !important;
+                color: #ffffff !important;
+                padding: 14px 18px !important;
+                border-radius: 12px;
+                background: #182235 !important; /* Fondo con excelente contraste */
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                letter-spacing: 0.2px;
+                cursor: pointer;
+            }
+
+            .nav-tab:hover, .nav-tab:active {
+                background: #1f2e47 !important;
+                color: var(--cyan) !important;
+                border-color: var(--cyan) !important;
+            }
+
+            .nav-tab.active {
+                background: var(--cyan) !important;
+                color: #000000 !important;
+                border-color: var(--cyan) !important;
+                font-weight: 900 !important;
+                box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4) !important;
+            }
+
+            .nav-right-actions {
+                margin-top: auto;
+                padding-top: 16px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .btn-kodi-addon {
+                width: 100%;
+                justify-content: center;
+                padding: 14px;
+                font-size: 16px;
+                font-weight: 800;
+                background: #ff5722 !important;
+                color: #ffffff !important;
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(255, 87, 34, 0.35);
+            }
+
+            .hero-banner { height: 320px; padding: 20px; }
+            .hero-title { font-size: 24px; }
+            .grid-container { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+            .modal-overlay { padding: 20px 12px; }
+            .modal-container { max-height: 92vh; }
+            .modal-close-btn { top: 14px; right: 14px; width: 38px; height: 38px; font-size: 20px; }
+            .modal-header-hero { flex-direction: column; align-items: center; text-align: center; padding: 25px 16px; }
+            .modal-poster { width: 120px; }
+            .modal-meta-row { justify-content: center; }
+            .link-row-card { flex-direction: column; align-items: stretch; }
+            .link-right-actions { justify-content: stretch; }
+            .btn-action-torrent, .btn-action-copy { flex: 1; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header>
+        <div class="nav-container">
+            <a href="/" class="brand-box">
+                <img src="../icon.png" alt="Logo Latarr">
+                <div>
+                    <div class="brand-title">LATARR <span style="font-weight:300; color:#fff;">CINEMA</span></div>
+                </div>
+                <span class="brand-badge">PORTAL P2P</span>
+            </a>
+
+            <!-- Botón Hamburguesa Móvil (☰) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menú" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menú de Navegación (Tabs en PC, Drawer en Celular) -->
+            <div class="nav-menu-wrap" id="navMenu">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-type="top" onclick="handleCategoryClick('top', this)">🔥 Tendencias</button>
+                    <button class="nav-tab" data-type="movies" onclick="handleCategoryClick('movies', this)">🎬 Películas</button>
+                    <button class="nav-tab" data-type="series" onclick="handleCategoryClick('series', this)">📺 Series</button>
+                    <button class="nav-tab" data-type="anime" onclick="handleCategoryClick('anime', this)">⛩️ Anime</button>
+                    <button class="nav-tab" data-type="actors" onclick="handleCategoryClick('actors', this)">🎭 Actores</button>
+                </div>
+
+                <div class="nav-right-actions">
+                    <a href="/" class="btn-kodi-addon">📦 Addon Kodi</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cortina oscura de fondo para celular (dentro de header para que z-index sea 100% predecible) -->
+        <div class="nav-backdrop" id="navBackdrop" onclick="closeNav()"></div>
+    </header>
+
+    <!-- BARRA DE CONTROLES: BÚSQUEDA Y FILTROS -->
+    <section class="controls-bar">
+        <div class="controls-container">
+            <div class="search-box">
+                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="searchInput" placeholder="Buscar por título, palabra clave o actor..." oninput="handleSearch(this.value)">
+            </div>
+
+            <select class="filter-select" id="genreFilter" onchange="applyFilters(); this.blur();">
+                <option value="">Todos los Géneros</option>
+            </select>
+
+            <select class="filter-select" id="yearFilter" onchange="applyFilters(); this.blur();">
+                <option value="">Todos los Años</option>
+            </select>
+
+            <span class="counter-badge" id="counterText">Cargando catálogo...</span>
+        </div>
+    </section>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- ENCABEZADO DE SECCIÓN -->
+        <div class="section-header">
+            <h2 class="section-title" id="sectionTitle">🔥 <span>Lo Más Popular</span> y Descargado</h2>
+        </div>
+
+        <!-- GRILLA DE CONTENIDO -->
+        <div class="grid-container" id="cardsGrid">
+            <!-- Las tarjetas se generan dinámicamente -->
+        </div>
+
+        <!-- ESPACIO DE PUBLICIDAD PASIVA (BANNER 300x250) -->
+        <div class="sponsor-banners-container">
+            <!-- Banner 300x250 Centrado -->
+            <div class="sponsor-banner-box" style="min-height: 250px; width: 300px;">
+                <script>
+                    atOptions = {
+                        'key' : 'b376103ec1c5c370c5316173b26a3ada',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bancadeltempoidea.org/22/b376103ec1c5c370c5316173b26a3ada"></script>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL DE DESCARGA DE ENLACES -->
+    <div class="modal-overlay" id="downloadModal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-container" tabindex="-1">
+            <button class="modal-close-btn" onclick="closeModal()">×</button>
+            
+            <div class="modal-header-hero" id="modalHero">
+                <div class="modal-poster">
+                    <img id="modalPosterImg" src="" alt="Poster">
+                </div>
+                <div class="modal-details">
+                    <h2 class="modal-title" id="modalTitle">Título</h2>
+                    <div class="modal-meta-row">
+                        <span class="rating" id="modalRating">⭐ 0.0</span>
+                        <span id="modalYear">2026</span>
+                        <span id="modalGenre">Género</span>
+                    </div>
+                    <p class="modal-overview" id="modalOverview">Sinopsis...</p>
+                </div>
+            </div>
+
+            <!-- Selector de Temporada y Capítulos para Series / Anime -->
+            <div class="season-selector-box" id="seasonSelectorBox" style="display: none;">
+                <div class="selector-label">Temporadas Disponibles:</div>
+                <div class="pill-group" id="seasonPills"></div>
+
+                <div class="selector-label" style="margin-top: 14px;">Capítulos:</div>
+                <div class="pill-group" id="episodePills"></div>
+            </div>
+
+            <!-- Lista de Enlaces -->
+            <div class="modal-links-body">
+                <!-- Banner dentro del Modal (468x60) - Siempre visible arriba de los enlaces -->
+                <div class="sponsor-banner-box" style="margin: 0 auto 20px; min-height: 60px; max-width: 480px; border-radius: 8px;">
+                    <script>
+                        atOptions = {
+                            'key' : 'b1b737088c12a456a64a335d7cf65b76',
+                            'format' : 'iframe',
+                            'height' : 60,
+                            'width' : 468,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://bancadeltempoidea.org/22/b1b737088c12a456a64a335d7cf65b76"></script>
+                </div>
+
+                <div class="links-header-text">
+                    <span>⚡</span> Fuentes P2P Verificadas (Elige y abre en tu cliente Torrent):
+                </div>
+
+                <div id="linksListContainer">
+                    <!-- Filas de links -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICACIÓN -->
+    <div class="toast" id="toastMsg">
+        <span>✔</span> ¡Enlace Magnet copiado al portapapeles!
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 <strong>LATARR CINEMA</strong> — Portal P2P de Cine, Series y Anime en Español.</p>
+        <p style="margin-top: 8px;">Alojado en red de alta velocidad global en <a href="https://latarr.shop">latarr.shop</a>. No se almacenan archivos con copyright en los servidores.</p>
+    </footer>
+
+    <!-- LÓGICA DE LA APLICACIÓN -->
+    <script>
+        // ESTADO GLOBAL
+        let currentType = 'top';
+        let fullCatalog = [];
+        let filteredCatalog = [];
+        let currentPage = 1;
+        const PAGE_SIZE = 36;
+        let activeSeriesData = null;
+        let activeSeason = 1;
+
+        // CATÁLOGO GLOBAL PARA BÚSQUEDA CRUZADA (PELÍCULAS + SERIES + ANIME)
+        let globalCatalog = null;
+        let isGlobalLoading = false;
+
+        async function ensureGlobalCatalog() {
+            if (globalCatalog && globalCatalog.length > 0) return globalCatalog;
+            if (isGlobalLoading) {
+                while (isGlobalLoading) {
+                    await new Promise(r => setTimeout(r, 80));
+                }
+                return globalCatalog || [];
+            }
+            isGlobalLoading = true;
+            try {
+                const [moviesRes, seriesRes, animeRes] = await Promise.all([
+                    fetch('/peliculas.json'),
+                    fetch('/series.json'),
+                    fetch('/anime.json')
+                ]);
+                const movies = await moviesRes.json();
+                const series = await seriesRes.json();
+                const anime = await animeRes.json();
+
+                const taggedMovies = movies.map(m => ({ ...m, _mediaType: 'movies' }));
+                const taggedSeries = series.map(s => ({ ...s, _mediaType: 'series' }));
+                const taggedAnime = anime.map(a => ({ ...a, _mediaType: 'anime' }));
+
+                globalCatalog = [...taggedMovies, ...taggedSeries, ...taggedAnime];
+            } catch (err) {
+                console.error("Error al cargar catalogo global:", err);
+            } finally {
+                isGlobalLoading = false;
+            }
+            return globalCatalog || [];
+        }
+
+        // INICIALIZACIÓN
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '#detalles') {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            loadCategory('top');
+            // Precargar catalogo completo en segundo plano para busqueda instantanea
+            setTimeout(ensureGlobalCatalog, 800);
+        });
+
+        // CONTROL DE MENÚ MÓVIL (HAMBURGUESA)
+        function handleCategoryClick(type, btn) {
+            switchCategory(type, btn);
+            closeNav();
+        }
+
+        function toggleNav() {
+            const menu = document.getElementById('navMenu');
+            const toggle = document.getElementById('menuToggle');
+            const backdrop = document.getElementById('navBackdrop');
+            if (!menu || !toggle) return;
+            const isActive = menu.classList.toggle('active');
+            toggle.classList.toggle('active', isActive);
+            if (backdrop) backdrop.classList.toggle('active', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        }
+
+        function closeNav() {
+            const menu = document.getElementById('navMenu');
+            const toggle = document.getElementById('menuToggle');
+            const backdrop = document.getElementById('navBackdrop');
+            if (menu) menu.classList.remove('active');
+            if (toggle) toggle.classList.remove('active');
+            if (backdrop) backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // CAMBIAR PESTAÑA PRINCIPAL
+        function switchCategory(type, btn) {
+            document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentType = type;
+            document.getElementById('searchInput').value = '';
+            document.getElementById('genreFilter').value = '';
+            document.getElementById('yearFilter').value = '';
+
+            const titles = {
+                'top': '🔥 <span>Lo Más Popular</span> y Descargado',
+                'movies': '🎬 <span>Películas</span> en Catálogo',
+                'series': '📺 <span>Series</span> Completas',
+                'anime': '⛩️ <span>Anime</span> en Emisión y Finalizado',
+                'actors': '🎭 <span>Actores</span> y Filmografías'
+            };
+            document.getElementById('sectionTitle').innerHTML = titles[type] || 'Catálogo';
+
+            loadCategory(type);
+        }
+
+        // CARGA DE DATOS DESDE CLOUDFLARE PAGES
+        async function loadCategory(type) {
+            document.getElementById('cardsGrid').innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--cyan);">Cargando catálogo en vivo...</div>';
+            document.getElementById('counterText').innerText = 'Cargando...';
+
+            let url = '';
+            if (type === 'top') url = '/top_movies.json';
+            else if (type === 'movies') url = '/peliculas.json';
+            else if (type === 'series') url = '/series.json';
+            else if (type === 'anime') url = '/anime.json';
+            else if (type === 'actors') url = '/actors.json';
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+
+                fullCatalog = data;
+
+                populateFilters(fullCatalog);
+                filteredCatalog = [...fullCatalog];
+                currentPage = 1;
+                renderCards(false);
+            } catch (err) {
+                console.error("Error al cargar datos:", err);
+                document.getElementById('cardsGrid').innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: #ff5722;">Error al conectar con la red de catálogo. Intenta nuevamente.</div>';
+            }
+        }
+
+        // POBLAR SELECTORES (GÉNEROS Y AÑOS DEL ADDON)
+        function populateFilters(items) {
+            const genreSelect = document.getElementById('genreFilter');
+            genreSelect.innerHTML = '<option value="">Todos los Géneros</option>';
+            const genres = new Set();
+
+            const yearSelect = document.getElementById('yearFilter');
+            yearSelect.innerHTML = '<option value="">Todos los Años</option>';
+            const years = new Set();
+            
+            items.forEach(item => {
+                const g = item.genre || (item.actor ? 'Actor' : '');
+                if (g) genres.add(g);
+                const y = item.year;
+                if (y && !isNaN(y)) years.add(y.toString());
+            });
+
+            Array.from(genres).sort().forEach(g => {
+                const opt = document.createElement('option');
+                opt.value = g;
+                opt.innerText = g;
+                genreSelect.appendChild(opt);
+            });
+
+            Array.from(years).sort((a, b) => b - a).forEach(y => {
+                const opt = document.createElement('option');
+                opt.value = y;
+                opt.innerText = y;
+                yearSelect.appendChild(opt);
+            });
+        }
+
+        // BÚSQUEDA GLOBAL Y FILTRADO
+        let searchDebounceTimer = null;
+        function handleSearch(q) {
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(() => {
+                applyFilters();
+            }, 200);
+        }
+
+        async function applyFilters() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const genre = document.getElementById('genreFilter').value;
+            const year = document.getElementById('yearFilter').value;
+
+            if (q.length > 0) {
+                if (currentType === 'actors') {
+                    document.getElementById('sectionTitle').innerHTML = `🎭 Actores para: "<span>${q}</span>"`;
+                    filteredCatalog = fullCatalog.filter(item => {
+                        return item.actor && item.actor.name.toLowerCase().includes(q);
+                    });
+                } else {
+                    // BÚSQUEDA GLOBAL EN PELÍCULAS, SERIES Y ANIME
+                    const allItems = await ensureGlobalCatalog();
+                    document.getElementById('sectionTitle').innerHTML = `🔍 Resultados para: "<span>${q}</span>"`;
+
+                    filteredCatalog = allItems.filter(item => {
+                        const matchQ = (item.title && item.title.toLowerCase().includes(q)) || 
+                                       (item.clean_title && item.clean_title.toLowerCase().includes(q));
+                        const matchGenre = !genre || item.genre === genre;
+                        const matchYear = !year || (item.year && item.year.toString() === year.toString());
+                        return matchQ && matchGenre && matchYear;
+                    });
+                }
+            } else {
+                // RESTAURAR TÍTULO DE LA PESTAÑA ACTIVA
+                const titles = {
+                    'top': '🔥 <span>Lo Más Popular</span> y Descargado',
+                    'movies': '🎬 <span>Películas</span> en Catálogo',
+                    'series': '📺 <span>Series</span> Completas',
+                    'anime': '⛩️ <span>Anime</span> en Emisión y Finalizado',
+                    'actors': '🎭 <span>Actores</span> y Filmografías'
+                };
+                document.getElementById('sectionTitle').innerHTML = titles[currentType] || 'Catálogo';
+
+                filteredCatalog = fullCatalog.filter(item => {
+                    if (item.actor) return true;
+                    const matchGenre = !genre || item.genre === genre;
+                    const matchYear = !year || (item.year && item.year.toString() === year.toString());
+                    return matchGenre && matchYear;
+                });
+            }
+
+            currentPage = 1;
+            renderCards(false);
+        }
+
+        // RENDERIZAR TARJETAS (CON SCROLL INFINITO)
+        function renderCards(append = false) {
+            const grid = document.getElementById('cardsGrid');
+            const total = filteredCatalog.length;
+            document.getElementById('counterText').innerText = `${total.toLocaleString()} títulos disponibles`;
+
+            if (total === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 60px; color: var(--text-muted);">No se encontraron títulos que coincidan con la búsqueda.</div>';
+                return;
+            }
+
+            if (!append) {
+                const itemsToShow = filteredCatalog.slice(0, currentPage * PAGE_SIZE);
+                grid.innerHTML = itemsToShow.map((item, idx) => createCardHTML(item, idx)).join('');
+                activeCardIndex = -1;
+            } else {
+                const start = (currentPage - 1) * PAGE_SIZE;
+                const end = currentPage * PAGE_SIZE;
+                const nextBatch = filteredCatalog.slice(start, end);
+                if (nextBatch.length > 0) {
+                    const html = nextBatch.map((item, idx) => createCardHTML(item, start + idx)).join('');
+                    grid.insertAdjacentHTML('beforeend', html);
+                }
+            }
+        }
+
+        // DETECCIÓN DE SCROLL INFINITO AUTOMÁTICO
+        let isFetchingNextPage = false;
+        window.addEventListener('scroll', () => {
+            if (isFetchingNextPage) return;
+            const scrollY = window.scrollY || window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+            if (scrollY + windowHeight >= docHeight - 700) {
+                if (filteredCatalog.length > currentPage * PAGE_SIZE) {
+                    isFetchingNextPage = true;
+                    currentPage++;
+                    renderCards(true);
+                    setTimeout(() => { isFetchingNextPage = false; }, 150);
+                }
+            }
+        });
+
+        function createCardHTML(item, index) {
+            // Caso especial: Actor
+            if (item.actor) {
+                const poster = item.actor.profile_path ? `https://image.tmdb.org/t/p/w500${item.actor.profile_path}` : '../icon.png';
+                return `
+                    <div class="card" tabindex="0" data-index="${index}" onclick="viewActorMovies(${item.actor.id})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
+                        <div class="card-poster">
+                            <img src="${poster}" alt="${item.actor.name}" loading="lazy" onerror="this.src='../icon.png'">
+                            <span class="badge-quality badge-4k">${item.actor.count} Películas</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">${item.actor.name}</div>
+                            <div class="card-meta">
+                                <span>Filmografía</span>
+                                <span style="color:var(--cyan);">Ver títulos ›</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            const poster = item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : '../icon.png';
+            const qualityClass = (item.quality === '4K') ? 'badge-4k' : (item.quality === '1080P' ? 'badge-1080p' : 'badge-hd');
+            const rating = item.rating ? item.rating.toFixed(1) : '8.0';
+
+            // Tipo de medio para buscar enlaces (en búsqueda global o por pestaña)
+            let mediaKind = item._mediaType || currentType;
+            if (mediaKind === 'top') mediaKind = 'movies';
+
+            let typeBadge = '';
+            if (item._mediaType === 'series') typeBadge = '📺 Serie';
+            else if (item._mediaType === 'anime') typeBadge = '⛩️ Anime';
+            else if (item._mediaType === 'movies') typeBadge = '🎬 Película';
+
+            return `
+                <div class="card" tabindex="0" data-index="${index}" onclick="openDownloadModal(${item.tmdb_id}, '${mediaKind}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
+                    <div class="card-poster">
+                        <img src="${poster}" alt="${item.title || item.clean_title}" loading="lazy" onerror="this.src='../icon.png'">
+                        <span class="badge-quality ${qualityClass}">${item.quality || 'HD'}</span>
+                        <span class="badge-rating">⭐ ${rating}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">${item.title || item.clean_title}</div>
+                        <div class="card-meta">
+                            <span>${item.year || '2026'}</span>
+                            <span style="color:${typeBadge ? 'var(--cyan)' : 'var(--text-muted)'}; font-weight:${typeBadge ? '700' : 'normal'};">${typeBadge || item.genre || 'Cine'}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // VER PELÍCULAS DE UN ACTOR
+        function viewActorMovies(actorId) {
+            const actorObj = fullCatalog.find(a => a.actor && a.actor.id === actorId);
+            if (!actorObj || !actorObj.movies) return;
+
+            filteredCatalog = actorObj.movies;
+            populateFilters(actorObj.movies);
+            document.getElementById('sectionTitle').innerHTML = `🎭 Películas de <span>${actorObj.actor.name}</span>`;
+            currentPage = 1;
+            renderCards(false);
+        }
+
+        // ABRIR MODAL DE ENLACES DE DESCARGA
+        async function openDownloadModal(tmdbId, mediaType) {
+            const modal = document.getElementById('downloadModal');
+            const modalContainer = modal.querySelector('.modal-container');
+            const linksContainer = document.getElementById('linksListContainer');
+            const seasonBox = document.getElementById('seasonSelectorBox');
+            
+            // Bloquear scroll de fondo para que no se mueva la web detrás
+            document.body.style.overflow = 'hidden';
+            linksContainer.innerHTML = '<div style="text-align:center; padding: 30px; color: var(--cyan);">Buscando fuentes P2P en la red...</div>';
+            seasonBox.style.display = 'none';
+            modal.classList.add('active');
+
+            // Añadir estado al historial para que la flecha "Atrás" del navegador o mouse cierre el modal en vez de salir de la web
+            if (!isModalHistoryPushed) {
+                history.pushState({ modalOpen: true }, '', '#detalles');
+                isModalHistoryPushed = true;
+            }
+
+            if (modalContainer) {
+                modalContainer.scrollTop = 0;
+                modalContainer.focus();
+            }
+
+            // Determinar ruta del archivo JSON de links
+            let folder = 'movies';
+            if (mediaType === 'series') folder = 'series';
+            else if (mediaType === 'anime') folder = 'anime';
+
+            try {
+                const res = await fetch(`/links/${folder}/${tmdbId}.json`);
+                if (!res.ok) throw new Error("No link file found");
+                const data = await res.json();
+
+                // Ficha del encabezado
+                const meta = data.metadata || {};
+                document.getElementById('modalTitle').innerText = meta.clean_title || meta.title || 'Título';
+                document.getElementById('modalRating').innerText = `⭐ ${(meta.rating || 8.0).toFixed(1)}`;
+                document.getElementById('modalYear').innerText = meta.year || '2026';
+                document.getElementById('modalGenre').innerText = meta.genre || 'Cine';
+                document.getElementById('modalOverview').innerText = meta.overview || 'Sinopsis disponible en la reproducción.';
+                
+                if (meta.poster_path) {
+                    document.getElementById('modalPosterImg').src = `https://image.tmdb.org/t/p/w500${meta.poster_path}`;
+                    document.getElementById('modalHero').style.backgroundImage = `url('https://image.tmdb.org/t/p/w1280${meta.poster_path}')`;
+                }
+
+                // Si es película:
+                if (folder === 'movies') {
+                    renderMovieLinks(data.links || []);
+                } 
+                // Si es serie o anime:
+                else {
+                    activeSeriesData = data;
+                    setupSeriesSeasons(data);
+                }
+
+            } catch (err) {
+                console.error("Error al cargar enlaces:", err);
+                linksContainer.innerHTML = '<div style="text-align:center; padding: 30px; color: #ff5722;">No se pudieron cargar las fuentes para este título.</div>';
+            }
+        }
+
+        // RENDERIZAR ENLACES DE PELÍCULAS
+        function renderMovieLinks(links) {
+            const container = document.getElementById('linksListContainer');
+            if (!links || links.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding: 20px; color: var(--text-muted);">No hay fuentes disponibles en este momento.</div>';
+                return;
+            }
+
+            // Ordenar por calidad (4K primero) y semillas
+            links.sort((a, b) => (b.seeds || 0) - (a.seeds || 0));
+
+            container.innerHTML = links.map(link => {
+                return `
+                    <div class="link-row-card">
+                        <div class="link-left-info">
+                            <div class="link-badges">
+                                <span class="badge-pill badge-pill-quality">${link.quality || '1080P'}</span>
+                                <span class="badge-pill badge-pill-audio">Subs Español</span>
+                                <span class="badge-pill badge-pill-source">${link.source || 'P2P'}</span>
+                            </div>
+                            <div class="link-release-name">${link.title || link.clean_title}</div>
+                            <div class="link-extra-stats">
+                                <span class="link-seeds">🟢 ${link.seeds || 0} semillas</span>
+                                <span>💾 ${link.size || 'N/A'}</span>
+                            </div>
+                        </div>
+                        <div class="link-right-actions">
+                            <a href="${link.magnet}" class="btn-action-torrent" title="Abrir directamente en uTorrent, qBittorrent o Flud">
+                                <span>⚡</span> Abrir Torrent
+                            </a>
+                            <button class="btn-action-copy" onclick="copyMagnet('${link.magnet}')" title="Copiar enlace magnet para Real-Debrid o Seedbox">
+                                <span>📋</span> Copiar
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // SELECTOR DE TEMPORADAS Y CAPÍTULOS PARA SERIES
+        function setupSeriesSeasons(data) {
+            const seasonBox = document.getElementById('seasonSelectorBox');
+            const episodes = data.episodes || [];
+            const packs = data.packs || [];
+
+            // Si es una película o no tiene episodios ni packs, ir directo a los enlaces
+            if (data.type === 'movie' || (episodes.length === 0 && packs.length === 0)) {
+                seasonBox.style.display = 'none';
+                renderMovieLinks(data.links || []);
+                return;
+            }
+
+            seasonBox.style.display = 'block';
+
+            const seasons = [...new Set(episodes.map(e => (e.season !== undefined && e.season !== null) ? e.season : 1))].sort((a,b) => a - b);
+
+            const seasonPills = document.getElementById('seasonPills');
+            seasonPills.innerHTML = seasons.map((s, idx) => `
+                <button class="pill-btn ${idx === 0 ? 'active' : ''}" onclick="selectSeason(${s}, this)">${s === 0 ? 'Especiales / T0' : 'Temporada ' + s}</button>
+            `).join('');
+
+            // También agregar botón de Packs si existen
+            if (packs.length > 0) {
+                seasonPills.innerHTML += `<button class="pill-btn" onclick="showPacks(this)">📦 Temporadas Completas</button>`;
+            }
+
+            if (seasons.length > 0) {
+                selectSeason(seasons[0], seasonPills.children[0]);
+            } else if (packs.length > 0) {
+                showPacks(seasonPills.querySelector('button'));
+            }
+        }
+
+        function selectSeason(seasonNum, btn) {
+            document.querySelectorAll('#seasonPills .pill-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            activeSeason = seasonNum;
+            const episodes = (activeSeriesData.episodes || []).filter(e => {
+                const sn = (e.season !== undefined && e.season !== null) ? e.season : 1;
+                return sn === seasonNum;
+            });
+            const epsSet = [...new Set(episodes.map(e => e.episode))].sort((a,b) => a - b);
+
+            const episodePills = document.getElementById('episodePills');
+            episodePills.innerHTML = epsSet.map((ep, idx) => `
+                <button class="pill-btn ${idx === 0 ? 'active' : ''}" onclick="selectEpisode(${ep}, this)">Cap. ${ep}</button>
+            `).join('');
+
+            if (epsSet.length > 0) {
+                selectEpisode(epsSet[0], episodePills.children[0]);
+            }
+        }
+
+        function selectEpisode(epNum, btn) {
+            document.querySelectorAll('#episodePills .pill-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            const links = (activeSeriesData.episodes || []).filter(e => e.season === activeSeason && e.episode === epNum);
+            renderMovieLinks(links);
+        }
+
+        function showPacks(btn) {
+            document.querySelectorAll('#seasonPills .pill-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            document.getElementById('episodePills').innerHTML = '<span style="font-size:13px; color:var(--text-muted);">Descarga la temporada completa en un solo archivo magnet:</span>';
+            renderMovieLinks(activeSeriesData.packs || []);
+        }
+
+        // COPIAR MAGNET CON TOAST
+        function copyMagnet(magnetUri) {
+            navigator.clipboard.writeText(magnetUri).then(() => {
+                showToast("¡Enlace Magnet copiado al portapapeles!");
+            }).catch(() => {
+                // Fallback para navegadores antiguos
+                const temp = document.createElement("textarea");
+                temp.value = magnetUri;
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand("copy");
+                document.body.removeChild(temp);
+                showToast("¡Enlace Magnet copiado al portapapeles!");
+            });
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toastMsg');
+            t.innerText = msg;
+            t.style.display = 'flex';
+            setTimeout(() => {
+                t.style.display = 'none';
+            }, 3000);
+        }
+
+        // CERRAR MODAL Y CONTROL DE NAVEGACIÓN ATRÁS
+        let isModalHistoryPushed = false;
+
+        function closeModal(triggerHistoryBack = true) {
+            const modal = document.getElementById('downloadModal');
+            if (!modal) return;
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restaurar scroll del fondo
+            if (activeCardIndex >= 0) {
+                const cards = document.querySelectorAll('#cardsGrid .card');
+                if (cards[activeCardIndex]) {
+                    cards[activeCardIndex].focus();
+                }
+            }
+
+            // Si se cerró por botón o teclado (no por la flecha Atrás del navegador)
+            // sincronizamos el historial para que no quede el hash residual
+            if (triggerHistoryBack && isModalHistoryPushed) {
+                isModalHistoryPushed = false;
+                history.back();
+            } else {
+                isModalHistoryPushed = false;
+            }
+        }
+
+        function closeModalOnBackdrop(e) {
+            if (e.target.id === 'downloadModal') {
+                closeModal();
+            }
+        }
+
+        // SI EL USUARIO PULSA "ATRÁS" EN EL NAVEGADOR O CON EL BOTÓN DEL RATÓN:
+        window.addEventListener('popstate', function(e) {
+            const modal = document.getElementById('downloadModal');
+            if (modal && modal.classList.contains('active')) {
+                closeModal(false); // Cierra el modal sin volver a disparar history.back()
+            }
+        });
+
+        // NAVEGACIÓN COMPLETA POR TECLADO (FLECHAS + ENTER + ESTILO KODI / APPLE TV)
+        let activeCardIndex = -1;
+
+        function getGridColumns() {
+            const cards = document.querySelectorAll('#cardsGrid .card');
+            if (cards.length < 2) return 1;
+            const firstTop = cards[0].offsetTop;
+            let count = 0;
+            for (let i = 0; i < cards.length; i++) {
+                if (Math.abs(cards[i].offsetTop - firstTop) < 6) count++;
+                else break;
+            }
+            return Math.max(1, count);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('downloadModal');
+
+            // 1. SI EL MODAL ESTÁ ABIERTO:
+            if (modal && modal.classList.contains('active')) {
+                if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+                    closeModal();
+                    return;
+                }
+                const modalContainer = modal.querySelector('.modal-container');
+                if (modalContainer) {
+                    if (e.key === 'ArrowDown') {
+                        modalContainer.scrollBy({ top: 60, behavior: 'smooth' });
+                        e.preventDefault();
+                    } else if (e.key === 'ArrowUp') {
+                        modalContainer.scrollBy({ top: -60, behavior: 'smooth' });
+                        e.preventDefault();
+                    } else if (e.key === 'PageDown') {
+                        modalContainer.scrollBy({ top: 250, behavior: 'smooth' });
+                        e.preventDefault();
+                    } else if (e.key === 'PageUp') {
+                        modalContainer.scrollBy({ top: -250, behavior: 'smooth' });
+                        e.preventDefault();
+                    }
+                }
+                return;
+            }
+
+            // 2. NO INTERCEPTAR SI EL USUARIO ESCRIBE EN EL BUSCADOR O EN SELECTS:
+            const tag = (document.activeElement && document.activeElement.tagName) ? document.activeElement.tagName.toLowerCase() : '';
+            if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+
+            // 3. NAVEGAR POR LAS TARJETAS CON LAS FLECHAS
+            const cards = Array.from(document.querySelectorAll('#cardsGrid .card'));
+            if (cards.length === 0) return;
+
+            const cols = getGridColumns();
+            let newIndex = activeCardIndex;
+
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                newIndex = (activeCardIndex === -1) ? 0 : Math.min(cards.length - 1, activeCardIndex + 1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                newIndex = (activeCardIndex === -1) ? 0 : Math.max(0, activeCardIndex - 1);
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                newIndex = (activeCardIndex === -1) ? 0 : Math.min(cards.length - 1, activeCardIndex + cols);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (activeCardIndex >= 0 && activeCardIndex < cols) {
+                    // Si ya estamos en la primera fila y presionamos Arriba: subir al techo de la página
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+                newIndex = (activeCardIndex === -1) ? 0 : Math.max(0, activeCardIndex - cols);
+            } else {
+                return;
+            }
+
+            if (newIndex >= 0 && newIndex < cards.length) {
+                activeCardIndex = newIndex;
+                const targetCard = cards[newIndex];
+
+                // 1. Foco sin salto brusco de scroll del navegador
+                targetCard.focus({ preventScroll: true });
+
+                // 2. Si estamos en la primera fila, subir al tope para ver las tarjetas completas sin cortes
+                if (newIndex < cols) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    const rect = targetCard.getBoundingClientRect();
+                    const headerOffset = 130; // Margen para el header superior sticky
+                    const isOutOfView = (rect.top < headerOffset) || (rect.bottom > window.innerHeight - 40);
+
+                    if (isOutOfView) {
+                        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+
+                // 3. Si nos acercamos al final con flechas, cargar la siguiente página automáticamente
+                if (newIndex >= cards.length - cols * 2 && filteredCatalog.length > currentPage * PAGE_SIZE) {
+                    currentPage++;
+                    renderCards(true);
+                }
+            }
+        });
+    </script>
+
+    <!-- MONETIZACIÓN ADSTERRA (POPUNDER INTELIGENTE: MÁXIMO 2 POR VISITA) -->
+    <script>
+        (function() {
+            var STORAGE_KEY = 'latarr_visit_pops';
+            var MAX_POPS = 2;
+            var SESSION_TIMEOUT_MS = 45 * 60 * 1000; // 45 minutos (o nueva visita al cerrar)
+
+            function getPopData() {
+                try {
+                    var raw = sessionStorage.getItem(STORAGE_KEY);
+                    var now = Date.now();
+                    if (!raw) return { count: 0, time: now };
+                    var data = JSON.parse(raw);
+                    if (now - data.time > SESSION_TIMEOUT_MS) {
+                        return { count: 0, time: now };
+                    }
+                    return data;
+                } catch(e) {
+                    return { count: 0, time: Date.now() };
+                }
+            }
+
+            function savePopData(data) {
+                try {
+                    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                } catch(e) {}
+            }
+
+            var popData = getPopData();
+            if (popData.count >= MAX_POPS) {
+                return; // Límite de la visita alcanzado: navegación limpia
+            }
+
+            // Interceptar window.open para contar los 2 de la sesión
+            var originalOpen = window.open;
+            window.open = function() {
+                popData = getPopData();
+                if (popData.count >= MAX_POPS) {
+                    return null;
+                }
+                popData.count += 1;
+                popData.time = Date.now();
+                savePopData(popData);
+                return originalOpen.apply(this, arguments);
+            };
+
+            // Inyectar script de Popunder
+            var s = document.createElement('script');
+            s.setAttribute('data-cfasync', 'false');
+            s.src = 'https://aarems.org/1/d7bf4e3e79adc4304995b2fb8c564403';
+            document.body.appendChild(s);
+        })();
+    </script>
+
+</body>
+</html>

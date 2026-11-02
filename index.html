@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LATARR CINEMA — Addon Nativo de Streaming P2P para Kodi</title>
-    <meta name="description" content="Latarr Cinema: Addon nativo para Kodi con streaming P2P en alta velocidad, sin necesidad de Debrid y con catálogo 100% verificado en Español Latino.">
+    <meta name="description" content="Latarr Cinema: Addon nativo para Kodi con streaming P2P en alta velocidad, sin necesidad de Debrid, subtítulos al español sincronizados y fuentes verificadas.">
     <link rel="icon" type="image/png" href="icon.png">
     
     <!-- Google Fonts -->
@@ -488,6 +488,14 @@
             text-decoration: none;
         }
 
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-backdrop {
+            display: none;
+        }
+
         /* Responsive Mobile Adjustments */
         @media (max-width: 968px) {
             .block-row, .block-row.reverse {
@@ -499,8 +507,94 @@
                 flex: none;
             }
             header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+            .menu-toggle {
+                display: flex;
                 flex-direction: column;
-                gap: 18px;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                width: 42px;
+                height: 42px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                cursor: pointer;
+                z-index: 1001;
+                transition: background 0.2s;
+            }
+            .menu-toggle span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: #fff;
+                border-radius: 2px;
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+                background: var(--cyan);
+            }
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+                background: var(--cyan);
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 82%;
+                max-width: 320px;
+                height: 100vh;
+                height: 100dvh;
+                background: #090d16 !important; /* Solido 100% opaco */
+                border-left: 1px solid rgba(0, 229, 255, 0.3);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 85px 20px 30px;
+                gap: 12px;
+                z-index: 1000;
+                transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95);
+                overflow-y: auto;
+            }
+            nav.active {
+                right: 0;
+            }
+            nav a {
+                font-size: 16px;
+                font-weight: 700 !important;
+                color: #ffffff !important;
+                padding: 13px 18px;
+                border-radius: 12px;
+                background: #131a29 !important;
+                border: 1px solid rgba(255, 255, 255, 0.08) !important;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            nav a:hover, nav a:active {
+                background: #1c263b !important;
+                border-color: var(--cyan) !important;
+                color: var(--cyan) !important;
+            }
+            .nav-backdrop {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.85);
+                z-index: 999;
+            }
+            .nav-backdrop.active {
+                display: block;
             }
             .btn-group {
                 flex-direction: column;
@@ -524,7 +618,16 @@
                 <span class="brand-sub">Addon Nativo de Streaming P2P</span>
             </div>
         </a>
-        <nav>
+
+        <!-- Botón Hamburguesa Móvil (☰) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menú" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="app/" style="background: rgba(0, 229, 255, 0.15); color: var(--cyan); border: 1px solid var(--cyan); font-weight: 800; border-radius: 20px; padding: 6px 14px;">🍿 Portal Web P2P</a>
             <a href="#top">Inicio</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#catalogo">Catálogo</a>
@@ -534,6 +637,9 @@
             <a href="https://paypal.me/multicajafull" target="_blank" class="btn-nav-donate">❤️ Donar</a>
         </nav>
     </header>
+
+    <!-- Cortina de fondo oscuro para celular -->
+    <div class="nav-backdrop" id="navBackdrop" onclick="closeNav()"></div>
 
     <!-- BLOQUE 1: HERO PRINCIPAL (FANART + DESCARGAS) -->
     <section class="block-section">
@@ -545,13 +651,32 @@
                     Dile adiós a esperar raspeos eternos de enlaces caídos. <strong>LATARR CINEMA</strong> cambia el paradigma tradicional: no mostramos carátulas ciegas para luego rezar por un enlace; nuestro catálogo en la nube te muestra <strong>únicamente títulos con fuentes vivas y verificadas</strong> listas para reproducir en segundos.
                 </p>
                 <p style="font-size: 15px; color: var(--text-muted);">
-                    Cine, series y anime enfocados en audio <strong>Español Latino</strong> y subtitulado sincronizado, sin necesidad de cuentas ni mensualidades Debrid.
+                    Cine, series y anime con <strong>subtítulos al español sincronizados</strong> y pistas en <strong>audio latino</strong> verificadas, sin necesidad de cuentas ni mensualidades Debrid.
                 </p>
 
-                <!-- Los 2 Botones de Descarga Principales -->
-                <div class="btn-group">
+                <!-- Acceso al Portal Web P2P (Descargas Directas) -->
+                <div style="margin-bottom: 20px;">
+                    <a href="app/" style="display: flex; align-items: center; justify-content: center; gap: 12px; background: linear-gradient(135deg, #00e5ff 0%, #0091ea 100%); color: #000; font-weight: 800; font-size: 16px; padding: 15px 24px; border-radius: 14px; text-decoration: none; box-shadow: 0 8px 25px rgba(0, 229, 255, 0.35); transition: transform 0.2s;">
+                        <span style="font-size: 20px;">🍿</span> Entrar al Portal Web de Descargas P2P
+                        <span style="font-size: 11px; background: rgba(0, 0, 0, 0.85); color: #00e5ff; padding: 3px 8px; border-radius: 6px; font-weight: 900; letter-spacing: 0.5px;">ONLINE</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-media">
+                <div class="media-frame">
+                    <img src="img_bloque1.png?v=2" alt="Latarr Fanart Oficial">
+                </div>
+            </div>
+        </div>
+
+        <!-- FILA DE DESCARGAS TV BOX / KODI + BANNERS DE APOYO -->
+        <div class="container" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.07);">
+            <div>
+                <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">Descarga para tu Smart TV, TV Box o dispositivo con Kodi:</div>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px;">
                     <a href="descargas/plugin.video.latarr-2.0.0.zip" class="btn-download-primary" download>
-                        <span>📦</span> Descargar Addon Latarr v2.0
+                        <span>📦</span> Addon Latarr v2.0
                     </a>
                     <a href="descargas/repository.elementumorg-0.0.7.zip" class="btn-download-secondary" download>
                         <span>⚡</span> Repositorio Elementum
@@ -559,9 +684,34 @@
                 </div>
             </div>
 
-            <div class="block-media">
-                <div class="media-frame">
-                    <img src="img_bloque1.jpg" alt="Latarr Fanart Oficial">
+            <!-- FILA DE BANNERS: 728x90 y 300x250 a la derecha -->
+            <div style="display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap;">
+                <!-- Banner 728x90 -->
+                <div style="display: flex; align-items: center; justify-content: center; min-height: 90px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                    <script>
+                        atOptions = {
+                            'key' : 'e8f305343da91a6af9ad6896860e348d',
+                            'format' : 'iframe',
+                            'height' : 90,
+                            'width' : 728,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://bancadeltempoidea.org/22/e8f305343da91a6af9ad6896860e348d"></script>
+                </div>
+
+                <!-- Banner 300x250 Cuadrado (Rellena el espacio a la derecha) -->
+                <div style="display: flex; align-items: center; justify-content: center; min-height: 250px; width: 300px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                    <script>
+                        atOptions = {
+                            'key' : 'b376103ec1c5c370c5316173b26a3ada',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://bancadeltempoidea.org/22/b376103ec1c5c370c5316173b26a3ada"></script>
                 </div>
             </div>
         </div>
@@ -674,10 +824,10 @@
                 </p>
                 <ul class="feature-bullets">
                     <li>
-                        <span class="bullet-icon">🚫</span>
+                        <span class="bullet-icon">💬</span>
                         <div>
-                            <strong>Filtro Inteligente de Idioma:</strong>
-                            <div style="font-size: 14px;">Descarta automáticamente cualquier archivo que no contenga pista de audio en Español/Latino comprobada.</div>
+                            <strong>Prioridad de Subtítulos y Fuentes Vivas:</strong>
+                            <div style="font-size: 14px;">Prioriza enjambres de alta velocidad con subtítulos al español sincronizados, indexando también pistas en audio latino cuando están disponibles.</div>
                         </div>
                     </li>
                     <li>
@@ -806,9 +956,95 @@
         }
     </script>
 
-    <!-- Monetización Adsterra (Popunder & Social Bar) -->
-    <script data-cfasync="false" src="https://aarems.org/1/d7bf4e3e79adc4304995b2fb8c564403"></script>
-    <script data-cfasync="false" src="https://bancadeltempoidea.org/14/98b67dc6e6ada4ba8886e3073c38dfdf"></script>
+    <!-- Monetización Adsterra (Popunder por Visita: Máximo 2 por sesión) -->
+    <script>
+        (function() {
+            var STORAGE_KEY = 'latarr_visit_pops';
+            var MAX_POPS = 2;
+            var SESSION_TIMEOUT_MS = 45 * 60 * 1000; // 45 minutos (o nueva pestaña/visita)
+
+            function getPopData() {
+                try {
+                    // sessionStorage se reinicia cada vez que el usuario cierra y vuelve a entrar
+                    var raw = sessionStorage.getItem(STORAGE_KEY);
+                    var now = Date.now();
+                    if (!raw) return { count: 0, time: now };
+                    var data = JSON.parse(raw);
+                    // Si dejó la pestaña abierta y vuelve después de 45 min, cuenta como nueva visita
+                    if (now - data.time > SESSION_TIMEOUT_MS) {
+                        return { count: 0, time: now };
+                    }
+                    return data;
+                } catch(e) {
+                    return { count: 0, time: Date.now() };
+                }
+            }
+
+            function savePopData(data) {
+                try {
+                    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                } catch(e) {}
+            }
+
+            var popData = getPopData();
+            if (popData.count >= MAX_POPS) {
+                return; // Ya cumplió los 2 de esta visita: navegación limpia
+            }
+
+            // Interceptamos window.open para contar con precisión y bloquear a partir del 3ero en esta visita
+            var originalOpen = window.open;
+            window.open = function() {
+                popData = getPopData();
+                if (popData.count >= MAX_POPS) {
+                    return null;
+                }
+                popData.count += 1;
+                popData.time = Date.now();
+                savePopData(popData);
+                return originalOpen.apply(this, arguments);
+            };
+
+            // Cargar script de Adsterra Popunder
+            var s = document.createElement('script');
+            s.setAttribute('data-cfasync', 'false');
+            s.src = 'https://aarems.org/1/d7bf4e3e79adc4304995b2fb8c564403';
+            document.body.appendChild(s);
+        })();
+    </script>
+
+    <!-- Script Menú Hamburguesa Móvil -->
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById('mainNav');
+            var toggle = document.getElementById('menuToggle');
+            var backdrop = document.getElementById('navBackdrop');
+            if (!nav || !toggle || !backdrop) return;
+            var isActive = nav.classList.toggle('active');
+            toggle.classList.toggle('active', isActive);
+            backdrop.classList.toggle('active', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        }
+
+        function closeNav() {
+            var nav = document.getElementById('mainNav');
+            var toggle = document.getElementById('menuToggle');
+            var backdrop = document.getElementById('navBackdrop');
+            if (nav) nav.classList.remove('active');
+            if (toggle) toggle.classList.remove('active');
+            if (backdrop) backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var nav = document.getElementById('mainNav');
+            if (nav) {
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', closeNav);
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
