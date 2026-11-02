@@ -1561,7 +1561,6 @@
             }
 
             const poster = item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : '../icon.png';
-            const qualityClass = (item.quality === '4K') ? 'badge-4k' : (item.quality === '1080P' ? 'badge-1080p' : 'badge-hd');
             const rating = item.rating ? item.rating.toFixed(1) : '8.0';
 
             // Tipo de medio para buscar enlaces (en búsqueda global o por pestaña)
@@ -1577,7 +1576,7 @@
                 <div class="card" tabindex="0" data-index="${index}" onclick="openDownloadModal(${item.tmdb_id}, '${mediaKind}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
                     <div class="card-poster">
                         <img src="${poster}" alt="${item.title || item.clean_title}" loading="lazy" onerror="this.src='../icon.png'">
-                        <span class="badge-quality ${qualityClass}">${item.quality || 'HD'}</span>
+                        <span class="badge-quality badge-1080p">1080P</span>
                         <span class="badge-rating">⭐ ${rating}</span>
                     </div>
                     <div class="card-body">
