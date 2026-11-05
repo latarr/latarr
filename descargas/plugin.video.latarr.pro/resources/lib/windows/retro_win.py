@@ -139,20 +139,6 @@ class LatarrRetroDialog(xbmcgui.WindowXMLDialog):
     def onAction(self, action):
         action_id = action.getId()
 
-        # OK/Enter sobre la lista lanza el juego directamente
-        if action_id in (xbmcgui.ACTION_SELECT_ITEM, xbmcgui.ACTION_MOUSE_LEFT_CLICK):
-            try:
-                focused = self.getFocusId()
-                if focused == 6001:
-                    ctrl = self.getControl(6001)
-                    pos  = ctrl.getSelectedPosition()
-                    if 0 <= pos < len(self._juegos_vista):
-                        self._launch_game(self._juegos_vista[pos])
-                    return
-            except Exception:
-                pass
-
-
         if action_id in (xbmcgui.ACTION_PREVIOUS_MENU, xbmcgui.ACTION_NAV_BACK):
             self._closed = True
             self.close()
@@ -208,26 +194,27 @@ class LatarrRetroDialog(xbmcgui.WindowXMLDialog):
             self.close()
 
     def _launch_game(self, juego):
-        """Muestra confirmación y lanza el juego."""
+        """Muestra confirmación, cierra la ventana y lanza el juego."""
         titulo = juego.get('titulo', 'Juego')
-
-        # Confirmación antes de descargar
-        plat = juego.get('plataforma', '')
-        desc = juego.get('descripcion', '')
-        jugs = juego.get('jugadores', 1)
+        plat   = juego.get('plataforma', '')
+        desc   = juego.get('descripcion', '')
+        jugs   = juego.get('jugadores', 1)
 
         ok = xbmcgui.Dialog().yesno(
-            f'🕹  {titulo}',
-            f'[B]{plat}[/B] · {juego.get("anio", "")}\n\n'
-            f'{desc}\n\n'
-            f'[COLOR FFAAAAAA]{jugs} Jugador{"es" if jugs > 1 else ""}[/COLOR]\n\n'
-            '¿Iniciar juego?',
+            titulo,
+            f'{desc}\n\n{jugs} Jugador{"es" if jugs > 1 else ""}\n\n¿Iniciar juego?',
             nolabel='Cancelar',
-            yeslabel='¡Jugar!'
+            yeslabel='Jugar!'
         )
 
         if not ok:
             return
+
+        # IMPORTANTE: cerrar la ventana ANTES de lanzar
+        # Player().play() no funciona desde dentro de un WindowXMLDialog activo
+        self._closed = True
+        self.close()
+        xbmc.sleep(300)
 
         # Lanzar vía api
         api.launch_retro_game(juego)

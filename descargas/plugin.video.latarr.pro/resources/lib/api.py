@@ -580,11 +580,37 @@ def launch_retro_game(juego):
         pDialog.close()
 
         # ── 4. Lanzar con RetroPlayer ─────────────────────────
-        li = xbmcgui.ListItem(label=titulo, path=rom_local)
-        li.setProperty('GameClient', core)
-        xbmc.Player().play(rom_local, li)
-        xbmc.log(f'[LATARR-RETRO] Play enviado: {rom_local} con {core}', xbmc.LOGINFO)
-        return True
+        # Intentar 3 metodos en orden hasta que uno funcione
+        rom_safe = rom_local.replace('\\', '/')
+
+        # Metodo A: Player().play con ListItem y GameClient
+        try:
+            li = xbmcgui.ListItem(label=titulo, path=rom_local)
+            li.setProperty('GameClient', core)
+            xbmc.Player().play(rom_local, li)
+            xbmc.log(f'[LATARR-RETRO] Metodo A OK: {rom_local}', xbmc.LOGINFO)
+            return True
+        except Exception as e1:
+            xbmc.log(f'[LATARR-RETRO] Metodo A fallo: {e1}', xbmc.LOGWARNING)
+
+        # Metodo B: executebuiltin PlayMedia
+        try:
+            xbmc.executebuiltin(f'PlayMedia("{rom_safe}")')
+            xbmc.log(f'[LATARR-RETRO] Metodo B OK: PlayMedia', xbmc.LOGINFO)
+            return True
+        except Exception as e2:
+            xbmc.log(f'[LATARR-RETRO] Metodo B fallo: {e2}', xbmc.LOGWARNING)
+
+        # Metodo C: RunPlugin con ruta directa
+        try:
+            xbmc.executebuiltin(f'RunPlugin({rom_safe})')
+            xbmc.log(f'[LATARR-RETRO] Metodo C OK: RunPlugin', xbmc.LOGINFO)
+            return True
+        except Exception as e3:
+            xbmc.log(f'[LATARR-RETRO] Metodo C fallo: {e3}', xbmc.LOGWARNING)
+
+        xbmcgui.Dialog().notification('LATARR RETRO', 'No se pudo lanzar el juego. Verifica que RetroPlayer este habilitado en Kodi.', xbmcgui.NOTIFICATION_ERROR, 6000)
+        return False
 
     except Exception as e:
         try:
