@@ -1,0 +1,111 @@
+{
+  "pais": "CO",
+  "nombre_pais": "Colombia",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 9,
+  "categorias": [
+    "Nacionales",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "co-canal-institucional",
+      "nombre": "Canal Institucional",
+      "pais": "CO",
+      "categoria": "Nacionales",
+      "logo": "https://cdn.m3u.cl/logo/120_Canal_Institucional.png",
+      "url": "https://streaming.rtvc.gov.co/TV_CanalInstitucional_live/smil:live.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "120",
+      "destacado": false
+    },
+    {
+      "id": "co-senal-colombia",
+      "nombre": "Señal Colombia",
+      "pais": "CO",
+      "categoria": "Nacionales",
+      "logo": "https://cdn.m3u.cl/logo/128_Senal_Colombia.png",
+      "url": "https://streaming.rtvc.gov.co/TV_Senal_Colombia_live/smil:live.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "128",
+      "destacado": false
+    },
+    {
+      "id": "co-canal-vision-dorada",
+      "nombre": "Canal Visión Dorada",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/122_Canal_Vision_Dorada.png",
+      "url": "https://movil.ejeserver.com/live/visiondorada.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "122",
+      "destacado": false
+    },
+    {
+      "id": "co-oasis-tv",
+      "nombre": "Oasis TV",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/862_Oasis_TV.png",
+      "url": "https://5e85d90130e77.streamlock.net/6020/6020/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "862",
+      "destacado": false
+    },
+    {
+      "id": "co-suram",
+      "nombre": "Suram",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/129_Suram.png",
+      "url": "https://livetv.305streamhd.com:3111/live/suramtvlive.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "129",
+      "destacado": false
+    },
+    {
+      "id": "co-tele-familia",
+      "nombre": "Tele Familia",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/187_Tele_Familia.png",
+      "url": "https://stmv2.voxtvhd.com.br/telefamilia/telefamilia/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "187",
+      "destacado": false
+    },
+    {
+      "id": "co-tele-islas",
+      "nombre": "Tele Islas",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/137_Tele_Islas.png",
+      "url": "https://5ab772334c39c.streamlock.net/live-teleislas/_definst_/teleislas/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "137",
+      "destacado": false
+    },
+    {
+      "id": "co-telepacifico",
+      "nombre": "Telepacífico",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/135_Telepacifico.png",
+      "url": "https://play.cdn.enetres.net/6E5C615AA5FF4123ACAF0DAB57B7B8DC021/022/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "135",
+      "destacado": false
+    },
+    {
+      "id": "co-veo-tv",
+      "nombre": "Veo TV",
+      "pais": "CO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1157_Veo_TV.png",
+      "url": "https://movil.ejeserver.com/live/veotv.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1157",
+      "destacado": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "pais": "EC",
+  "nombre_pais": "Ecuador",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 4,
+  "categorias": [
+    "Nacionales",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "ec-ecuavisa",
+      "nombre": "Ecuavisa",
+      "pais": "EC",
+      "categoria": "Nacionales",
+      "logo": "https://cdn.m3u.cl/logo/1567_Ecuavisa.png",
+      "url": "https://origin.dpsgo.com/ssai/event/GyPkTVDZSXGhpOvxPK7m2g/master.m3u8?PlaylistM3UCL",
+      "alternativas": [
+        "https://redirector.rudo.video/hls-video/c54ac2799874375c81c1672abb700870537c5223/ecuavisa/ecuavisa.smil/playlist.m3u8?PlaylistM3UCL"
+      ],
+      "tvg_id": "1567",
+      "destacado": false
+    },
+    {
+      "id": "ec-america-estereo",
+      "nombre": "America Estereo",
+      "pais": "EC",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/95_America_Estereo.png",
+      "url": "https://video2.makrodigital.com/americaestereoquito/americaestereoquito/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "95",
+      "destacado": false
+    },
+    {
+      "id": "ec-red-tve-ventanas",
+      "nombre": "Red TVE Ventanas",
+      "pais": "EC",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1286_Red_TVE_Ventanas.png",
+      "url": "https://s2.tvdatta.com:3825/live/redtvelive.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1286",
+      "destacado": false
+    },
+    {
+      "id": "ec-tv-puruwa",
+      "nombre": "TV Puruwa",
+      "pais": "EC",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/110_TV_Puruwa.png",
+      "url": "https://live.tvcontrolcp.com:1936/puruwatv/puruwatv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "110",
+      "destacado": false
+    }
+  ]
+}

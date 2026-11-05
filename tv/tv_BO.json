@@ -1,0 +1,22 @@
+{
+  "pais": "BO",
+  "nombre_pais": "Bolivia",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 1,
+  "categorias": [
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "bo-red-ad-venir-internacional",
+      "nombre": "Red AD Venir Internacional",
+      "pais": "BO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/92_Red_AD_Venir_Internacional.png",
+      "url": "https://streamer1.streamhost.org/salive/GMIredadvenirh/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "92",
+      "destacado": false
+    }
+  ]
+}

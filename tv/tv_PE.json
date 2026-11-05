@@ -1,0 +1,313 @@
+{
+  "pais": "PE",
+  "nombre_pais": "Perú",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 27,
+  "categorias": [
+    "Nacionales",
+    "Noticias",
+    "Música",
+    "Cultura",
+    "Religión",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "pe-latina",
+      "nombre": "Latina",
+      "pais": "PE",
+      "categoria": "Nacionales",
+      "logo": "https://cdn.m3u.cl/logo/1657_Latina.png",
+      "url": "https://redirector.rudo.video/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1657",
+      "destacado": false
+    },
+    {
+      "id": "pe-latina-noticias",
+      "nombre": "Latina Noticias",
+      "pais": "PE",
+      "categoria": "Noticias",
+      "logo": "https://cdn.m3u.cl/logo/1742_Latina_Noticias.png",
+      "url": "https://redirector.rudo.video/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latinanoticias/latinanoticias.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1742",
+      "destacado": false
+    },
+    {
+      "id": "pe-turbo-mix-tv",
+      "nombre": "Turbo Mix TV",
+      "pais": "PE",
+      "categoria": "Música",
+      "logo": "https://cdn.m3u.cl/logo/43_Turbo_Mix_TV.png",
+      "url": "https://7.innovatestream.pe:19360/turbomixoficial/turbomixoficial.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "43",
+      "destacado": false
+    },
+    {
+      "id": "pe-vision-musica-tv",
+      "nombre": "Vision Musica TV",
+      "pais": "PE",
+      "categoria": "Música",
+      "logo": "https://cdn.m3u.cl/logo/876_Vision_Musica_TV.png",
+      "url": "https://videoserver.tmcreativos.com:19360/visionmusica/visionmusica.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "876",
+      "destacado": false
+    },
+    {
+      "id": "pe-cultura-24-tv",
+      "nombre": "Cultura 24 TV",
+      "pais": "PE",
+      "categoria": "Cultura",
+      "logo": "https://cdn.m3u.cl/logo/696_Cultura_24_TV.png",
+      "url": "https://www.opencaster.com/resources/hls_stream/cultura24.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "696",
+      "destacado": false
+    },
+    {
+      "id": "pe-emanuel7-tv",
+      "nombre": "Emanuel7 TV",
+      "pais": "PE",
+      "categoria": "Religión",
+      "logo": "https://cdn.m3u.cl/logo/1555_Emanuel7_TV.png",
+      "url": "https://stv1.voxbr.com.br/emanuel7tv/emanuel7tv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1555",
+      "destacado": false
+    },
+    {
+      "id": "pe-autentica-tv",
+      "nombre": "Autentica TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1089_Autentica_TV.png",
+      "url": "https://live.obslivestream.com/autenticatvmux/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1089",
+      "destacado": false
+    },
+    {
+      "id": "pe-canal-8-catacaos",
+      "nombre": "Canal 8 Catacaos",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1097_Canal_8_Catacaos.png",
+      "url": "https://live.obslivestream.com/canal8/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1097",
+      "destacado": false
+    },
+    {
+      "id": "pe-controversia-tv",
+      "nombre": "Controversia TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1188_Controversia_TV.png",
+      "url": "https://live.obslivestream.com/controversiatv/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1188",
+      "destacado": false
+    },
+    {
+      "id": "pe-cr-tv",
+      "nombre": "CR TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1180_CR_TV.png",
+      "url": "https://live.obslivestream.com/crtvmux/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1180",
+      "destacado": false
+    },
+    {
+      "id": "pe-exitosa",
+      "nombre": "Exitosa",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/691_Exitosa.png",
+      "url": "https://streamtv.onliv3.online:1936/exito-tv/exito-tv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "691",
+      "destacado": false
+    },
+    {
+      "id": "pe-foro-tv",
+      "nombre": "Foro TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1659_Foro_TV.png",
+      "url": "https://mc.servidor.stream:19360/8274/8274.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1659",
+      "destacado": false
+    },
+    {
+      "id": "pe-impacto-tv",
+      "nombre": "Impacto TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1740_Impacto_TV.png",
+      "url": "https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1740",
+      "destacado": false
+    },
+    {
+      "id": "pe-latina-clasicos",
+      "nombre": "Latina Clasicos",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1741_Latina_Clasicos.png",
+      "url": "https://redirector.rudo.video/hls-video/plus226/latina2/latina2.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1741",
+      "destacado": false
+    },
+    {
+      "id": "pe-mega-tv-jaen",
+      "nombre": "Mega TV Jaen",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1491_Mega_TV_Jaen.png",
+      "url": "https://7.innovatestream.pe:19360/megatvjaen/megatvjaen.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1491",
+      "destacado": false
+    },
+    {
+      "id": "pe-nativa",
+      "nombre": "Nativa",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/684_Nativa.png",
+      "url": "https://oneplay.iptvperu.tv:1936/static/nativa1.stream/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "684",
+      "destacado": false
+    },
+    {
+      "id": "pe-ok-teve",
+      "nombre": "OK TeVe",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1095_OK_TeVe.png",
+      "url": "https://live.obslivestream.com/oktv/video.m3u8?token=Bk-DXAXulO1OV0&PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1095",
+      "destacado": false
+    },
+    {
+      "id": "pe-ovacion",
+      "nombre": "Ovacion",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/699_Ovacion.png",
+      "url": "https://5c3fb01839654.streamlock.net:1963/iptvovacion1/liveovacion1tv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "699",
+      "destacado": false
+    },
+    {
+      "id": "pe-palmeras-tv",
+      "nombre": "Palmeras TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1290_Palmeras_TV.png",
+      "url": "https://play.agenciastreaming.com:8081/palmerastv/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1290",
+      "destacado": false
+    },
+    {
+      "id": "pe-panc-tv-peru",
+      "nombre": "PANC TV Peru",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1578_PANC_TV_Peru.png",
+      "url": "https://panctv.ddns.net/hls/pe/live.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1578",
+      "destacado": false
+    },
+    {
+      "id": "pe-tele-selva",
+      "nombre": "Tele Selva",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1546_Tele_Selva.png",
+      "url": "https://7.innovatestream.pe:19360/tvnoticiassatipo/tvnoticiassatipo.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1546",
+      "destacado": false
+    },
+    {
+      "id": "pe-telecolor-tv",
+      "nombre": "Telecolor TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1189_Telecolor_TV.png",
+      "url": "https://live.obslivestream.com/telecolormux/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1189",
+      "destacado": false
+    },
+    {
+      "id": "pe-tv-en-linea-cusco",
+      "nombre": "TV en linea Cusco",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1590_TV_en_linea_Cusco.png",
+      "url": "https://s4.tvdatta.com:3450/live/tvenlinealive.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1590",
+      "destacado": false
+    },
+    {
+      "id": "pe-tvperuanisima",
+      "nombre": "TVperuanisima",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/686_TVperuanisima.png",
+      "url": "https://k20.usastreams.com:8081/tvperuanisima/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "686",
+      "destacado": false
+    },
+    {
+      "id": "pe-uranio-tv",
+      "nombre": "Uranio TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1094_Uranio_TV.png",
+      "url": "https://live.obslivestream.com/uraniotv/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1094",
+      "destacado": false
+    },
+    {
+      "id": "pe-via-alto-mayo-tv",
+      "nombre": "Via Alto Mayo TV",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1191_Via_Alto_Mayo_TV.png",
+      "url": "https://live.obslivestream.com/viaaltomayomux/index.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1191",
+      "destacado": false
+    },
+    {
+      "id": "pe-via-television-tarapoto",
+      "nombre": "Via Television Tarapoto",
+      "pais": "PE",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/703_Via_Television_Tarapoto.png",
+      "url": "https://videoserver.tmcreativos.com:19360/cablerasvia/cablerasvia.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "703",
+      "destacado": false
+    }
+  ]
+}

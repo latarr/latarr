@@ -1,0 +1,265 @@
+{
+  "pais": "MX",
+  "nombre_pais": "México",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 23,
+  "categorias": [
+    "Noticias",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "mx-8-ntv",
+      "nombre": "8 NTV",
+      "pais": "MX",
+      "categoria": "Noticias",
+      "logo": "https://cdn.m3u.cl/logo/642_8_NTV.png",
+      "url": "https://60417ddeaf0d9.streamlock.net:443/ntv/videontv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "642",
+      "destacado": false
+    },
+    {
+      "id": "mx-amx-noticias",
+      "nombre": "AMX Noticias",
+      "pais": "MX",
+      "categoria": "Noticias",
+      "logo": "https://cdn.m3u.cl/logo/1042_AMX_Noticias.png",
+      "url": "https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1042",
+      "destacado": false
+    },
+    {
+      "id": "mx-canal-66-el-canal-de-las-noticias",
+      "nombre": "Canal 66 El Canal de las Noticias",
+      "pais": "MX",
+      "categoria": "Noticias",
+      "logo": "https://cdn.m3u.cl/logo/1174_Canal_66_El_Canal_de_las_Noticias.png",
+      "url": "https://60417ddeaf0d9.streamlock.net:443/canal66/smil:canal66.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1174",
+      "destacado": false
+    },
+    {
+      "id": "mx-adn-40",
+      "nombre": "ADN 40",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/658_ADN_40.png",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "658",
+      "destacado": false
+    },
+    {
+      "id": "mx-alcance-tv",
+      "nombre": "Alcance TV",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/865_Alcance_TV.png",
+      "url": "https://5bf8041cb3fed.streamlock.net:443/AlcanceTV/AlcanceTV/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "865",
+      "destacado": false
+    },
+    {
+      "id": "mx-canal-10-chiapas",
+      "nombre": "Canal 10 Chiapas",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/660_Canal_10_Chiapas.png",
+      "url": "https://5ca9af4645e15.streamlock.net:443/chiapas/videochiapas/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "660",
+      "destacado": false
+    },
+    {
+      "id": "mx-conecta-tv",
+      "nombre": "Conecta TV",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/16_Conecta_TV.png",
+      "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "16",
+      "destacado": true
+    },
+    {
+      "id": "mx-giktvmx",
+      "nombre": "GikTVMX",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1409_GikTVMX.png",
+      "url": "https://pistream.ddns.net/hls/stream.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1409",
+      "destacado": false
+    },
+    {
+      "id": "mx-mexiquense-tv",
+      "nombre": "Mexiquense TV",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/652_Mexiquense_TV.png",
+      "url": "https://5ca3e84a76d30.streamlock.net:443/mexiquense/videomexiquense/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "652",
+      "destacado": false
+    },
+    {
+      "id": "mx-multimedios-cdmx",
+      "nombre": "Multimedios CDMX",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/667_Multimedios_CDMX.png",
+      "url": "https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "667",
+      "destacado": false
+    },
+    {
+      "id": "mx-multimedios-guadalajara",
+      "nombre": "Multimedios Guadalajara",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/668_Multimedios_Guadalajara.png",
+      "url": "https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "668",
+      "destacado": false
+    },
+    {
+      "id": "mx-multimedios-laguna",
+      "nombre": "Multimedios Laguna",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/669_Multimedios_Laguna.png",
+      "url": "https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "669",
+      "destacado": false
+    },
+    {
+      "id": "mx-multimedios-monterrey",
+      "nombre": "Multimedios Monterrey",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/670_Multimedios_Monterrey.png",
+      "url": "https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "670",
+      "destacado": false
+    },
+    {
+      "id": "mx-rcg-1-saltillo",
+      "nombre": "RCG 1 Saltillo",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/673_RCG_1_Saltillo.png",
+      "url": "https://video1.getstreamhosting.com:1936/8172/8172/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "673",
+      "destacado": false
+    },
+    {
+      "id": "mx-rtq-queretaro",
+      "nombre": "RTQ Queretaro",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/676_RTQ_Queretaro.png",
+      "url": "https://59d39900ebfb8.streamlock.net/rytqrolive/rytqrolive/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "676",
+      "destacado": false
+    },
+    {
+      "id": "mx-sizart-canal-24-zacatecas",
+      "nombre": "SIZART Canal 24 Zacatecas",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/646_SIZART_Canal_24_Zacatecas.png",
+      "url": "https://5ca9af4645e15.streamlock.net:443/zacatecas/videozacatecas/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "646",
+      "destacado": false
+    },
+    {
+      "id": "mx-teleritmo",
+      "nombre": "Teleritmo",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/680_Teleritmo.png",
+      "url": "https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "680",
+      "destacado": false
+    },
+    {
+      "id": "mx-tempus-stream",
+      "nombre": "Tempus Stream",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1606_Tempus_Stream.png",
+      "url": "https://video1.getstreamhosting.com:1936/8116/8116/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1606",
+      "destacado": false
+    },
+    {
+      "id": "mx-tvp-culiacan",
+      "nombre": "TVP Culiacan",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/651_TVP_Culiacan.png",
+      "url": "https://5ca3e84a76d30.streamlock.net:443/gpacifico1/smil:gpculiacan.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "651",
+      "destacado": false
+    },
+    {
+      "id": "mx-tvp-los-mochis",
+      "nombre": "TVP Los Mochis",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/648_TVP_Los_Mochis.png",
+      "url": "https://5ca3e84a76d30.streamlock.net:443/gpacifico2/smil:mochis.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "648",
+      "destacado": false
+    },
+    {
+      "id": "mx-tvp-mazatlan",
+      "nombre": "TVP Mazatlan",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/649_TVP_Mazatlan.png",
+      "url": "https://5ca3e84a76d30.streamlock.net:443/gpacifico4/smil:mazatlan.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "649",
+      "destacado": false
+    },
+    {
+      "id": "mx-tvp-obregon",
+      "nombre": "TVP Obregon",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/650_TVP_Obregon.png",
+      "url": "https://5ca3e84a76d30.streamlock.net:443/gpacifico3/smil:obregon.smil/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "650",
+      "destacado": false
+    },
+    {
+      "id": "mx-umtv",
+      "nombre": "UMTV",
+      "pais": "MX",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/641_UMTV.png",
+      "url": "https://60417ddeaf0d9.streamlock.net:443/montemorelos/videomontemorelos/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "641",
+      "destacado": false
+    }
+  ]
+}

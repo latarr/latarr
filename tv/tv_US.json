@@ -1,0 +1,22 @@
+{
+  "pais": "US",
+  "nombre_pais": "Estados Unidos",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 1,
+  "categorias": [
+    "Música"
+  ],
+  "canales": [
+    {
+      "id": "us-salsagorda-television",
+      "nombre": "Salsagorda Television",
+      "pais": "US",
+      "categoria": "Música",
+      "logo": "https://cdn.m3u.cl/logo/1557_Salsagorda_Television.png",
+      "url": "https://www.televinterserver.com:2020/salsagordatvs/salsagordatvs.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1557",
+      "destacado": false
+    }
+  ]
+}

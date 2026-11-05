@@ -1,0 +1,77 @@
+{
+  "pais": "DO",
+  "nombre_pais": "República Dominicana",
+  "actualizado": "2026-11-04T18:39:47",
+  "total": 6,
+  "categorias": [
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "do-acento-tv",
+      "nombre": "Acento TV",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/709_Acento_TV.png",
+      "url": "http://acentotv01.streamprolive.com/hls/live.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "709",
+      "destacado": false
+    },
+    {
+      "id": "do-guaymate-tv",
+      "nombre": "Guaymate TV",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1011_Guaymate_TV.png",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/guaymatetv/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "1011",
+      "destacado": false
+    },
+    {
+      "id": "do-microvision",
+      "nombre": "Microvision",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/728_Microvision.jpg",
+      "url": "https://streaming.telecablecentral.com.do/live/MicroHD/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "728",
+      "destacado": false
+    },
+    {
+      "id": "do-teleradio-norte",
+      "nombre": "Teleradio Norte",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/749_Teleradio_Norte.jpg",
+      "url": "https://angelistic.live:3785/hybrid/play.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "749",
+      "destacado": false
+    },
+    {
+      "id": "do-teleunion",
+      "nombre": "Teleunion",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/751_Teleunion.jpg",
+      "url": "http://server3.prostudionetwork.com:1945/teleunion/TU/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "751",
+      "destacado": false
+    },
+    {
+      "id": "do-vallevision",
+      "nombre": "Vallevisión",
+      "pais": "DO",
+      "categoria": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/760_Vallevision.png",
+      "url": "https://streaming.telecablecentral.com.do/Vallevision/ValleHD/playlist.m3u8?PlaylistM3UCL",
+      "alternativas": [],
+      "tvg_id": "760",
+      "destacado": false
+    }
+  ]
+}

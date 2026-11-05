@@ -1,0 +1,106 @@
+{
+  "actualizado": "2026-11-04T18:39:47",
+  "paises": [
+    {
+      "codigo": "CL",
+      "nombre": "Chile",
+      "archivo": "tv_CL.json",
+      "total": 313,
+      "categorias": {
+        "Nacionales": 11,
+        "Noticias": 6,
+        "Música": 17,
+        "Deportes": 2,
+        "Cultura": 2,
+        "Religión": 10,
+        "Regionales": 196,
+        "Radios con cámara": 69
+      }
+    },
+    {
+      "codigo": "AR",
+      "nombre": "Argentina",
+      "archivo": "tv_AR.json",
+      "total": 79,
+      "categorias": {
+        "Nacionales": 1,
+        "Noticias": 1,
+        "Música": 3,
+        "Religión": 2,
+        "Regionales": 64,
+        "Radios con cámara": 8
+      }
+    },
+    {
+      "codigo": "PE",
+      "nombre": "Perú",
+      "archivo": "tv_PE.json",
+      "total": 27,
+      "categorias": {
+        "Nacionales": 1,
+        "Noticias": 1,
+        "Música": 2,
+        "Cultura": 1,
+        "Religión": 1,
+        "Regionales": 21
+      }
+    },
+    {
+      "codigo": "MX",
+      "nombre": "México",
+      "archivo": "tv_MX.json",
+      "total": 23,
+      "categorias": {
+        "Noticias": 3,
+        "Regionales": 20
+      }
+    },
+    {
+      "codigo": "CO",
+      "nombre": "Colombia",
+      "archivo": "tv_CO.json",
+      "total": 9,
+      "categorias": {
+        "Nacionales": 2,
+        "Regionales": 7
+      }
+    },
+    {
+      "codigo": "DO",
+      "nombre": "República Dominicana",
+      "archivo": "tv_DO.json",
+      "total": 6,
+      "categorias": {
+        "Regionales": 6
+      }
+    },
+    {
+      "codigo": "EC",
+      "nombre": "Ecuador",
+      "archivo": "tv_EC.json",
+      "total": 4,
+      "categorias": {
+        "Nacionales": 1,
+        "Regionales": 3
+      }
+    },
+    {
+      "codigo": "US",
+      "nombre": "Estados Unidos",
+      "archivo": "tv_US.json",
+      "total": 1,
+      "categorias": {
+        "Música": 1
+      }
+    },
+    {
+      "codigo": "BO",
+      "nombre": "Bolivia",
+      "archivo": "tv_BO.json",
+      "total": 1,
+      "categorias": {
+        "Regionales": 1
+      }
+    }
+  ]
+}
