@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Interfaz">
+        <setting id="ui_mode" type="enum" label="Estilo de Interfaz" values="Apple TV Cinema (Predeterminado)|Listas Clásicas de Kodi" default="0" />
+    </category>
+    <category label="Catálogo">
+        <setting id="github_url" type="text" label="URL del catálogo" default="https://latarr-repo.pages.dev" />
+    </category>
+    <category label="Reproducción">
+        <setting id="torrent_engine" type="enum" label="Motor Torrent" values="Elementum (Predeterminado)|Torrest" default="0" />
+    </category>
+</settings>

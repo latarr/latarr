@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">8100</defaultcontrol>
+
+    <controls>
+        <!-- 1. Fondo base obsidiana 100% sólido y opaco (bloquea totalmente la ventana inferior) -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>solid_black.png</texture>
+        </control>
+
+        <!-- Fanart Latarr estático como fondo sutil -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>scale</aspectratio>
+            <colordiffuse>22FFFFFF</colordiffuse>
+            <texture>fanart_bg.jpg</texture>
+        </control>
+
+        <!-- Viñeta degradada Apple TV -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>vignette_hero.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+
+        <!-- Franja oscura de cabecera -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>136</height>
+            <texture colordiffuse="FF0B0E14">solid_black.png</texture>
+        </control>
+
+        <!-- 2. Título de la sección -->
+        <control type="label">
+            <left>70</left>
+            <top>30</top>
+            <width>390</width>
+            <height>42</height>
+            <font>font30_title</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>$INFO[Window.Property(tv_title)]</label>
+        </control>
+
+        <!-- Botón Volver (ID 8005) - Ancho 210 para que quepa 'Volver a Inicio' completo -->
+        <control type="button" id="8005">
+            <left>480</left>
+            <top>28</top>
+            <width>210</width>
+            <height>44</height>
+            <label>$INFO[Window.Property(btn_back_label)]</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFFFFFF</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>8100</ondown>
+            <onleft>8002</onleft>
+            <onright>8001</onright>
+        </control>
+
+        <!-- Botón Filtro País (ID 8001) - Ancho 220 -->
+        <control type="button" id="8001">
+            <left>705</left>
+            <top>28</top>
+            <width>220</width>
+            <height>44</height>
+            <label>$INFO[Window.Property(filter_country)]</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFFFFFF</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>8100</ondown>
+            <onleft>8005</onleft>
+            <onright>8002</onright>
+        </control>
+
+        <!-- Botón Filtro Categoría (ID 8002) - Ancho 260 para que quepa 'Categoría: Todas' -->
+        <control type="button" id="8002">
+            <left>940</left>
+            <top>28</top>
+            <width>260</width>
+            <height>44</height>
+            <label>$INFO[Window.Property(filter_category)]</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFFFFFF</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>8100</ondown>
+            <onleft>8001</onleft>
+            <onright>8005</onright>
+        </control>
+
+        <!-- 3. Sub-barra: canal/país enfocado y categoría/total -->
+        <control type="label">
+            <left>70</left>
+            <top>88</top>
+            <width>1350</width>
+            <height>32</height>
+            <font>font13</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>$INFO[Window.Property(selected_name)]  •  [COLOR FFD0D4DC]$INFO[Window.Property(selected_extra)][/COLOR]</label>
+        </control>
+
+        <!-- Píldora de contador -->
+        <control type="group">
+            <left>1440</left>
+            <top>86</top>
+            <width>410</width>
+            <height>32</height>
+            <control type="image">
+                <left>0</left><top>0</top><width>410</width><height>32</height>
+                <texture border="8">badge_bg.png</texture>
+            </control>
+            <control type="label">
+                <left>10</left><top>0</top><width>390</width><height>32</height>
+                <font>font12</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>FFFFFFFF</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>$INFO[Window.Property(total_count_label)]</label>
+            </control>
+        </control>
+
+        <!-- Separador sutil -->
+        <control type="image">
+            <left>70</left>
+            <top>132</top>
+            <width>1780</width>
+            <height>1</height>
+            <texture colordiffuse="33FFFFFF">button_focus.png</texture>
+        </control>
+
+        <!-- 4. Cuadrícula de Canales / Países estilo Apple TV (Panel 6 columnas) -->
+        <control type="panel" id="8100">
+            <left>70</left>
+            <top>145</top>
+            <width>1780</width>
+            <height>900</height>
+            <orientation>vertical</orientation>
+            <scrolltime>200</scrolltime>
+            <onup>8005</onup>
+            <pagecontrol>60</pagecontrol>
+
+            <itemlayout width="296" height="190">
+                <!-- Tarjeta base oscura -->
+                <control type="image">
+                    <left>10</left>
+                    <top>5</top>
+                    <width>276</width>
+                    <height>175</height>
+                    <texture border="14">button_normal.png</texture>
+                    <colordiffuse>D9151821</colordiffuse>
+                </control>
+                <!-- Logo o Bandera: aspecto proporcional REAL (keep) centrado sin estirarse -->
+                <control type="image">
+                    <left>18</left>
+                    <top>12</top>
+                    <width>260</width>
+                    <height>102</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture fallback="button_normal.png">$INFO[ListItem.Art(thumb)]</texture>
+                </control>
+                <!-- Placa de texto inferior -->
+                <control type="image">
+                    <left>10</left>
+                    <top>118</top>
+                    <width>276</width>
+                    <height>62</height>
+                    <texture border="12">button_normal.png</texture>
+                    <colordiffuse>F20B0E14</colordiffuse>
+                </control>
+                <!-- Nombre del canal / país -->
+                <control type="label">
+                    <left>16</left>
+                    <top>122</top>
+                    <width>264</width>
+                    <height>28</height>
+                    <font>font13</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <!-- Subtítulo (Categoría o Total Canales) -->
+                <control type="label">
+                    <left>16</left>
+                    <top>150</top>
+                    <width>264</width>
+                    <height>22</height>
+                    <font>font11</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FF8E95A5</textcolor>
+                    <label>$INFO[ListItem.Property(subtitle)]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout width="296" height="190">
+                <!-- Tarjeta base oscura en foco -->
+                <control type="image">
+                    <left>10</left>
+                    <top>5</top>
+                    <width>276</width>
+                    <height>175</height>
+                    <texture border="14">button_normal.png</texture>
+                    <colordiffuse>FF1E222D</colordiffuse>
+                </control>
+                <!-- Marco blanco brillante con halo neón sobre la tarjeta -->
+                <control type="image">
+                    <left>-2</left>
+                    <top>-7</top>
+                    <width>300</width>
+                    <height>199</height>
+                    <texture border="24">frame_focus.png</texture>
+                    <visible>Control.HasFocus(8100)</visible>
+                </control>
+                <!-- Logo o Bandera: aspecto proporcional REAL (keep) centrado sin estirarse -->
+                <control type="image">
+                    <left>18</left>
+                    <top>12</top>
+                    <width>260</width>
+                    <height>102</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture fallback="button_normal.png">$INFO[ListItem.Art(thumb)]</texture>
+                </control>
+                <!-- Placa de texto inferior con contraste máximo -->
+                <control type="image">
+                    <left>10</left>
+                    <top>118</top>
+                    <width>276</width>
+                    <height>62</height>
+                    <texture border="8">badge_bg.png</texture>
+                    <colordiffuse>F2000000</colordiffuse>
+                </control>
+                <!-- Nombre en foco: Blanco Brillante con Sombra -->
+                <control type="label">
+                    <left>16</left>
+                    <top>122</top>
+                    <width>264</width>
+                    <height>28</height>
+                    <font>font13</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+                <!-- Subtítulo en foco -->
+                <control type="label">
+                    <left>16</left>
+                    <top>150</top>
+                    <width>264</width>
+                    <height>22</height>
+                    <font>font11</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFD0D4DC</textcolor>
+                    <label>$INFO[ListItem.Property(subtitle)]</label>
+                </control>
+            </focusedlayout>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">6001</defaultcontrol>
+
+    <controls>
+        <!-- Fondo solido negro -->
+        <control type="image">
+            <left>0</left><top>0</top><width>1920</width><height>1080</height>
+            <texture>solid_black.png</texture>
+        </control>
+
+        <!-- Fondo fanart sutil -->
+        <control type="image">
+            <left>0</left><top>0</top><width>1920</width><height>1080</height>
+            <aspectratio>scale</aspectratio>
+            <colordiffuse>18FFFFFF</colordiffuse>
+            <texture>fanart_bg.jpg</texture>
+        </control>
+
+        <!-- Vigneta Apple TV -->
+        <control type="image">
+            <left>0</left><top>0</top><width>1920</width><height>1080</height>
+            <texture>vignette_hero.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+
+        <!-- Franja oscura cabecera -->
+        <control type="image">
+            <left>0</left><top>0</top><width>1920</width><height>136</height>
+            <texture colordiffuse="FF0B0E14">solid_black.png</texture>
+        </control>
+
+        <!-- Titulo RETRO ARCADE con icono joystick -->
+        <control type="label">
+            <left>70</left><top>30</top><width>400</width><height>42</height>
+            <font>font30_title</font>
+            <textcolor>FFFF6B00</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>[B]🕹  RETRO ARCADE[/B]</label>
+        </control>
+
+        <!-- Boton Volver (ID 6099) -->
+        <control type="button" id="6099">
+            <left>500</left><top>28</top><width>160</width><height>44</height>
+            <label>← Volver</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFCCCCCC</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>7001</ondown>
+            <onright>7001</onright>
+        </control>
+
+        <!-- Separador cabecera -->
+        <control type="image">
+            <left>70</left><top>132</top><width>1780</width><height>1</height>
+            <texture colordiffuse="33FF6B00">button_focus.png</texture>
+        </control>
+
+        <!-- ══ BOTONES FILTRO PLATAFORMA ══ -->
+        <!-- Todos (ID 7001) -->
+        <control type="button" id="7001">
+            <left>70</left><top>148</top><width>160</width><height>40</height>
+            <label>Todos</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFAAAAAA</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <onup>6099</onup>
+            <ondown>6001</ondown>
+            <onright>7002</onright>
+            <onleft>7003</onleft>
+        </control>
+
+        <!-- Arcade (ID 7002) -->
+        <control type="button" id="7002">
+            <left>245</left><top>148</top><width>160</width><height>40</height>
+            <label>Arcade</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFF6B00</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <onup>6099</onup>
+            <ondown>6001</ondown>
+            <onleft>7001</onleft>
+            <onright>7003</onright>
+        </control>
+
+        <!-- Neo-Geo (ID 7003) -->
+        <control type="button" id="7003">
+            <left>420</left><top>148</top><width>160</width><height>40</height>
+            <label>Neo-Geo</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFCC0000</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <onup>6099</onup>
+            <ondown>6001</ondown>
+            <onleft>7002</onleft>
+            <onright>7001</onright>
+        </control>
+
+        <!-- ══ CUADRICULA DE JUEGOS (Panel ID 6001) ══ -->
+        <!-- Ocupa 2/3 izquierda de la pantalla -->
+        <control type="panel" id="6001">
+            <left>70</left><top>205</top>
+            <width>1200</width><height>840</height>
+            <orientation>vertical</orientation>
+            <scrolltime>200</scrolltime>
+            <onup>7001</onup>
+            <pagecontrol>60</pagecontrol>
+
+            <!-- Item normal -->
+            <itemlayout width="295" height="210">
+                <!-- Tarjeta base -->
+                <control type="image">
+                    <left>8</left><top>5</top><width>279</width><height>195</height>
+                    <texture border="14">button_normal.png</texture>
+                    <colordiffuse>D9151821</colordiffuse>
+                </control>
+                <!-- Poster / Logo del juego -->
+                <control type="image">
+                    <left>14</left><top>10</top><width>267</width><height>128</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture fallback="button_normal.png">$INFO[ListItem.Art(thumb)]</texture>
+                </control>
+                <!-- Placa inferior -->
+                <control type="image">
+                    <left>8</left><top>140</top><width>279</width><height>60</height>
+                    <texture border="8">button_normal.png</texture>
+                    <colordiffuse>EE0B0E14</colordiffuse>
+                </control>
+                <!-- Titulo del juego -->
+                <control type="label">
+                    <left>14</left><top>144</top><width>267</width><height>26</height>
+                    <font>font13</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFDDDDDD</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <!-- Plataforma + Año -->
+                <control type="label">
+                    <left>14</left><top>170</top><width>267</width><height>22</height>
+                    <font>font11</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FF8E95A5</textcolor>
+                    <label>$INFO[ListItem.Property(plat_label)]</label>
+                </control>
+            </itemlayout>
+
+            <!-- Item enfocado -->
+            <focusedlayout width="295" height="210">
+                <!-- Tarjeta base con brillo -->
+                <control type="image">
+                    <left>8</left><top>5</top><width>279</width><height>195</height>
+                    <texture border="14">button_normal.png</texture>
+                    <colordiffuse>FF1E222D</colordiffuse>
+                </control>
+                <!-- Marco neón naranja en foco -->
+                <control type="image">
+                    <left>-4</left><top>-4</top><width>303</width><height>218</height>
+                    <texture border="24">frame_focus.png</texture>
+                    <visible>Control.HasFocus(6001)</visible>
+                </control>
+                <!-- Poster -->
+                <control type="image">
+                    <left>14</left><top>10</top><width>267</width><height>128</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture fallback="button_normal.png">$INFO[ListItem.Art(thumb)]</texture>
+                </control>
+                <!-- Placa inferior oscura -->
+                <control type="image">
+                    <left>8</left><top>140</top><width>279</width><height>60</height>
+                    <texture border="8">badge_bg.png</texture>
+                    <colordiffuse>F2000000</colordiffuse>
+                </control>
+                <!-- Titulo en foco: blanco brillante -->
+                <control type="label">
+                    <left>14</left><top>144</top><width>267</width><height>26</height>
+                    <font>font13</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+                <!-- Plataforma + Año en foco -->
+                <control type="label">
+                    <left>14</left><top>170</top><width>267</width><height>22</height>
+                    <font>font11</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFDDA060</textcolor>
+                    <label>$INFO[ListItem.Property(plat_label)]</label>
+                </control>
+            </focusedlayout>
+        </control>
+
+        <!-- ══ PANEL INFO LATERAL DERECHO ══ -->
+        <!-- Fondo del panel info -->
+        <control type="image">
+            <left>1310</left><top>205</top><width>540</width><height>840</height>
+            <texture border="16">button_normal.png</texture>
+            <colordiffuse>CC0B0E14</colordiffuse>
+        </control>
+
+        <!-- Poster grande del juego enfocado -->
+        <control type="image">
+            <left>1330</left><top>225</top><width>500</width><height>300</height>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <texture fallback="button_normal.png">$INFO[Window.Property(retro_poster)]</texture>
+        </control>
+
+        <!-- Separador naranja -->
+        <control type="image">
+            <left>1330</left><top>540</top><width>500</width><height>2</height>
+            <texture colordiffuse="AAFF6B00">button_focus.png</texture>
+        </control>
+
+        <!-- Titulo del juego en el panel -->
+        <control type="label">
+            <left>1330</left><top>555</top><width>500</width><height>36</height>
+            <font>font18</font>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>[B]$INFO[Window.Property(retro_titulo)][/B]</label>
+        </control>
+
+        <!-- Plataforma + Año -->
+        <control type="label">
+            <left>1330</left><top>598</top><width>500</width><height>26</height>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFF6B00</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>$INFO[Window.Property(retro_plat)]  ·  $INFO[Window.Property(retro_anio)]</label>
+        </control>
+
+        <!-- Jugadores -->
+        <control type="label">
+            <left>1330</left><top>630</top><width>500</width><height>26</height>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FF8E95A5</textcolor>
+            <label>$INFO[Window.Property(retro_jugadores)] Jugador(es)</label>
+        </control>
+
+        <!-- Separador sutil -->
+        <control type="image">
+            <left>1330</left><top>666</top><width>500</width><height>1</height>
+            <texture colordiffuse="33FFFFFF">button_focus.png</texture>
+        </control>
+
+        <!-- Descripcion del juego -->
+        <control type="label">
+            <left>1330</left><top>678</top><width>500</width><height>200</height>
+            <font>font13</font>
+            <align>left</align>
+            <aligny>top</aligny>
+            <textcolor>FFCCCCCC</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <wrap>true</wrap>
+            <label>$INFO[Window.Property(retro_desc)]</label>
+        </control>
+
+        <!-- Instruccion: OK para jugar -->
+        <control type="label">
+            <left>1330</left><top>890</top><width>500</width><height>30</height>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FF555E70</textcolor>
+            <label>[COLOR FFFF6B00][B]OK[/B][/COLOR]  para jugar  ·  [COLOR FFFF6B00][B]←[/B][/COLOR] Volver</label>
+        </control>
+
+        <!-- Contador total de juegos -->
+        <control type="group">
+            <left>1440</left><top>86</top><width>340</width><height>32</height>
+            <control type="image">
+                <left>0</left><top>0</top><width>340</width><height>32</height>
+                <texture border="8">badge_bg.png</texture>
+            </control>
+            <control type="label">
+                <left>10</left><top>0</top><width>320</width><height>32</height>
+                <font>font12</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>FFFFFFFF</textcolor>
+                <label>$INFO[Window.Property(retro_total)] juegos disponibles</label>
+            </control>
+        </control>
+
+    </controls>
+</window>

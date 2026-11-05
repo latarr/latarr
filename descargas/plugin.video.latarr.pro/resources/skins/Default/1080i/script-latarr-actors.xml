@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="false">8100</defaultcontrol>
+
+    <controls>
+        <!-- 1. Fondo base obsidiana sólido (sin transparencias) -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture colordiffuse="FF0D0F14">button_focus.png</texture>
+        </control>
+
+        <!-- Fanart Latarr estático como fondo sutil -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>scale</aspectratio>
+            <colordiffuse>22FFFFFF</colordiffuse>
+            <texture>fanart_bg.jpg</texture>
+        </control>
+
+        <!-- Viñeta degradada Apple TV -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>vignette_hero.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+
+        <!-- Franja oscura de cabecera -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>136</height>
+            <texture colordiffuse="FF0B0E14">button_focus.png</texture>
+        </control>
+
+        <!-- 2. Título de la sección -->
+        <control type="label">
+            <left>70</left>
+            <top>30</top>
+            <width>500</width>
+            <height>42</height>
+            <font>font30_title</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>$INFO[Window.Property(catalog_title)]</label>
+        </control>
+
+        <!-- Botón Volver a Inicio (junto al título, centrado y visible) -->
+        <control type="button" id="8005">
+            <left>590</left>
+            <top>28</top>
+            <width>220</width>
+            <height>44</height>
+            <label>Volver a Inicio</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFFFFFF</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>8100</ondown>
+            <onleft>8100</onleft>
+            <onright>8100</onright>
+        </control>
+
+        <!-- 3. Sub-barra: nombre del actor enfocado y cantidad de películas -->
+        <control type="label">
+            <left>70</left>
+            <top>88</top>
+            <width>1280</width>
+            <height>32</height>
+            <font>font13</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <label>$INFO[Window.Property(selected_title)]  •  [COLOR FFD0D4DC]$INFO[Window.Property(selected_genre)][/COLOR]</label>
+        </control>
+
+        <!-- Píldora de contador de actores -->
+        <control type="group">
+            <left>1370</left>
+            <top>86</top>
+            <width>480</width>
+            <height>32</height>
+            <control type="image">
+                <left>0</left><top>0</top><width>480</width><height>32</height>
+                <texture border="8">badge_bg.png</texture>
+            </control>
+            <control type="label">
+                <left>10</left><top>0</top><width>460</width><height>32</height>
+                <font>font12</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>FFFFFFFF</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>$INFO[Window.Property(total_count)] actores disponibles</label>
+            </control>
+        </control>
+
+        <!-- Separador sutil -->
+        <control type="image">
+            <left>70</left>
+            <top>132</top>
+            <width>1780</width>
+            <height>1</height>
+            <texture colordiffuse="33FFFFFF">button_focus.png</texture>
+        </control>
+
+        <!-- 4. Cuadrícula de fotos de actores (mismo panel que el catálogo) -->
+        <control type="panel" id="8100">
+            <left>70</left>
+            <top>145</top>
+            <width>1780</width>
+            <height>900</height>
+            <orientation>vertical</orientation>
+            <scrolltime>200</scrolltime>
+            <onup>8005</onup>
+            <pagecontrol>60</pagecontrol>
+
+            <itemlayout width="254" height="355">
+                <!-- Póster del actor (sin foco) -->
+                <control type="image">
+                    <left>15</left>
+                    <top>0</top>
+                    <width>224</width>
+                    <height>336</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <diffuse>mask_poster.png</diffuse>
+                    <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                </control>
+                <!-- Franja oscura degradada al pie para contraste total -->
+                <control type="image">
+                    <left>15</left>
+                    <top>280</top>
+                    <width>224</width>
+                    <height>56</height>
+                    <texture colordiffuse="CC000000">button_normal.png</texture>
+                </control>
+                <!-- Nombre del actor -->
+                <control type="label">
+                    <left>18</left>
+                    <top>286</top>
+                    <width>218</width>
+                    <height>44</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>E6FFFFFF</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout width="254" height="355">
+                <!-- Póster del actor (con foco) -->
+                <control type="image">
+                    <left>15</left>
+                    <top>0</top>
+                    <width>224</width>
+                    <height>336</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <diffuse>mask_poster.png</diffuse>
+                    <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                </control>
+                <!-- Marco blanco brillante con halo neón sobre el actor seleccionado -->
+                <control type="image">
+                    <left>2</left>
+                    <top>-13</top>
+                    <width>250</width>
+                    <height>362</height>
+                    <texture border="24">frame_focus.png</texture>
+                    <visible>Control.HasFocus(8100)</visible>
+                </control>
+                <!-- Píldora de alto contraste detrás del nombre -->
+                <control type="image">
+                    <left>22</left>
+                    <top>288</top>
+                    <width>210</width>
+                    <height>40</height>
+                    <texture border="8">badge_bg.png</texture>
+                    <colordiffuse>F20B0E14</colordiffuse>
+                </control>
+                <!-- Nombre del actor en foco: Blanco Brillante con Sombra -->
+                <control type="label">
+                    <left>24</left>
+                    <top>288</top>
+                    <width>206</width>
+                    <height>40</height>
+                    <font>font13</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+            </focusedlayout>
+        </control>
+
+    </controls>
+</window>
