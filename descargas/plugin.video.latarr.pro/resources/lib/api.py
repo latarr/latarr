@@ -430,16 +430,32 @@ def get_tv_channels(country_code='CL'):
 RETRO_BASE_URL = "https://latarr-pro.pages.dev/retro"
 
 def get_retro_games():
-    """Carga el índice de juegos retro desde disco local del addon."""
+    """Carga el índice de juegos retro. Primero intenta local, luego Cloudflare."""
+    import urllib.request as _req
     json_path = os.path.normpath(os.path.join(
         addon.getAddonInfo('path'),
         'catalogo', 'retro', 'juegos.json'
     ))
+    # Intentar leer local
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            xbmc.log(f'[LATARR-RETRO] Error leyendo juegos.json local: {e}', xbmc.LOGERROR)
+    # Fallback: descargar de Cloudflare Pages
+    url = RETRO_BASE_URL + '/juegos.json'
     try:
-        with open(json_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        xbmc.log(f'[LATARR-RETRO] Descargando juegos.json de {url}', xbmc.LOGINFO)
+        with _req.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read().decode('utf-8'))
+        # Guardar local para proximas veces
+        os.makedirs(os.path.dirname(json_path), exist_ok=True)
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        return data
     except Exception as e:
-        xbmc.log(f'[LATARR-RETRO] Error leyendo juegos.json: {e}', xbmc.LOGERROR)
+        xbmc.log(f'[LATARR-RETRO] Error descargando juegos.json: {e}', xbmc.LOGERROR)
         return []
 
 

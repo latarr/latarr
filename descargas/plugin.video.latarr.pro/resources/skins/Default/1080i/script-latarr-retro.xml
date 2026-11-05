@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+    <allowoverlay>yes</allowoverlay>
+    <coordinates>
+        <system>1</system>
+    </coordinates>
     <defaultcontrol always="true">6001</defaultcontrol>
 
     <controls>
