@@ -3,7 +3,7 @@
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <!-- Emuladores Retro Arcade (opcionales - Kodi los instala al primer uso) -->
-        <import addon="game.libretro.mame2003_plus"   version="0.0.0" optional="true"/>
+        <import addon="game.libretro.mame2003_plus"   version="0.0.0"/>
         <import addon="game.libretro.fbneo"            version="0.0.0" optional="true"/>
         <import addon="game.libretro.snes9x"           version="0.0.0" optional="true"/>
         <import addon="game.libretro.genesis-plus-gx"  version="0.0.0" optional="true"/>

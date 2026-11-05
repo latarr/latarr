@@ -139,13 +139,29 @@ class LatarrRetroDialog(xbmcgui.WindowXMLDialog):
     def onAction(self, action):
         action_id = action.getId()
 
+        # OK/Enter sobre la lista lanza el juego directamente
+        if action_id in (xbmcgui.ACTION_SELECT_ITEM, xbmcgui.ACTION_MOUSE_LEFT_CLICK):
+            try:
+                focused = self.getFocusId()
+                if focused == 6001:
+                    ctrl = self.getControl(6001)
+                    pos  = ctrl.getSelectedPosition()
+                    if 0 <= pos < len(self._juegos_vista):
+                        self._launch_game(self._juegos_vista[pos])
+                    return
+            except Exception:
+                pass
+
+
         if action_id in (xbmcgui.ACTION_PREVIOUS_MENU, xbmcgui.ACTION_NAV_BACK):
             self._closed = True
             self.close()
             return
 
-        # Actualizar hero al navegar verticalmente en la lista
-        if action_id in (xbmcgui.ACTION_MOVE_UP, xbmcgui.ACTION_MOVE_DOWN):
+        # Actualizar hero al navegar en la lista (todas las direcciones)
+        if action_id in (xbmcgui.ACTION_MOVE_UP, xbmcgui.ACTION_MOVE_DOWN,
+                         xbmcgui.ACTION_MOVE_LEFT, xbmcgui.ACTION_MOVE_RIGHT,
+                         xbmcgui.ACTION_PAGE_UP, xbmcgui.ACTION_PAGE_DOWN):
             try:
                 super().onAction(action)
                 ctrl = self.getControl(6001)

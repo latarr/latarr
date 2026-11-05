@@ -509,11 +509,12 @@ def _download_retro_file(url, dest_path, progress_dialog=None):
 
 def launch_retro_game(juego):
     """
-    Descarga la ROM (y BIOS si es Neo-Geo) desde Cloudflare y lanza el juego
-    directamente con el motor RetroPlayer de Kodi.
-    Devuelve True si el juego se lanzó correctamente.
+    1. Auto-instala el core si no esta instalado
+    2. Descarga BIOS + ROM desde Cloudflare
+    3. Lanza con RetroPlayer de Kodi
     """
     import xbmcgui
+    import xbmcaddon as _xbmcaddon
 
     titulo   = juego.get('titulo', 'Juego')
     archivo  = juego.get('archivo_rom', '')
@@ -524,48 +525,72 @@ def launch_retro_game(juego):
     rom_nombre = os.path.basename(archivo)
     rom_local  = os.path.join(local_dir, rom_nombre)
 
-    # Instalar core si no está (Kodi lo pregunta automáticamente al hacer PlayMedia)
-    # Solo verificamos que tengamos el archivo ROM listo
-
     pDialog = xbmcgui.DialogProgress()
     pDialog.create('LATARR RETRO', f'Preparando {titulo}...')
 
     try:
-        # 1. Descargar BIOS Neo-Geo si es necesaria y no existe aún
+        # ── 1. Auto-instalar core si no esta ──────────────────
+        pDialog.update(5, 'Verificando emulador...')
+        try:
+            _xbmcaddon.Addon(core)
+            xbmc.log(f'[LATARR-RETRO] Core {core} ya instalado', xbmc.LOGINFO)
+        except RuntimeError:
+            xbmc.log(f'[LATARR-RETRO] Instalando core {core}...', xbmc.LOGINFO)
+            pDialog.update(10, 'Instalando emulador MAME... Espera un momento...')
+            xbmc.executebuiltin(f'InstallAddon({core})')
+            # Esperar hasta 30 segundos a que se instale
+            for _ in range(30):
+                xbmc.sleep(1000)
+                try:
+                    _xbmcaddon.Addon(core)
+                    xbmc.log(f'[LATARR-RETRO] Core {core} instalado OK', xbmc.LOGINFO)
+                    break
+                except RuntimeError:
+                    pass
+            else:
+                # Si fallo la instalacion, intentar de todas formas
+                xbmc.log(f'[LATARR-RETRO] Core puede no haberse instalado, intentando igual', xbmc.LOGWARNING)
+
+        # ── 2. Descargar BIOS Neo-Geo si necesaria ────────────
         if bios_rel:
             bios_nombre = os.path.basename(bios_rel)
             bios_local  = os.path.join(local_dir, bios_nombre)
             if not os.path.exists(bios_local):
                 bios_url = f"{RETRO_BASE_URL}/{bios_rel}"
-                xbmc.log(f'[LATARR-RETRO] Descargando BIOS: {bios_url}', xbmc.LOGINFO)
-                pDialog.update(0, 'Descargando BIOS Neo-Geo...')
+                pDialog.update(20, 'Descargando BIOS Neo-Geo...')
                 if not _download_retro_file(bios_url, bios_local, pDialog):
                     pDialog.close()
-                    xbmcgui.Dialog().notification('Error', 'No se pudo descargar la BIOS', xbmcgui.NOTIFICATION_ERROR)
+                    xbmcgui.Dialog().notification('LATARR RETRO', 'Error descargando BIOS', xbmcgui.NOTIFICATION_ERROR, 4000)
                     return False
 
-        # 2. Descargar ROM si no existe en caché local
+        # ── 3. Descargar ROM ──────────────────────────────────
         if not os.path.exists(rom_local):
             rom_url = f"{RETRO_BASE_URL}/{archivo}"
-            xbmc.log(f'[LATARR-RETRO] Descargando ROM: {rom_url}', xbmc.LOGINFO)
-            pDialog.update(0, f'Descargando {titulo}...')
+            xbmc.log(f'[LATARR-RETRO] Descargando: {rom_url}', xbmc.LOGINFO)
+            pDialog.update(30, f'Descargando {titulo}...')
             if not _download_retro_file(rom_url, rom_local, pDialog):
                 pDialog.close()
-                xbmcgui.Dialog().notification('Error', 'No se pudo descargar el juego', xbmcgui.NOTIFICATION_ERROR)
+                xbmcgui.Dialog().notification('LATARR RETRO', 'Error descargando ROM', xbmcgui.NOTIFICATION_ERROR, 4000)
                 return False
         else:
             xbmc.log(f'[LATARR-RETRO] ROM en cache: {rom_local}', xbmc.LOGINFO)
 
-        pDialog.update(100, f'Lanzando {titulo}...')
+        pDialog.update(95, f'Lanzando {titulo}...')
+        xbmc.sleep(500)
         pDialog.close()
 
-        # 3. Lanzar el juego con RetroPlayer de Kodi
-        # PlayMedia abre el juego en pantalla completa con el core especificado
-        xbmc.executebuiltin(f'PlayMedia("{rom_local}",0,"{core}")')
+        # ── 4. Lanzar con RetroPlayer ─────────────────────────
+        li = xbmcgui.ListItem(label=titulo, path=rom_local)
+        li.setProperty('GameClient', core)
+        xbmc.Player().play(rom_local, li)
+        xbmc.log(f'[LATARR-RETRO] Play enviado: {rom_local} con {core}', xbmc.LOGINFO)
         return True
 
     except Exception as e:
-        pDialog.close()
+        try:
+            pDialog.close()
+        except Exception:
+            pass
         xbmc.log(f'[LATARR-RETRO] Error lanzando {titulo}: {e}', xbmc.LOGERROR)
-        xbmcgui.Dialog().notification('Error', f'Error al lanzar el juego', xbmcgui.NOTIFICATION_ERROR)
+        xbmcgui.Dialog().notification('LATARR RETRO', f'Error: {e}', xbmcgui.NOTIFICATION_ERROR, 5000)
         return False
