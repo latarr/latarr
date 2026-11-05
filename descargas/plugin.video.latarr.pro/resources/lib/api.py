@@ -2,6 +2,7 @@ import os
 import json
 import urllib.parse
 import xbmc
+import xbmcvfs
 import xbmcgui
 import xbmcaddon
 
@@ -469,7 +470,14 @@ def get_retro_games_by_platform(plataforma=None):
 
 def _retro_local_dir():
     """Carpeta temporal donde se guardan las ROMs descargadas en el dispositivo."""
-    temp_dir = xbmc.translatePath('special://temp/latarr_retro/')
+    try:
+        import xbmcvfs
+        temp_dir = xbmcvfs.translatePath('special://temp/latarr_retro/')
+    except (ImportError, AttributeError):
+        try:
+            temp_dir = xbmc.translatePath('special://temp/latarr_retro/')
+        except Exception:
+            temp_dir = os.path.join(os.path.expanduser('~'), '.latarr_retro')
     os.makedirs(temp_dir, exist_ok=True)
     return temp_dir
 
