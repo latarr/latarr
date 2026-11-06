@@ -647,6 +647,16 @@ class LatarrHomeWindow(xbmcgui.WindowXMLDialog):
         )
         dlg.doModal()
         del dlg
+        # Esperar a que el juego termine antes de devolver el foco al home
+        import xbmc
+        xbmc.sleep(800)
+        player = xbmc.Player()
+        if player.isPlaying():
+            monitor = xbmc.Monitor()
+            xbmc.log('[LATARR-RETRO] Esperando fin del juego...', xbmc.LOGINFO)
+            while player.isPlaying() and not monitor.abortRequested():
+                xbmc.sleep(500)
+            xbmc.log('[LATARR-RETRO] Juego terminado, volviendo al home', xbmc.LOGINFO)
 
     def _open_search(self):
         query = xbmcgui.Dialog().input('¿Qué deseas ver en Latarr?', type=xbmcgui.INPUT_ALPHANUM)

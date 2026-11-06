@@ -623,16 +623,10 @@ def launch_retro_game(juego):
             pass
 
         # Reproducir con RetroPlayer
+        # API Kodi: Player().play(path_string, listitem) — el listitem lleva el GameInfoTag
         try:
-            player = xbmc.Player()
-            player.play(item=li)
-            xbmc.log(f'[LATARR-RETRO] Player().play enviado con InfoTagGame: {rom_local}', xbmc.LOGINFO)
-            # Esperar a que RetroPlayer empiece (hasta 10 segundos)
-            timeout = 0
-            while not player.isPlaying() and timeout < 100:
-                xbmc.sleep(100)
-                timeout += 1
-            xbmc.log(f'[LATARR-RETRO] RetroPlayer iniciado: {player.isPlaying()}', xbmc.LOGINFO)
+            xbmc.Player().play(rom_local, li)
+            xbmc.log(f'[LATARR-RETRO] Player().play enviado: {rom_local}', xbmc.LOGINFO)
             return True
         except Exception as e_play:
             xbmc.log(f'[LATARR-RETRO] Player().play fallo: {e_play}', xbmc.LOGWARNING)
