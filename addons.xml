@@ -11,7 +11,7 @@
         <import addon="game.libretro.fceumm"           version="0.0.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
+        <provides>video game</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="es_ES">LATARR PRO - Cine y Deporte Premium</summary>

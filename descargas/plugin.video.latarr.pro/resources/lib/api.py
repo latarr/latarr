@@ -587,37 +587,58 @@ def launch_retro_game(juego):
         xbmc.sleep(500)
         pDialog.close()
 
-        # ── 4. Lanzar con RetroPlayer ─────────────────────────
-        # Intentar 3 metodos en orden hasta que uno funcione
+        # ── 4. Lanzar con RetroPlayer (API oficial Kodi v20/v21) ──
         rom_safe = rom_local.replace('\\', '/')
+        plataforma = juego.get('plataforma', 'Arcade')
 
-        # Metodo A: Player().play con ListItem y GameClient
+        # Crear ListItem explícito para juegos
+        li = xbmcgui.ListItem(label=titulo, path=rom_local, offscreen=True)
+
+        # Metodo oficial Kodi 20/21: InfoTagGame
+        # Esto le indica OBLIGATORIAMENTE a Kodi que es un JUEGO y NO un video
         try:
-            li = xbmcgui.ListItem(label=titulo, path=rom_local)
-            li.setProperty('GameClient', core)
+            game_tag = li.getGameInfoTag()
+            game_tag.setTitle(titulo)
+            game_tag.setPlatform(plataforma)
+            game_tag.setGameClient(core)
+            xbmc.log(f'[LATARR-RETRO] getGameInfoTag configurado: {titulo} -> {core}', xbmc.LOGINFO)
+        except Exception as e_tag:
+            xbmc.log(f'[LATARR-RETRO] getGameInfoTag no disponible ({e_tag}), usando fallback clasico', xbmc.LOGDEBUG)
+            try:
+                li.setInfo('game', {
+                    'title': titulo,
+                    'platform': plataforma,
+                    'gameclient': core
+                })
+            except Exception:
+                pass
+
+        # Propiedades adicionales para compatibilidad total
+        li.setProperty('gameclient', core)
+        li.setProperty('GameClient', core)
+        li.setProperty('mimetype', 'kodi.gameclient')
+        try:
+            li.setContentLookup(False)
+        except Exception:
+            pass
+
+        # Reproducir con RetroPlayer
+        try:
             xbmc.Player().play(rom_local, li)
-            xbmc.log(f'[LATARR-RETRO] Metodo A OK: {rom_local}', xbmc.LOGINFO)
+            xbmc.log(f'[LATARR-RETRO] Player().play enviado con InfoTagGame: {rom_local}', xbmc.LOGINFO)
             return True
-        except Exception as e1:
-            xbmc.log(f'[LATARR-RETRO] Metodo A fallo: {e1}', xbmc.LOGWARNING)
+        except Exception as e_play:
+            xbmc.log(f'[LATARR-RETRO] Player().play fallo: {e_play}', xbmc.LOGWARNING)
 
-        # Metodo B: executebuiltin PlayMedia
+        # Fallback PlayMedia con sintaxis de gameclient
         try:
-            xbmc.executebuiltin(f'PlayMedia("{rom_safe}")')
-            xbmc.log(f'[LATARR-RETRO] Metodo B OK: PlayMedia', xbmc.LOGINFO)
+            xbmc.executebuiltin(f'PlayMedia("{rom_safe}",gameclient={core})')
+            xbmc.log(f'[LATARR-RETRO] PlayMedia fallback enviado: {rom_safe}', xbmc.LOGINFO)
             return True
-        except Exception as e2:
-            xbmc.log(f'[LATARR-RETRO] Metodo B fallo: {e2}', xbmc.LOGWARNING)
+        except Exception as e_pm:
+            xbmc.log(f'[LATARR-RETRO] PlayMedia fallo: {e_pm}', xbmc.LOGERROR)
 
-        # Metodo C: RunPlugin con ruta directa
-        try:
-            xbmc.executebuiltin(f'RunPlugin({rom_safe})')
-            xbmc.log(f'[LATARR-RETRO] Metodo C OK: RunPlugin', xbmc.LOGINFO)
-            return True
-        except Exception as e3:
-            xbmc.log(f'[LATARR-RETRO] Metodo C fallo: {e3}', xbmc.LOGWARNING)
-
-        xbmcgui.Dialog().notification('LATARR RETRO', 'No se pudo lanzar el juego. Verifica que RetroPlayer este habilitado en Kodi.', xbmcgui.NOTIFICATION_ERROR, 6000)
+        xbmcgui.Dialog().notification('LATARR RETRO', 'Error al iniciar RetroPlayer', xbmcgui.NOTIFICATION_ERROR, 5000)
         return False
 
     except Exception as e:
