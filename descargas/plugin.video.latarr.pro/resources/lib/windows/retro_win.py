@@ -194,15 +194,16 @@ class LatarrRetroDialog(xbmcgui.WindowXMLDialog):
             self.close()
 
     def _launch_game(self, juego):
-        """Muestra confirmación, cierra la ventana y lanza el juego."""
+        """Muestra confirmacion, guarda el juego elegido y cierra el dialogo.
+        El lanzamiento real lo hace home.py DESPUES de que el dialogo
+        esta completamente destruido (evita conflicto de ventanas modales)."""
         titulo = juego.get('titulo', 'Juego')
-        plat   = juego.get('plataforma', '')
         desc   = juego.get('descripcion', '')
         jugs   = juego.get('jugadores', 1)
 
         ok = xbmcgui.Dialog().yesno(
             titulo,
-            f'{desc}\n\n{jugs} Jugador{"es" if jugs > 1 else ""}\n\n¿Iniciar juego?',
+            f'{desc}\n\n{jugs} Jugador{"es" if jugs > 1 else ""}\n\n\u00bfIniciar juego?',
             nolabel='Cancelar',
             yeslabel='Jugar!'
         )
@@ -210,11 +211,7 @@ class LatarrRetroDialog(xbmcgui.WindowXMLDialog):
         if not ok:
             return
 
-        # IMPORTANTE: cerrar la ventana ANTES de lanzar
-        # Player().play() no funciona desde dentro de un WindowXMLDialog activo
+        # Guardar el juego a lanzar — home.py lo lee despues de doModal()
+        self.juego_a_lanzar = juego
         self._closed = True
-        self.close()
-        xbmc.sleep(300)
-
-        # Lanzar vía api
-        api.launch_retro_game(juego)
+        self.close()  # cierra el dialogo limpio, sin lanzar nada todavia
