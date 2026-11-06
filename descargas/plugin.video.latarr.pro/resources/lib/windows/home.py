@@ -662,8 +662,10 @@ class LatarrHomeWindow(xbmcgui.WindowXMLDialog):
             xbmc.log(f"[LATARR-RETRO] Lanzando juego desde home: {juego_a_lanzar.get('titulo')}", xbmc.LOGINFO)
             xbmc.sleep(500)  # dar tiempo a que el dialogo se destruya completamente
             retro_api.launch_retro_game(juego_a_lanzar)
-            # Esperar que el juego termine para no volver al home prematuramente
-            xbmc.sleep(1000)
+            # Traer RetroPlayer al frente (el juego corria detras de la UI de Kodi)
+            xbmc.sleep(800)
+            xbmc.executebuiltin('ActivateWindow(FullscreenGame)')
+            xbmc.sleep(500)
             player = xbmc.Player()
             if player.isPlaying():
                 monitor = xbmc.Monitor()
