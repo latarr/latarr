@@ -356,8 +356,7 @@ class LatarrHomeWindow(xbmcgui.WindowXMLDialog):
             if addon.getSetting('ui_mode') == "1":
                 self._closed = True
                 self.close()
-        elif control_id == 110: # RETRO ARCADE
-            self._open_retro()
+        
 
     def _open_catalog(self, media_type):
         from .catalog import LatarrCatalogDialog
@@ -635,44 +634,6 @@ class LatarrHomeWindow(xbmcgui.WindowXMLDialog):
             return
         del dlg
 
-    def _open_retro(self):
-        """Seccion Retro Arcade: descarga y lanza ROMs clasicas en Kodi RetroPlayer."""
-        from .retro_win import LatarrRetroDialog
-        import xbmc
-        from .. import api as retro_api
-
-        dlg = LatarrRetroDialog(
-            'script-latarr-retro.xml',
-            self.addon_path,
-            defaultSkin='Default',
-            defaultRes='1080i',
-            addon_path=self.addon_path
-        )
-        dlg.doModal()
-
-        # Leer el juego elegido ANTES de destruir el dialogo
-        juego_a_lanzar = getattr(dlg, 'juego_a_lanzar', None)
-
-        # Destruir completamente el dialogo modal
-        del dlg
-
-        # Si el usuario eligio un juego, lanzarlo ahora que el dialogo ya no existe
-        # Esto evita el conflicto "active modal dialogs" que mataba a MAME a los 11s
-        if juego_a_lanzar:
-            xbmc.log(f"[LATARR-RETRO] Lanzando juego desde home: {juego_a_lanzar.get('titulo')}", xbmc.LOGINFO)
-            xbmc.sleep(500)  # dar tiempo a que el dialogo se destruya completamente
-            retro_api.launch_retro_game(juego_a_lanzar)
-            # Traer RetroPlayer al frente (el juego corria detras de la UI de Kodi)
-            xbmc.sleep(800)
-            xbmc.executebuiltin('ActivateWindow(FullscreenGame)')
-            xbmc.sleep(500)
-            player = xbmc.Player()
-            if player.isPlaying():
-                monitor = xbmc.Monitor()
-                xbmc.log('[LATARR-RETRO] Esperando fin del juego...', xbmc.LOGINFO)
-                while player.isPlaying() and not monitor.abortRequested():
-                    xbmc.sleep(500)
-                xbmc.log('[LATARR-RETRO] Juego terminado, volviendo al home', xbmc.LOGINFO)
 
     def _open_search(self):
         query = xbmcgui.Dialog().input('¿Qué deseas ver en Latarr?', type=xbmcgui.INPUT_ALPHANUM)

@@ -129,17 +129,7 @@
                 <onright>107</onright>
             </control>
         <!-- Botón RETRO ARCADE (ID 110) -->
-        <control type="button" id="110">
-            <left>1480</left><top>28</top><width>170</width><height>44</height>
-            <label>🕹 RETRO</label>
-            <font>font13</font>
-            <align>center</align>
-            <textcolor>FFFF6B00</textcolor>
-            <focusedcolor>FF000000</focusedcolor>
-            <texturefocus border="12">button_focus.png</texturefocus>
-            <texturenofocus border="12">button_normal.png</texturenofocus>
-            <ondown>5001</ondown>
-        </control>
+        
 
             <control type="button" id="107">
                 <width>165</width>
