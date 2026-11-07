@@ -1,0 +1,594 @@
+{
+  "tipo": "deportes_pro",
+  "version": "1.0",
+  "categorias": [
+    {
+      "id": "deportes_premium",
+      "nombre": "DEPORTES PREMIUM",
+      "icono": "deportes_premium.png",
+      "emoji": "⚽",
+      "server_cat_id": 219,
+      "canales": [
+        {
+          "nombre": "ESPN DEPORTES",
+          "stream_id": 591971,
+          "logo": "https://i.postimg.cc/tRNbSKHV/Dise-o-sin-t-tulo-9.png"
+        },
+        {
+          "nombre": "ESPN 1 HD | AR",
+          "stream_id": 591974,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 1 FHD | ARG",
+          "stream_id": 591975,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 1 CO FHD",
+          "stream_id": 591976,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 1 CH HD",
+          "stream_id": 591977,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 1 MEX HD",
+          "stream_id": 591978,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 1 MEX FHD",
+          "stream_id": 591979,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122217.jpg"
+        },
+        {
+          "nombre": "ESPN 2 HD | ARG",
+          "stream_id": 591980,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122242.jpg"
+        },
+        {
+          "nombre": "ESPN 2 ARG | FHD",
+          "stream_id": 591981,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122242.jpg"
+        },
+        {
+          "nombre": "ESPN 2 | CO",
+          "stream_id": 591982,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122242.jpg"
+        },
+        {
+          "nombre": "ESPN 2 | CH",
+          "stream_id": 591983,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122242.jpg"
+        },
+        {
+          "nombre": "ESPN 3 HD | AR",
+          "stream_id": 591986,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122257.jpg"
+        },
+        {
+          "nombre": "ESPN 3 | CO",
+          "stream_id": 591987,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122257.jpg"
+        },
+        {
+          "nombre": "ESPN 3 | CH",
+          "stream_id": 591988,
+          "logo": "https://bantel.iptvperu.tv/img/channels/logo_1708122257.jpg"
+        },
+        {
+          "nombre": "ESPN PREMIUM | AR",
+          "stream_id": 591997,
+          "logo": "https://cdn.storage.foromedios.com/monthly_2022_05/large_es.png.aa439426a82c10606ef062d67bd99b89.png"
+        },
+        {
+          "nombre": "ESPN PREMIUM | CH",
+          "stream_id": 591998,
+          "logo": "https://i.postimg.cc/RFfwQLzc/ESP-NPREM.png"
+        },
+        {
+          "nombre": "FOX SPORT | AR",
+          "stream_id": 592000,
+          "logo": "https://i.postimg.cc/Qdt5n33x/FO-X.png"
+        },
+        {
+          "nombre": "TNT SPORT AR",
+          "stream_id": 592031,
+          "logo": "https://i.postimg.cc/tJ02zqWP/descarga-(16).png"
+        },
+        {
+          "nombre": "TNT SPORT | CH",
+          "stream_id": 592032,
+          "logo": "https://1000logos.net/wp-content/uploads/2025/08/TNT-Sports-Logo.jpg"
+        },
+        {
+          "nombre": "TNT PREMIUM | CH",
+          "stream_id": 592033,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZKL2Hi_74uu9hgOVO5p4WvTqt1FSH2x2NxJOwYyPRaQSlPALKx2Mgmmp&s=10"
+        },
+        {
+          "nombre": "DSPORTS | AR",
+          "stream_id": 592036,
+          "logo": "https://ipuntotv.com/IMAGES/Dsports-logo.jpg"
+        },
+        {
+          "nombre": "DSPORTS | CO",
+          "stream_id": 592037,
+          "logo": "https://ipuntotv.com/IMAGES/Dsports-logo.jpg"
+        },
+        {
+          "nombre": "DSPORTS 2",
+          "stream_id": 592038,
+          "logo": "https://d18o29lhcg4kda.cloudfront.net/fit-in/360x270/Y2gwMTAwMDAwMDAwMTI4X2xpbmVhcl9jaGFubmVsX3NzbGE_11002_LOGO_360x270.png?timestamp=1718310567007"
+        },
+        {
+          "nombre": "DSPORTS+",
+          "stream_id": 592039,
+          "logo": "https://d18o29lhcg4kda.cloudfront.net/fit-in/360x270/Y2gwMTAwMDAwMDAwMTM5X2xpbmVhcl9jaGFubmVsX3NzbGE_11002_LOGO_360x270.png?timestamp=1785741343782"
+        },
+        {
+          "nombre": "SKY SPORTS | BUNDESLIGA",
+          "stream_id": 592040,
+          "logo": "https://i.postimg.cc/pXBxg3ks/3840px-Sky-Sport-Logo-2026-svg.png"
+        },
+        {
+          "nombre": "SKY SPORTS | LA LIGA",
+          "stream_id": 592041,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKBCa6SydXxbOh3qbRLTAWW6FOnRo5nXa9kw&s"
+        },
+        {
+          "nombre": "SKY SPORT | PREMIER",
+          "stream_id": 592042,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYABthI6mNEBc0bLSK5k1fldp-eXtMKKXGhw&s"
+        }
+      ]
+    },
+    {
+      "id": "champions_league",
+      "nombre": "CHAMPIONS LEAGUE",
+      "icono": "champions_league.png",
+      "emoji": "🏆",
+      "server_cat_id": 358,
+      "canales": [
+        {
+          "nombre": "11:55 | English: Fenerbahce vs. Liverpool | UEFA Champions League",
+          "stream_id": 1737307,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "11:55 | English: Aek Athens vs. Real Madrid | UEFA Champions League",
+          "stream_id": 1737308,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "12:00 | En Español: Aek Athens vs. Real Madrid | UEFA Champions League",
+          "stream_id": 1737309,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "12:30 | En Español: Fenerbahce vs. Liverpool | UEFA Champions League",
+          "stream_id": 1737310,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "12:30 | Aek Athens vs. Real Madrid | UEFA Champions League | ESPN",
+          "stream_id": 1737311,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "12:30 | Fenerbahce vs. Liverpool | UEFA Champions League | ESPN",
+          "stream_id": 1737312,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: Porto vs. Napoli | UEFA Champions League",
+          "stream_id": 1737313,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: Viking vs. Sabah | UEFA Champions League",
+          "stream_id": 1737314,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: Lens vs. Como | UEFA Champions League",
+          "stream_id": 1737315,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: SK Slavia Praha vs. Arsenal | UEFA Champions League",
+          "stream_id": 1737316,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: PSV vs. Club Brugge | UEFA Champions League",
+          "stream_id": 1737317,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: Borussia Dortmund vs. Real Betis | UEFA Champions League",
+          "stream_id": 1737318,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | English: RB Leipzig vs. Manchester City | UEFA Champions League",
+          "stream_id": 1737319,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "13:55 | The Golazo Show | UEFA Champions League",
+          "stream_id": 1737320,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | RB Leipzig vs. Manchester City | UEFA Champions League | ESPN",
+          "stream_id": 1737321,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | UCL al instante | UEFA Champions League | ESPN",
+          "stream_id": 1737322,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | Borussia Dortmund vs. Real Betis | UEFA Champions League | ESPN",
+          "stream_id": 1737323,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | Porto vs. Napoli | UEFA Champions League | ESPN",
+          "stream_id": 1737324,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | Viking vs. Sabah | UEFA Champions League | ESPN",
+          "stream_id": 1737325,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | SK Slavia Praha vs. Arsenal | UEFA Champions League | ESPN",
+          "stream_id": 1737326,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | Lens vs. Como | UEFA Champions League | ESPN",
+          "stream_id": 1737327,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:40 | PSV vs. Club Brugge | UEFA Champions League | ESPN",
+          "stream_id": 1737328,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:45 | En Español: Porto vs. Napoli | UEFA Champions League",
+          "stream_id": 1737329,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:45 | En Español: Viking vs. Sabah | UEFA Champions League",
+          "stream_id": 1737330,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:45 | En Español: Lens vs. Como | UEFA Champions League",
+          "stream_id": 1737331,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:45 | En Español: PSV vs. Club Brugge | UEFA Champions League",
+          "stream_id": 1737332,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:45 | En Español: Borussia Dortmund vs. Real Betis | UEFA Champions League",
+          "stream_id": 1737333,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:50 | En Español: RB Leipzig vs. Manchester City | UEFA Champions League",
+          "stream_id": 1737334,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        },
+        {
+          "nombre": "14:55 | En Español: SK Slavia Praha vs. Arsenal | UEFA Champions League",
+          "stream_id": 1737335,
+          "logo": "https://i.postimg.cc/vTMQJkPP/champy%DB%86nzlyg.png"
+        }
+      ]
+    },
+    {
+      "id": "copa_libertadores",
+      "nombre": "COPA LIBERTADORES",
+      "icono": "copa_libertadores.png",
+      "emoji": "🇸🇦",
+      "server_cat_id": 233,
+      "canales": [
+        {
+          "nombre": "LIBERTADORES 1 | Fluminense vs Platense 6 PM ET",
+          "stream_id": 742924,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 2 |",
+          "stream_id": 742925,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 3 |",
+          "stream_id": 742926,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 4 |",
+          "stream_id": 742927,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 5 |",
+          "stream_id": 742928,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 6 |",
+          "stream_id": 742929,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        },
+        {
+          "nombre": "LIBERTADORES 7 |",
+          "stream_id": 742930,
+          "logo": "https://i.postimg.cc/WbP0vVgS/615px-Conmebol_Libertadores_logo.svg.png"
+        }
+      ]
+    },
+    {
+      "id": "copa_sudamericana",
+      "nombre": "COPA SUDAMERICANA",
+      "icono": "copa_sudamericana.png",
+      "emoji": "🌎",
+      "server_cat_id": 234,
+      "canales": [
+        {
+          "nombre": "SUDAMERICANA 1 |",
+          "stream_id": 751961,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        },
+        {
+          "nombre": "SUDAMERICANA 2 |  Boca Juniors vs São Paulo 8.30 PM ET",
+          "stream_id": 751962,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        },
+        {
+          "nombre": "SUDAMERICANA 3 |",
+          "stream_id": 751963,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        },
+        {
+          "nombre": "SUDAMERICANA 4 |",
+          "stream_id": 751964,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        },
+        {
+          "nombre": "SUDAMERICANA 5 |",
+          "stream_id": 751965,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        },
+        {
+          "nombre": "SUDAMERICANA 6 |",
+          "stream_id": 751966,
+          "logo": "https://logodownload.org/wp-content/uploads/2018/10/copa-sulamericana-logo.png"
+        }
+      ]
+    },
+    {
+      "id": "europa_league",
+      "nombre": "EUROPA LEAGUE",
+      "icono": "europa_league.png",
+      "emoji": "🟠",
+      "server_cat_id": 230,
+      "canales": [
+        {
+          "nombre": "Europa League 01 | OFI vs Bayer Leverkusen 12.45 PM ET",
+          "stream_id": 714385,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 02 | Juventus vs Rennes 12.45 PM ET",
+          "stream_id": 714386,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 03 | Ararat-Armenia vs AZ 12.45 PM ET",
+          "stream_id": 714387,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 04 | Sturm Graz vs Olympique Marseille 12.45 PM ET",
+          "stream_id": 714388,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 05 | Lillestrøm vs Real Sociedad 3 PM ET",
+          "stream_id": 714389,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 06 | Hoffenheim vs Olympique Lyonnais 3 PM ET",
+          "stream_id": 714390,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 07 | Celtic vs Celta de Vigo 3 PM ET",
+          "stream_id": 714391,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 08 | AFC Bournemouth vs Milan 3 PM ET",
+          "stream_id": 714392,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 09 | Omonia Nicosia vs Benfica 3 PM ET",
+          "stream_id": 714393,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 10 | Beşiktaş vs Crystal Palace 3 PM ET",
+          "stream_id": 714394,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 11 |",
+          "stream_id": 714395,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 12 |",
+          "stream_id": 714396,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        },
+        {
+          "nombre": "Europa League 14 |",
+          "stream_id": 714397,
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrr4UZOhUwsEsOcFYIs1FhDGmK2vI9t9BLdg&s"
+        }
+      ]
+    },
+    {
+      "id": "conference_league",
+      "nombre": "CONFERENCE LEAGUE",
+      "icono": "conference_league.png",
+      "emoji": "🟢",
+      "server_cat_id": 431,
+      "canales": [
+        {
+          "nombre": "UEFA Conference League 00 |",
+          "stream_id": 714402,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 01 |",
+          "stream_id": 714403,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 02 |",
+          "stream_id": 714404,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 03 |",
+          "stream_id": 714405,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 04 |",
+          "stream_id": 714406,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 05 |",
+          "stream_id": 714407,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 06 |",
+          "stream_id": 714408,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 07 |",
+          "stream_id": 714409,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 08 |",
+          "stream_id": 714410,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 09 |",
+          "stream_id": 714411,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 10 |",
+          "stream_id": 714412,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 11 |",
+          "stream_id": 714413,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 12 |",
+          "stream_id": 714414,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 13 |",
+          "stream_id": 714415,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        },
+        {
+          "nombre": "UEFA Conference League 14 |",
+          "stream_id": 714416,
+          "logo": "https://i.postimg.cc/tTQVBX6M/images-q-tbn-ANd9Gc-Qf-Wa-SWOMgmu-Dq-Ds9H6RQe-Xhqcl-Bd-KWfeux-Hg-s.png"
+        }
+      ]
+    },
+    {
+      "id": "premier_league",
+      "nombre": "PREMIER LEAGUE",
+      "icono": "premier_league.png",
+      "emoji": "🦁",
+      "server_cat_id": 225,
+      "canales": [
+        {
+          "nombre": "DAZN 1",
+          "stream_id": 205613,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "DAZN 2",
+          "stream_id": 205614,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "1PREMIER LEAGUE | DAZN 3",
+          "stream_id": 205615,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "PREMIER LEAGUE | DAZN 4",
+          "stream_id": 205616,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "1PREMIER LEAGUE | ESPN",
+          "stream_id": 205617,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "1PREMIER LEAGUE | NBC UNIVERSO",
+          "stream_id": 205618,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "PREMIER LEAGUE | SKY SPORTS",
+          "stream_id": 205621,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        },
+        {
+          "nombre": "||DE|| Sky Sport Premier League HD",
+          "stream_id": 205622,
+          "logo": "https://i.ibb.co/dDgKFVj/proerws232.png"
+        }
+      ]
+    }
+  ]
+}

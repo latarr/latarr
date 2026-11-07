@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="false">5001</defaultcontrol>
+    
+    <controls>
+        <!-- ============================================================ -->
+        <!-- 1. CAPAS DE FONDO ULTRA-LIGERAS (GPU ACCELERATED)            -->
+        <!-- ============================================================ -->
+        <!-- Fondo base obsidiana puro -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture colordiffuse="FF0D0F14">button_focus.png</texture>
+        </control>
+
+        <!-- Fanart dinámico de fondo con transición rápida de 250ms -->
+        <control type="image" id="10001">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>scale</aspectratio>
+            <fadetime>250</fadetime>
+            <texture fallback="fallback_poster.png">$INFO[Window.Property(hero_fanart)]</texture>
+        </control>
+
+        <!-- Viñeta degradada Apple TV (funde suavemente textos y estantes) -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>vignette_hero.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+
+        <!-- ============================================================ -->
+        <!-- 2. BARRA SUPERIOR DE NAVEGACIÓN (APPLE TV TOP BAR)          -->
+        <!-- ============================================================ -->
+        <control type="label">
+            <left>70</left>
+            <top>42</top>
+            <width>280</width>
+            <height>40</height>
+            <font>font30_title</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <label>[B]LATARR[/B] [COLOR FF8E95A5]CINEMA[/COLOR]</label>
+        </control>
+
+        <control type="grouplist" id="100">
+            <left>380</left>
+            <top>38</top>
+            <width>1480</width>
+            <height>50</height>
+            <orientation>horizontal</orientation>
+            <itemgap>12</itemgap>
+            <onleft>106</onleft>
+            <onright>106</onright>
+
+            <control type="button" id="101">
+                <width>145</width>
+                <height>46</height>
+                <label>Inicio</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>106</onleft>
+                <onright>102</onright>
+            </control>
+
+            <control type="button" id="102">
+                <width>155</width>
+                <height>46</height>
+                <label>Películas</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>101</onleft>
+                <onright>103</onright>
+            </control>
+
+            <control type="button" id="103">
+                <width>145</width>
+                <height>46</height>
+                <label>Series</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>102</onleft>
+                <onright>104</onright>
+            </control>
+
+            <control type="button" id="104">
+                <width>145</width>
+                <height>46</height>
+                <label>Anime</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>103</onleft>
+                <onright>109</onright>
+            </control>
+
+            <control type="button" id="109">
+                <width>110</width>
+                <height>46</height>
+                <label>TV</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>104</onleft>
+                <onright>107</onright>
+            </control>
+        <!-- Botón RETRO ARCADE (ID 110) -->
+        
+
+            <control type="button" id="107">
+                <width>165</width>
+                <height>46</height>
+                <label>Historial</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>109</onleft>
+                <onright>108</onright>
+            </control>
+
+            <control type="button" id="108">
+                <width>175</width>
+                <height>46</height>
+                <label>Colecciones</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>107</onleft>
+                <onright>105</onright>
+            </control>
+
+            <control type="button" id="105">
+                <width>145</width>
+                <height>46</height>
+                <label>Buscar</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>108</onleft>
+                <onright>106</onright>
+            </control>
+
+            <control type="button" id="106">
+                <width>145</width>
+                <height>46</height>
+                <label>Ajustes</label>
+                <font>font13</font>
+                <align>center</align>
+                <textcolor>FFD0D4DC</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <onleft>105</onleft>
+                <onright>101</onright>
+            </control>
+        </control>
+
+        <!-- ============================================================ -->
+        <!-- 3. HERO BANNER DINÁMICO (METADATOS SINCRONIZADOS)            -->
+        <!-- ============================================================ -->
+        <!-- Título -->
+        <control type="label">
+            <left>70</left>
+            <top>125</top>
+            <width>1050</width>
+            <height>55</height>
+            <font>font36_title</font>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>B0000000</shadowcolor>
+            <label>$INFO[Window.Property(hero_title)]</label>
+            <scroll>true</scroll>
+        </control>
+
+        <!-- Píldoras de Metadatos -->
+        <control type="grouplist">
+            <left>70</left>
+            <top>185</top>
+            <width>1050</width>
+            <height>40</height>
+            <orientation>horizontal</orientation>
+            <itemgap>12</itemgap>
+
+            <!-- Píldora Calidad HD -->
+            <control type="group">
+                <width>100</width>
+                <height>34</height>
+                <control type="image">
+                    <left>0</left><top>0</top><width>100</width><height>34</height>
+                    <texture border="8">badge_bg.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left><top>0</top><width>100</width><height>34</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <label>1080p</label>
+                </control>
+            </control>
+
+            <!-- Píldora Calificación -->
+            <control type="group">
+                <width>105</width>
+                <height>34</height>
+                <control type="image">
+                    <left>0</left><top>0</top><width>105</width><height>34</height>
+                    <texture border="8">badge_bg.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left><top>0</top><width>105</width><height>34</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFFFD60A</textcolor>
+                    <label>★ $INFO[Window.Property(hero_rating)]</label>
+                </control>
+            </control>
+
+            <!-- Píldora Año -->
+            <control type="group">
+                <width>95</width>
+                <height>34</height>
+                <control type="image">
+                    <left>0</left><top>0</top><width>95</width><height>34</height>
+                    <texture border="8">badge_bg.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left><top>0</top><width>95</width><height>34</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFCCCCCC</textcolor>
+                    <label>$INFO[Window.Property(hero_year)]</label>
+                </control>
+            </control>
+
+            <!-- Píldora Género -->
+            <control type="group">
+                <width>220</width>
+                <height>34</height>
+                <control type="image">
+                    <left>0</left><top>0</top><width>220</width><height>34</height>
+                    <texture border="8">badge_bg.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left><top>0</top><width>220</width><height>34</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FFB0B8C8</textcolor>
+                    <label>$INFO[Window.Property(hero_genre)]</label>
+                </control>
+            </control>
+        </control>
+
+        <!-- Sinopsis -->
+        <control type="textbox">
+            <left>70</left>
+            <top>235</top>
+            <width>1020</width>
+            <height>95</height>
+            <font>font13</font>
+            <textcolor>FFCCCCCC</textcolor>
+            <shadowcolor>A0000000</shadowcolor>
+            <label>$INFO[Window.Property(hero_plot)]</label>
+            <autoscroll delay="3500" time="3000" repeat="5000">true</autoscroll>
+        </control>
+
+        <!-- ============================================================ -->
+        <!-- 4. CONTENEDOR DE CARRUSELES (OPTIMIZADO PARA TV BOX Y STICKS)-->
+        <!-- ============================================================ -->
+        <control type="grouplist" id="9000">
+            <left>70</left>
+            <top>330</top>
+            <width>1850</width>
+            <height>735</height>
+            <orientation>vertical</orientation>
+            <itemgap>20</itemgap>
+            <scrolltime>200</scrolltime>
+            <defaultcontrol>5001</defaultcontrol>
+            <onup>101</onup>
+            <ondown>5003</ondown>
+
+            <!-- FILA 0: CONTINUAR VIENDO (Visible solo si hay elementos en el historial) -->
+            <control type="label" id="5099">
+                <width>1780</width>
+                <height>28</height>
+                <font>font14</font>
+                <textcolor>FF00E5FF</textcolor>
+                <label>[B]CONTINUAR VIENDO[/B]</label>
+                <visible>Integer.IsGreater(Container(5000).NumItems, 0)</visible>
+            </control>
+
+            <control type="fixedlist" id="5000">
+                <left>0</left>
+                <top>0</top>
+                <width>1800</width>
+                <height>350</height>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                <onup>101</onup>
+                <visible>Integer.IsGreater(Container(5000).NumItems, 0)</visible>
+                
+                <itemlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                    <!-- Franja inferior de contraste -->
+                    <control type="image">
+                        <left>0</left>
+                        <top>280</top>
+                        <width>224</width>
+                        <height>56</height>
+                        <texture colordiffuse="D007090E">button_focus.png</texture>
+                    </control>
+                    <!-- Barra de progreso fondo -->
+                    <control type="image">
+                        <left>12</left>
+                        <top>320</top>
+                        <width>200</width>
+                        <height>6</height>
+                        <texture colordiffuse="50FFFFFF">button_focus.png</texture>
+                    </control>
+                    <!-- Barra de progreso avance Neón Cyan -->
+                    <control type="progress">
+                        <left>12</left>
+                        <top>320</top>
+                        <width>200</width>
+                        <height>6</height>
+                        <info>ListItem.Property(percent)</info>
+                        <texturebg border="1" colordiffuse="00000000">button_focus.png</texturebg>
+                        <midtexture border="1" colordiffuse="FF00E5FF">button_focus.png</midtexture>
+                    </control>
+                    <!-- Texto de tiempo -->
+                    <control type="label">
+                        <left>12</left>
+                        <top>287</top>
+                        <width>200</width>
+                        <height>20</height>
+                        <font>font11</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <label>$INFO[ListItem.Property(resume_time)] ($INFO[ListItem.Property(percent)]%)</label>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                    <!-- Franja inferior de contraste -->
+                    <control type="image">
+                        <left>0</left>
+                        <top>280</top>
+                        <width>224</width>
+                        <height>56</height>
+                        <texture colordiffuse="E807090E">button_focus.png</texture>
+                    </control>
+                    <!-- Barra de progreso fondo -->
+                    <control type="image">
+                        <left>12</left>
+                        <top>320</top>
+                        <width>200</width>
+                        <height>6</height>
+                        <texture colordiffuse="50FFFFFF">button_focus.png</texture>
+                    </control>
+                    <!-- Barra de progreso avance Neón Cyan -->
+                    <control type="progress">
+                        <left>12</left>
+                        <top>320</top>
+                        <width>200</width>
+                        <height>6</height>
+                        <info>ListItem.Property(percent)</info>
+                        <texturebg border="1" colordiffuse="00000000">button_focus.png</texturebg>
+                        <midtexture border="1" colordiffuse="FF00E5FF">button_focus.png</midtexture>
+                    </control>
+                    <!-- Texto de tiempo -->
+                    <control type="label">
+                        <left>12</left>
+                        <top>287</top>
+                        <width>200</width>
+                        <height>20</height>
+                        <font>font11</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <label>[B]$INFO[ListItem.Property(resume_time)] ($INFO[ListItem.Property(percent)]%)[/B]</label>
+                    </control>
+                    <!-- Marco blanco brillante: solo visible cuando esta fila tiene el foco real -->
+                    <control type="image">
+                        <left>-13</left>
+                        <top>-13</top>
+                        <width>250</width>
+                        <height>362</height>
+                        <texture border="24">frame_focus.png</texture>
+                        <visible>Control.HasFocus(5000)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <!-- FILA 1: LO MEJOR EN PELÍCULAS -->
+            <control type="label">
+                <width>1780</width>
+                <height>28</height>
+                <font>font14</font>
+                <textcolor>FFFFFFFF</textcolor>
+                <label>[B]LO MEJOR EN PELÍCULAS[/B]</label>
+            </control>
+
+            <control type="fixedlist" id="5001">
+                <left>0</left>
+                <top>0</top>
+                <width>1800</width>
+                <height>350</height>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                
+                <itemlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                    <!-- Marco blanco brillante: solo visible cuando esta fila tiene el foco real -->
+                    <control type="image">
+                        <left>-13</left>
+                        <top>-13</top>
+                        <width>250</width>
+                        <height>362</height>
+                        <texture border="24">frame_focus.png</texture>
+                        <visible>Control.HasFocus(5001)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <!-- FILA 2: LO MEJOR EN SERIES -->
+            <control type="label">
+                <width>1780</width>
+                <height>28</height>
+                <font>font14</font>
+                <textcolor>FFFFFFFF</textcolor>
+                <label>[B]LO MEJOR EN SERIES[/B]</label>
+            </control>
+
+            <control type="fixedlist" id="5002">
+                <left>0</left>
+                <top>0</top>
+                <width>1800</width>
+                <height>350</height>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                
+                <itemlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                    <!-- Marco blanco brillante: solo visible cuando esta fila tiene el foco real -->
+                    <control type="image">
+                        <left>-13</left>
+                        <top>-13</top>
+                        <width>250</width>
+                        <height>362</height>
+                        <texture border="24">frame_focus.png</texture>
+                        <visible>Control.HasFocus(5002)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <!-- FILA 3: LO MEJOR EN ANIME -->
+            <control type="label">
+                <width>1780</width>
+                <height>28</height>
+                <font>font14</font>
+                <textcolor>FFFFFFFF</textcolor>
+                <label>[B]LO MEJOR EN ANIME[/B]</label>
+            </control>
+
+            <control type="fixedlist" id="5003">
+                <left>0</left>
+                <top>0</top>
+                <width>1800</width>
+                <height>350</height>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                <ondown>5003</ondown>
+                
+                <itemlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="240" height="350">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>224</width>
+                        <height>336</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <diffuse>mask_poster.png</diffuse>
+                        <texture fallback="fallback_poster.png">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+                    <!-- Marco blanco brillante: solo visible cuando esta fila tiene el foco real -->
+                    <control type="image">
+                        <left>-13</left>
+                        <top>-13</top>
+                        <width>250</width>
+                        <height>362</height>
+                        <texture border="24">frame_focus.png</texture>
+                        <visible>Control.HasFocus(5003)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+
+        </control>
+
+    </controls>
+</window>

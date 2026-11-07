@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">9001</defaultcontrol>
+    
+    <controls>
+        <!-- 1. Fondo oscurecido con desenfoque simulado (Backdrop Dimmer) -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture colordiffuse="D9000000">button_focus.png</texture>
+        </control>
+
+        <!-- 2. Tarjeta Flotante Central Obsidian / Apple TV (Glass Sheet) -->
+        <control type="group">
+            <left>440</left>
+            <top>270</top>
+            <width>1040</width>
+            <height>540</height>
+
+            <!-- Fondo de la tarjeta con borde sutil -->
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <width>1040</width>
+                <height>540</height>
+                <texture border="16">button_normal.png</texture>
+                <colordiffuse>F412151C</colordiffuse>
+            </control>
+
+            <!-- Borde exterior fino de elevación con resplandor -->
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <width>1040</width>
+                <height>540</height>
+                <texture border="16">border_glow.png</texture>
+                <colordiffuse>33FFFFFF</colordiffuse>
+            </control>
+
+            <!-- ================= LADO IZQUIERDO: VISUAL ================= -->
+            <!-- Póster con máscara redondeada -->
+            <control type="image">
+                <left>45</left>
+                <top>45</top>
+                <width>230</width>
+                <height>345</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <diffuse>mask_poster.png</diffuse>
+                <texture fallback="fallback_poster.png">$INFO[Window.Property(item_poster)]</texture>
+            </control>
+
+            <!-- Sombra fondo barra progreso -->
+            <control type="image">
+                <left>45</left>
+                <top>402</top>
+                <width>230</width>
+                <height>8</height>
+                <texture colordiffuse="50FFFFFF">button_focus.png</texture>
+            </control>
+
+            <!-- Barra de Progreso Neón Cyan -->
+            <control type="progress">
+                <left>45</left>
+                <top>402</top>
+                <width>230</width>
+                <height>8</height>
+                <info>Window.Property(item_percent)</info>
+                <texturebg border="1" colordiffuse="00000000">button_focus.png</texturebg>
+                <midtexture border="1" colordiffuse="FF00E5FF">button_focus.png</midtexture>
+            </control>
+
+            <!-- Texto de Progreso bajo la barra -->
+            <control type="label">
+                <left>45</left>
+                <top>418</top>
+                <width>230</width>
+                <height>25</height>
+                <font>font12</font>
+                <textcolor>FF8E95A5</textcolor>
+                <align>center</align>
+                <label>$INFO[Window.Property(item_progress_badge)]</label>
+            </control>
+
+            <!-- ================= LADO DERECHO: DETALLES Y ACCIONES ================= -->
+            <!-- Píldora Badge Superior -->
+            <control type="group">
+                <left>315</left>
+                <top>42</top>
+                <width>230</width>
+                <height>28</height>
+                <control type="image">
+                    <left>0</left><top>0</top><width>230</width><height>28</height>
+                    <texture border="8">badge_bg.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left><top>0</top><width>230</width><height>28</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FF00E5FF</textcolor>
+                    <label>CONTINUAR VIENDO</label>
+                </control>
+            </control>
+
+            <!-- Título del Contenido -->
+            <control type="label">
+                <left>315</left>
+                <top>80</top>
+                <width>680</width>
+                <height>40</height>
+                <font>font30_title</font>
+                <textcolor>FFFFFFFF</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>$INFO[Window.Property(item_title)]</label>
+            </control>
+
+            <!-- Subtítulo de Tiempo (Te quedaste en... Restan...) -->
+            <control type="label">
+                <left>315</left>
+                <top>124</top>
+                <width>680</width>
+                <height>26</height>
+                <font>font13</font>
+                <textcolor>FF8E95A5</textcolor>
+                <label>$INFO[Window.Property(item_subtitle)]</label>
+            </control>
+
+            <!-- Sinopsis / Resumen -->
+            <control type="textbox">
+                <left>315</left>
+                <top>156</top>
+                <width>680</width>
+                <height>80</height>
+                <font>font13</font>
+                <textcolor>FFB0B8C8</textcolor>
+                <label>$INFO[Window.Property(item_plot)]</label>
+                <autoscroll>false</autoscroll>
+            </control>
+
+            <!-- Línea Separadora Sutil -->
+            <control type="image">
+                <left>315</left>
+                <top>248</top>
+                <width>680</width>
+                <height>1</height>
+                <texture colordiffuse="26FFFFFF">button_focus.png</texture>
+            </control>
+
+            <!-- ================= BOTONES DE ACCIÓN (ESTILO APPLE TV) ================= -->
+            <!-- Botón 1: Continuar desde MM:SS -->
+            <control type="button" id="9001">
+                <left>315</left>
+                <top>265</top>
+                <width>680</width>
+                <height>52</height>
+                <font>font14</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>FFFFFFFF</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <label>    Continuar desde $INFO[Window.Property(resume_time)]</label>
+                <onup>9003</onup>
+                <ondown>9002</ondown>
+            </control>
+
+            <!-- Botón 2: Reproducir desde el inicio -->
+            <control type="button" id="9002">
+                <left>315</left>
+                <top>327</top>
+                <width>680</width>
+                <height>52</height>
+                <font>font14</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>FFFFFFFF</textcolor>
+                <focusedcolor>FF000000</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <label>    Reproducir desde el inicio</label>
+                <onup>9001</onup>
+                <ondown>9003</ondown>
+            </control>
+
+            <!-- Botón 3: Quitar de la lista -->
+            <control type="button" id="9003">
+                <left>315</left>
+                <top>389</top>
+                <width>680</width>
+                <height>52</height>
+                <font>font14</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>FFFF6B6B</textcolor>
+                <focusedcolor>FFFF2222</focusedcolor>
+                <texturefocus border="12">button_focus.png</texturefocus>
+                <texturenofocus border="12">button_normal.png</texturenofocus>
+                <label>    Quitar de la lista</label>
+                <onup>9002</onup>
+                <ondown>9001</ondown>
+            </control>
+
+        </control>
+    </controls>
+</window>
