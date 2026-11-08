@@ -301,6 +301,95 @@ def get_sports_channels_live(server_cat_id):
         return []
 
 
+
+def get_daily_events_live():
+    """
+    Obtiene en VIVO los eventos deportivos diarios desde el servidor IPTV.
+    Detecta automáticamente las categorías dinámicas (ej: 'EVENTOS DIARIOS 08/11'
+    o '[EVENTOS DIARIOS | EXCLUSIVOS]') sin importar la fecha ni IDs estáticos.
+    Devuelve lista de dicts con 'nombre', 'stream_id', 'logo'.
+    """
+    try:
+        pool = _load_pool()
+        servidores = pool.get('servidores', [])
+        cuentas    = pool.get('cuentas', [])
+
+        if not servidores or not cuentas:
+            xbmc.log('[LATARR-PRO] get_daily_events_live: pool vacio', xbmc.LOGWARNING)
+            return []
+
+        servidor = servidores[0].rstrip('/')
+        with _pool_lock:
+            idx = _pool_index[0] % len(cuentas)
+        cuenta = cuentas[idx]
+        usuario = cuenta['username']
+        clave   = cuenta['password']
+
+        import re
+        from urllib.request import urlopen, Request
+        headers = {'User-Agent': 'IPTVSmartersPro'}
+
+        # 1. Obtener categorías en vivo para encontrar las de eventos del día
+        cat_url = (
+            f"{servidor}/player_api.php"
+            f"?username={usuario}&password={clave}"
+            f"&action=get_live_categories"
+        )
+        xbmc.log(f'[LATARR-PRO] Buscando categorias de eventos diarios en {servidor}', xbmc.LOGINFO)
+        req = Request(cat_url, headers=headers)
+        resp = urlopen(req, timeout=12)
+        categories = json.loads(resp.read().decode('utf-8'))
+
+        event_cat_ids = []
+        for c in (categories or []):
+            name = c.get('category_name', '')
+            clean_name = re.sub(r'\s+', '', name).upper()
+            if 'EVENTOSDIARIOS' in clean_name:
+                cid = c.get('category_id')
+                if cid:
+                    event_cat_ids.append((cid, name))
+
+        if not event_cat_ids:
+            xbmc.log('[LATARR-PRO] No se encontraron categorias de eventos diarios hoy', xbmc.LOGWARNING)
+            return []
+
+        xbmc.log(f'[LATARR-PRO] Categorias dinamicas detectadas: {[n for _, n in event_cat_ids]}', xbmc.LOGINFO)
+
+        # 2. Obtener streams de cada categoría de eventos diarios
+        partidos = []
+        seen_ids = set()
+        for cat_id, cat_name in event_cat_ids:
+            stream_url = (
+                f"{servidor}/player_api.php"
+                f"?username={usuario}&password={clave}"
+                f"&action=get_live_streams&category_id={cat_id}"
+            )
+            try:
+                req2 = Request(stream_url, headers=headers)
+                resp2 = urlopen(req2, timeout=15)
+                streams = json.loads(resp2.read().decode('utf-8'))
+                for s in (streams or []):
+                    sid = s.get('stream_id') or s.get('id')
+                    nombre = s.get('name', '') or s.get('stream_display_name', '')
+                    logo = s.get('stream_icon', '') or s.get('thumbnail', '')
+                    if sid and sid not in seen_ids:
+                        seen_ids.add(sid)
+                        partidos.append({
+                            'nombre': nombre,
+                            'stream_id': sid,
+                            'logo': logo
+                        })
+            except Exception as ex_cat:
+                xbmc.log(f'[LATARR-PRO] Error cargando streams de cat {cat_id}: {ex_cat}', xbmc.LOGWARNING)
+
+        xbmc.log(f'[LATARR-PRO] get_daily_events_live OK: {len(partidos)} eventos cargados', xbmc.LOGINFO)
+        return partidos
+
+    except Exception as e:
+        xbmc.log(f'[LATARR-PRO] get_daily_events_live ERROR: {e}', xbmc.LOGERROR)
+        return []
+
+
 def get_sports_categories():
     """Devuelve las 7 categorías deportivas PRO (sin los canales, solo metadatos)."""
     sports_path = os.path.join(
@@ -344,6 +433,9 @@ def get_sports_channels(category_id):
         xbmc.log(f'[LATARR-PRO] Error leyendo JSON local para {category_id}: {e}', xbmc.LOGWARNING)
 
     # ── DEPORTES PREMIUM: siempre desde JSON local (rápido, sin red) ──
+    if category_id == 'eventos_diarios':
+        return get_daily_events_live()
+
     if category_id == 'deportes_premium':
         return canales_local
 
