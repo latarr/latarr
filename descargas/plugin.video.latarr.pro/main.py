@@ -476,4 +476,12 @@ if __name__ == '__main__':
     xbmc.executebuiltin("Dialog.Close(busydialog)")
     xbmc.executebuiltin("Dialog.Close(busydialognocancel)")
     xbmc.executebuiltin("Dialog.Close(all, true)")
+
+    # Salida rápida estilo Netflix (Atrás / Esc / Backspace detiene el video)
+    try:
+        from resources.lib import keymap
+        keymap.ensure_netflix_keymap()
+    except Exception as _km_err:
+        xbmc.log(f"[LATARR] Error iniciando keymap: {_km_err}", xbmc.LOGWARNING)
+
     launch_cinema()
