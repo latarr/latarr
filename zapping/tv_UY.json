@@ -1,0 +1,91 @@
+{
+  "pais": "UY",
+  "nombre_pais": "Uruguay",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 7,
+  "categorias": [
+    "Cine y Series",
+    "Deportes",
+    "Música",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "uy-tv-universal-uruguay",
+      "nombre": "TV Universal Uruguay",
+      "pais": "UY",
+      "categoria": "Cine y Series",
+      "logo": "https://i.imgur.com/KD4aZ7W.jpeg",
+      "url": "https://stream.universal.org.uy/hls/0/stream.m3u8",
+      "alternativas": [],
+      "tvg_id": "TVUniversalUruguay.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-canal-mas",
+      "nombre": "Canal Mas",
+      "pais": "UY",
+      "categoria": "Deportes",
+      "logo": "https://i.imgur.com/gs1L1mW.png",
+      "url": "https://canalmasuruguay.com/hls/720p/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "CanalMas.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-la-elegida-television",
+      "nombre": "La Elegida Television",
+      "pais": "UY",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/zdrbjDc.png",
+      "url": "https://stmv.gmpro.top/laelegidatv/laelegidatv/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "LaElegidaTelevision.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-canal-alma",
+      "nombre": "Canal ALMA",
+      "pais": "UY",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/rB7iFUF.jpg",
+      "url": "https://stmv1.voxtvhd.com.br/canalalmatv/canalalmatv/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "CanalALMA.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-canal-once-plus",
+      "nombre": "Canal Once Plus",
+      "pais": "UY",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/TYiMGUD.png",
+      "url": "https://5e50264bd6766.streamlock.net/canal11ury/videocanal11ury/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "CanalOncePlus.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-desde-el-sur-tv",
+      "nombre": "Desde El Sur TV",
+      "pais": "UY",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/y3vNkEU.jpeg",
+      "url": "https://stmv.gmpro.top/surtv/surtv/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "DesdeElSurTV.uy@SD",
+      "destacado": false
+    },
+    {
+      "id": "uy-mision-vida-tv",
+      "nombre": "Mision Vida TV",
+      "pais": "UY",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/8JgBuTm.png",
+      "url": "https://5bf8041cb3fed.streamlock.net/zoefm/zoefm/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "MisionVidaTV.uy@SD",
+      "destacado": false
+    }
+  ]
+}

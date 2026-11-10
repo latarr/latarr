@@ -1,0 +1,233 @@
+{
+  "pais": "PR",
+  "nombre_pais": "Puerto Rico",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 20,
+  "categorias": [
+    "Deportes",
+    "Música",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "pr-wapa-tv-4-2",
+      "nombre": "WAPA-TV 4.2",
+      "pais": "PR",
+      "categoria": "Deportes",
+      "logo": "https://i.imgur.com/5WNBFmp.png",
+      "url": "https://wapa.hostless.app/WAPA-TV-4-2.m3u8",
+      "alternativas": [],
+      "tvg_id": "WAPATV42.pr@HD",
+      "destacado": false
+    },
+    {
+      "id": "pr-la-x",
+      "nombre": "La-X",
+      "pais": "PR",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/i2GnQTq.png",
+      "url": "https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "LaX.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-america-teve",
+      "nombre": "America TeVe",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/K9o3mLP.png",
+      "url": "https://live.gideo.video/americateve2/master.m3u8",
+      "alternativas": [],
+      "tvg_id": "AmericaTeVe.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-candelita-tv",
+      "nombre": "Candelita TV",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/34BvVDl.png",
+      "url": "https://6110f70ea8d0e.streamlock.net/1689/1689/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "CandelitaTV.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-catv",
+      "nombre": "CAtv",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://caribbeanadvantage.com/images/CAtv-logo-512.png",
+      "url": "https://video2.getstreamhosting.com:19360/8216/8216.m3u8",
+      "alternativas": [],
+      "tvg_id": "CAtv.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-cdm-internacional",
+      "nombre": "CDM Internacional",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/N7IneVk.png",
+      "url": "https://627bb251f23c7.streamlock.net:444/CDMInternacional/CDMInternacional/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "CDMInternacional.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-defiance-media",
+      "nombre": "DeFiance Media",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/DISTROTV/LIVECHANNEL/66698943bac4421ebc533695/images/logo_20231219_193005_68.png",
+      "url": "https://amg01529-defiancetv-defiancemedia-glewed-tre8x.amagi.tv/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "DeFianceMedia.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-ebn-television-widp",
+      "nombre": "EBN Television WIDP",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/4OCptwT.png",
+      "url": "https://627bb251f23c7.streamlock.net:444/EBNTELEVISION/EBNTELEVISION/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "EBNTelevision.pr@WIDP",
+      "destacado": false
+    },
+    {
+      "id": "pr-familia-vision-hd",
+      "nombre": "Familia Vision HD",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/uqTH7m5.jpg",
+      "url": "https://584097344c1f0.streamlock.net/29/stream/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "FamiliaVisionHD.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-faro-de-santidad-tv",
+      "nombre": "Faro de Santidad TV",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/GoNBFzI.png",
+      "url": "https://5dbcd1053301e.streamlock.net:4443/farodesantidad/farodesantidad/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "FarodeSantidadTV.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-paraiso-tv",
+      "nombre": "Paraiso TV",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/wE31GIP.jpg",
+      "url": "https://stream.eleden.com/livewtpm/ngrp:livewtpm_all/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "ParaisoTV.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-pura-palabra-718p",
+      "nombre": "Pura Palabra (718p)",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/nl5vyIw.png",
+      "url": "https://59825a54e4454.streamlock.net:8443/william233/william233/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "PuraPalabra.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-salvacion-tv",
+      "nombre": "Salvacion TV",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/6HOViG9.png",
+      "url": "https://stream.eleden.com/livesalvatv/ngrp:livesalvatv_all/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "SalvacionTV.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-telenorte",
+      "nombre": "Telenorte",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/LCiYFrh.jpg",
+      "url": "https://627bb251f23c7.streamlock.net:444/TopRadioTV/TopRadioTV/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "Telenorte.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-teleonce",
+      "nombre": "TeleOnce",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/Crt3P4N.png",
+      "url": "https://live.11-cdn.com/TeleOnce/3fc63fe00050c646635f16b071cd33e2.sdp/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "TeleOnce.pr@HD",
+      "destacado": false
+    },
+    {
+      "id": "pr-wecn",
+      "nombre": "WECN",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/NYBZBY0.png",
+      "url": "https://59825a54e4454.streamlock.net:8443/pastorairisn394/pastorairisn394/chunklist_w239411719.m3u8",
+      "alternativas": [],
+      "tvg_id": "WECN.pr@SD",
+      "destacado": false
+    },
+    {
+      "id": "pr-welu-8-1",
+      "nombre": "WELU 8.1",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/42UdwD0.png",
+      "url": "https://video1.getstreamhosting.com:1936/8226/8226/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "WELU81.pr@HD",
+      "destacado": false
+    },
+    {
+      "id": "pr-wipr-tv-6-1",
+      "nombre": "WIPR-TV 6.1",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/MGJaxFO.png",
+      "url": "https://streamwipr.pr/hls/stream/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "WIPRTV61.pr@HD",
+      "destacado": false
+    },
+    {
+      "id": "pr-wkaq-tv-2-2",
+      "nombre": "WKAQ-TV 2.2",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/TL6xy4y.png",
+      "url": "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream2/master.m3u8",
+      "alternativas": [],
+      "tvg_id": "WKAQTV22.pr@HD",
+      "destacado": false
+    },
+    {
+      "id": "pr-wxwz-ld-23-1",
+      "nombre": "WXWZ-LD 23.1",
+      "pais": "PR",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/rjmGc9p.png",
+      "url": "https://5bf8041cb3fed.streamlock.net/mastvpr/mastvpr/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "WXWZLD231.pr@HD",
+      "destacado": false
+    }
+  ]
+}
