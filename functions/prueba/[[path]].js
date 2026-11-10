@@ -1,9 +1,25 @@
 // Stremio Protocol v3 Router para Cloudflare Pages Functions
-// LATARR PRO: Películas, Series y Anime con Subtítulos en Español y múltiples calidades
+// LATARR PRO: Películas, Series y Anime con Subtítulos en Español, filtros de género y AÑOS
+
+const YEAR_OPTIONS_MOVIES = [
+  "2026", "2025", "2024", "2023", "2022", "2021", "2020",
+  "2019", "2018", "2017", "2016", "2015", "2014", "2013",
+  "2012", "2011", "2010", "2009", "2008", "2007", "2006",
+  "2005", "2004", "2003", "2002", "2001", "2000",
+  "1990s", "1980s", "Clásicos"
+];
+
+const YEAR_OPTIONS_SERIES = [
+  "2026", "2025", "2024", "2023", "2022", "2021", "2020",
+  "2019", "2018", "2017", "2016", "2015", "2014", "2013",
+  "2012", "2011", "2010", "2009", "2008", "2007", "2006",
+  "2005", "2004", "2003", "2002", "2001", "2000",
+  "1990s", "1980s"
+];
 
 const MANIFEST = {
   id: "org.latarr.pro",
-  version: "2.0.0",
+  version: "2.1.0",
   name: "LATARR PRO",
   description: "Películas, Series y Anime con Subtítulos en Español y Audio Dual",
   logo: "https://latarr-pro.pages.dev/icon.png",
@@ -39,6 +55,10 @@ const MANIFEST = {
             "Western"
           ]
         },
+        {
+          name: "year",
+          options: YEAR_OPTIONS_MOVIES
+        },
         { name: "skip", isRequired: false },
         { name: "search", isRequired: false }
       ]
@@ -61,6 +81,10 @@ const MANIFEST = {
             "Otros"
           ]
         },
+        {
+          name: "year",
+          options: YEAR_OPTIONS_SERIES
+        },
         { name: "skip", isRequired: false },
         { name: "search", isRequired: false }
       ]
@@ -70,6 +94,10 @@ const MANIFEST = {
       id: "latarr_anime",
       name: "⛩️ Anime LATARR",
       extra: [
+        {
+          name: "year",
+          options: YEAR_OPTIONS_SERIES
+        },
         { name: "skip", isRequired: false },
         { name: "search", isRequired: false }
       ]
@@ -227,19 +255,19 @@ export async function onRequest(context) {
 
     let items = [];
     if (catId === "latarr_movies") {
-      if (!extra.genre && !extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
+      if (!extra.genre && !extra.year && !extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
         items = (await fetchAssetJson(context, "/top_movies.json")) || [];
       } else {
         items = (await fetchAssetJson(context, "/peliculas.json")) || [];
       }
     } else if (catId === "latarr_series") {
-      if (!extra.genre && !extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
+      if (!extra.genre && !extra.year && !extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
         items = (await fetchAssetJson(context, "/top_series.json")) || [];
       } else {
         items = (await fetchAssetJson(context, "/series.json")) || [];
       }
     } else if (catId === "latarr_anime") {
-      if (!extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
+      if (!extra.year && !extra.search && (!extra.skip || parseInt(extra.skip) === 0)) {
         items = (await fetchAssetJson(context, "/top_anime.json")) || [];
       } else {
         items = (await fetchAssetJson(context, "/anime.json")) || [];
@@ -252,6 +280,33 @@ export async function onRequest(context) {
     if (extra.genre && extra.genre !== "Todos") {
       const targetGenre = normalizeText(extra.genre);
       items = items.filter(i => normalizeText(i.genre) === targetGenre);
+    }
+
+    // Filtrar por año
+    if (extra.year && extra.year !== "Todos") {
+      if (extra.year === "2000s") {
+        items = items.filter(i => {
+          const y = parseInt(i.year);
+          return y >= 2000 && y <= 2009;
+        });
+      } else if (extra.year === "1990s") {
+        items = items.filter(i => {
+          const y = parseInt(i.year);
+          return y >= 1990 && y <= 1999;
+        });
+      } else if (extra.year === "1980s") {
+        items = items.filter(i => {
+          const y = parseInt(i.year);
+          return y >= 1980 && y <= 1989;
+        });
+      } else if (extra.year === "Clásicos") {
+        items = items.filter(i => {
+          const y = parseInt(i.year);
+          return y < 1980;
+        });
+      } else {
+        items = items.filter(i => String(i.year) === String(extra.year));
+      }
     }
 
     // Filtrar por búsqueda
