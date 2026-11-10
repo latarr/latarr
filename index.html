@@ -607,6 +607,49 @@
 </head>
 <body id="top">
 
+    <!-- BANNER LATERAL DERECHO (160x300) -->
+    <style>
+        .side-banner-right {
+            position: fixed;
+            top: 130px;
+            right: calc(50% - 620px - 175px);
+            width: 160px;
+            min-height: 300px;
+            z-index: 99;
+            display: none;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(10, 14, 23, 0.8);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+        @media (min-width: 1600px) {
+            .side-banner-right {
+                display: block;
+            }
+        }
+        @media (min-width: 1360px) and (max-width: 1599px) {
+            .side-banner-right {
+                display: block;
+                right: 12px;
+            }
+        }
+    </style>
+
+    <!-- Banner Lateral Derecho (160x300 Mediano) -->
+    <div class="side-banner-right">
+        <script>
+            atOptions = {
+                'key' : 'd2eb92159cc3b65609fd112bc728495f',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://bancadeltempoidea.org/22/d2eb92159cc3b65609fd112bc728495f"></script>
+    </div>
+
+
     <div class="ambient-glow"></div>
 
     <!-- Navegación Superior -->

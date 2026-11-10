@@ -1278,6 +1278,7 @@
     <script>
         // ESTADO GLOBAL
         let currentType = 'top';
+        let isViewingActorMovies = false;
         let fullCatalog = [];
         let filteredCatalog = [];
         let currentPage = 1;
@@ -1360,6 +1361,7 @@
 
         // CAMBIAR PESTAÑA PRINCIPAL
         function switchCategory(type, btn) {
+            isViewingActorMovies = false;
             document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentType = type;
@@ -1595,11 +1597,33 @@
             const actorObj = fullCatalog.find(a => a.actor && a.actor.id === actorId);
             if (!actorObj || !actorObj.movies) return;
 
+            isViewingActorMovies = true;
             filteredCatalog = actorObj.movies;
             populateFilters(actorObj.movies);
             document.getElementById('sectionTitle').innerHTML = `🎭 Películas de <span>${actorObj.actor.name}</span>`;
             currentPage = 1;
             renderCards(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (!history.state || !history.state.actorMovies) {
+                history.pushState({ actorMovies: true }, '', '#actores');
+            }
+        }
+
+        // VOLVER A LA CUADRÍCULA DE ACTORES
+        function backToActors(triggerHistoryBack = true) {
+            if (!isViewingActorMovies) return;
+            isViewingActorMovies = false;
+            filteredCatalog = fullCatalog;
+            populateFilters(fullCatalog);
+            document.getElementById('sectionTitle').innerHTML = '🎭 <span>Actores</span> y Filmografías';
+            currentPage = 1;
+            renderCards(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (triggerHistoryBack && window.location.hash === '#actores') {
+                history.back();
+            }
         }
 
         // ABRIR MODAL DE ENLACES DE DESCARGA
@@ -1833,8 +1857,19 @@
         // SI EL USUARIO PULSA "ATRÁS" EN EL NAVEGADOR O CON EL BOTÓN DEL RATÓN:
         window.addEventListener('popstate', function(e) {
             const modal = document.getElementById('downloadModal');
+            // Si el modal estaba abierto, cerrarlo y quedarse en la vista actual (no saltar dos veces)
             if (modal && modal.classList.contains('active')) {
-                closeModal(false); // Cierra el modal sin volver a disparar history.back()
+                closeModal(false);
+                return;
+            }
+            // Si el historial nos regresó al estado de películas de actor, permanecer en las películas del actor
+            if (e.state && e.state.actorMovies) {
+                return;
+            }
+            // Solo regresar a la lista de actores si el historial salió del actor
+            if (isViewingActorMovies) {
+                backToActors(false);
+                return;
             }
         });
 
@@ -1855,10 +1890,12 @@
 
         document.addEventListener('keydown', function(e) {
             const modal = document.getElementById('downloadModal');
+            const isBackKey = (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27 || e.key === 'Backspace' || e.keyCode === 8);
 
             // 1. SI EL MODAL ESTÁ ABIERTO:
             if (modal && modal.classList.contains('active')) {
-                if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+                if (isBackKey) {
+                    e.preventDefault();
                     closeModal();
                     return;
                 }
@@ -1884,6 +1921,13 @@
             // 2. NO INTERCEPTAR SI EL USUARIO ESCRIBE EN EL BUSCADOR O EN SELECTS:
             const tag = (document.activeElement && document.activeElement.tagName) ? document.activeElement.tagName.toLowerCase() : '';
             if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+
+            // 2.5 SI ESTÁ VIENDO LAS PELÍCULAS DE UN ACTOR Y PULSA RETROCESO O ESCAPE:
+            if (isViewingActorMovies && isBackKey) {
+                e.preventDefault();
+                backToActors(true);
+                return;
+            }
 
             // 3. NAVEGAR POR LAS TARJETAS CON LAS FLECHAS
             const cards = Array.from(document.querySelectorAll('#cardsGrid .card'));
