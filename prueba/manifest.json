@@ -1,8 +1,8 @@
 {
-  "id": "org.latarr.prueba",
-  "version": "1.0.0",
-  "name": "LATARR PRO (Prueba)",
-  "description": "Prueba de concepto de LATARR en Stremio con Películas y Series en Español Latino",
+  "id": "org.latarr.pro",
+  "version": "2.0.0",
+  "name": "LATARR PRO",
+  "description": "Películas, Series y Anime con Subtítulos en Español y Audio Dual",
   "logo": "https://latarr-pro.pages.dev/icon.png",
   "background": "https://latarr-pro.pages.dev/hero.jpg",
   "resources": [
@@ -15,18 +15,89 @@
     "series"
   ],
   "idPrefixes": [
+    "tmdb",
     "tt"
   ],
   "catalogs": [
     {
       "type": "movie",
       "id": "latarr_movies",
-      "name": "LATARR Películas (Prueba)"
+      "name": "🎬 Películas LATARR",
+      "extra": [
+        {
+          "name": "genre",
+          "options": [
+            "Accion",
+            "Aventura",
+            "Ciencia Ficcion",
+            "Comedia",
+            "Crimen",
+            "Drama",
+            "Familia",
+            "Fantasia",
+            "Terror",
+            "Suspenso",
+            "Romance",
+            "Animacion",
+            "Documental",
+            "Belica",
+            "Historia",
+            "Musica",
+            "Western"
+          ]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        },
+        {
+          "name": "search",
+          "isRequired": false
+        }
+      ]
     },
     {
       "type": "series",
       "id": "latarr_series",
-      "name": "LATARR Series (Prueba)"
+      "name": "📺 Series LATARR",
+      "extra": [
+        {
+          "name": "genre",
+          "options": [
+            "Accion",
+            "Animacion",
+            "Ciencia Ficcion",
+            "Comedia",
+            "Crimen",
+            "Drama",
+            "Documental",
+            "Otros"
+          ]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        },
+        {
+          "name": "search",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "id": "latarr_anime",
+      "name": "⛩️ Anime LATARR",
+      "extra": [
+        {
+          "name": "skip",
+          "isRequired": false
+        },
+        {
+          "name": "search",
+          "isRequired": false
+        }
+      ]
     }
   ]
 }
