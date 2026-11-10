@@ -1,0 +1,1521 @@
+{
+  "pais": "Chile",
+  "codigo": "CL",
+  "total": 167,
+  "categorias": [
+    "Nacionales",
+    "Noticias",
+    "Cine y Series",
+    "Música",
+    "Infantil",
+    "Cultura",
+    "Regionales",
+    "Radios con cámara",
+    "Variedad"
+  ],
+  "canales": [
+    {
+      "nombre": "Bio Bio TV",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/lhglEUP.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/339f69c6122f6d8f4574732c235f09b7683e31a5/bbtv/bbtv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mega",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/RlZfR84.png",
+      "destacado": false,
+      "url": "http://tr.live.clarovtrcdn.vtrplay.com/megahdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mega 2",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/c1ME00r.png",
+      "destacado": false,
+      "url": "http://15.204.196.147:22880/MEGA2-MEGAMEDIA-EE.UU-PROVEEDOR/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mega Ficcion",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/aQdhJie.png",
+      "destacado": false,
+      "url": "http://15.204.196.147:22880/MEGAFICCION-MEGAMEDIA-EE.UU-PROVEEDOR/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Meganoticias Ahora",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/JCVEqTc.png",
+      "destacado": false,
+      "url": "http://15.204.196.147:22880/MEGANOTICIA-MEGAMEDIA-EE.UU-PROVEEDOR/video.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV+",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://jireh-8-hls-video-us-isp.dps.live/hls-video/ey6283je82983je9823je8jowowiekldk9838274/tvmas/tvmas.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Atacama Noticias",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/Avx4Ecf.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/atacamanoticias/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nuevo Tiempo TV",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/eCPzibM.png",
+      "destacado": false,
+      "url": "https://streamtv.novotempo.com/CDN-TV-ES/smil:tvnuevotiempo.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Puranoticia TV",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/NklUi6Y.png",
+      "destacado": false,
+      "url": "https://pnt.janusmedia.tv/hls/pnt.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Star Channel",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "",
+      "destacado": false,
+      "url": "http://138.121.15.230:9002/STAR-CHANNEL/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "13 Festival",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/Ymk6j5o.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "FM Plus TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/1UokOyN.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/fmplus/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Genial TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/uBC8e96.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/genialtv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Clave",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://cdn.m3u.cl/logo/1270_La_Clave.png",
+      "destacado": false,
+      "url": "https://unlimited1-cl-isp.dps.live/laclavetv/laclavetv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Pauta",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/UAKLJAt.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274/pautatv/pautatv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Retromusica Television",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://cdn.m3u.cl/logo/1765_Retromusica_Television.png",
+      "destacado": false,
+      "url": "https://vdochile.com:3864/stream/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ritoque TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/nTVJcFA.png",
+      "destacado": false,
+      "url": "https://streaming.purum.cl/ritoquetv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sabor TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://cdn.m3u.cl/logo/416_Sabor_TV.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/sabortv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sensacion Costa",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/oYQoWAB.png",
+      "destacado": false,
+      "url": "https://tvcosta.gleeze.com/memfs/4d48db09-0b1e-4803-8da7-22be388bdd7e.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Solo Bailalo",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/SImJE7c.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/8000/8000/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "V Classic TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/WIACJSy.png",
+      "destacado": false,
+      "url": "http://186.148.196.100:8000/play/a02z",
+      "alternativas": []
+    },
+    {
+      "nombre": "13 Kids",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "https://i.imgur.com/8WJUbSD.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/LhHrVtyeQkKZ-Ye_xEU75g/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Discovery Kids Latin America Chile",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "",
+      "destacado": false,
+      "url": "http://38.224.231.176:8000/play/a01j/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "13C",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://i.imgur.com/Zfe2f5j.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Agricultura TV",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://i.imgur.com/sxrYc3Q.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274/921tv/921tv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "13T",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/csBNi2L.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "15.1 BPB",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/hyxkJYV.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/enlacebpbtv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ADA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1638_ADA_TV.png",
+      "destacado": false,
+      "url": "https://live-evg10.tv360.bitel.com.pe/bitel/alasdeaguilaSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ADN TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AVfTwNw.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AM Canal",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wfi9NXL.png",
+      "destacado": false,
+      "url": "https://streaming.bitsur.cl:3534/live/vdo1102live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Antofagasta TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/XIQr0fs.png",
+      "destacado": false,
+      "url": "https://unlimited6-cl.dps.live/atv/atv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Aysen TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/DmdBf9S.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/aysentv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Caldera Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/A3Jiffe.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/kymczwbrge/kymczwbrge/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Campo Abierto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KL6pgaL.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/catvlive/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CampusTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/LvzLg33.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/campustv/campustv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 1 Nuble",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/PGSixH5.png",
+      "destacado": false,
+      "url": "https://tls-cl.cdnz.cl/canal21tv/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 2 Quellon",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MOwLCwT.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/tvquellon/tvquellon.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 30 Loncomilla",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dgUHqrQ.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/canal30loncomilla/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 5 Puerto Montt",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pLobTRW.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/aufymdjpjf/aufymdjpjf/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 9 Bio-Bio Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/J2G1WMs.png",
+      "destacado": false,
+      "url": "https://unlimited6-cl.dps.live/c9/c9.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Chilote",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/mdYIKyt.png",
+      "destacado": false,
+      "url": "https://videostream.chileservidores.com:8081/chiloe2/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Claro",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://images.pluto.tv/channels/68224482c5d53e1351aaf2f2/colorLogoPNG_1751655767455.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-68224482c5d53e1351aaf2f2.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal ISB",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cQ4ggTw.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/isb/isb.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Latino 54",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/mKUQoX7.png",
+      "destacado": false,
+      "url": "https://videostream.chileservidores.com:8081/latina/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Local",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ReZXqWR.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/canallocalcl/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Survision Alerce",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FknQYSp.png",
+      "destacado": false,
+      "url": "https://s1.tvdatta.com:3384/live/canal20tvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Caracola TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QGvfqug.png",
+      "destacado": false,
+      "url": "https://wifispeed.trapemn.tv:1936/comunales/caracola-tv/chunks.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Central TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1706_Central_TV.png",
+      "destacado": false,
+      "url": "https://freya.mivideo.pro/centraltv/video.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Chile Channel",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/F1it6fh.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/chilechannel/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "China Channel",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1769_China_Channel.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/chinachannel/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Club TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6fmQLF8.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/clubtv/clubtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Concepcion TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9k0yAxj.jpeg",
+      "destacado": false,
+      "url": "https://stream.blserver.cl/hls/ctv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Contivision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Lz2OlKf.png",
+      "destacado": false,
+      "url": "https://unlimited6-cl.dps.live/cm/cm.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cooperativa",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/422_Cooperativa.png",
+      "destacado": false,
+      "url": "https://unlimited1-cl-isp.dps.live/coopetv/coopetv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Coyhaique TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1768_Coyhaique_TV.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/coyhaiquetv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "DCH TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/65Xk6oI.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/dchtv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Decima TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eu8hDDc.png",
+      "destacado": false,
+      "url": "https://unlimited2-cl-isp.dps.live/decimatv/decimatv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Docevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1759_Docevision.png",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/giatvplayout7/giatv-208729/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El 3 de Conce",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KvsrWyE.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/xedkektnqj/xedkektnqj/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Canal Feliz",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/UlmYraS.png",
+      "destacado": false,
+      "url": "http://streaming.multicontenidos.cl:8081/live/canalfeliz/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Centro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2KqGHvA.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/diarioelcentrotv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Pinguino TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ikEs9b8.png",
+      "destacado": false,
+      "url": "https://redirector.dps.live/hls/pinguinotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Radar",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1743_El_Radar.png",
+      "destacado": false,
+      "url": "https://video.ipstream.cl:3459/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "En Linea Maule",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://enlineamaule.cl/wp-content/uploads/2025/08/En-linea-Maule841351465.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/enlineamauletv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "EnerGeek",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.energeek.cl/logos/EG-Retro-2025_pfp.png",
+      "destacado": false,
+      "url": "https://cl-2.backend.energeek.cl/bkp/egretroweb/index.m3u8?token=IPTVgh26",
+      "alternativas": []
+    },
+    {
+      "nombre": "EnerGeek FAN",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.energeek.cl/logos/EG-Fan-2025_pfp.png",
+      "destacado": false,
+      "url": "https://cl-2.backend.energeek.cl/bkp/egfan/mobile/index.m3u8?token=IPTVgh26",
+      "alternativas": []
+    },
+    {
+      "nombre": "Enfoque Digital TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GaJzjt5.png",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/8074/8074/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Estacion Limache TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YAADx7P.png",
+      "destacado": false,
+      "url": "https://v4.tustreaming.cl/limachemovil/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Estacion TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eICyrPP.png",
+      "destacado": false,
+      "url": "https://unlimited1-cl-isp.dps.live/supersonikatv/supersonikatv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Fortaleza TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BJpop5n.png",
+      "destacado": false,
+      "url": "https://multimedia.fortalezatv.cl/video/video.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Frecuencia 7 TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZhwmWXD.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/frecuencia7/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "FunBox",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9MXM6jD.png",
+      "destacado": false,
+      "url": "http://186.148.196.100:8000/play/a00d",
+      "alternativas": []
+    },
+    {
+      "nombre": "GVision (288p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jUPHG21.png",
+      "destacado": false,
+      "url": "https://videostream.chileservidores.com:8081/tome/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Holvoet TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9JKRO3R.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/holvoettv/holvoettv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Iquique TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZpXXLox.png",
+      "destacado": false,
+      "url": "https://origin.skarnetchile.com:8081/iquiquetv-hd/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ISA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/24qGdyn.jpeg",
+      "destacado": false,
+      "url": "https://scl.edge.grupoz.cl/isatv/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Islita TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YGLbCeC.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/unetev/unetev/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ITV Patagonia",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://rhk91h.infiniteuploads.cloud/2025/08/Logo-ITV-Patagonia.jpg",
+      "destacado": false,
+      "url": "https://redirector.dps.live/hls/itv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Juntos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/U62q2eM.png",
+      "destacado": false,
+      "url": "https://video.juntostvchile.cl:8879/hls/web-jntv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Chilena TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GHJkxaB.png",
+      "destacado": false,
+      "url": "https://vdochile.com:3134/stream/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Comarca TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1698_La_Comarca_TV.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/lcomarcatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Melinkana TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/I0nzI1y.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/melinkana/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Metro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0aoI5Zd.jpeg",
+      "destacado": false,
+      "url": "https://jireh-8-hls-video-us-isp.dps.live/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/metropolitanatv/metropolitanatv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Nuestra",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/WExojSG.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/339f69c6122f6d8f4574732c235f09b7683e31a5/ln/ln.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Popular TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AWdgMCC.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/enlacetv1/enlacetv1/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Lila TV Pencahue",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/widaSu3.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/radiolila/radiolila/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Maray TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YinMA8c.png",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/8242/ngrp:8242_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Marga Marga TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4cg51eE.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/margamargatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MTNA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/v7SA92F.png",
+      "destacado": false,
+      "url": "https://live.mtna.tv/hls/mtna/mtna.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mundos Lacustres TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/5xKtvnD.jpeg",
+      "destacado": false,
+      "url": "https://video.ipstream.cl:3710/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nada Es Imposible TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cGNgvOD.png",
+      "destacado": false,
+      "url": "https://vdochile.com:3194/live/mvqutymylive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "NCTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oo5vDBv.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/nctv/nctv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://cdn.m3u.cl/logo/1552_Nina_TV.png",
+      "destacado": false,
+      "url": "https://tv1.ninatv.cl/hls/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Odisea TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/8SCnoiZ.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/odiseatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Oli TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2emMRvf.jpeg",
+      "destacado": false,
+      "url": "https://v4.tustreaming.cl/retroplaytv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Polar TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4exfvPt.png",
+      "destacado": false,
+      "url": "https://polartv.webredirect.org/memfs/319ac83c-e602-4e91-8104-2b5501380b5e.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Primitivos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/w9WpbTN.jpeg",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/heqhvtgebg/heqhvtgebg/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Pucon TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nO4cV3E.png",
+      "destacado": false,
+      "url": "https://redirector.dps.live/hls/pucontv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rial TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zcwQyPI.png",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/8124/8124/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rocco TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QFzCKRa.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/wympnqeqts/wympnqeqts/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RTC Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/w91IBj7.png",
+      "destacado": false,
+      "url": "https://scl.edge.grupoz.cl/rtcstreaming/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RTV Nuble",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BDKgDZG.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/canalrtv/canalrtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "San Nicolas TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/z94YCpH.png",
+      "destacado": false,
+      "url": "https://v4.tustreaming.cl/sannicolastv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Santa Maria Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/SnbGpoK.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/smtv/smtv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Solo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://stream.making.cl/logo-solotv.png",
+      "destacado": false,
+      "url": "https://sproxy.solotv.cl/hls/live/fhd.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "SUR TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wDCqoor.png",
+      "destacado": false,
+      "url": "https://surtv-2.mddsoluciones.cl/play/ZZZ-WEB-001:ULpj2JxXM9/live/surtvweb/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Surena TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZQRb3L3.png",
+      "destacado": false,
+      "url": "https://vs20.live.opencaster.com/surenatv_187f915a/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Suyai TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://suyaitv.cl/wp-content/uploads/2024/10/ico_Suyai_TV_512.png",
+      "destacado": false,
+      "url": "https://trun.suyaitv.cl/memfs/1255a743-cd41-40a8-86c4-d264ee16ebf3.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "T-Vinet",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KisHIpA.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/inet2/inet2.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "T13 En Vivo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2Vlkl2x.png",
+      "destacado": false,
+      "url": "https://redirector.dps.live/hls/t13/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TCM Latin America Chile",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QpDkrmT.png",
+      "destacado": false,
+      "url": "https://streaming.onnethn.com/TCM_HD/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleangol",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nhPFGs8.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/teleangol/teleangol.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Televida",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bmNA8hq.png",
+      "destacado": false,
+      "url": "https://tls-cl.cdnz.cl/televida/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tendencias Prime",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nDWW4m7.png",
+      "destacado": false,
+      "url": "https://v4.tustreaming.cl/tendenciastv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tevex",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FnInQRd.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/tevex/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Thema Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.thematelevision.cl/wp-content/uploads/2019/08/fffffffff.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/thema/thema.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TNE",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/8QbvXva.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/tnetv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Turismo Travel TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4ixl8Px.png",
+      "destacado": false,
+      "url": "https://stmv3.voxtvhd.com.br/turismotraveltv/turismotraveltv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Turno",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/XuSeHBt.png",
+      "destacado": false,
+      "url": "https://redirector.dps.live/hls/turno/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Senado",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CNUZ6ig.png",
+      "destacado": false,
+      "url": "https://janus-tv-ply.senado.cl/playlist/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV UCT",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/tpI0WQH.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/uct/uct.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Usach",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KDC7IVl.png",
+      "destacado": false,
+      "url": "https://stv4.janus.cl/playlist/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV5 Linares",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/PNKlJBj.png",
+      "destacado": false,
+      "url": "https://v1.tustreaming.cl/tv5linares/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVN3",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9LEiQPJ.png",
+      "destacado": false,
+      "url": "https://mdstrm.com/live-stream-playlist/5653641561b4eba30a7e4929.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVO San Vicente",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/PCVWtHd.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/8014/8014/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVR",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.postimg.cc/prDRDZw3/TVR-Logo.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/tvr/tvr.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVU",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/5vFMTxt/Logo-tvu.png",
+      "destacado": false,
+      "url": "https://unlimited1-cl-isp.dps.live/tvu/tvu.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "U Los Lagos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/HxUZseV.png",
+      "destacado": false,
+      "url": "http://tv.ulagos.cl/web/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UATV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BdZGS66.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/uatv/uatv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UCV TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.postimg.cc/jjGpZf4T/UCV-Logo.png",
+      "destacado": false,
+      "url": "https://unlimited2-cl-isp.dps.live/ucvtv2/ucvtv2.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Uniregion TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VEO6aos.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/ubyecbxnfd/ubyecbxnfd/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UTalca TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2AK61FQ.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/campustv/campustv.smil/campustv/livestream1/chunks.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZJNSpfZ.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/utv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Verso TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zdv4IF8.png",
+      "destacado": false,
+      "url": "https://verso.coopcom.cl/live/SHf6GLCpn4hDSpWdzaDzgX0ciU82/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Via X",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "http://45.170.130.224:8000/play/a025/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "VTV Valle de Aconcagua",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0bFVvKj.png",
+      "destacado": false,
+      "url": "https://unlimited1-us.dps.live/vtv/vtv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Wapp",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Bv1yJ1d.png",
+      "destacado": false,
+      "url": "https://stream.wapptv.cl/video/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Zona Latina",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lMyZZtk.png",
+      "destacado": false,
+      "url": "http://45.170.130.224:8000/play/a00x/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AE Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/425dj2i.jpeg",
+      "destacado": false,
+      "url": "https://tls-cl.cdnz.cl/aeradio/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Chocolate FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/382_ChocolateFM.png",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/8180/8180/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Dance FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i2.paste.pics/ff3e1e1045a1968dcdbcda3824a94eb3.png",
+      "destacado": false,
+      "url": "https://5eaccbab48461.streamlock.net:1936/dancefm_1/dancefm_1/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "EnerGeek Radio",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.energeek.cl/logos/EG-Radio-2025_pfp.png",
+      "destacado": false,
+      "url": "https://cl-2.backend.energeek.cl/bkp/egradio/mobile/index.m3u8?token=IPTVgh26",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mi Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/XEpLWJw.png",
+      "destacado": false,
+      "url": "https://scl.edge.grupoz.cl/miradio2/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Patagonia Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/oFuWBZO.png",
+      "destacado": false,
+      "url": "https://video01.logicahost.com.br/grupomedia/grupomedia/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio America TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/8DXWU8z.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/americamovil/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Ancoa TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/406_Radio_Ancoa_TV.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/radioancoatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Armonia TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/puWBnP3.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/armoniamovil/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Contemporanea Coihueco",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/1493_Radio_Contemporanea_Coihueco.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:19360/8046/8046.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Duna",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/427_Radio_Duna.png",
+      "destacado": false,
+      "url": "https://mdstrm.com/live-stream-playlist/67ed8a8d6db4af9a0188555c.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio El Sembrador",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/gBpMAc3.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/elsembrador/elsembrador/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Fantasia TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/389_Radio_Fantasia_TV.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/fantasiatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio La Serena TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/65ftM3v.png",
+      "destacado": false,
+      "url": "https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Panoramica",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/1502_Radio_Panoramica.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/alingeproducciones/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Popular TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/71U0wTN.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:19360/8052/8052.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Pudahuel",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/429_Pudahuel_FM.png",
+      "destacado": false,
+      "url": "https://unlimited2-cl-isp.dps.live/pudahueltv/pudahueltv.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Rancagua FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/ZzUc6je.png",
+      "destacado": false,
+      "url": "https://tv.arkeo.cl:1936/radiorancagua/radiorancagua/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Ritmo FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/qU3E0kX.png",
+      "destacado": false,
+      "url": "https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Suyai TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://stream-tools.zenomedia.com/content/stations/883465cc-a2ee-418a-972d-2c937707687d/image/?keep=w&lu=1775615385000&resize=350x350",
+      "destacado": false,
+      "url": "https://cl-2.backend.energeek.cl/RadioSuyai-Neo/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio UNIACC",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/1744_Radio_UNIACC.png",
+      "destacado": false,
+      "url": "https://scl.edge.grupoz.cl/uniaccastream/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Universal",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/390_Radio_Universal.png",
+      "destacado": false,
+      "url": "https://videostream.chileservidores.com:8081/universal/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio USACH",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://static.mytuner.mobi/media/tvos_radios/997/radio-udesantiago.75310738.jpg",
+      "destacado": false,
+      "url": "https://rusach2.janus.cl/playlist/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Via Libre",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/396_Radio_Via_Libre.png",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/vialibretv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Vida Curico",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/167_Radio_Vida_Curico.png",
+      "destacado": false,
+      "url": "https://v2.tustreaming.cl/radiovidacurico/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Zona 90.3",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://cdn.m3u.cl/logo/1629_Radio_Zona_90_3.png",
+      "destacado": false,
+      "url": "https://live.tvcontrolcp.com:8081/radiozona/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleangol Radio",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/nhPFGs8.png",
+      "destacado": false,
+      "url": "https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "13 Humor",
+      "categoria": "Variedad",
+      "subtitulo": "Variedad",
+      "logo": "https://i.imgur.com/KvMuTzN.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "13 Realities",
+      "categoria": "Variedad",
+      "subtitulo": "Variedad",
+      "logo": "https://i.imgur.com/m0SuwMU.png",
+      "destacado": false,
+      "url": "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8",
+      "alternativas": []
+    }
+  ]
+}

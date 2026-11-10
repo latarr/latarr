@@ -1,0 +1,73 @@
+{
+  "pais": "Nicaragua",
+  "codigo": "NI",
+  "total": 7,
+  "categorias": [
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "nombre": "Canal 10",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ztp781b.png",
+      "destacado": false,
+      "url": "https://ddycmnicl95kp.cloudfront.net/live/ja5k3h31wv9r/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 12",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/UhEW8cj.png",
+      "destacado": false,
+      "url": "http://45.228.234.9:8000/play/a06s/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MegaBox",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/JqaW7Ei.png",
+      "destacado": false,
+      "url": "https://hdbox.chunklistv.com/live?stream=megabox",
+      "alternativas": []
+    },
+    {
+      "nombre": "Olam Metro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dDZnyUA.jpeg",
+      "destacado": false,
+      "url": "https://netzerstreaming.com:4433/hls/olammetro/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TN8",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/m0Zdxiz.png",
+      "destacado": false,
+      "url": "https://streamingcws30.com/tn8/videotn8/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV 45",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/sI0msrn.png",
+      "destacado": false,
+      "url": "https://hdbox.chunklistv.com/live?stream=3abn-nicaragua",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVONE Nicaragua",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FNk6rdz.png",
+      "destacado": false,
+      "url": "https://hdbox.chunklistv.com/live?stream=tvone",
+      "alternativas": []
+    }
+  ]
+}

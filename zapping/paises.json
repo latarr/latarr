@@ -1,0 +1,122 @@
+{
+  "actualizado": "2026-11-09 22:05:33",
+  "total_canales": 1855,
+  "total_paises": 23,
+  "paises": [
+    {
+      "codigo": "DEP",
+      "nombre": "⚽ Deportes LATAM & Premium",
+      "total": 55
+    },
+    {
+      "codigo": "CL",
+      "nombre": "Chile",
+      "total": 167
+    },
+    {
+      "codigo": "AR",
+      "nombre": "Argentina",
+      "total": 140
+    },
+    {
+      "codigo": "PE",
+      "nombre": "Perú",
+      "total": 120
+    },
+    {
+      "codigo": "MX",
+      "nombre": "México",
+      "total": 118
+    },
+    {
+      "codigo": "CO",
+      "nombre": "Colombia",
+      "total": 103
+    },
+    {
+      "codigo": "ES",
+      "nombre": "España",
+      "total": 156
+    },
+    {
+      "codigo": "US",
+      "nombre": "Estados Unidos / Hispano",
+      "total": 260
+    },
+    {
+      "codigo": "INT",
+      "nombre": "Internacional & Variedades",
+      "total": 165
+    },
+    {
+      "codigo": "DO",
+      "nombre": "República Dominicana",
+      "total": 182
+    },
+    {
+      "codigo": "EC",
+      "nombre": "Ecuador",
+      "total": 51
+    },
+    {
+      "codigo": "BO",
+      "nombre": "Bolivia",
+      "total": 39
+    },
+    {
+      "codigo": "VE",
+      "nombre": "Venezuela",
+      "total": 51
+    },
+    {
+      "codigo": "UY",
+      "nombre": "Uruguay",
+      "total": 7
+    },
+    {
+      "codigo": "PY",
+      "nombre": "Paraguay",
+      "total": 57
+    },
+    {
+      "codigo": "CR",
+      "nombre": "Costa Rica",
+      "total": 53
+    },
+    {
+      "codigo": "PA",
+      "nombre": "Panamá",
+      "total": 16
+    },
+    {
+      "codigo": "CU",
+      "nombre": "Cuba",
+      "total": 1
+    },
+    {
+      "codigo": "GT",
+      "nombre": "Guatemala",
+      "total": 29
+    },
+    {
+      "codigo": "SV",
+      "nombre": "El Salvador",
+      "total": 14
+    },
+    {
+      "codigo": "HN",
+      "nombre": "Honduras",
+      "total": 44
+    },
+    {
+      "codigo": "NI",
+      "nombre": "Nicaragua",
+      "total": 7
+    },
+    {
+      "codigo": "PR",
+      "nombre": "Puerto Rico",
+      "total": 20
+    }
+  ]
+}

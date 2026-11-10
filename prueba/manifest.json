@@ -1,0 +1,32 @@
+{
+  "id": "org.latarr.prueba",
+  "version": "1.0.0",
+  "name": "LATARR PRO (Prueba)",
+  "description": "Prueba de concepto de LATARR en Stremio con Películas y Series en Español Latino",
+  "logo": "https://latarr-pro.pages.dev/icon.png",
+  "background": "https://latarr-pro.pages.dev/hero.jpg",
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "types": [
+    "movie",
+    "series"
+  ],
+  "idPrefixes": [
+    "tt"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "latarr_movies",
+      "name": "LATARR Películas (Prueba)"
+    },
+    {
+      "type": "series",
+      "id": "latarr_series",
+      "name": "LATARR Series (Prueba)"
+    }
+  ]
+}

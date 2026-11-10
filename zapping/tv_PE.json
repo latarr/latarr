@@ -1,0 +1,1099 @@
+{
+  "pais": "Perú",
+  "codigo": "PE",
+  "total": 120,
+  "categorias": [
+    "Nacionales",
+    "Noticias",
+    "Música",
+    "Infantil",
+    "Cultura",
+    "Religión",
+    "Regionales",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "nombre": "ATV",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/eUzYZfg.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/ATV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ATV Sur",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/LnyVa5H.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/ATV-SUR/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ATV+",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/fY9256H.png",
+      "destacado": false,
+      "url": "http://45.171.108.253:8888/ATV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Global TV",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/yuEou9C.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/GLOBAL/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/MOsWriY.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/LATINA/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Peru",
+      "categoria": "Nacionales",
+      "subtitulo": "Nacionales",
+      "logo": "https://i.imgur.com/6io0IrX.png",
+      "destacado": false,
+      "url": "http://181.224.200.5:2277/play/a0dx/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina Noticias 24/7",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://assets.rudo.video/assets/latina/live/logoApi_4b43aad719f5bbf7aa2813c2199e6e3e1755620584.png",
+      "destacado": false,
+      "url": "https://dai.google.com/linear/hls/event/oYQGDqEGTmGdHE_fz9oLlg/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Peru Noticias",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "",
+      "destacado": false,
+      "url": "http://190.93.224.42/TV-PERU-NOTICIAS/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Folklore TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/QdOGJes.png",
+      "destacado": false,
+      "url": "https://play.folkloretv.pe/StreamSD/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Karibena",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/cgHjg1e.png",
+      "destacado": false,
+      "url": "http://187.102.210.46/KARIBENA/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Fabulosa TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/GjME5H0.png",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8004/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Miel TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/dPSFrCs.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/mieltvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RumbaMix TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/rwA3HIp.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/mixtvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Top Latino TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/VRl8nPZ.png",
+      "destacado": false,
+      "url": "http://38.87.224.20:2220/play/a02b/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Peruanisima",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/m50qAVY.png",
+      "destacado": false,
+      "url": "https://k20.usastreams.com:8081/tvperuanisima/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVUNO",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/dht94P4.png",
+      "destacado": false,
+      "url": "https://streamtv.onliv3.online:1936/karibtv/karibtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Chikitoonz",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "https://chikitoonz.com/site/wp-content/uploads/2024/08/logochikitoonz2.png",
+      "destacado": false,
+      "url": "http://45.70.201.81:8000/play/a00p/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Peques TV",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "https://img-evg3.tv360.bitel.com.pe/peru-image/2026/01/06/04/1767647409377/6123aa5e7fc7.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/pequestv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cultura 24",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://i.imgur.com/h0LxXsx.png",
+      "destacado": false,
+      "url": "https://www.opencaster.com/resources/hls_stream/cultura24.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bethel TV",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://i.imgur.com/zCVh765.png",
+      "destacado": false,
+      "url": "https://alfa.betheltv.tv/srt/3_abr/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "36 TV Huacho",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/F4NZM3s.jpeg",
+      "destacado": false,
+      "url": "https://live-evg10.tv360.bitel.com.pe/bitel/36tvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ABTelevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/tqMDscD.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/abctelevisionSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Agro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1uLGa3w.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/agroSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "America Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "http://190.93.224.42/AMERICA-TV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Andes Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CsW4Op8.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/andestvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Antena SUR",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4aHrD2l.jpeg",
+      "destacado": false,
+      "url": "https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AsiriTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/7bGVFBa.png",
+      "destacado": false,
+      "url": "https://video2.lhdserver.es/asiritv/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Autentica Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bEJK3RN.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/autenticatvmux/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bella Abanquina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bORM4rt.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/bellaabanquinaSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "BNB Digital",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MgEN1F8.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/bnbSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cadena TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/stvzqzd.png",
+      "destacado": false,
+      "url": "https://tv.bitstreaming.net:3789/live/cdntvlive.m3u8",
+      "alternativas": [
+        "https://live-evg10.tv360.bitel.com.pe/bitel/cadenatv/playlist.m3u8"
+      ]
+    },
+    {
+      "nombre": "Cajamarca TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pC57NYv.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/cajamarcatvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 21 Huancayo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Kfdkm06.png",
+      "destacado": false,
+      "url": "https://play.agenciastreaming.com:8081/tvwanka/tracks-v1/index.fmp4.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 8 Catacaos",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/O5MrFjY.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/canal8/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal IPe",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "http://187.102.210.46/IPE/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CANAL M Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EcdNFuJ.png",
+      "destacado": false,
+      "url": "https://live-evg10.tv360.bitel.com.pe/bitel/anqaratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Mas TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rdHygJ1.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/mastvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Casma TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/42aE0nm.jpeg",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/casmatvSRT-TRA/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Conecta2TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/W6FDUwt.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/conecta2/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Controversia TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/X7cPyP2.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/controversiatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CR Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oxycMeA.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/crtvmux/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CVN TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QF5VUcy.png",
+      "destacado": false,
+      "url": "https://7.innovatestream.pe:19360/cvntumbes/cvntumbes.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Dac TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/g4pZ3ZW.jpeg",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/dactvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "DeltaTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/crttwAR.png",
+      "destacado": false,
+      "url": "https://tv2.bitstreaming.net:3539/live/deltanetlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Foro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarTiQHz2Pl0Bpx9g7JV_eaz4V4f61wtGyRw&s",
+      "destacado": false,
+      "url": "https://mc.servidor.stream:19360/8274/8274.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Genios TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iH2Lx6E.png",
+      "destacado": false,
+      "url": "https://sc3.wasidata.com/Genios2_1902/video.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Huacho Peru TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/PevmfqK.png",
+      "destacado": false,
+      "url": "https://tv.huachotv.com/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Impacto Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bkpCGP6.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Imperial Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eYXqkyN.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/imperialSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Intuitiva TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zcehR4M.png",
+      "destacado": false,
+      "url": "https://video2.lhdserver.es/cableperu/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Justicia TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VOjLXJd.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/JUSTICIA-TV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Tele",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "http://190.93.224.42/LA-TELE/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina Clasicos",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/q0dAWyj.png",
+      "destacado": false,
+      "url": "http://45.171.108.253:8888/LATINA/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina Podcast",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://assets.rudo.video/assets/latina/live/backgroundApi_347d1f0b8f6b597bc08abeb60c975c471769447202.png",
+      "destacado": false,
+      "url": "https://redirector.rudo.video/hls-video/plus226/latina4/latina4.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Lider TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/naZXUdR.jpeg",
+      "destacado": false,
+      "url": "https://chankillo.agenciastreaming.com/lidertv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Master TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/K2ZimRv.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/mastertvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Media TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BAaR5T5.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/mediatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Milenial TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/8ZiNoEa.png",
+      "destacado": false,
+      "url": "https://www.milenial.news/salida/milenial.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Monterrico TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/SuVO9T7.png",
+      "destacado": false,
+      "url": "https://h.jcp.live.opencaster.com/play_src/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nativa",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Y9k9XSO.png",
+      "destacado": false,
+      "url": "http://187.102.210.46/NATIVATV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nativa TV Satipo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ScCAgGB.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/nativachanchamayoSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "NZK Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/IqsB6VR.jpeg",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8258/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ONDA DIGITAL",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/3R2emx7.jpg",
+      "destacado": false,
+      "url": "https://tv.ondadigital.pe/ondadigital/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/gbjdiLW.jpeg",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/onda/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ozono TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Wkdibpv.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/ozonotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Panamericana TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/uQhEDES.png",
+      "destacado": false,
+      "url": "http://45.171.108.253:8888/PANAMERICANA/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "PBO",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vBpxX4S.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/PBO/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "PiuraTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KnJAqbd.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/piuratvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Planea TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EoLhvBN.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/planeatvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Primavera 15",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wsJ8Ag2.png",
+      "destacado": false,
+      "url": "https://mc.servidor.stream:19360/8244/8244.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Qollasuyo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6bi7fGB.jpeg",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/qollasuyotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Qosqo Times",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oWJauwQ.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/qosqo/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Real Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/7KECyh5.jpeg",
+      "destacado": false,
+      "url": "https://live-evg10.tv360.bitel.com.pe/bitel/realtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Region TV Callao",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/I4grcqk.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/regiontvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RN Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oFGiW7u.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/rnyurimaguas/rnyurimaguas.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RPP TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oBz3CgE.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/RPP/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RSelvaTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/DAK5ZnD.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/selvaticaSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rumbo Minero TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.rumbominero.com/wp-content/uploads/2021/05/logo_RM_AM_2.png",
+      "destacado": false,
+      "url": "http://45.70.201.81:8000/play/a018/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Senal Peru TV (404p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1q0R6R9.png",
+      "destacado": false,
+      "url": "https://livestream.perucast.com/hls/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Siscom TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0JUlFZ4.png",
+      "destacado": false,
+      "url": "https://video2.lhdserver.es/siscomtv/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "SolTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GtNkuAc.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/streamtv/streamtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sqala TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/DJ05m8s.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/studiotvhuanta/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Studio Pasco TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zgyNuVE.jpeg",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/studiopasco/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Super Canal",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eotfCMd.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/supercanalSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telecolor Yurimaguas",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Ug6XNIU.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/telecolormux/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telesystem TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CI4CNgL.jpeg",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/telesystemSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Television Tarapoto",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Dzen7sh.png",
+      "destacado": false,
+      "url": "http://45.5.57.58:8000/play/a038/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teve Empresa",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://img-evg3.tv360.bitel.com.pe/peru-image/2026/04/07/02/1775503150878/c34840061c94_480_270.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/tvempresaSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Top TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/tiNvihZ.png",
+      "destacado": false,
+      "url": "https://tvdatta.com:3084/live/toptvaguaytialive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Trivu",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QrUYjOS.png",
+      "destacado": false,
+      "url": "http://190.93.224.42/TRIVU-TV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Bella Asuncion",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/H69eLFW.png",
+      "destacado": false,
+      "url": "https://s2.tvdatta.com:3687/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Cosmos",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nr4ctt4.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/tvcosmos/tvcosmos.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV MAX",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/JFBpDJ1.jpeg",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/nexSRT_TRA/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Norte Chiclayo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0fg6m2L.png",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/tvnorte/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV+ Chincha",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bjQpQsu.jpeg",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/tvchincha/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVenLinea",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/txV8lw0.png",
+      "destacado": false,
+      "url": "https://srt.tvdatta.com/tvenlinea/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ucayalina de Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jBhfcqy.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/utv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Unicentro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lhewC3K.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/unicentroSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Unitel",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/F0PWpyc.png",
+      "destacado": false,
+      "url": "https://play.agenciastreaming.com:8081/uniteltv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Universitaria TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/OcDimHX.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/uraniotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Uranio TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EeNpfIr.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/uranioyurimaguasSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "USMPTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9cmIv3q.png",
+      "destacado": false,
+      "url": "http://187.102.210.46/USMP/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Via Altomayo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/aJ4XExn.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/viaaltomayomux/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Via Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FiptbGQ.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/cablerasvia/cablerasvia.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vision Sur",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AbZYWEQ.png",
+      "destacado": false,
+      "url": "https://live-evg8.tv360.bitel.com.pe/bitel/visionsur/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Viva TV Yurimaguas",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GkSoxhx.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/vivatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "VNP",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TOnknEW.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/visionnoticias/visionnoticias.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "VR Canal 21 Nasca",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rxzz6kD.jpeg",
+      "destacado": false,
+      "url": "https://live-evg10.tv360.bitel.com.pe/bitel/nasca/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Wayra TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eQLRVFp.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/wayratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WEST",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://aptcperu.org/wp-content/uploads/2026/04/logoMesa-de-trabajo-1-copia-5.png",
+      "destacado": false,
+      "url": "https://cablered.iptvperu.tv:1936/cablered/west/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Wtv",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/V10iVeh.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/ncanalSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Yurimaguas TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VWC6Pt1.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/yurimaguastvSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Yurivision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VhWuaER.jpeg",
+      "destacado": false,
+      "url": "https://live-evg5.tv360.bitel.com.pe/bitel/yurivisionSRT/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Millenium 109 FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/sfNL6Bv.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/nqvnhujhrx/nqvnhujhrx.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Master",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/AUoxyzP.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Onda Digital",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/Lid5RTv.png",
+      "destacado": false,
+      "url": "https://live.ondadigitaltv.com/RADIOODTV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Rumba TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/BYcxI03.png",
+      "destacado": false,
+      "url": "https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Tropical",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/TBPVOBI.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RadioTV Oriente",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/iHaFLHX.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/tvoriente/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Turbo Mix Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/AsdBQa3.png",
+      "destacado": false,
+      "url": "https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8",
+      "alternativas": []
+    }
+  ]
+}

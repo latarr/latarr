@@ -1,0 +1,474 @@
+{
+  "pais": "Venezuela",
+  "codigo": "VE",
+  "total": 51,
+  "categorias": [
+    "Música",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "nombre": "BTA TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/vygOosC.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/manifiest/hls/prog9/btatv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "KandelaTV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/cCFxyIp.jpg",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ShowVen TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/AJIN8Dc.png",
+      "destacado": false,
+      "url": "https://cdnbarinas.tvzamora.com/showven/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "123TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/xXGeZms.png",
+      "destacado": false,
+      "url": "http://200.59.191.177:8000/play/a0lb/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Aguacate TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/wpWBsgf/IMG-20230705-154622.jpg",
+      "destacado": false,
+      "url": "https://stream.aguacatetv.com:3949/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ANTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Qm88HT0.png",
+      "destacado": false,
+      "url": "http://181.78.8.199:8000/play/a0fo/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 21 Tachira",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/7Tb7CF4.jpg",
+      "destacado": false,
+      "url": "https://stmv2.voxtvhd.com.br/canal21/canal21/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Diplomatico",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/34vsSzS/1439-Canal-Diplomatico.png",
+      "destacado": false,
+      "url": "https://master.myplaytv.com:2020/hls/canaldiplomatico/canaldiplomatico.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal I",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vKfOavW.png",
+      "destacado": false,
+      "url": "https://streaming.canal-i.com/canal-i/live/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Catatumbo TV (406p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/LBI2la0.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/manifiest/hls/prog9/catatumbotv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Colombeia",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "http://200.59.191.177:8000/play/a0la/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Globovision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/v6nRdxQ.png",
+      "destacado": false,
+      "url": "http://181.78.8.199:8000/play/a09k/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Grande TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jxCirrP.png",
+      "destacado": false,
+      "url": "https://vs20.live.opencaster.com/grande41_0b593479/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Guaro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/LN92K6h/IMG-20230705-154347.jpg",
+      "destacado": false,
+      "url": "https://stream.guarotv.net:3592/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Inter TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/HG2DM8G/IMG-20230705-153952.jpg",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3439/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Isla TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/l11Ixhi.jpeg",
+      "destacado": false,
+      "url": "https://59d39900ebfb8.streamlock.net/islatv/islatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "IVC",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/HyXYR2o.png",
+      "destacado": false,
+      "url": "http://200.59.191.177:8000/play/a00j/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Tele Tuya",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/vvqk2hw/LOGO-HORIZONTAL-text.png",
+      "destacado": false,
+      "url": "http://181.78.8.199:8000/play/a0fs/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Lara en Redes",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://laraenredes.com/wp-content/uploads/elementor/thumbs/LOGO-LARA-EN-REDES-2025-r768xu4o4gvkigl9v1lorc3aq3n35710u0g7cah8e0.jpg",
+      "destacado": false,
+      "url": "https://streamtv.laraenredes.com:3020/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i0.wp.com/latinamedios.com/wp-content/uploads/2023/03/LOGO-LATINA-TV-H-500.png?w=500&ssl=1",
+      "destacado": false,
+      "url": "https://streamtv.latinamedios.com:3413/live/latinatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "LGD Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/a9E0DTY.jpeg",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3403/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mas Talk",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/unE2LGz.jpg",
+      "destacado": false,
+      "url": "https://vod2live.univtec.com/manifest/89290956-94ab-4950-accb-a54bbd7e176f.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MAX Anime",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Oj3hEBh.jpg",
+      "destacado": false,
+      "url": "https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Meridiano TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/I6gsUqD.png",
+      "destacado": false,
+      "url": "http://181.78.8.199:8000/play/a0fr/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Plous TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/OSet4en.png",
+      "destacado": false,
+      "url": "https://vcp.myplaytv.com/glowtv/glowtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Portuguesa Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jHUSfGz.png",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3789/live/portutvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "PromarTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://vcp.myplaytv.com/promar/promar/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Reforma TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iZMDddR.png",
+      "destacado": false,
+      "url": "https://5bf8041cb3fed.streamlock.net/ReformaTV/ReformaTV/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Siembra TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zRX91Xr.png",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/siembratv/siembratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sun Channel",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/B26qL3e.png",
+      "destacado": false,
+      "url": "http://168.196.127.137:6001/play/a06p/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TAM TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://rtmp.tamtv.com.ve/tmp_hls/stream/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleAragua",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jPzcb2S.png",
+      "destacado": false,
+      "url": "http://45.173.198.59:8080/hls/nginx3.m3u8?tla=",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telecentro",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QtRNfaj.png",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3531/live/telecentrovelive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telesur",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/P50VjRX.png",
+      "destacado": false,
+      "url": "http://181.78.211.244:8005/play/a0cc/index.m3u8",
+      "alternativas": [
+        "https://mblesmain01.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8"
+      ]
+    },
+    {
+      "nombre": "Telesur English",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/P50VjRX.png",
+      "destacado": false,
+      "url": "https://mblenmain01.telesur.ultrabase.net/mblivev3/480p/playlist.m3u8",
+      "alternativas": [
+        "https://mblenmain01.telesur.ultrabase.net/mblivev3/hd/playlist.m3u8"
+      ]
+    },
+    {
+      "nombre": "Televen",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cxvkUvK.png",
+      "destacado": false,
+      "url": "http://38.134.250.110:8000/play/a02i/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Televisora de Oriente (406p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wFC6Xxq.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/manifiest/hls/prog9/tvo.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TRT (410p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://vcp12.myplaytv.com/trt/trt/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tu TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/OBEmXQF.png",
+      "destacado": false,
+      "url": "https://astl-mainstr.qvixsolutions.com/asltvtu_ext/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV FANB",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/yaEyv29.png",
+      "destacado": false,
+      "url": "http://200.59.191.177:8000/play/a0le/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Oasis Monay",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/hwd7osJ.jpeg",
+      "destacado": false,
+      "url": "https://live.teve.pro/live/tvoasis/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVes",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QX5DVUB.png",
+      "destacado": false,
+      "url": "https://vs20.live.opencaster.com/tves_5fd18b1e/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVM para ti",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://intervenhosting.net/imagenes/tvmparati.jpg",
+      "destacado": false,
+      "url": "https://streamtv.intervenhosting.net:3529/live/tvmparatilive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVS",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/J8ztiAN.png",
+      "destacado": false,
+      "url": "https://vcp10.myplaytv.com/tvs/tvs/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UniTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KLGeznX.png",
+      "destacado": false,
+      "url": "https://vcp6.myplaytv.com/unitv/unitv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vale TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/NMI2Wed.png",
+      "destacado": false,
+      "url": "https://59d39900ebfb8.streamlock.net/valetv_480/valetv_480/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ve Plus",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/uc3zqcP.png",
+      "destacado": false,
+      "url": "http://186.148.196.100:8000/play/a01d",
+      "alternativas": []
+    },
+    {
+      "nombre": "Venevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/gm1m8hW.png",
+      "destacado": false,
+      "url": "http://181.78.8.199:8000/play/a0if/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Venevision Internacional",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vtGED07.jpg",
+      "destacado": false,
+      "url": "https://vod2live.univtec.com/manifest/4c41c0d8-e2e4-43cc-bd43-79afe715e1b3.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vepaco TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0bqJksL.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/manifiest/hls/prog9/vepacotv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vive",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VEYhkDq.png",
+      "destacado": false,
+      "url": "http://200.59.191.177:8000/play/a0l6/index.m3u8",
+      "alternativas": []
+    }
+  ]
+}

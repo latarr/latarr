@@ -1,0 +1,190 @@
+{
+  "pais": "Puerto Rico",
+  "codigo": "PR",
+  "total": 20,
+  "categorias": [
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "nombre": "America TeVe",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/K9o3mLP.png",
+      "destacado": false,
+      "url": "https://live.gideo.video/americateve2/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Candelita TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/34BvVDl.png",
+      "destacado": false,
+      "url": "https://6110f70ea8d0e.streamlock.net/1689/1689/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CAtv",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://caribbeanadvantage.com/images/CAtv-logo-512.png",
+      "destacado": false,
+      "url": "https://video2.getstreamhosting.com:19360/8216/8216.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CDM Internacional",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/N7IneVk.png",
+      "destacado": false,
+      "url": "https://627bb251f23c7.streamlock.net:444/CDMInternacional/CDMInternacional/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "DeFiance Media",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/DISTROTV/LIVECHANNEL/66698943bac4421ebc533695/images/logo_20231219_193005_68.png",
+      "destacado": false,
+      "url": "https://amg01529-defiancetv-defiancemedia-glewed-tre8x.amagi.tv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "EBN Television WIDP",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4OCptwT.png",
+      "destacado": false,
+      "url": "https://627bb251f23c7.streamlock.net:444/EBNTELEVISION/EBNTELEVISION/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Familia Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/uqTH7m5.jpg",
+      "destacado": false,
+      "url": "https://584097344c1f0.streamlock.net/29/stream/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Faro de Santidad TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GoNBFzI.png",
+      "destacado": false,
+      "url": "https://5dbcd1053301e.streamlock.net:4443/farodesantidad/farodesantidad/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La-X",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/i2GnQTq.png",
+      "destacado": false,
+      "url": "https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Paraiso TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wE31GIP.jpg",
+      "destacado": false,
+      "url": "https://stream.eleden.com/livewtpm/ngrp:livewtpm_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Pura Palabra (718p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nl5vyIw.png",
+      "destacado": false,
+      "url": "https://59825a54e4454.streamlock.net:8443/william233/william233/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Salvacion TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6HOViG9.png",
+      "destacado": false,
+      "url": "https://stream.eleden.com/livesalvatv/ngrp:livesalvatv_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telenorte",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/LCiYFrh.jpg",
+      "destacado": false,
+      "url": "https://627bb251f23c7.streamlock.net:444/TopRadioTV/TopRadioTV/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleOnce",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Crt3P4N.png",
+      "destacado": false,
+      "url": "https://live.11-cdn.com/TeleOnce/3fc63fe00050c646635f16b071cd33e2.sdp/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WAPA-TV 4.2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/5WNBFmp.png",
+      "destacado": false,
+      "url": "https://wapa.hostless.app/WAPA-TV-4-2.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WECN",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/NYBZBY0.png",
+      "destacado": false,
+      "url": "https://59825a54e4454.streamlock.net:8443/pastorairisn394/pastorairisn394/chunklist_w239411719.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WELU 8.1",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/42UdwD0.png",
+      "destacado": false,
+      "url": "https://video1.getstreamhosting.com:1936/8226/8226/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WIPR-TV 6.1",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MGJaxFO.png",
+      "destacado": false,
+      "url": "https://streamwipr.pr/hls/stream/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WKAQ-TV 2.2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TL6xy4y.png",
+      "destacado": false,
+      "url": "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream2/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "WXWZ-LD 23.1",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rjmGc9p.png",
+      "destacado": false,
+      "url": "https://5bf8041cb3fed.streamlock.net/mastvpr/mastvpr/playlist.m3u8",
+      "alternativas": []
+    }
+  ]
+}

@@ -30,6 +30,7 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
         self.initial_country = kwargs.pop('initial_country', None)
         self.initial_category = kwargs.pop('initial_category', 'Todas')
         self.initial_pos = kwargs.pop('initial_pos', 0)
+        self.is_zapping = kwargs.pop('is_zapping', False)
         super().__init__(*args, **kwargs)
 
         self.initialized = False
@@ -55,14 +56,31 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
             return
         self.initialized = True
 
-        self.setProperty('tv_title', '[B]LATARR[/B] [COLOR FFFFAA00]PRO[/COLOR] [COLOR FF8E95A5]EN VIVO[/COLOR]')
-        self.countries = api.get_tv_countries()
-        self.sports_cats = api.get_sports_categories()
+        self._update_header_mode()
 
         if self.initial_country:
             self._show_channels(self.initial_country, category=self.initial_category, select_pos=self.initial_pos)
         else:
             self._show_countries(select_pos=self.initial_pos)
+
+    def _update_header_mode(self):
+        if self.is_zapping:
+            self.setProperty('tv_title', '[B]ZAPPING[/B] [COLOR FFFFAA00]TV[/COLOR] [COLOR FF8E95A5]PRO[/COLOR]')
+            self.setProperty('btn_mode_label', '📺 TV en Vivo')
+            self.setProperty('btn_back_label', '← Volver a TV')
+        else:
+            self.setProperty('tv_title', '[B]LATARR[/B] [COLOR FFFFAA00]PRO[/COLOR] [COLOR FF8E95A5]EN VIVO[/COLOR]')
+            self.setProperty('btn_mode_label', '📡 Zapping TV')
+            self.setProperty('btn_back_label', 'Volver a Inicio')
+
+    def _toggle_mode(self):
+        self.is_zapping = not self.is_zapping
+        self.countries = []
+        self.sports_cats = []
+        self.current_country = None
+        self.current_category = 'Todas'
+        self._last_country_pos = 0
+        self._show_countries(select_pos=0)
 
     # ------------------------------------------------------------------ Vistas
     def _show_countries(self, select_pos=0):
@@ -71,19 +89,36 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
         ctrl = self.getControl(8100)
         ctrl.reset()
 
-        self.setProperty('btn_back_label', 'Volver a Inicio')
-        self.setProperty('filter_country', 'Deportes + Países')
+        self._update_header_mode()
+        self.setProperty('filter_country', 'Países Zapping' if self.is_zapping else 'Deportes + Países')
         self.setProperty('filter_category', 'Todas')
 
-        if not self.countries:
-            self.countries = api.get_tv_countries()
-        if not self.sports_cats:
-            self.sports_cats = api.get_sports_categories()
+        if self.is_zapping:
+            if not self.countries:
+                self.countries = api.get_zapping_countries()
+            self.sports_cats = []
+        else:
+            if not self.countries:
+                self.countries = api.get_tv_countries()
+            if not self.sports_cats:
+                self.sports_cats = api.get_sports_categories()
 
         flags_dir = os.path.join(self.addon_path, 'resources', 'skins', 'Default', 'media', 'flags')
         sports_dir = os.path.join(self.addon_path, 'resources', 'skins', 'Default', 'media', 'sports')
 
         items = []
+
+        # En modo normal, agregar la tarjeta de acceso a Zapping TV
+        if not self.is_zapping:
+            zap_icon = os.path.join(flags_dir, 'flag_DEP.png')
+            if not os.path.exists(zap_icon):
+                zap_icon = os.path.join(sports_dir, 'deportes_premium.png')
+            li = xbmcgui.ListItem(label='📡 ZAPPING TV PRO')
+            li.setArt({'thumb': zap_icon, 'icon': zap_icon, 'poster': zap_icon})
+            li.setProperty('item_type', 'toggle_zapping')
+            li.setProperty('subtitle', '[COLOR FFFFAA00]⚡ 2.400+ Canales · Deportes LATAM[/COLOR]')
+            li.setProperty('total', 'PRO')
+            items.append(li)
 
         # ── BLOQUE 1: Categorías Deportivas PRO ──────────────────────────────
         for cat in self.sports_cats:
@@ -125,8 +160,12 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
             items.append(li)
 
         total_items = len(self.sports_cats) + len(self.countries)
-        self.setProperty('total_count_label',
-                         f'{len(self.sports_cats)} deportes • {len(self.countries)} países')
+        if self.is_zapping:
+            total_canales = sum(c.get('total', 0) for c in self.countries)
+            self.setProperty('total_count_label', f'{len(self.countries)} secciones · {total_canales} canales')
+        else:
+            self.setProperty('total_count_label',
+                             f'{len(self.sports_cats)} deportes · {len(self.countries)} países')
 
         ctrl.addItems(items)
         self.setFocusId(8100)
@@ -146,7 +185,7 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
         self.current_sport_id = sport_id
         self.current_sport_name = sport_name
 
-        self.setProperty('btn_back_label', '← Deportes + Países')
+        self.setProperty('btn_back_label', '← Países' if self.is_zapping else '← Deportes + Países')
         self.setProperty('filter_country', f'⚽ {sport_name}')
         self.setProperty('filter_category', SPORTS_BADGE)
 
@@ -209,13 +248,13 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
                 break
         self.current_country_name = c_name
 
-        self.setProperty('btn_back_label', '← Deportes + Países')
-        self.setProperty('filter_country', f'País: {c_name}')
+        self.setProperty('btn_back_label', '← Países' if self.is_zapping else '← Deportes + Países')
+        self.setProperty('filter_country', c_name if country_code == 'DEP' else f'País: {c_name}')
 
         ctrl = self.getControl(8100)
         ctrl.reset()
 
-        data = api.get_tv_channels(country_code)
+        data = api.get_zapping_channels(country_code) if self.is_zapping else api.get_tv_channels(country_code)
         self.raw_channels = data.get('canales', [])
         cats = data.get('categorias', [])
 
@@ -257,7 +296,8 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
             li.setProperty('stream_url', url)
             li.setProperty('alternativas', json.dumps(alts))
             li.setProperty('channel_name', nombre)
-            li.setProperty('subtitle', cat)
+            sub = ch.get('subtitulo') or cat
+            li.setProperty('subtitle', sub)
             items.append(li)
 
         ctrl.addItems(items)
@@ -291,6 +331,8 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
         if action_id in (xbmcgui.ACTION_NAV_BACK, xbmcgui.ACTION_PREVIOUS_MENU, xbmcgui.ACTION_STOP):
             if self.view_mode in ('channels', 'sports_channels'):
                 self._show_countries(select_pos=self._last_country_pos)
+            elif self.is_zapping:
+                self._toggle_mode()
             else:
                 self.close()
         # Actualizar info al navegar
@@ -299,6 +341,10 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
             self._update_selected_info()
 
     def onClick(self, control_id):
+        if control_id == 8003:  # Toggle Modo TV / Zapping
+            self._toggle_mode()
+            return
+
         if control_id == 8100:
             ctrl = self.getControl(8100)
             item = ctrl.getSelectedItem()
@@ -306,6 +352,10 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
                 return
 
             item_type = item.getProperty('item_type')
+
+            if item_type == 'toggle_zapping':
+                self._toggle_mode()
+                return
 
             if self.view_mode == 'countries':
                 self._last_country_pos = ctrl.getSelectedPosition()
@@ -328,6 +378,8 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
         elif control_id == 8005:  # Botón Volver
             if self.view_mode in ('channels', 'sports_channels'):
                 self._show_countries(select_pos=self._last_country_pos)
+            elif self.is_zapping:
+                self._toggle_mode()
             else:
                 self.close()
 
@@ -451,7 +503,7 @@ class LatarrTVDialog(xbmcgui.WindowXMLDialog):
                 }
             else:
                 self.resume_data = {
-                    'section': 'tv',
+                    'section': 'zapping' if self.is_zapping else 'tv',
                     'country': self.current_country,
                     'category': self.current_category,
                     'pos': pos,

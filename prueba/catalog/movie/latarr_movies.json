@@ -1,0 +1,32 @@
+{
+  "metas": [
+    {
+      "id": "tt15239678",
+      "type": "movie",
+      "name": "Dune: Parte Dos (2024)",
+      "poster": "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xOMo8BRK7PfcJv9JCnx7s520b22.jpg",
+      "description": "Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia.",
+      "genres": [
+        "Ciencia Ficción",
+        "Aventura"
+      ],
+      "releaseInfo": "2024",
+      "imdbRating": "8.5"
+    },
+    {
+      "id": "tt6263850",
+      "type": "movie",
+      "name": "Deadpool & Wolverine (2024)",
+      "poster": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yDHYTjA3R0jFYba16jBB1jv82E9.jpg",
+      "description": "Un apático Wade Wilson se afana en la vida civil dejando atrás sus días como Deadpool.",
+      "genres": [
+        "Acción",
+        "Comedia"
+      ],
+      "releaseInfo": "2024",
+      "imdbRating": "7.8"
+    }
+  ]
+}

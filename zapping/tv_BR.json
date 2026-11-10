@@ -1,0 +1,79 @@
+{
+  "pais": "BR",
+  "nombre_pais": "Brasil",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 6,
+  "categorias": [
+    "Deportes",
+    "Música",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "id": "br-cazetv",
+      "nombre": "CazeTV",
+      "pais": "BR",
+      "categoria": "Deportes",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png",
+      "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "CazeTV.br@SD",
+      "destacado": false
+    },
+    {
+      "id": "br-espn-4-brazil",
+      "nombre": "ESPN 4 (Brazil)",
+      "pais": "BR",
+      "categoria": "Deportes",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ESPN_4_logo.svg/960px-ESPN_4_logo.svg.png",
+      "url": "http://181.78.197.59:8000/play/a07n/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "ESPN4.br@SD",
+      "destacado": false
+    },
+    {
+      "id": "br-espn-brazil",
+      "nombre": "ESPN (Brazil)",
+      "pais": "BR",
+      "categoria": "Deportes",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png",
+      "url": "http://181.78.197.59:8000/play/a07z/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "ESPN.br@SD",
+      "destacado": false
+    },
+    {
+      "id": "br-lamore-rock-show-webtv",
+      "nombre": "Lamore Rock Show WebTV",
+      "pais": "BR",
+      "categoria": "Música",
+      "logo": "https://www.lamorerockshowwebtv.com.br/wp-content/uploads/2024/11/logo_rockshow.avif",
+      "url": "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "LamoreRockShowWebTV.br@SD",
+      "destacado": false
+    },
+    {
+      "id": "br-mas-maisum",
+      "nombre": "+MaisUm",
+      "pais": "BR",
+      "categoria": "Música",
+      "logo": "https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png",
+      "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
+      "alternativas": [],
+      "tvg_id": "PlusMaisUm.br@HD",
+      "destacado": false
+    },
+    {
+      "id": "br-tiktok-radio-brasil",
+      "nombre": "TikTok Radio Brasil",
+      "pais": "BR",
+      "categoria": "Radios con cámara",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/f/f4/TikTok_Radio.svg",
+      "url": "https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992529",
+      "alternativas": [],
+      "tvg_id": "TikTokRadioBrasil.br@HD",
+      "destacado": false
+    }
+  ]
+}

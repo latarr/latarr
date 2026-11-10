@@ -515,6 +515,24 @@ def get_tv_channels(country_code='CL'):
     return data if data else {"canales": [], "categorias": [], "total": 0}
 
 
+# ==================================================
+# ZAPPING TV - Suite completa por paises y categorias
+# ==================================================
+
+def get_zapping_countries():
+    """Obtiene la lista de paises y secciones de Zapping TV."""
+    data = _fetch_local_or_remote('zapping/paises.json', use_cache=True)
+    return data.get('paises', []) if data else []
+
+
+def get_zapping_channels(country_code='CL'):
+    """Obtiene los canales y categorias de Zapping TV para un pais o seccion especifico."""
+    country_code = (country_code or 'CL').upper()
+    data = _fetch_local_or_remote(f'zapping/tv_{country_code}.json', use_cache=True)
+    return data if data else {"canales": [], "categorias": [], "total": 0}
+
+
+
 # ═══════════════════════════════════════════════════════════════════
 # RETRO ARCADE — Descarga y lanzamiento de ROMs desde Cloudflare
 # ═══════════════════════════════════════════════════════════════════

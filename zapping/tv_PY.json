@@ -1,0 +1,525 @@
+{
+  "pais": "Paraguay",
+  "codigo": "PY",
+  "total": 57,
+  "categorias": [
+    "Música",
+    "Regionales",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "nombre": "E40",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/0RypDUY.png",
+      "destacado": false,
+      "url": "https://copacotf.desdeparaguay.net/e40tv/e40tv_py_alta/playlist.m3u8?admin=tvaccion",
+      "alternativas": []
+    },
+    {
+      "nombre": "GO TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.ibb.co/jkvYVyz/Captura.png",
+      "destacado": false,
+      "url": "https://rds3.desdeparaguay.net/gotv/gotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "HEi Now",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/oMHiGRN.png",
+      "destacado": false,
+      "url": "https://copacogen.desdeparaguay.net/heitv/heitv_py_alta/playlist.m3u8?admin=nacion",
+      "alternativas": []
+    },
+    {
+      "nombre": "Venus Media",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/XwmUbfp.png",
+      "destacado": false,
+      "url": "https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "5Dias TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AX25tmv.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/13.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ABC-TV Paraguay",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/OqfBMGy.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/7.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alt Media TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YkOgWMc.png",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/altmedia/altmedia.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "America Paraguay",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rCEu3fM.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/83.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bruno Masi TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/QFmyjZN/unnamed-1.png",
+      "destacado": false,
+      "url": "https://rds3.desdeparaguay.net/brunomasitv/brunomasitv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CAD TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lafmmRa.jpeg",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/dcsajkpvrh/dcsajkpvrh.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 5 TV Max",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6oihaDM.png",
+      "destacado": false,
+      "url": "https://tvmaxsa.com.py/hls/FB-430927919930380-0-AbzjnbAzAIR0NaFg.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 8 C&C Producciones",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/SVj5fjg.jpg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/canal8cvs/canal8cvs.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 8 Vision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/mKju6hk.png",
+      "destacado": false,
+      "url": "https://tigocloudgen.desdeparaguay.net/satelitaltv/satelitaltv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Pro",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/h7qelDq.png",
+      "destacado": false,
+      "url": "https://www.desde-paraguay.com/pro.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Caritas TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/rwkpQx6/unnamed-2.png",
+      "destacado": false,
+      "url": "https://rds3.desdeparaguay.net/caritastv/caritastv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cosmos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dAMyExY.jpg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/cosmostv/cosmostv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Del Rey TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Zjxvg9u.jpeg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/delreytv/delreytv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Invasiva TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/R9E6jEC.png",
+      "destacado": false,
+      "url": "https://tv-omega-nine.vercel.app/hls/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latele",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Qcf6Qev.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a03i/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mega TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CaA7l86.png",
+      "destacado": false,
+      "url": "https://www.desde-paraguay.com/mega.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MiTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/sgrEt9z.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a02w/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Monumental TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/kEcOYML.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a046/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nandejara Ne'e TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VFxuBdL.jpg",
+      "destacado": false,
+      "url": "https://copacogen.desdeparaguay.net/nandejaraneetv/nandejaraneetv/playlist.m3u8?admin=tvaccion",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nanduti",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AsuVsLa.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a02d/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "NPY",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pUEkaiW.png",
+      "destacado": false,
+      "url": "https://copacogen.desdeparaguay.net/npy/npy_py_alta/playlist.m3u8?admin=tvaccion",
+      "alternativas": []
+    },
+    {
+      "nombre": "Oasis TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/u9umNKp.jpeg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/oasistv/oasistv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Occidental TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/8IRBA9h.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/occidentaltv/occidentaltv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Oviedo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6OlfgSQ.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/oviedotv/oviedotv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Paraguay TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TWnTZ3c.png",
+      "destacado": false,
+      "url": "https://stream.paraguaytv.gov.py/memfs/bbe36fed-9b49-4d1d-adaa-4bd6d1b2e386.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Paravision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/yd9Dw2G.png",
+      "destacado": false,
+      "url": "http://45.170.130.224:8000/play/a032/index.m3u8?hls",
+      "alternativas": []
+    },
+    {
+      "nombre": "Productiva TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KXHK7UP.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a04i/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RCC TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/sd9iOIh.png",
+      "destacado": false,
+      "url": "https://copacoradios.desdeparaguay.net/rcctv/rcctv/playlist.m3u8?admin=nacion",
+      "alternativas": []
+    },
+    {
+      "nombre": "Red Digital",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/3jj0MQP.jpg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/reddigitalsanpedro/reddigitalsanpedro.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Red Interior TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/z89GLCw.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/redinteriortv/redinteriortv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Regional TV Yaguaron",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iL5JnSy.jpeg",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a05o/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Republica TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/qYRw4JP/Captura.png",
+      "destacado": false,
+      "url": "https://rds3.desdeparaguay.net/republicatv/republicatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Senado TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/LzgODUS.png",
+      "destacado": false,
+      "url": "https://vid.hls.protv.ro/liveibu6/liveibu6_highw/index.m3u8?1",
+      "alternativas": []
+    },
+    {
+      "nombre": "Suceso TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BwRNes1.png",
+      "destacado": false,
+      "url": "https://live.enhdtv.com:8081/8060/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "SUR TV Itapua",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ltJQvZd.png",
+      "destacado": false,
+      "url": "http://45.170.130.224:8000/play/a036/index.m3u8?hls",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telefuturo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6lVrFvb.png",
+      "destacado": false,
+      "url": "http://158.172.217.18:8000/play/a0ns/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Trece",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cgIv5QK.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/82.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Aire",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/7gHFKPZ.png",
+      "destacado": false,
+      "url": "http://190.128.214.97:64333/play/a05y/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Camara",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Mfypr0t.png",
+      "destacado": false,
+      "url": "http://45.170.130.224:8000/play/a03x/index.m3u8?hls",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Canindeyu",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cateqjx.jpeg",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/tvcanindeyu/tvcanindeyu.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Unicanal",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cgTD2TW.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/72.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Union TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/No9YzNC.png",
+      "destacado": false,
+      "url": "https://tigocloud.desdeparaguay.net/800tv/800tv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AGR FM TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/tg6EjTU.png",
+      "destacado": false,
+      "url": "https://tigocloud.desdeparaguay.net/agrtv/agrtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alcance FM PLAY TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/ymcWecA.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/alcancefmtv/alcancefmtv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Dismar Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/KOuxdMD.png",
+      "destacado": false,
+      "url": "https://rds3.desdeparaguay.net/dismartv/dismartv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Los Angeles TV Radio",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/CaNdkpJ.jpeg",
+      "destacado": false,
+      "url": "https://stmv6.voxtvhd.com.br/losangeles/losangeles/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Colmenar 92.5 FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/LniNLO1.jpeg",
+      "destacado": false,
+      "url": "https://tvdatta.com:3041/live/colmenarlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Guaira TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/kLanG1t.jpeg",
+      "destacado": false,
+      "url": "https://tvdatta.com:3991/live/guairatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio San Cristobal 88.7 FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/zaJhBdj.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/sancristobalfm/sancristobalfm.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio TV El Arca del Pacto",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/Oq0i3Rb.png",
+      "destacado": false,
+      "url": "https://video.wilohosting.com:19360/radiotvelarcadelpacto/radiotvelarcadelpacto.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tropicalia 93.9 FM",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/oMML5Ue.png",
+      "destacado": false,
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/67.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UniRadio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/Co3YrU0.png",
+      "destacado": false,
+      "url": "https://video.hostingcaaguazu.com:19360/uniradiotv/uniradiotv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Villa Elisa Radio TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/ryzCsvy.jpg",
+      "destacado": false,
+      "url": "https://copacogen.desdeparaguay.net/villaelisatv/villaelisatv/playlist.m3u8?admin=nacion",
+      "alternativas": []
+    }
+  ]
+}

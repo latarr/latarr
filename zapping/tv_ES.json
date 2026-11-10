@@ -1,0 +1,1423 @@
+{
+  "pais": "España",
+  "codigo": "ES",
+  "total": 156,
+  "categorias": [
+    "Noticias",
+    "Cine y Series",
+    "Música",
+    "Infantil",
+    "Cultura",
+    "Religión",
+    "Regionales",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "nombre": "24 Horas",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.ibb.co/21sXZ3GT/24h.png",
+      "destacado": false,
+      "url": "https://ztnr.rtve.es/ztnr/1694255.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "24 Horas Catalunya",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.ibb.co/21sXZ3GT/24h.png",
+      "destacado": false,
+      "url": "https://ztnr.rtve.es/ztnr/4952053.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Sur Noticias",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/A3JscwS.png",
+      "destacado": false,
+      "url": "https://cdnlive.codev8.net/rtvalive/smil:channel42.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda 15 TV (224p)",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/mUrZz9O.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8034/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda Valencia TV",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/6HxLUQd.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8116/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AXN CEE",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "",
+      "destacado": false,
+      "url": "http://88.212.15.50/live/axn_hun/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "AXN CEE Czech Republic",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "",
+      "destacado": false,
+      "url": "http://88.212.15.50/live/test_axn/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cine Friki",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/b3Ospym.png",
+      "destacado": false,
+      "url": "https://d2mr4fu91mjx9m.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rb0tx75ojbc5u/CineFriki_ES.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cine Western",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/2UROzSc.png",
+      "destacado": false,
+      "url": "https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-awohw8g217ho8/CineWestern_ES.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Drama Movies Italy",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://f84e0b1628464fab846160df957f269e.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6094/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Drama Movies UK",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://fee09fd665814f51b939b6d106cf5f66.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6093/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Todo Novelas",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/NuYwGok.png",
+      "destacado": false,
+      "url": "https://dtsszjrztq9ti.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yshah5p4v45g1/ToDoNovelas_ES.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Activa TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/VCUZKiw.png",
+      "destacado": false,
+      "url": "https://streamtv.mediasector.es/hls/activatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cadena Elite",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/3yeGDTP.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8004/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "LiraTV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/hBswXYZ.png",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Music TV Granada",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.ibb.co/Swd9NP7n/music-tv-granada.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8032/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "POP World TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/LQB6G3s.jpg",
+      "destacado": false,
+      "url": "https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RTV Vida",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/EqUfEAh.png",
+      "destacado": false,
+      "url": "https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sol Musica",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/rbJrmPw.png",
+      "destacado": false,
+      "url": "https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "SpektraTV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/0zCt8e4.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8026/tracks-v1a1/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVOMIX",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://ugc.production.linktr.ee/7ef61237-c46d-456b-afe3-a42ef49a979e_Mejorado2.png",
+      "destacado": false,
+      "url": "https://cloud.tvomix.com/TVOMIX/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "XPTV1",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/Ty7GkoN.png",
+      "destacado": false,
+      "url": "https://janus.xpbroadcasting.com:8443/hls/xptv1.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Clan",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "https://i.ibb.co/vv3FC2Nv/clan.png",
+      "destacado": false,
+      "url": "https://lge-lgla2.otteravision.com/lge/lgcla/lgcla.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Logos TV Kids",
+      "categoria": "Infantil",
+      "subtitulo": "Infantil",
+      "logo": "https://i.imgur.com/Kr3U3Ub.png",
+      "destacado": false,
+      "url": "https://streamer1.streamhost.org/salive/logoskidsH/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Crimen & Historia",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://images.pluto.tv/channels/64ddcbb14c5ed80008fad416/colorLogoPNG.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-64ddcbb14c5ed80008fad416.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Historia",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://i.imgur.com/VUy8xIG.png",
+      "destacado": false,
+      "url": "https://d1k3vzh2ivy22k.cloudfront.net/Historia.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Historia Y Vida",
+      "categoria": "Cultura",
+      "subtitulo": "Cultura",
+      "logo": "https://i.imgur.com/56ZtCA1.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-67517f923a61d40008c451f0.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "BCN Gospel TV",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://bcngospelchannel.com/wp-content/uploads/2025/09/bcn-gospel-channer-favicon.png",
+      "destacado": false,
+      "url": "https://live1.ovalcast.com:3916/live/bcngospeltvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "EWTN Espana",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://i.imgur.com/KvpMbkd.png",
+      "destacado": false,
+      "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/q6xkg9py/480/chunklist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVO Jesus",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://tvomix.com/Logos/Tvojesus.png",
+      "destacado": false,
+      "url": "https://cloud.tvomix.com/TVOJESUS/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "12tv",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VSTgXsh.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/mic/manifiest/hls/12tv/12tv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "28 kanala",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/DyvK28q.png",
+      "destacado": false,
+      "url": "https://streaming.28kanala.eus/hls/z.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "3Cat Cameres del temps",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zXy2kbe.png",
+      "destacado": false,
+      "url": "https://directes-tv-int.3catdirectes.cat/live-content/beauties-hls/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "3Cat Plats bruts",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/49ZENis.png",
+      "destacado": false,
+      "url": "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "3CatInfo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://directes-tv-int.3catdirectes.cat/live-origin/canal324-hls/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://especial7tv.gestec-video.com/hls/regional.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV Cordoba",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://streaming004.gestec-video.com/hls/7TVCORDOBA.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV Jaen",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://streaming004.gestec-video.com/hls/7TVJAEN.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV Jerez",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://streaming004.gestec-video.com/hls/7TVJEREZ.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV Malaga",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://streaming004.gestec-video.com/hls/7TVMALAGA.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "7TV Sevilla",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rnzMR9R.png",
+      "destacado": false,
+      "url": "https://especial7tv.gestec-video.com/hls/7TVSEVILLA.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "8 La Marina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BTJvvBK.png",
+      "destacado": false,
+      "url": "https://streaming005.gestec-video.com/hls/canal24.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "A Punt",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://fastly.live.brightcove.com/1846756479408303045/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NDY3NTY0Nzk0MDgzMDMwNDUifQ.o6wb_VA-TVxl3ERgr7FKLlaTjY7smErmsf73QAydySE/playlist-hls-dvr.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Actualidad 360",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/3YeTu0n.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-67517fae5534bb0008187997.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alacanti TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pcWU6e1.png",
+      "destacado": false,
+      "url": "https://streaming01.gestec-video.com/hls/artequatreAlacanti.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alcarria TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pzJAYan.png",
+      "destacado": false,
+      "url": "http://217.182.77.27/live/alcarriatv-livestream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Arabi TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/9Vp9Ghg/LOGO-WEB-ARABI-TV-3.png",
+      "destacado": false,
+      "url": "https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bon Dia TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VgRCu2U.png",
+      "destacado": false,
+      "url": "https://directes-tv-int.3catdirectes.cat/live-content/bondia-hls/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 1 Mar Menor Torre Pacheco",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MQOwCdZ.png",
+      "destacado": false,
+      "url": "https://directo.tuwebtv.es/canal1.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 10 Emporda",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ojQ6wzX.png",
+      "destacado": false,
+      "url": "https://ventdelnord.tv:8080/escala/directe.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 2000",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/9RoBASf.png",
+      "destacado": false,
+      "url": "http://canal2000.berkano-systems.net/streaming/streams/canal2000.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 3 TV Biar",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cnKCZkK.png",
+      "destacado": false,
+      "url": "https://avantstreaming.es/hls/canal3.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 33 Madrid",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://media2.streambrothers.com:1936/8140/8140/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 4 Mancha Centro",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/t3O3O9M.png",
+      "destacado": false,
+      "url": "https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 45",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/yEfSnGt.png",
+      "destacado": false,
+      "url": "https://nlb1-live.emitstream.com/hls/625csn5et2iszm9oze65/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 56",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pwRVbCz.png",
+      "destacado": false,
+      "url": "https://videos.canal56.com/directe/stream/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Diocesano",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/uWhVKL3.png",
+      "destacado": false,
+      "url": "https://nlb2-live.emitstream.com/hls/5i3pxfuz4az356yu22ij/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Malaga RTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QSUOxtM.png",
+      "destacado": false,
+      "url": "https://canalmalaga-tv-live.flumotion.com/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Parlamento",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BUO0wH6.png",
+      "destacado": false,
+      "url": "https://congresodirecto.akamaized.net/hls/live/2037973/canalparlamento/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal San Roque",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/SN9kFKh.png",
+      "destacado": false,
+      "url": "https://cdnlivevlc.codev8.net/aytosanroquelive/smil:channel1.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Sierra de Cadiz",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/94rn7pb.png",
+      "destacado": false,
+      "url": "https://s.emisoras.tv:8081/sierradecadiz/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Sur 2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdnlive.codev8.net/rtvalive/smil:channel22.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Sur Andalucia",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lznnA4v.png",
+      "destacado": false,
+      "url": "https://dfk2a268yviz9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ddiii1m6jt6of/CanalSurAndaluciaES.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Taronja Comarques Centrals",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RP8VcqZ.png",
+      "destacado": false,
+      "url": "https://ingest1-video.streaming-pro.com/canaltaronja/central/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Taronja Osona i Moianes",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RP8VcqZ.png",
+      "destacado": false,
+      "url": "https://ingest1-video.streaming-pro.com/canaltaronja/osona/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Terrassa",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/5fc5ZyI.png",
+      "destacado": false,
+      "url": "https://ingest2-video.streaming-pro.com/canalterrassa/stream/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cetelmon TV (404p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/GGn7itj.png",
+      "destacado": false,
+      "url": "http://player.cetelmon.tv/protecteddfd43c2f3a8b41f3f28582bf8993aca6/992_high.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ciudades del Ocio TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CTQgqsM.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8024/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CMM TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_gnz6ity9/protocol/https/format/applehttp/flavorIds/1_a9gxgxzy,1_v71ryg4b,1_vbfvtjw6,1_obo1bqsx,1_3shk3s5d/a.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Costa Noroeste TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iM9AN6Z.png",
+      "destacado": false,
+      "url": "https://limited31.todostreaming.es/live/noroestetv-livestream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Diez TV Las Villas",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QTA40lP.png",
+      "destacado": false,
+      "url": "https://streaming.cloud.innovasur.es/mmj2/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Diez TV Ubeda",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/o2a7s4W.png",
+      "destacado": false,
+      "url": "https://streaming.cloud.innovasur.es/mmj/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Distrito TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AqGIoIt.png",
+      "destacado": false,
+      "url": "https://nlb2-live.emitstream.com/hls/3mn7wpcv7hbmxmdzaxap/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "DMAX",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/En2sLlW.png",
+      "destacado": false,
+      "url": "http://90.163.85.113:8093/stream/51/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Durangaldeko Telebista",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/qdlW6cg.png",
+      "destacado": false,
+      "url": "https://nlb2-live.emitstream.com/hls/5f9asjsehd7gmyxsdpzu/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El 33 Originals",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/frKCBTN.png",
+      "destacado": false,
+      "url": "https://directes-tv-int.3catdirectes.cat/live-content/c33-super3-hls/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Mueble",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://provider-static.plex.tv/epg/cms/production/d64983e2-55b1-410b-9599-98a28f7b94ba/Logo_ElMueble_1500x1000_AllWhite_-_Belen_Bruno.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-690dd10a37b131228d76d5b1.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Toro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://streaming-1.eltorotv.com/lb0/eltorotv-streaming-web/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Elche 7 TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/tjI0dLx.png",
+      "destacado": false,
+      "url": "https://elche7tv.gestec-video.com/hls/canal2.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Emporda TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jc0lUbX.png",
+      "destacado": false,
+      "url": "https://video3.lhdserver.es/empordatv2/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Estepona Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rMAB720.png",
+      "destacado": false,
+      "url": "https://cloudvideo.servers10.com:8081/8022/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "EsTuTele",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bsAbcmC.png",
+      "destacado": false,
+      "url": "https://cloud.streamingconnect.tv/hls/estutele/estutele.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ETB 1",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdn1.etbon.eus/etb1/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ETB 2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdn1.etbon.eus/etb2/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ETB Events 1",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bVUEmx9.png",
+      "destacado": false,
+      "url": "https://cdn1.etbon.eus/oc1/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ETB1 On",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdn1.etbon.eus/etb1on/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ETB2 On",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://cdn1.etbon.eus/etb2on/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Fuerteventura TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/MpvjCzC/Fuerteventura-tv-service-webtv-488969d1-1.png",
+      "destacado": false,
+      "url": "https://5c0956165db0b.streamlock.net/ftv/directo/.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Galicia TV Europa",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dvkzH8n.png",
+      "destacado": false,
+      "url": "https://crtvg-europa.flumotion.cloud/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Goiena Eus",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eaLIJzK.png",
+      "destacado": false,
+      "url": "https://zuzenean.goienamedia.eus/goiena-telebista.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Guada TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YaDNsYN.png",
+      "destacado": false,
+      "url": "https://cloud.streamingconnect.tv/hls/guadatv/guadatv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Hamaika Telebista",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/HR3G3Ie.png",
+      "destacado": false,
+      "url": "https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "HOLA! Play",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://m.media-amazon.com/images/I/5194tl8duqL.png",
+      "destacado": false,
+      "url": "https://hola-play-2108fd06-86d4-44e8-9867-c35b4895a1c1-es.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6433/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Interalmeria TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ulSkAjZ.png",
+      "destacado": false,
+      "url": "https://interalmeria.tv/directo/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Intercomarcal TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KLPSnAT.png",
+      "destacado": false,
+      "url": "https://streamingtvi.gestec-video.com/hls/tvixa.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "KinoKazka",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/y6SWpsX.png",
+      "destacado": false,
+      "url": "http://stream.mcquack.net/167/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La 1 Catalunya",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/MxJNPHsn/La-1.png",
+      "destacado": false,
+      "url": "https://ztnr.rtve.es/ztnr/3293681.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La 8 Mediterraneo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://tbsfibra.es/wp-content/uploads/2022/07/17-8-MEDITERRANEO.png",
+      "destacado": false,
+      "url": "https://newscript.gestec-video.com/hls/8TVEVENTOS.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Lancelot TV (404p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RlzVIJP.png",
+      "destacado": false,
+      "url": "https://5c0956165db0b.streamlock.net:8090/directo/_definst_/lancelot.television/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Logos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Kr3U3Ub.png",
+      "destacado": false,
+      "url": "https://streamer1.streamhost.org/salive/logosH/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Love The Planet",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RBcD49X.png",
+      "destacado": false,
+      "url": "https://amg01821-lovetvchannels-lovetheplanetuksamsung-samsunguk-apopw.amagi.tv/playlist/amg01821-lovetvchannels-lovetheplanetuksamsung-samsunguk/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "M95 Television Marbella",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RzAkP1V.png",
+      "destacado": false,
+      "url": "https://limited2.todostreaming.es/live/m95-livestream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mijas 3.40TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RH1zLLs.png",
+      "destacado": false,
+      "url": "https://streaming004.gestec-video.com/hls/MIJAS.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MyTime Movie Network",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pw4NZK1.png",
+      "destacado": false,
+      "url": "https://appletree-mytimespain-rakuten.amagi.tv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Negocios TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://m.media-amazon.com/images/I/21HEgSJn2gL.png",
+      "destacado": false,
+      "url": "https://streaming013.gestec-video.com/hls/negociostv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nortevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/C5SYw7B.png",
+      "destacado": false,
+      "url": "http://amaru.dyndns.org:8870/0.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda Algeciras",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/kUhFkVF.png",
+      "destacado": false,
+      "url": "https://cloudtv.provideo.es/live/algecirastv-livestream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda Cadiz",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/sOBMnby.png",
+      "destacado": false,
+      "url": "https://ondacadiztv.es:30443/octv/24h/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Platzi TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vEzeqHP.png",
+      "destacado": false,
+      "url": "https://mdstrm.com/live-stream-playlist/629a63ae8df27c082901f78b.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Popular TV Murcia",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jFg9dGO.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/mic/manifiest/populartvrm.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Punt 3",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/i9tsnhD.png",
+      "destacado": false,
+      "url": "https://bit.controlstreams.com:5443/LiveApp/streams/punt3.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Action Movies Italy",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://87f2e2e5e7624e3bad85da1ca2ed31a7.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6067/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Action Movies UK",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Comedy Movies Italy",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://b8bc6c4b9be64bd6aeb3b92aa8521ed4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6184/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Comedy Movies UK",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Family Movies Italy",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://3315fc3e7276420f895e19cf807dbee1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6215/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Family Movies UK",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Top Movies Italy",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rakuten TV Top Movies UK",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Meew6eX.png",
+      "destacado": false,
+      "url": "https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Real Madrid TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/5pMo7dL.png",
+      "destacado": false,
+      "url": "http://90.163.85.113:8093/stream/26/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Real Madrid TV English",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/5pMo7dL.png",
+      "destacado": false,
+      "url": "http://88.212.15.50/live/real_madrid_tv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ribera TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/mPvSubP.png",
+      "destacado": false,
+      "url": "https://common01.todostreaming.es/live/ribera-livestream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RNE para todos",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/dsgrWTP8/fast-rneaudioparatodos-nac.png",
+      "destacado": false,
+      "url": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_para_todos_main.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ROTV Valencia",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/0TDnVQ4.png",
+      "destacado": false,
+      "url": "https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Storie Criminali",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://images.pluto.tv/channels/66177d18c8311c0008d077d0/colorLogoPNG.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-66177d18c8311c0008d077d0.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Taroteame",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://5d2733224ac48.streamlock.net/taroteame/tarot_web/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TBN Espana",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oGvsUH9.png",
+      "destacado": false,
+      "url": "https://edge.xn--tbnespaa-j3a.es/LiveApp/streams/tbnlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele 7",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/JcuV9ZE.png",
+      "destacado": false,
+      "url": "https://ingest2-video.streaming-pro.com/tele7_ABR/stream/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Elx",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/w5NTWpl.png",
+      "destacado": false,
+      "url": "https://tvdirecto.teleelx.es/stream/teleelx.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Safor",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EowJfr0.png",
+      "destacado": false,
+      "url": "https://video.telesafor.com/hls/video.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleganes",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/BXyplMX.png",
+      "destacado": false,
+      "url": "https://nlb2-live.emitstream.com/hls/5z6oj7ziwxzfnj78vg2m/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telemadrid",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "",
+      "destacado": false,
+      "url": "https://live.telemadrid.cross-media.es/6389770581112/eu-central-1/6416060453001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiajI5YjgyLmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjQxNjA2MDQ1MzAwMSIsImVobiI6ImxpdmUudGVsZW1hZHJpZC5jcm9zcy1tZWRpYS5lcyIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiNjQxNjA2MDQ1MzAwMSJdLCJqdGkiOiI2Mzg5NzcwNTgxMTEyIn0.kqriAMUkHT6m0V6wkCHJum_EUyL4PAi1zJMKlfmYHEU/playlist-hls.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleVigo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4iVmlFa.png",
+      "destacado": false,
+      "url": "https://cloud.fastchannel.es/mic/manifiest/hls/televigo/televigo.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Television Aranda",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FwIIdKG.png",
+      "destacado": false,
+      "url": "https://cloud.streamingconnect.tv/hls/telearanda/telearanda.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Television Canaria",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://rtvc.es/archivos/2020/03/logo-mobilretina.png",
+      "destacado": false,
+      "url": "https://rtvclive.flumotion.cloud/rtvc1live/smil:channel1PRG.smil/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Television Consciente",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6QVHKPw.png",
+      "destacado": false,
+      "url": "https://cdn318.fractalmedia.es/318/live/hls/tvc/master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tito TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://tvomix.com/Logos/Titotv.png",
+      "destacado": false,
+      "url": "https://cloud.tvomix.com/TITOTV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Trailers UK",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RwZ1hCN.png",
+      "destacado": false,
+      "url": "https://amg01821-lovetvchannels-lovemagazineuk-samsungse-p1sf1.amagi.tv/playlist/amg01821-lovetvchannels-lovemagazineuk-samsungse/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV BRICS Spanish",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vLpm8tN.png",
+      "destacado": false,
+      "url": "https://espbrics.mediacdn.ru/cdn/brics/spanish/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Sabadell-Valles",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/fSTsGbG.png",
+      "destacado": false,
+      "url": "https://ingest1-video.streaming-pro.com/canaltaronja/sabadell/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVA",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/aobkgrS.png",
+      "destacado": false,
+      "url": "https://streaming007.gestec-video.com/hls/artequatreTVA.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVE Internacional America",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/RpKLCMvp/tve.png",
+      "destacado": false,
+      "url": "https://barinaslive1.boldmss.com/TVE/TVE.isml/index.m3u8",
+      "alternativas": [
+        "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_ame_main_1080.m3u8"
+      ]
+    },
+    {
+      "nombre": "TVE Star",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/j98NY8Mr/starcolor.png",
+      "destacado": false,
+      "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_576.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVG2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/yFy6gxg.png",
+      "destacado": false,
+      "url": "https://crtvg-tvg2.flumotion.cloud/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVReus",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Ee0C8UH.jpg",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8166/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Une Vinalopo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/WpGR7RQ.png",
+      "destacado": false,
+      "url": "https://streamingtvi.gestec-video.com/hls/unesd.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Urola Telebista (416p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/V23bltn.png",
+      "destacado": false,
+      "url": "https://5940924978228.streamlock.net/j_Directo2/mp4:j_Directo2/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vision 6 TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TB1wMQ7.jpg",
+      "destacado": false,
+      "url": "https://streaming.proceso.info:8888/vision6-web/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "VOTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1g2Z64L.png",
+      "destacado": false,
+      "url": "https://ingest2-video.streaming-pro.com/votv/streaming_web/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Voyages & Saveurs",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://images.pluto.tv/channels/680291e38e1ff89c2427aefd/colorLogoPNG_1749650211442.png",
+      "destacado": false,
+      "url": "https://jmp2.uk/plu-680291e38e1ff89c2427aefd.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "XPTV US",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1m7kDmc.png",
+      "destacado": false,
+      "url": "https://janus.xpbroadcasting.com:8443/hls/xptvUS.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "XPTV2",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/74Z8ATB.png",
+      "destacado": false,
+      "url": "https://janus.xpbroadcasting.com:8443/hls/xptv2.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio 3",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "",
+      "destacado": false,
+      "url": "https://rtvelivestream.rtve.es/rtvesec/rne/rne3_main.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Bocairent TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/MzUQtrl.png",
+      "destacado": false,
+      "url": "http://185.81.77.4/BocairentTV/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Carnaval TV",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/cdpbkSo.png",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8116/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Radio Television Marbella",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/o9Ro8TR.png",
+      "destacado": false,
+      "url": "https://streaming.rtvmarbella.tv/hls/streamingweb.m3u8",
+      "alternativas": []
+    }
+  ]
+}

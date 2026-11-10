@@ -1,0 +1,75 @@
+{
+  "pais": "Uruguay",
+  "codigo": "UY",
+  "total": 7,
+  "categorias": [
+    "Cine y Series",
+    "Música",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "nombre": "TV Universal Uruguay",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/KD4aZ7W.jpeg",
+      "destacado": false,
+      "url": "https://stream.universal.org.uy/hls/0/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Elegida Television",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/zdrbjDc.png",
+      "destacado": false,
+      "url": "https://stmv.gmpro.top/laelegidatv/laelegidatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal ALMA",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rB7iFUF.jpg",
+      "destacado": false,
+      "url": "https://stmv1.voxtvhd.com.br/canalalmatv/canalalmatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Mas",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/gs1L1mW.png",
+      "destacado": false,
+      "url": "https://canalmasuruguay.com/hls/720p/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Once Plus",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TYiMGUD.png",
+      "destacado": false,
+      "url": "https://5e50264bd6766.streamlock.net/canal11ury/videocanal11ury/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Desde El Sur TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/y3vNkEU.jpeg",
+      "destacado": false,
+      "url": "https://stmv.gmpro.top/surtv/surtv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mision Vida TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/8JgBuTm.png",
+      "destacado": false,
+      "url": "https://5bf8041cb3fed.streamlock.net/zoefm/zoefm/playlist.m3u8",
+      "alternativas": []
+    }
+  ]
+}

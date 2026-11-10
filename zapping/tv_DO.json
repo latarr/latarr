@@ -1,0 +1,1652 @@
+{
+  "pais": "República Dominicana",
+  "codigo": "DO",
+  "total": 182,
+  "categorias": [
+    "Cine y Series",
+    "Música",
+    "Religión",
+    "Regionales",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "nombre": "Cinevision Canal 19",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/mJN2XNm.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/tvhdlive/tvhdlive/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Imagen Universal TV",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://i.imgur.com/DP6HmDV.png",
+      "destacado": false,
+      "url": "https://imagenuniversaltv.net:3771/live/iutvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mega Cine TV",
+      "categoria": "Cine y Series",
+      "subtitulo": "Cine y Series",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/2893-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/megacinetv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Fuego TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/T9vWjeB.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3553/live/cromtvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Maimon TV Canal 3",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/twldaaC.png",
+      "destacado": false,
+      "url": "https://tele-stream.telecasa.net/live/st3/maimontv-hd/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Makao TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/asD5y7i.png",
+      "destacado": false,
+      "url": "https://live.obslivestream.com/makaomux/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Siembra TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3226-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3809/live/siembratvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tarima TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://vercanalesdominicanos.com/wp-content/uploads/2026/03/tarima.png",
+      "destacado": false,
+      "url": "http://190.122.104.210:5080/LiveApp/streams/tarima.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Dominicana TV",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/teledominicana.png",
+      "destacado": false,
+      "url": "https://vdopanel.jlahozconsulting.com/p/3417/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Topical Moon RD",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3900-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://sistemastr.tropicalmoonmedia.com/live/56BE17DB16EB76C9F2DDB8346F4DFA4E/30.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Exitos",
+      "categoria": "Música",
+      "subtitulo": "Música",
+      "logo": "https://i.imgur.com/ahz7X7u.png",
+      "destacado": false,
+      "url": "https://streaming.grupomediosdelnorte.com:19360/tvexitos/tvexitos.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Voz de Jesus",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://gia.tv/streams/pstream/208429.png",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/giatvplayout7/giatv-208429/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Luz Divina TV",
+      "categoria": "Religión",
+      "subtitulo": "Religión",
+      "logo": "https://imgur.com/BHZw3PK.jpeg",
+      "destacado": false,
+      "url": "https://tv.wracanal10.com:3776/live/luzdivinatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Acento TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jhiZfHf.png",
+      "destacado": false,
+      "url": "https://acentotv01.streamprolive.com/hls/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Aguila TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3770-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/aguilatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ahora TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dyJyuXc.png",
+      "destacado": false,
+      "url": "https://stream.haislin.com/ahoratv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alcarrizos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/C3fdPYGs/Alcarrizo.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/alcarrizostv/alcarrizostv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Alegre TV RD",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/O6USO8r.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3149/live/alegretvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Altanto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KWvVLhc.png",
+      "destacado": false,
+      "url": "https://stream.haislin.com/ls_j3BOKxBbUJ/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ame 47",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MUEbjeP.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/ame47/ame47/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Antena 21",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QE0XWLh.png",
+      "destacado": false,
+      "url": "https://hls.tvabierta.net/hls/021.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Antena 7",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/zKWFgeQ.png",
+      "destacado": false,
+      "url": "https://hls.tvabierta.net/hls/007.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bajo Techo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/I2wRq88.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/bajotechotv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bani Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.banivision.com/wp-content/uploads/2023/04/Bani-Vision-Favicon.png",
+      "destacado": false,
+      "url": "https://videostream.shockmedia.com.ar/hls/banivision/banivision.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bellavision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/XqQ3kCs.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/bellavision8hd/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Boca Chica TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/npiRBPC.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/bocachicatv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bonao TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/en1vCZB.png",
+      "destacado": false,
+      "url": "https://tele-stream.telecasa.net/live/st2/bonaotv-hd/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Bonches Latinos TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Kp8x0NS.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/latinostv/latinostv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Boreal",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KSquHTG.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/borealtelevision/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Camu TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/3d8cLm9.jpg",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/camutv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cana TV Digital",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/k8jxt12.png",
+      "destacado": false,
+      "url": "https://cdnfox.hostlagarto.com/canatvdigital/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 17 RTVD",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.ibb.co/2YvKhjW4/Quisqueya-17-AZUL.png",
+      "destacado": false,
+      "url": "https://cdn.protvradiostream.com/rtvd17/ngrp:rtvd17_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal 4 RD",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/3AqCAji.png",
+      "destacado": false,
+      "url": "https://cdn.protvradiostream.com/canal4rd-1/ngrp:canal4rd-1_all/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal Catorce",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iKLGBbA.png",
+      "destacado": false,
+      "url": "https://stream.haislin.com/14tv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canal DTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/JO5yuNC.png",
+      "destacado": false,
+      "url": "https://s.emisoras.tv:8081/dtv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Canalda 26",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://canaldahd.com/wp-content/uploads/2023/03/cropped-canaldahdlogo-1.png",
+      "destacado": false,
+      "url": "https://canalda.rgradio.net:3084/live/canaldalive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cananga TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/isXlMAh.png",
+      "destacado": false,
+      "url": "https://cdn.streamingcpanel.com:3545/live/canangatlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cascara TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/DEUR7mB.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/cascaratv/cascaratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cenovision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/ShPaOvn.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/cenovision/cenovision/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Chinola TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ybud4dI.png",
+      "destacado": false,
+      "url": "https://tv.wracanal10.com:3300/live/chinolatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cibaena TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/iHjdckl.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3958/live/cibaenatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cielo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2PNw6BA.png",
+      "destacado": false,
+      "url": "https://streaming.servervideo.net:1936/cielotv/cielotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Citrico TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://enhd.ar/wp-content/uploads/2022/01/0e4a83fc-ba5b-4f26-a333-31f8bd544bcb-300x260.jpeg",
+      "destacado": false,
+      "url": "https://edge.essastream.com/citricotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Claro Television Dominicana",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/fJD7OxB.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3960/live/claroteledomlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Claro Vision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MpTgJMJ.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3057/live/clarovisiontvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CNT Mas TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/ctnmas.jpg",
+      "destacado": false,
+      "url": "https://edge.essastream.com/cntmas/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "COCO TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/CnAc7jU.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/canalcocotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Codigo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/DbjywI3.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/codigotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Colome TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://colometv.com/assets/images/logo.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/colometv/colometv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Color Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/rkgWToA.jpg",
+      "destacado": false,
+      "url": "https://cdn4.wind.do/streams/colorvision/colorvision_master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Cotubanama TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/D6gAezp.png",
+      "destacado": false,
+      "url": "https://host.streamingnation.live/p/3588/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CromTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jk1lkOV.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/cromtv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CTT Canal 49",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jsi4qVb.jpg",
+      "destacado": false,
+      "url": "https://cdnfox.hostlagarto.com/cct49/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "CV Vision TV (288p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/ccviison-1.png",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8128/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "De Ultimo Minuto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/6ML2z17.png",
+      "destacado": false,
+      "url": "https://soportedvb.click:3620/live/deultimominutomedialive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Del Pueblo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/Pw7ZUT1.jpg",
+      "destacado": false,
+      "url": "https://vdopanel.jlahozconsulting.com:3869/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Delta TV Canal 50",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/Z1K1tyl.jpg",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/deltatv50/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Digital Vision 63",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FQkLIMR.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/digitalvision/digitalvision/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ecos Canal 57",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/ccFwraQ.png",
+      "destacado": false,
+      "url": "https://2-fss-2.streamhoster.com/pl_138/206532-6829872-1/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ecovision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/Y4ahiYu.png",
+      "destacado": false,
+      "url": "https://streaming.grupomediosdelnorte.com:19360/ecovision/ecovision.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Puerto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FnshExB.jpg",
+      "destacado": false,
+      "url": "https://5bf8041cb3fed.streamlock.net/PuertoTV/PuertoTV/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "El Seis 6",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://elseis.do/wp-content/uploads/2025/02/logo-el-seis-horizontal.png",
+      "destacado": false,
+      "url": "https://stream.elseis.do/canal6/live_1080.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Elias Pina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VqxSsZD.png",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/8078/8078/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Enntivision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nePOFZW.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/enntivision/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "entelevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/gVtLpMD.png",
+      "destacado": false,
+      "url": "https://stream.haislin.com/entelevision/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Enterate RD",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3508-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/enteraterd/enteraterd/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Entuno TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/U9OsybQ.jpg",
+      "destacado": false,
+      "url": "https://soportedvb.click:3442/live/entunotvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Extra 86 TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3780-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://video-eu1.streamerr.co/hls/sb77f834a54/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Farovision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YtdOXWb.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/femeninatv/femeninatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "FRATA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/VxeTREd.png",
+      "destacado": false,
+      "url": "https://vdopanel.jlahozconsulting.com:3706/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "GalaxiATeVe",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://grupomediosdelnorte.com/iptv/galaxia.png",
+      "destacado": false,
+      "url": "https://streaming.grupomediosdelnorte.com:19360/galaxiateve/galaxiateve.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Gi Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/br9TNG8.png",
+      "destacado": false,
+      "url": "https://canal.gitelevisionserver.com/live/DIEEFIh506fL8huspvl0f0c2PZF3/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Guaymate TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/PBgQi9a.png",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/guaymatetv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Haina Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/eoodUNJ.png",
+      "destacado": false,
+      "url": "https://cdn.streamingcpanel.com:3447/live/hainavisionlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Hermanas Mirabal TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cbKgcGh.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/hmtv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Informe TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/TmJaXrO.jpg",
+      "destacado": false,
+      "url": "https://edge.essastream.com/informetv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "JARABACOA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/m9WCrlw.jpg",
+      "destacado": false,
+      "url": "https://streaming.jarabacoatv.com/Jarabacoa_tv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Jimani TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/EPYHUSc.jpeg",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/8246/8246/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Junior Technologia TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3812-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3616/live/juniorrodrigueztvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Descarga TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/kq1CrDE.png",
+      "destacado": false,
+      "url": "https://video.udwn.net:19360/ladescargatv/ladescargatv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Hora TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://lahoratv.org/imagen/lahora.jpeg",
+      "destacado": false,
+      "url": "https://edge.enhdtv.com/8206/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Reina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3386-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/lareinatv/lareinatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Ruta TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/2896-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3983/live/larutatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "La Voz de Maria",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Zv8CxZX.png",
+      "destacado": false,
+      "url": "https://live.lavozdemaria.com:3436/live/lavozdemarialive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Laguna TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/lagunatv.jpg",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/lagutv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Larivision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.larivision.com/web/wp-content/uploads/2025/07/logow.png",
+      "destacado": false,
+      "url": "https://live.larivision.net/livelan/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Latina TV Internacional",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/UAfyeYT.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/latinatv/latinatv/chunklist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Lena TV (614p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3232-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/lenaratv/lenaratv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Linieros TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bLutjkf.png",
+      "destacado": false,
+      "url": "https://soportedvb.click:3017/live/linierostvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Luna TV Canal 53",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EvX5aqI.png",
+      "destacado": false,
+      "url": "https://tv.wracanal10.com:3671/live/lunatvcanal53live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Makina TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/2951-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://vdopanel.jlahozconsulting.com:3303/live/makinalive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Manaclar Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3445-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/manaclar/manaclar/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Maniel TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/4060-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/manieltv/manieltv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Marka TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3355-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/markatv/markatv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Marla Vision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3738-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://soportedvb.click:3877/live/merlavisionlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MegaVision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/u5ECnZd.png",
+      "destacado": false,
+      "url": "http://server3.prostudionetwork.com:1943/megavision/MV/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MI Turno TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/uODDaEY.png",
+      "destacado": false,
+      "url": "https://video.udwn.net:19360/miturnotv/miturnotv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Miavision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/Bbcrjvs.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/miavisiontv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Microvision 10",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wMl1fNZ.png",
+      "destacado": false,
+      "url": "https://streaming.telecablecentral.com.do/live/MicroHD/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Mision ELTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/hwC1stN.png",
+      "destacado": false,
+      "url": "https://rd.tvabierta.net/live/misioneltv.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Montecristi Digital 8",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/ExoOHQI.jpeg",
+      "destacado": false,
+      "url": "https://soportedvb.click:3400/live/montecristitvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "MorroTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3759-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/morrotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Musavision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/wMse6cT.png",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/musavisiontv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Naranja TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/g7iFN3s.png",
+      "destacado": false,
+      "url": "https://cdn.streamingcpanel.com:3526/live/teleraiceslive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Navarrete Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/navarrete.png",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/ntvnavarrete/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Nexxo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/2OpCxa6.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/Nexxo/Nexxo/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "OEPM TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QghtwMB.jpeg",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/oepmtelevision/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Onda TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RUIyD9a.png",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/ondatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "ORBIT TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lizQs3n.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/orbittv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Palmar TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3328-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3255/live/palmartvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Pronems TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/a9ORO1G.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/pronemstv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Punta Cana TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/KF7fLTx.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/puntacanatv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Punto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/vfvN6ox.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/puntotv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "R Television",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3039-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://vdopanel.jlahozconsulting.com/p/3142/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "R&E TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/HpKQYp3.png",
+      "destacado": false,
+      "url": "https://cloud2.streaminglivehd.com:1936/8072/8072/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RDN",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/x02CGSW.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/rdntv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Ready TV Canal 6",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZONPQhR.png",
+      "destacado": false,
+      "url": "https://streaming.telecablecentral.com.do/ReadyTV/ReadyHD/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Reportero TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/Reportero-100x75-1.png",
+      "destacado": false,
+      "url": "https://streamrd.cloud:5443/LiveApp/streams/J3E3REmLNBzirS9A10575071547538.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "RNN",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/12Z9qPw.png",
+      "destacado": false,
+      "url": "https://2-fss-2.streamhoster.com/pl_138/206532-6829902-1/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Rocavision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/FkHqqsi.jpg",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3331/live/rocavisiontvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Romana TV Canal 42",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/EXnsmhx.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/cvmhbyrcat/cvmhbyrcat.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "San Isidro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/pwmJrsm.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/expresooriental/expresooriental/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Santa Cruz TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://santacruztv8.com/assets/images/logo.png",
+      "destacado": false,
+      "url": "https://host.streamingnation.live/p/3345/hybrid/play.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Santiago TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/10SUxGZ.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/telemilenio/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Senal Digital TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/KGqUu1X.jpg",
+      "destacado": false,
+      "url": "https://soportedvb.click:3494/live/senaldigitaltvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Senales TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/7Zr79F2.png",
+      "destacado": false,
+      "url": "https://live.dionelysterrero.com/senalestv/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "SiTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/f8bDccF.png",
+      "destacado": false,
+      "url": "http://190.122.104.210:5080/LiveApp/streams/sitv2.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Super Canal",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/AZBamNi.png",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/supercanalhd/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Super Digital TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3431-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://cdn.streamrd.cloud/live/ch_kb5qe1zr.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Super TV 55",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://3.bp.blogspot.com/-WO2ZKryfWoU/Wr1pO5clk_I/AAAAAAAAdJk/QYRg8_bp4OgmIWI55Y4m6i5o8RiWfCHWwCLcBGAs/s200/SuperTV55.jpg",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/supertv55/supertv55/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Sur TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/oAyvK0N.jpeg",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/eradiofonicas/eradiofonicas/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Antillas",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/G1pJZkC.png",
+      "destacado": false,
+      "url": "http://45.171.108.253:8888/TELEANTILLAS/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Dajabon TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3822-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/dajabon/dajabon/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Ola 44",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/tele-ola.jpeg",
+      "destacado": false,
+      "url": "https://teleola.ddns.net/hls/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Poder TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.telepoder.online/wp-content/uploads/2024/02/cropped-cropped-Logo-PoderTV2.png",
+      "destacado": false,
+      "url": "https://cdn.telepoder.online:3229/dash/stream.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tele Proyecto TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/LmBxN5x.png",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/Teleproyecto/Teleproyecto/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleBendicion",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/nh4sNVI.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/telebendicion/telebendicion/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telecanal 12",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/90cTK8S.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/telecanal12/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telecanal 28",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/hEJ6lZ9.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/telecanal28/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleCibaoHD",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/IpInp05.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/telecibaotv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telecontacto",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/TMvV9dF.png",
+      "destacado": false,
+      "url": "https://streaming.grupomediosdelnorte.com:19360/telecontacto/telecontacto.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleimpacto",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/dBEysOV.png",
+      "destacado": false,
+      "url": "https://vpss2003.streamprolive.com/hls/live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telemax",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/QvKmjvV.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/telemax/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telemetro TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/Ck2NL0t.png",
+      "destacado": false,
+      "url": "https://streamunoapp.com:3366/live/telemetrolive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telenord 10",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1Ei0kB8.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/telenord10/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telenord 12",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/o7EzEsV.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/telenord12/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telenord 8",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/1Ei0kB8.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/telenord8/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TELESIGLO",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/2195-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/telesiglo/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telesistema 11",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ZzeZKCu.png",
+      "destacado": false,
+      "url": "https://cdn4.wind.do/streams/telesistema/telesistema_master.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teletur",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/Ig4gR93.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/teleturtv/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleunion",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/vTfxkjW.png",
+      "destacado": false,
+      "url": "http://server2grupocam.com:1945/teleunion/TU/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Teleuniverso",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/gQev8ST.png",
+      "destacado": false,
+      "url": "https://hls.tvabierta.net/hls/029.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Telever",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/ejKctXc.png",
+      "destacado": false,
+      "url": "https://soportedvb.click:3413/live/televerlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Televida",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/S8Zdn41.png",
+      "destacado": false,
+      "url": "https://cnn.hostlagarto.com/televida/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Television del Este",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/mmjbcGr.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/televisiondeleste/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tenarenses TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/cPIgs0v.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/tenarensestvrd/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tiguerito TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://dominicanchannels.com/wp-content/uploads/tigueritos-tv.jpg",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/tigueritostv/tigueritostv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tom And Jerry",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://gia.tv/streams/pptv/208314.jpg?1750373428",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tora Canal 69",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://latoratv69.com.do/wp-content/themes/bootscore/assets/img/logo-tora-tv.png",
+      "destacado": false,
+      "url": "https://tv.wracanal10.com:3012/live/latoratvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Tour Spot TV (1280p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/khj869k.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/toursporttv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Turismo",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://gia.tv/streams/pptv/208343.jpg",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/giatvplayout7/giatv-208343/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Turismo RDTV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3800-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/yosoyturismotv/live/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV 10 San Juan",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/e2BXUdH.png",
+      "destacado": false,
+      "url": "https://59d39900ebfb8.streamlock.net/tv10sanjuan/tv10sanjuan/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Cotui Canal 31",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/sMF7JDm.png",
+      "destacado": false,
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvcotui/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Higuey Digital",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/ptQyOMi.png",
+      "destacado": false,
+      "url": "https://host.streamingnation.live/p/3467/live/tvhigueylive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TV Luz",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/FZUQ2WP.png",
+      "destacado": false,
+      "url": "https://host.streamingnation.live/p/3780/live/tvluzlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVN",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/4037-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://5790d294af2dc.streamlock.net/tvn/tvn/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVN24",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bu6bQMa.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/vozzmedia/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVO",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/MhloaFB.png",
+      "destacado": false,
+      "url": "https://videoserver.tmcreativos.com:19360/gkemzxrrmr/gkemzxrrmr.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TVS (540p)",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/a2YX1oj.jpg",
+      "destacado": false,
+      "url": "https://imagenuniversaltv.net:3741/live/tvslive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "UVA TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3918-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://www.uvatvhd.com/hls.php?file=live.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Valle Nuevo TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/RvIkFxp.png",
+      "destacado": false,
+      "url": "https://stmv6.voxtvhd.com.br/vallenuevotv/vallenuevotv/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vallevision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/lNpgFAU.png",
+      "destacado": false,
+      "url": "https://streaming.telecablecentral.com.do/Vallevision/ValleHD/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vega Teve",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/jiyMOZx.png",
+      "destacado": false,
+      "url": "https://cloud5.livescast.com:19360/canalvegateve/canalvegateve.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vegavision Canal 18",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/352jxnd.png",
+      "destacado": false,
+      "url": "https://fox.hostlagarto.com:8081/canal26/tracks-v1a1/mono.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Vision NDV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/4gj5NMa.png",
+      "destacado": false,
+      "url": "https://soportedvb.click:3891/live/visionndvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Xtra Tv",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://xtratvrd.com/logo512.png",
+      "destacado": false,
+      "url": "https://edge.essastream.com/xtratv/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Xtremo Channel",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/bvPh0Uq.png",
+      "destacado": false,
+      "url": "https://ss2.tvrdomi.com:1936/xtremochannel/xtremochannel/playlist.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Yunavision",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://i.imgur.com/YjceEv5.png",
+      "destacado": false,
+      "url": "https://tele-stream.telecasa.net/live/st1/yunavision-hd/index.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Zonavision TV",
+      "categoria": "Regionales",
+      "subtitulo": "Regionales",
+      "logo": "https://imgur.com/B3PrrMH.png",
+      "destacado": false,
+      "url": "https://ds.tvabierta.net/memfs/b295f254-7af9-45e4-bfc6-7e0bba41929d.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "Caoba TV Radio",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://www.vivalivetv.com/public/files/shows/0/1/3906-294x165-FFFFFF.jpg",
+      "destacado": false,
+      "url": "https://host.streamingnation.live:3940/live/caobatvlive.m3u8",
+      "alternativas": []
+    },
+    {
+      "nombre": "TeleRadioNorte",
+      "categoria": "Radios con cámara",
+      "subtitulo": "Radios con cámara",
+      "logo": "https://i.imgur.com/s43eFy0.png",
+      "destacado": false,
+      "url": "https://angelistic.live:3785/live/tvoficiallive.m3u8",
+      "alternativas": []
+    }
+  ]
+}

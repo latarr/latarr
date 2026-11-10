@@ -345,6 +345,8 @@ class LatarrHomeWindow(xbmcgui.WindowXMLDialog):
             self._open_catalog('anime')
         elif control_id == 109: # TV en Vivo
             self._open_tv()
+        elif control_id == 111: # Zapping TV
+            self._open_zapping()
         elif control_id == 105: # Buscar
             self._open_search()
         elif control_id == 107: # Historial
