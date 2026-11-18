@@ -3,6 +3,13 @@
   "version": "1.0",
   "categorias": [
     {
+      "id": "eventos_diarios",
+      "nombre": "EVENTOS DEL DÍA",
+      "icono": "eventos_diarios.png",
+      "emoji": "⚡",
+      "canales": []
+    },
+    {
       "id": "deportes_premium",
       "nombre": "DEPORTES PREMIUM",
       "icono": "deportes_premium.png",

@@ -53,12 +53,29 @@
             <shadowcolor>FF000000</shadowcolor>
             <label>$INFO[Window.Property(tv_title)]</label>
         </control>
-
-        <!-- Botón Volver (ID 8005) - Ancho 210 para que quepa 'Volver a Inicio' completo -->
-        <control type="button" id="8005">
-            <left>480</left>
+        <!-- Botón Toggle de Modo (ID 8003) - Cambia entre TV en Vivo y Zapping TV -->
+        <control type="button" id="8003">
+            <left>440</left>
             <top>28</top>
-            <width>210</width>
+            <width>200</width>
+            <height>44</height>
+            <label>$INFO[Window.Property(btn_mode_label)]</label>
+            <font>font13</font>
+            <align>center</align>
+            <textcolor>FFFFD000</textcolor>
+            <focusedcolor>FF000000</focusedcolor>
+            <texturefocus border="12">button_focus.png</texturefocus>
+            <texturenofocus border="12">button_normal.png</texturenofocus>
+            <ondown>8100</ondown>
+            <onleft>8002</onleft>
+            <onright>8005</onright>
+        </control>
+
+        <!-- Botón Volver (ID 8005) -->
+        <control type="button" id="8005">
+            <left>655</left>
+            <top>28</top>
+            <width>180</width>
             <height>44</height>
             <label>$INFO[Window.Property(btn_back_label)]</label>
             <font>font13</font>
@@ -68,15 +85,15 @@
             <texturefocus border="12">button_focus.png</texturefocus>
             <texturenofocus border="12">button_normal.png</texturenofocus>
             <ondown>8100</ondown>
-            <onleft>8002</onleft>
+            <onleft>8003</onleft>
             <onright>8001</onright>
         </control>
 
-        <!-- Botón Filtro País (ID 8001) - Ancho 220 -->
+        <!-- Botón Filtro País (ID 8001) -->
         <control type="button" id="8001">
-            <left>705</left>
+            <left>850</left>
             <top>28</top>
-            <width>220</width>
+            <width>210</width>
             <height>44</height>
             <label>$INFO[Window.Property(filter_country)]</label>
             <font>font13</font>
@@ -90,11 +107,11 @@
             <onright>8002</onright>
         </control>
 
-        <!-- Botón Filtro Categoría (ID 8002) - Ancho 260 para que quepa 'Categoría: Todas' -->
+        <!-- Botón Filtro Categoría (ID 8002) -->
         <control type="button" id="8002">
-            <left>940</left>
+            <left>1075</left>
             <top>28</top>
-            <width>260</width>
+            <width>230</width>
             <height>44</height>
             <label>$INFO[Window.Property(filter_category)]</label>
             <font>font13</font>
@@ -105,7 +122,7 @@
             <texturenofocus border="12">button_normal.png</texturenofocus>
             <ondown>8100</ondown>
             <onleft>8001</onleft>
-            <onright>8005</onright>
+            <onright>8003</onright>
         </control>
 
         <!-- 3. Sub-barra: canal/país enfocado y categoría/total -->

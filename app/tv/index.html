@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>LATARR CINEMA</title>
+<style>
+/* ============================================================
+   RESET Y BASE ESTRICTA 1920x1080
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #0D0F14;
+  overflow: hidden;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+#canvas {
+  position: fixed;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  overflow: hidden;
+  background: #0D0F14;
+}
+
+.screen-view {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+/* ============================================================
+   1. PANTALLA INICIO (script-latarr-main.xml)
+   ============================================================ */
+#bg-fanart {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.38;
+  transition: opacity 0.25s ease-out;
+  z-index: 1;
+}
+
+#bg-vignette {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  background: 
+    linear-gradient(to right, rgba(13, 15, 20, 0.96) 0%, rgba(13, 15, 20, 0.70) 50%, rgba(13, 15, 20, 0.30) 100%),
+    linear-gradient(to top, rgba(13, 15, 20, 1.0) 0%, rgba(13, 15, 20, 0.6) 45%, transparent 75%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brand {
+  position: absolute;
+  left: 70px;
+  top: 42px;
+  width: 280px;
+  height: 40px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.brand span {
+  color: #8E95A5;
+  font-weight: 500;
+}
+
+#nav-bar {
+  position: absolute;
+  left: 380px;
+  top: 38px;
+  width: 1480px;
+  height: 50px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.nav-btn {
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #D0D4DC;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+#tab-inicio      { width: 145px; }
+#tab-peliculas   { width: 155px; }
+#tab-series      { width: 145px; }
+#tab-anime       { width: 145px; }
+#tab-historial   { width: 165px; }
+#tab-colecciones { width: 175px; }
+#tab-buscar      { width: 145px; }
+
+.nav-btn.focused {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+#hero-container {
+  position: absolute;
+  left: 70px;
+  top: 125px;
+  width: 1050px;
+  height: 195px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+#hero-title {
+  width: 1050px;
+  height: 55px;
+  font-size: 44px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 55px;
+}
+
+#hero-pills {
+  margin-top: 5px;
+  width: 1050px;
+  height: 38px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-pill {
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+#pill-1080  { width: 100px; color: #FFFFFF; }
+#pill-rating{ width: 105px; color: #FFD60A; }
+#pill-year  { width: 95px;  color: #CCCCCC; }
+#pill-genre { width: 220px; color: #B0B8C8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+#hero-synopsis {
+  margin-top: 10px;
+  width: 1020px;
+  height: 85px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #CCCCCC;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+#shelves-viewport {
+  position: absolute;
+  left: 0;
+  top: 325px;
+  width: 1920px;
+  height: 755px;
+  overflow: hidden;
+  z-index: 6;
+  padding-top: 10px;
+}
+
+#shelves-wrapper {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+  width: 1850px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  transition: transform 0.28s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.shelf-block {
+  width: 1850px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shelf-title {
+  height: 28px;
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.shelf-row-container {
+  width: 1850px;
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+  margin-left: -20px;
+}
+
+.shelf-row {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  height: 340px;
+  transition: transform 0.22s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.card-item {
+  flex-shrink: 0;
+  width: 224px;
+  height: 336px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #181C26;
+  outline: none;
+  cursor: pointer;
+}
+
+.card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.card-item.focused {
+  box-shadow: 0 0 0 4px #FFFFFF, 0 0 24px rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+/* ============================================================
+   2. PANTALLA CATÁLOGO (script-latarr-catalog.xml)
+   ============================================================ */
+.cat-bg-fanart {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0A0C12 0%, #121622 100%);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.cat-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(10, 12, 18, 0.95) 100%),
+              linear-gradient(to top, rgba(10, 12, 18, 1.0) 0%, transparent 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cat-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 136px;
+  background: rgba(11, 14, 20, 0.94);
+  backdrop-filter: blur(12px);
+  z-index: 20;
+}
+
+.cat-title {
+  position: absolute;
+  left: 70px;
+  top: 30px;
+  width: 340px;
+  height: 42px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cat-title span {
+  color: #8E95A5;
+  font-weight: 500;
+}
+
+.cat-filters {
+  position: absolute;
+  left: 420px;
+  top: 30px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.cat-btn {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #D0D4DC;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+#btn-fil-year  { width: 180px; }
+#btn-fil-genre { width: 260px; }
+#btn-fil-back  { width: 140px; color: #FFFFFF; }
+
+.cat-btn.focused {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.cat-subinfo {
+  position: absolute;
+  left: 70px;
+  top: 88px;
+  width: 1280px;
+  height: 32px;
+  font-size: 16px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 32px;
+}
+.cat-subinfo .star-gold {
+  color: #FFD60A;
+  font-weight: 700;
+}
+.cat-subinfo .meta-silver {
+  color: #D0D4DC;
+}
+
+.cat-count-pill {
+  position: absolute;
+  right: 70px;
+  top: 86px;
+  height: 32px;
+  padding: 0 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-divider {
+  position: absolute;
+  left: 70px;
+  top: 132px;
+  width: 1780px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cat-grid-viewport {
+  position: absolute;
+  left: 70px;
+  top: 145px;
+  width: 1780px;
+  height: 915px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  z-index: 10;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.cat-grid-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 254px);
+  row-gap: 20px;
+  justify-content: start;
+}
+
+.cat-slot {
+  width: 254px;
+  height: 355px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.cat-card {
+  width: 224px;
+  height: 336px;
+  border-radius: 10px;
+  background: #181C26;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.cat-card.focused {
+  box-shadow: 0 0 0 4px #FFFFFF, 0 0 24px rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  z-index: 5;
+}
+
+/* Modal Selector de Filtros (Año / Género) */
+#modal-filter {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+#modal-filter.active {
+  display: flex;
+}
+.modal-box {
+  width: 600px;
+  max-height: 700px;
+  background: #121622;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.modal-head {
+  padding: 24px 30px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.modal-list {
+  padding: 16px 20px;
+  overflow-y: auto;
+  max-height: 580px;
+  scrollbar-width: none;
+}
+.modal-list::-webkit-scrollbar {
+  display: none;
+}
+.modal-option {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #D0D4DC;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+.modal-option.focused {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+/* ============================================================
+   PANTALLA DE CARGA INICIAL
+   ============================================================ */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0D0F14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease-out;
+}
+#loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loading-box {
+  text-align: center;
+}
+.loading-box .brand {
+  position: static;
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.loading-bar {
+  width: 220px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.loading-bar-inner {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  animation: loadAnim 1.2s ease-out forwards;
+}
+@keyframes loadAnim {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* ============================================================
+   3. PANTALLA DETALLES Y FUENTES (script-latarr-sources.xml)
+   ============================================================ */
+#winDetails {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  background: #07090E;
+  overflow: hidden;
+  z-index: 50;
+}
+
+#det-bg-fanart {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.35;
+  transition: opacity 0.3s ease-out;
+  z-index: 1;
+}
+
+#det-bg-vignette {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  background: 
+    linear-gradient(to right, rgba(7, 9, 14, 0.98) 0%, rgba(7, 9, 14, 0.85) 45%, rgba(7, 9, 14, 0.40) 100%),
+    linear-gradient(to top, rgba(7, 9, 14, 1.0) 0%, rgba(7, 9, 14, 0.70) 50%, transparent 80%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.det-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 65px;
+  background: rgba(10, 13, 20, 0.85);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.det-title {
+  position: absolute;
+  left: 60px;
+  top: 16px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.det-subtitle-pill {
+  position: absolute;
+  left: 1150px;
+  top: 14px;
+  width: 710px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* Columna Izquierda */
+.det-left-col {
+  position: absolute;
+  left: 60px;
+  top: 75px;
+  width: 820px;
+  height: 980px;
+  z-index: 10;
+}
+
+.det-poster {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 320px;
+  height: 480px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+  background: #151922;
+}
+
+.det-meta-box {
+  position: absolute;
+  left: 355px;
+  top: 10px;
+  width: 455px;
+}
+
+.det-meta-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.det-meta-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.det-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.det-pill.gold {
+  color: #FFD60A;
+}
+
+.det-meta-genre {
+  font-size: 15px;
+  color: #8E95A5;
+  margin-bottom: 16px;
+}
+
+.det-meta-genre span {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.det-meta-player {
+  font-size: 15px;
+  font-weight: 700;
+  color: #30D158;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.det-synopsis-label {
+  position: absolute;
+  left: 10px;
+  top: 508px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #8E95A5;
+}
+
+.det-synopsis-box {
+  position: absolute;
+  left: 10px;
+  top: 532px;
+  width: 800px;
+  height: 155px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #D0D4DC;
+  overflow: hidden;
+}
+
+/* Tarjeta Banner Adsterra 300x250 */
+.det-banner-card {
+  position: absolute;
+  left: 10px;
+  top: 700px;
+  width: 800px;
+  height: 270px;
+  background: rgba(18, 22, 34, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Columna Derecha */
+.det-right-col {
+  position: absolute;
+  left: 900px;
+  top: 65px;
+  width: 1020px;
+  height: 1015px;
+  background: rgba(10, 13, 21, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 10;
+}
+
+.det-right-header {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.det-right-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.det-instruct-pill {
+  padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-size: 13px;
+  color: #D0D4DC;
+}
+
+.det-instruct-pill strong {
+  color: #FFFFFF;
+}
+
+.det-sources-container {
+  height: 940px;
+  overflow-y: auto;
+  padding: 16px 35px 40px 35px;
+  scrollbar-width: none;
+}
+.det-sources-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fila de Fuente */
+.source-item {
+  width: 950px;
+  height: 94px;
+  background: rgba(27, 32, 42, 0.65);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+.source-item.focused {
+  background: #FFFFFF !important;
+  box-shadow: 0 8px 26px rgba(255, 255, 255, 0.3);
+  transform: scale(1.01);
+}
+
+.source-quality-badge {
+  width: 85px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-right: 22px;
+  flex-shrink: 0;
+}
+
+.source-item.focused .source-quality-badge {
+  background: #0D0F14 !important;
+  color: #FFFFFF !important;
+}
+
+.source-info-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.source-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.source-item.focused .source-title {
+  color: #000000 !important;
+}
+
+.source-details {
+  font-size: 13px;
+  color: #8E95A5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.source-item.focused .source-details {
+  color: #333333 !important;
+}
+
+.source-seeds-col {
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.source-item.focused .source-seeds-col {
+  color: #000000 !important;
+}
+
+/* Tarjeta Inteligente Adaptativa */
+.det-adaptive-card {
+  width: 950px;
+  background: rgba(18, 23, 36, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px 30px;
+  margin-top: 15px;
+}
+
+.det-adapt-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: 6px;
+  background: rgba(48, 209, 88, 0.12);
+  border: 1px solid rgba(48, 209, 88, 0.3);
+  color: #30D158;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.det-adapt-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.det-adapt-text {
+  font-size: 14px;
+  color: #D0D4DC;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.det-adapt-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+}
+
+.det-adapt-tip {
+  font-size: 13px;
+  color: #8E95A5;
+}
+
+</style>
+</head>
+<body>
+
+<div id="loading-overlay">
+  <div class="loading-box">
+    <div class="brand">LATARR <span>CINEMA</span></div>
+    <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+  </div>
+</div>
+
+<div id="canvas">
+
+  <!-- ==================== PANTALLA 1: INICIO ==================== -->
+  <div id="winHome" class="screen-view">
+    <div id="bg-fanart"></div>
+    <div id="bg-vignette"></div>
+
+    <div class="brand">LATARR <span>CINEMA</span></div>
+    <nav id="nav-bar">
+      <button class="nav-btn" id="tab-inicio"      data-idx="0">Inicio</button>
+      <button class="nav-btn" id="tab-peliculas"   data-idx="1">Películas</button>
+      <button class="nav-btn" id="tab-series"      data-idx="2">Series</button>
+      <button class="nav-btn" id="tab-anime"       data-idx="3">Anime</button>
+      <button class="nav-btn" id="tab-historial"   data-idx="4">Historial</button>
+      <button class="nav-btn" id="tab-colecciones" data-idx="5">Colecciones</button>
+      <button class="nav-btn" id="tab-buscar"      data-idx="6">Buscar</button>
+    </nav>
+
+    <div id="hero-container">
+      <div id="hero-title">Cargando...</div>
+      <div id="hero-pills">
+        <div class="hero-pill" id="pill-1080">1080p</div>
+        <div class="hero-pill" id="pill-rating">★ 7.5</div>
+        <div class="hero-pill" id="pill-year">2026</div>
+        <div class="hero-pill" id="pill-genre">Cine</div>
+      </div>
+      <div id="hero-synopsis"></div>
+    </div>
+
+    <div id="shelves-viewport">
+      <div id="shelves-wrapper">
+        <section class="shelf-block" id="shelf-block-0">
+          <h2 class="shelf-title">LO MEJOR EN PELÍCULAS</h2>
+          <div class="shelf-row-container">
+            <div class="shelf-row" id="shelf-row-0"></div>
+          </div>
+        </section>
+
+        <section class="shelf-block" id="shelf-block-1">
+          <h2 class="shelf-title">LO MEJOR EN SERIES</h2>
+          <div class="shelf-row-container">
+            <div class="shelf-row" id="shelf-row-1"></div>
+          </div>
+        </section>
+
+        <section class="shelf-block" id="shelf-block-2">
+          <h2 class="shelf-title">LO MEJOR EN ANIME</h2>
+          <div class="shelf-row-container">
+            <div class="shelf-row" id="shelf-row-2"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PANTALLA 2: CATÁLOGO ==================== -->
+  <div id="winCatalog" class="screen-view" style="display:none;">
+    <div class="cat-bg-fanart"></div>
+    <div class="cat-bg-vignette"></div>
+
+    <header class="cat-header">
+      <div class="cat-title" id="cat-title-text">CATÁLOGO <span>PELÍCULAS</span></div>
+
+      <div class="cat-filters" id="cat-filters-group">
+        <button class="cat-btn" id="btn-fil-year"  data-fidx="0">Año: <span id="lbl-fil-year">Todos</span></button>
+        <button class="cat-btn" id="btn-fil-genre" data-fidx="1">Género: <span id="lbl-fil-genre">Todos</span></button>
+        <button class="cat-btn" id="btn-fil-back"  data-fidx="2">Volver a Inicio</button>
+      </div>
+
+      <div class="cat-subinfo" id="cat-subinfo-text">Cargando catálogo...</div>
+      <div class="cat-count-pill" id="cat-count-pill">0 títulos disponibles</div>
+      <div class="cat-divider"></div>
+    </header>
+
+    <div class="cat-grid-viewport" id="cat-grid-viewport">
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </div>
+
+
+  <!-- ==================== PANTALLA 3: DETALLES Y FUENTES ==================== -->
+  <div id="winDetails" class="screen-view" style="display:none;">
+    <div id="det-bg-fanart"></div>
+    <div id="det-bg-vignette"></div>
+
+    <header class="det-header">
+      <div class="det-title">DETALLES Y FUENTES</div>
+      <div class="det-subtitle-pill" id="det-subtitle-pill">Buscando enlaces disponibles en la red P2P...</div>
+    </header>
+
+    <!-- Columna Izquierda: Póster + Metadatos + Sinopsis + Banner -->
+    <div class="det-left-col">
+      <img id="det-poster-img" class="det-poster" src="/app/tv/placeholder.jpg" alt="Póster">
+      
+      <div class="det-meta-box">
+        <div class="det-meta-title" id="det-meta-title">Cargando...</div>
+        <div class="det-meta-pills">
+          <div class="det-pill" id="det-pill-year">2026</div>
+          <div class="det-pill gold" id="det-pill-rating">★ 7.5</div>
+          <div class="det-pill" id="det-pill-quality">1080p</div>
+        </div>
+        <div class="det-meta-genre">Género: <span id="det-meta-genre-text">Cine</span></div>
+        <div class="det-meta-player">● Reproductor: TorrServer P2P</div>
+      </div>
+
+      <div class="det-synopsis-label">SINOPSIS</div>
+      <div class="det-synopsis-box" id="det-synopsis-box"></div>
+
+      <div class="det-banner-card">
+        <iframe srcdoc="<!DOCTYPE html><html><head><style>body{margin:0;padding:0;overflow:hidden;background:transparent;display:flex;align-items:center;justify-content:center;height:100%;}</style></head><body><script type='text/javascript'>atOptions={'key':'b376103ec1c5c370c5316173b26a3ada','format':'iframe','height':250,'width':300,'params':{}};</script><script type='text/javascript' src='//www.highperformanceformat.com/b376103ec1c5c370c5316173b26a3ada/invoke.js'></script></body></html>" width="300" height="250" frameborder="0" scrolling="no" style="display:block; margin: 0 auto; border-radius: 12px; overflow:hidden;"></iframe>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Fuentes P2P + Tarjeta Adaptativa -->
+    <div class="det-right-col">
+      <div class="det-right-header">
+        <div class="det-right-title">FUENTES DISPONIBLES</div>
+        <div class="det-instruct-pill">Pulsa <strong>Enter</strong> para reproducir</div>
+      </div>
+      <div class="det-sources-container" id="det-sources-container"></div>
+    </div>
+  </div>
+
+  <!-- Modal Diálogo de Filtros (Año / Género) -->
+  <div id="modal-filter">
+    <div class="modal-box">
+      <div class="modal-head" id="modal-head-title">Seleccionar</div>
+      <div class="modal-list" id="modal-list"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   CONTROLADOR PRINCIPAL LATARR CINEMA TV
+   ============================================================ */
+
+const POSTER_BASE = "https://image.tmdb.org/t/p/w342";
+const FANART_BASE = "https://image.tmdb.org/t/p/w1280";
+
+let CurrentScreen = 'home'; // 'home' | 'catalog'
+
+// ── ESTADO PANTALLA INICIO ───────────────────────────────────
+const HomeState = {
+  zone: 'shelf',          // 'nav' | 'shelf'
+  navIdx: 0,
+  shelfIdx: 0,
+  cardIdx: [0, 0, 0],
+  data: [[], [], []],
+  fanartTimer: null,
+  synopsisTimer: null,
+  synopsisAnim: null
+};
+
+// ── ESTADO PANTALLA CATÁLOGO ─────────────────────────────────
+const CatState = {
+  currentType: 'movies',  // 'movies' | 'series' | 'anime'
+  dataMap: {
+    movies: [],
+    series: [],
+    anime: []
+  },
+  filtered: [],
+  renderedCount: 0,
+  batchSize: 42,          // 6 filas x 7 columnas
+  zone: 'grid',           // 'grid' | 'filters' | 'modal'
+  gridIdx: 0,
+  filterIdx: 0,           // 0: Año, 1: Género, 2: Volver
+  currentYear: 'Todos',
+  currentGenre: 'Todos',
+  yearsList: [],
+  genresList: [],
+  modalIdx: 0,
+  modalType: 'year'       // 'year' | 'genre'
+};
+
+// ── 1. ESCALADO DE PANTALLA 1920x1080 ────────────────────────
+function resizeCanvas() {
+  const canvas = document.getElementById('canvas');
+  const sw = window.innerWidth / 1920;
+  const sh = window.innerHeight / 1080;
+  const scale = Math.min(sw, sh);
+  canvas.style.transform = `scale(${scale})`;
+  canvas.style.left = `${(window.innerWidth - 1920 * scale) / 2}px`;
+  canvas.style.top  = `${(window.innerHeight - 1080 * scale) / 2}px`;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// ── 2. CARGA DE DATOS ────────────────────────────────────────
+async function loadJSON(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(res.status);
+    return await res.json();
+  } catch (e) {
+    console.error("Error cargando:", url, e);
+    return [];
+  }
+}
+
+// ── 3. INICIO HOME ───────────────────────────────────────────
+async function initApp() {
+  const [movies, series, anime, catMovies, catSeries, catAnime] = await Promise.all([
+    loadJSON('/top_movies.json'),
+    loadJSON('/top_series.json'),
+    loadJSON('/top_anime.json'),
+    loadJSON('/peliculas.json'),
+    loadJSON('/series.json'),
+    loadJSON('/anime.json')
+  ]);
+
+  // Home data
+  HomeState.data[0] = Array.isArray(movies) ? movies.slice(0, 30) : [];
+  HomeState.data[1] = Array.isArray(series) ? series.slice(0, 30) : [];
+  HomeState.data[2] = Array.isArray(anime)  ? anime.slice(0, 30) : [];
+
+  renderHomeShelf(0, HomeState.data[0]);
+  renderHomeShelf(1, HomeState.data[1]);
+  renderHomeShelf(2, HomeState.data[2]);
+
+  HomeState.zone = 'shelf';
+  HomeState.shelfIdx = 0;
+  HomeState.cardIdx[0] = 0;
+  updateHomeShelfFocus();
+
+  // Catálogo multi-formato
+  CatState.dataMap.movies = Array.isArray(catMovies) ? catMovies : (catMovies.results || []);
+  CatState.dataMap.series = Array.isArray(catSeries) ? catSeries : (catSeries.results || []);
+  CatState.dataMap.anime  = Array.isArray(catAnime)  ? catAnime  : (catAnime.results || []);
+
+  // Event listeners para ratón / puntero TV
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.dataset.idx, 10);
+      HomeState.navIdx = idx;
+      if (idx === 1) openCatalog('movies');
+      else if (idx === 2) openCatalog('series');
+      else if (idx === 3) openCatalog('anime');
+    });
+  });
+  document.getElementById('btn-fil-year')?.addEventListener('click', () => openFilterModal('year'));
+  document.getElementById('btn-fil-genre')?.addEventListener('click', () => openFilterModal('genre'));
+  document.getElementById('btn-fil-back')?.addEventListener('click', closeCatalog);
+
+  // Ocultar cargador
+  const loader = document.getElementById('loading-overlay');
+  loader.classList.add('hidden');
+  setTimeout(() => loader.remove(), 400);
+}
+
+function renderHomeShelf(sIdx, items) {
+  const row = document.getElementById(`shelf-row-${sIdx}`);
+  row.innerHTML = '';
+  items.forEach((item, cIdx) => {
+    const card = document.createElement('div');
+    card.className = 'card-item';
+    const pPath = item.poster_path || item.poster || '';
+    const imgUrl = pPath.startsWith('http') ? pPath : (pPath ? `${POSTER_BASE}${pPath}` : '/app/tv/placeholder.jpg');
+
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    img.alt = item.title || item.name || '';
+    img.loading = 'lazy';
+    img.onerror = () => { img.src = '/app/tv/placeholder.jpg'; };
+
+    card.appendChild(img);
+    card.addEventListener('click', () => {
+      HomeState.shelfIdx = sIdx;
+      HomeState.cardIdx[sIdx] = cIdx;
+      updateHomeShelfFocus();
+      const types = ['movies', 'series', 'anime'];
+      openDetails(item, 'home', types[sIdx]);
+    });
+    row.appendChild(card);
+  });
+}
+
+function updateHomeShelfFocus() {
+  document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('focused'));
+  document.querySelectorAll('.card-item').forEach(c => c.classList.remove('focused'));
+
+  const s = HomeState.shelfIdx;
+  const c = HomeState.cardIdx[s];
+  const row = document.getElementById(`shelf-row-${s}`);
+  const card = row?.children[c];
+
+  if (card) {
+    card.classList.add('focused');
+    const offsetLeft = Math.max(0, c * 240);
+    row.style.transform = `translateX(-${offsetLeft}px)`;
+
+    const wrapper = document.getElementById('shelves-wrapper');
+    const targetBlock = document.getElementById(`shelf-block-${s}`);
+    const verticalOffset = targetBlock ? targetBlock.offsetTop : 0;
+    wrapper.style.transform = `translateY(-${verticalOffset}px)`;
+
+    const item = HomeState.data[s][c];
+    if (item) updateHomeHero(item);
+  }
+}
+
+function updateHomeNavFocus() {
+  document.querySelectorAll('.card-item').forEach(c => c.classList.remove('focused'));
+  const wrapper = document.getElementById('shelves-wrapper');
+  wrapper.style.transform = 'translateY(0px)';
+
+  document.querySelectorAll('.nav-btn').forEach((btn, idx) => {
+    btn.classList.toggle('focused', idx === HomeState.navIdx);
+  });
+}
+
+function updateHomeHero(item) {
+  const title = item.clean_title || item.title || item.name || 'Sin Título';
+  document.getElementById('hero-title').textContent = title;
+
+  const rVal = item.rating || item.vote_average || 7.5;
+  document.getElementById('pill-rating').textContent = `★ ${parseFloat(rVal).toFixed(1)}`;
+
+  const year = (item.year || item.release_date || item.first_air_date || '2026').toString().slice(0, 4);
+  document.getElementById('pill-year').textContent = year;
+
+  const g = item.genre || (Array.isArray(item.genres) ? item.genres[0] : 'Cine');
+  document.getElementById('pill-genre').textContent = g;
+
+  const plot = item.overview || item.plot || 'Sin sinopsis disponible.';
+  const synEl = document.getElementById('hero-synopsis');
+  synEl.textContent = plot;
+  startHomeSynopsisScroll(synEl);
+
+  if (HomeState.fanartTimer) clearTimeout(HomeState.fanartTimer);
+  HomeState.fanartTimer = setTimeout(() => {
+    const pPath = item.poster_path || '';
+    const fanartUrl = pPath ? `${FANART_BASE}${pPath}` : '';
+    const bgEl = document.getElementById('bg-fanart');
+    if (fanartUrl) bgEl.style.backgroundImage = `url('${fanartUrl}')`;
+  }, 220);
+}
+
+function startHomeSynopsisScroll(el) {
+  if (HomeState.synopsisTimer) clearTimeout(HomeState.synopsisTimer);
+  if (HomeState.synopsisAnim) cancelAnimationFrame(HomeState.synopsisAnim);
+  el.scrollTop = 0;
+
+  HomeState.synopsisTimer = setTimeout(() => {
+    const maxScroll = el.scrollHeight - el.clientHeight;
+    if (maxScroll <= 0) return;
+
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / 3000, 1);
+      el.scrollTop = maxScroll * progress;
+      if (progress < 1) {
+        HomeState.synopsisAnim = requestAnimationFrame(step);
+      } else {
+        HomeState.synopsisTimer = setTimeout(() => startHomeSynopsisScroll(el), 5000);
+      }
+    }
+    HomeState.synopsisAnim = requestAnimationFrame(step);
+  }, 3500);
+}
+
+// ── 4. CONTROLADOR DE CATÁLOGO ───────────────────────────────
+function extractCatFilters() {
+  const items = CatState.dataMap[CatState.currentType] || [];
+  const yearsSet = new Set();
+  const genresSet = new Set();
+
+  items.forEach(m => {
+    const y = (m.year || m.first_air_date || '').toString().slice(0, 4);
+    if (y && y.length === 4) yearsSet.add(y);
+    const g = m.genre || (Array.isArray(m.genres) ? m.genres[0] : '');
+    if (g) genresSet.add(g);
+  });
+
+  const sortedYears = Array.from(yearsSet).sort((a, b) => b.localeCompare(a));
+  const sortedGenres = Array.from(genresSet).sort((a, b) => a.localeCompare(b));
+
+  CatState.yearsList = ['Todos', ...sortedYears];
+  CatState.genresList = ['Todos', ...sortedGenres];
+}
+
+function openCatalog(mediaType = 'movies') {
+  CatState.currentType = mediaType;
+  CatState.currentYear = 'Todos';
+  CatState.currentGenre = 'Todos';
+  extractCatFilters();
+
+  CurrentScreen = 'catalog';
+  document.getElementById('winHome').style.display = 'none';
+  document.getElementById('winCatalog').style.display = 'block';
+
+  const titleMap = {
+    movies: 'CATÁLOGO <span>PELÍCULAS</span>',
+    series: 'CATÁLOGO <span>SERIES DE TV</span>',
+    anime:  'CATÁLOGO <span>ANIME</span>'
+  };
+  document.getElementById('cat-title-text').innerHTML = titleMap[mediaType] || `CATÁLOGO <span>${mediaType.toUpperCase()}</span>`;
+
+  // Aplicar filtros
+  applyCatFilters(true);
+}
+
+function closeCatalog() {
+  CurrentScreen = 'home';
+  document.getElementById('winCatalog').style.display = 'none';
+  document.getElementById('winHome').style.display = 'block';
+
+  // Regresar foco a Home en el tab correspondiente
+  HomeState.zone = 'nav';
+  const tabMap = { movies: 1, series: 2, anime: 3 };
+  HomeState.navIdx = tabMap[CatState.currentType] || 1;
+  updateHomeNavFocus();
+}
+
+function applyCatFilters(resetPosition = false) {
+  let list = CatState.dataMap[CatState.currentType] || [];
+
+  if (CatState.currentYear !== 'Todos') {
+    list = list.filter(m => (m.year || m.first_air_date || '').toString().slice(0, 4) === CatState.currentYear);
+  }
+  if (CatState.currentGenre !== 'Todos') {
+    list = list.filter(m => {
+      const g = m.genre || (Array.isArray(m.genres) ? m.genres[0] : '');
+      return g === CatState.currentGenre;
+    });
+  }
+
+  CatState.filtered = list;
+  document.getElementById('lbl-fil-year').textContent = CatState.currentYear;
+  document.getElementById('lbl-fil-genre').textContent = CatState.currentGenre;
+  document.getElementById('cat-count-pill').textContent = `${list.length} títulos disponibles`;
+
+  // Renderizar
+  const grid = document.getElementById('cat-grid');
+  grid.innerHTML = '';
+  CatState.renderedCount = 0;
+  appendCatBatch();
+
+  if (resetPosition) {
+    CatState.zone = 'grid';
+    CatState.gridIdx = 0;
+    document.getElementById('cat-grid-viewport').scrollTop = 0;
+  }
+  updateCatFocus();
+}
+
+function appendCatBatch() {
+  const grid = document.getElementById('cat-grid');
+  const start = CatState.renderedCount;
+  const end = Math.min(start + CatState.batchSize, CatState.filtered.length);
+
+  for (let i = start; i < end; i++) {
+    const item = CatState.filtered[i];
+    const slot = document.createElement('div');
+    slot.className = 'cat-slot';
+
+    const card = document.createElement('div');
+    card.className = 'cat-card';
+    card.dataset.idx = i;
+
+    const pPath = item.poster_path || item.poster || '';
+    const imgUrl = pPath.startsWith('http') ? pPath : (pPath ? `${POSTER_BASE}${pPath}` : '/app/tv/placeholder.jpg');
+
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    img.alt = item.clean_title || item.title || item.name || '';
+    img.loading = 'lazy';
+    img.onerror = () => { img.src = '/app/tv/placeholder.jpg'; };
+
+    card.appendChild(img);
+    card.addEventListener('click', () => {
+      CatState.gridIdx = i;
+      updateCatFocus();
+      openDetails(item, 'catalog', CatState.currentType);
+    });
+    slot.appendChild(card);
+    grid.appendChild(slot);
+  }
+  CatState.renderedCount = end;
+}
+
+function updateCatFocus() {
+  // Limpiar focos
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('focused'));
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('focused'));
+
+  if (CatState.zone === 'filters') {
+    const btns = [
+      document.getElementById('btn-fil-year'),
+      document.getElementById('btn-fil-genre'),
+      document.getElementById('btn-fil-back')
+    ];
+    if (btns[CatState.filterIdx]) {
+      btns[CatState.filterIdx].classList.add('focused');
+    }
+  } else if (CatState.zone === 'grid') {
+    const grid = document.getElementById('cat-grid');
+    const slot = grid.children[CatState.gridIdx];
+    if (slot) {
+      const card = slot.querySelector('.cat-card');
+      if (card) {
+        card.classList.add('focused');
+        // Auto-scroll suave de la fila hacia la vista
+        slot.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+    updateCatSubinfo();
+  }
+}
+
+function updateCatSubinfo() {
+  const item = CatState.filtered[CatState.gridIdx];
+  const infoEl = document.getElementById('cat-subinfo-text');
+  if (!item) {
+    infoEl.innerHTML = '';
+    return;
+  }
+  const title = item.clean_title || item.title || item.name || 'Sin Título';
+  const year = (item.year || item.first_air_date || '').toString().slice(0, 4);
+  const rating = (item.rating || item.vote_average) ? parseFloat(item.rating || item.vote_average).toFixed(1) : '7.0';
+  const genre = item.genre || (Array.isArray(item.genres) ? item.genres[0] : 'Cine');
+
+  infoEl.innerHTML = `${title} <span class="meta-silver">(${year})</span> &nbsp;•&nbsp; <span class="star-gold">★ ${rating}</span> &nbsp;•&nbsp; <span class="meta-silver">${genre}</span>`;
+}
+
+// ── 5. MODAL SELECTOR DE FILTROS (Kodi Dialog Style) ─────────
+function openFilterModal(type) {
+  CatState.zone = 'modal';
+  CatState.modalType = type;
+  CatState.modalIdx = 0;
+
+  const modal = document.getElementById('modal-filter');
+  const title = document.getElementById('modal-head-title');
+  const listEl = document.getElementById('modal-list');
+
+  title.textContent = type === 'year' ? 'Seleccionar Año' : 'Seleccionar Género';
+  listEl.innerHTML = '';
+
+  const options = type === 'year' ? CatState.yearsList : CatState.genresList;
+  const currentVal = type === 'year' ? CatState.currentYear : CatState.currentGenre;
+
+  options.forEach((opt, idx) => {
+    const div = document.createElement('div');
+    div.className = 'modal-option';
+    div.textContent = opt;
+    if (opt === currentVal) CatState.modalIdx = idx;
+    listEl.appendChild(div);
+  });
+
+  modal.classList.add('active');
+  updateModalFocus();
+}
+
+function closeFilterModal() {
+  document.getElementById('modal-filter').classList.remove('active');
+  CatState.zone = 'filters';
+  updateCatFocus();
+}
+
+function updateModalFocus() {
+  const listEl = document.getElementById('modal-list');
+  const items = listEl.children;
+  Array.from(items).forEach((el, i) => {
+    el.classList.toggle('focused', i === CatState.modalIdx);
+    if (i === CatState.modalIdx) {
+      el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  });
+}
+
+function selectCurrentModalOption() {
+  const options = CatState.modalType === 'year' ? CatState.yearsList : CatState.genresList;
+  const chosen = options[CatState.modalIdx];
+
+  if (CatState.modalType === 'year') {
+    CatState.currentYear = chosen;
+  } else {
+    CatState.currentGenre = chosen;
+  }
+
+  closeFilterModal();
+  applyCatFilters(true);
+}
+
+// ── 6. D-PAD / TECLADO REMOTO UNIFICADO ──────────────────────
+document.addEventListener('keydown', (e) => {
+  const key = e.key;
+
+  if (CurrentScreen === 'home') {
+    handleHomeKeys(e);
+  } else if (CurrentScreen === 'catalog') {
+    handleCatKeys(e);
+  } else if (CurrentScreen === 'details') {
+    handleDetailsKeys(e);
+  }
+});
+
+
+// ── ESTADO PANTALLA DETALLES Y FUENTES ───────────────────────
+const DetailsState = {
+  origin: 'home',         // 'home' | 'catalog'
+  mediaType: 'movies',    // 'movies' | 'series' | 'anime'
+  item: null,
+  list: [],
+  listIdx: 0,
+  synopsisTimer: null,
+  synopsisAnim: null
+};
+
+function cleanQuality(q) {
+  const qStr = String(q || '1080P').toUpperCase();
+  if (qStr.includes('2160') || qStr.includes('4K')) return '4K';
+  if (qStr.includes('1080')) return '1080P';
+  if (qStr.includes('720')) return '720P';
+  return 'HD';
+}
+
+function getSeedsColor(s) {
+  const seeds = parseInt(s || 0);
+  if (seeds >= 100) return '#30D158';
+  if (seeds >= 50) return '#FFD60A';
+  return '#FF453A';
+}
+
+async function openDetails(item, origin = 'home', mediaType = 'movies') {
+  DetailsState.origin = origin;
+  DetailsState.item = item;
+  DetailsState.mediaType = mediaType;
+  DetailsState.list = [];
+  DetailsState.listIdx = 0;
+
+  CurrentScreen = 'details';
+  document.getElementById('winHome').style.display = 'none';
+  document.getElementById('winCatalog').style.display = 'none';
+  document.getElementById('winDetails').style.display = 'block';
+
+  // Render inicial de columna izquierda
+  renderDetailsLeftMeta(item);
+
+  // Subtítulo superior y contenedor
+  document.getElementById('det-subtitle-pill').textContent = 'Buscando enlaces disponibles en la red P2P...';
+  const container = document.getElementById('det-sources-container');
+  container.innerHTML = '<div style="color:#8E95A5; font-size:18px; padding:40px 10px;">Buscando fuentes disponibles...</div>';
+
+  const tmdbId = item.tmdb_id || item.id;
+  const endpoint = `/links/${mediaType}/${tmdbId}.json`;
+  const data = await loadJSON(endpoint);
+
+  processAndRenderSources(data, item, mediaType);
+}
+
+function renderDetailsLeftMeta(item) {
+  const title = item.clean_title || item.title || item.name || 'Sin Título';
+  document.getElementById('det-meta-title').textContent = title;
+
+  const year = (item.year || item.first_air_date || item.release_date || '2026').toString().slice(0, 4);
+  document.getElementById('det-pill-year').textContent = year;
+
+  const rVal = item.rating || item.vote_average || 7.5;
+  document.getElementById('det-pill-rating').textContent = `★ ${parseFloat(rVal).toFixed(1)}`;
+
+  const genre = item.genre || (Array.isArray(item.genres) ? item.genres[0] : 'Cine');
+  document.getElementById('det-meta-genre-text').textContent = genre;
+
+  const pPath = item.poster_path || item.poster || '';
+  const imgUrl = pPath.startsWith('http') ? pPath : (pPath ? `${POSTER_BASE}${pPath}` : '/app/tv/placeholder.jpg');
+  const fanartUrl = pPath ? `${FANART_BASE}${pPath}` : '';
+
+  const posterImg = document.getElementById('det-poster-img');
+  posterImg.src = imgUrl;
+  posterImg.onerror = () => { posterImg.src = '/app/tv/placeholder.jpg'; };
+
+  const bgFanart = document.getElementById('det-bg-fanart');
+  if (fanartUrl) bgFanart.style.backgroundImage = `url('${fanartUrl}')`;
+
+  const synopsis = item.overview || item.plot || 'Sin sinopsis disponible para este título.';
+  const synBox = document.getElementById('det-synopsis-box');
+  synBox.textContent = synopsis;
+  startDetailsSynopsisScroll(synBox);
+}
+
+function startDetailsSynopsisScroll(el) {
+  if (DetailsState.synopsisTimer) clearTimeout(DetailsState.synopsisTimer);
+  if (DetailsState.synopsisAnim) cancelAnimationFrame(DetailsState.synopsisAnim);
+  el.scrollTop = 0;
+
+  DetailsState.synopsisTimer = setTimeout(() => {
+    const maxScroll = el.scrollHeight - el.clientHeight;
+    if (maxScroll <= 0) return;
+
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / 3000, 1);
+      el.scrollTop = maxScroll * progress;
+      if (progress < 1) {
+        DetailsState.synopsisAnim = requestAnimationFrame(step);
+      } else {
+        DetailsState.synopsisTimer = setTimeout(() => startDetailsSynopsisScroll(el), 5000);
+      }
+    }
+    DetailsState.synopsisAnim = requestAnimationFrame(step);
+  }, 3500);
+}
+
+function processAndRenderSources(data, item, mediaType) {
+  let rawLinks = [];
+
+  if (mediaType === 'movies') {
+    rawLinks = data && Array.isArray(data.links) ? [...data.links] : [];
+    rawLinks.sort((a, b) => (parseInt(b.seeds) || 0) - (parseInt(a.seeds) || 0));
+  } else {
+    // Series / Anime
+    if (data) {
+      (data.packs || []).forEach(p => {
+        const sn = p.season || 0;
+        p.custom_label = sn === 0 ? '[PACK] PACK COMPLETO' : `[PACK] Pack Temporada ${sn}`;
+        p.is_pack = 1;
+        rawLinks.push(p);
+      });
+      (data.episodes || []).forEach(ep => {
+        const sVal = parseInt(ep.season || 0);
+        const eVal = parseInt(ep.episode || 0);
+        if (sVal === 0) {
+          ep.custom_label = eVal > 0 ? `⭐ Especial ${eVal}` : `⭐ Especial`;
+        } else {
+          const sStr = String(sVal).padStart(2, '0');
+          const eStr = String(eVal).padStart(2, '0');
+          ep.custom_label = `Episodio S${sStr}E${eStr}`;
+        }
+        ep.is_pack = 0;
+        rawLinks.push(ep);
+      });
+      (data.links || []).forEach(l => rawLinks.push(l));
+
+      rawLinks.sort((a, b) => {
+        const packA = a.is_pack ? 0 : 1;
+        const packB = b.is_pack ? 0 : 1;
+        if (packA !== packB) return packA - packB;
+        const sA = parseInt(a.season || 0);
+        const sB = parseInt(b.season || 0);
+        if (sA !== sB) return sA - sB;
+        const eA = parseInt(a.episode || 0);
+        const eB = parseInt(b.episode || 0);
+        if (eA !== eB) return eA - eB;
+        return (parseInt(b.seeds) || 0) - (parseInt(a.seeds) || 0);
+      });
+    }
+  }
+
+  DetailsState.list = rawLinks;
+  DetailsState.listIdx = 0;
+
+  const subtitleEl = document.getElementById('det-subtitle-pill');
+  if (rawLinks.length === 0) {
+    subtitleEl.textContent = 'No se encontraron fuentes disponibles actualmente.';
+  } else {
+    subtitleEl.textContent = `Selecciona una versión  •  ${rawLinks.length} enlaces disponibles`;
+  }
+
+  const container = document.getElementById('det-sources-container');
+  container.innerHTML = '';
+
+  if (rawLinks.length === 0) {
+    container.innerHTML = '<div style="color:#8E95A5; font-size:18px; padding:40px 10px;">No hay fuentes P2P disponibles para este título en este momento.</div>';
+    return;
+  }
+
+  // Renderizar fuentes
+  rawLinks.forEach((src, idx) => {
+    const q = cleanQuality(src.quality);
+    const title = src.custom_label || src.title || `${item.clean_title || item.title} (${q})`;
+    const size = src.size || 'Desconocido';
+    const sourceTracker = (src.source || 'p2p').toLowerCase();
+    const seeds = parseInt(src.seeds || 0);
+    const dotColor = getSeedsColor(seeds);
+
+    const row = document.createElement('div');
+    row.className = 'source-item';
+    row.dataset.idx = idx;
+
+    row.innerHTML = `
+      <div class="source-quality-badge">${q}</div>
+      <div class="source-info-col">
+        <div class="source-title">${title}</div>
+        <div class="source-details">Subs Español &nbsp;|&nbsp; ${size} &nbsp;|&nbsp; ${sourceTracker}</div>
+      </div>
+      <div class="source-seeds-col">
+        <span style="color: ${dotColor}; font-size: 14px;">●</span>
+        <span>${seeds} seeds</span>
+      </div>
+    `;
+
+    row.addEventListener('click', () => {
+      DetailsState.listIdx = idx;
+      updateDetailsFocus();
+      playSelectedSource();
+    });
+
+    container.appendChild(row);
+  });
+
+  // Tarjeta Inteligente Adaptativa si hay pocos enlaces
+  if (rawLinks.length > 0 && rawLinks.length <= 4) {
+    const adaptCard = document.createElement('div');
+    adaptCard.className = 'det-adaptive-card';
+    adaptCard.innerHTML = `
+      <div class="det-adapt-pill">● Fuente Verificada en P2P</div>
+      <div class="det-adapt-title">Listo para Reproducción Directa con TorrServer</div>
+      <div class="det-adapt-text">Este título cuenta con enlace optimizado y semillas activas en la red P2P. El reproductor comenzará la descarga en búfer de alta velocidad automáticamente al pulsar Enter.</div>
+      <div class="det-adapt-divider"></div>
+      <div class="det-adapt-tip">Consejo: Si el video tarda unos segundos en comenzar, es completamente normal mientras se conectan los primeros peers.</div>
+    `;
+    container.appendChild(adaptCard);
+  }
+
+  updateDetailsFocus();
+}
+
+function updateDetailsFocus() {
+  const container = document.getElementById('det-sources-container');
+  const items = container.querySelectorAll('.source-item');
+
+  items.forEach((item, idx) => {
+    const isFocus = idx === DetailsState.listIdx;
+    item.classList.toggle('focused', isFocus);
+    if (isFocus) {
+      item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  });
+}
+
+function playSelectedSource() {
+  const src = DetailsState.list[DetailsState.listIdx];
+  if (!src || !src.magnet) {
+    if (window.LatarrNative && window.LatarrNative.showToast) {
+      window.LatarrNative.showToast("Enlace magnet no disponible");
+    }
+    return;
+  }
+
+  const title = DetailsState.item.clean_title || DetailsState.item.title || DetailsState.item.name || 'Latarr Video';
+  const poster = DetailsState.item.poster_path ? `${POSTER_BASE}${DetailsState.item.poster_path}` : '';
+  const tmdbId = String(DetailsState.item.tmdb_id || DetailsState.item.id || '');
+  const mediaType = DetailsState.mediaType || 'movies';
+  const season = parseInt(src.season || 0);
+  const episode = parseInt(src.episode || 0);
+
+  if (window.LatarrNative && window.LatarrNative.playTorrent) {
+    window.LatarrNative.playTorrent(src.magnet, title, poster, tmdbId, mediaType, season, episode);
+  } else {
+    // Si corre en navegador web fuera de APK
+    window.location.href = src.magnet;
+  }
+}
+
+function closeDetails() {
+  CurrentScreen = DetailsState.origin; // 'home' | 'catalog'
+  document.getElementById('winDetails').style.display = 'none';
+
+  if (DetailsState.origin === 'home') {
+    document.getElementById('winHome').style.display = 'block';
+    updateHomeShelfFocus();
+  } else {
+    document.getElementById('winCatalog').style.display = 'block';
+    updateCatFocus();
+  }
+}
+
+function handleDetailsKeys(e) {
+  const key = e.key;
+  const total = DetailsState.list.length;
+
+  switch (key) {
+    case 'ArrowDown':
+      if (DetailsState.listIdx < total - 1) {
+        DetailsState.listIdx++;
+        updateDetailsFocus();
+      }
+      e.preventDefault();
+      break;
+
+    case 'ArrowUp':
+      if (DetailsState.listIdx > 0) {
+        DetailsState.listIdx--;
+        updateDetailsFocus();
+      }
+      e.preventDefault();
+      break;
+
+    case 'Enter':
+      playSelectedSource();
+      e.preventDefault();
+      break;
+
+    case 'Backspace':
+    case 'Escape':
+      closeDetails();
+      e.preventDefault();
+      break;
+  }
+}
+
+function handleHomeKeys(e) {
+  const key = e.key;
+
+  if (HomeState.zone === 'nav') {
+    switch (key) {
+      case 'ArrowRight':
+        if (HomeState.navIdx < 6) {
+          HomeState.navIdx++;
+          updateHomeNavFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowLeft':
+        if (HomeState.navIdx > 0) {
+          HomeState.navIdx--;
+          updateHomeNavFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowDown':
+        HomeState.zone = 'shelf';
+        HomeState.shelfIdx = 0;
+        updateHomeShelfFocus();
+        e.preventDefault();
+        break;
+
+      case 'Enter':
+        // Clic en tab
+        if (HomeState.navIdx === 1) { // Películas
+          openCatalog('movies');
+        } else if (HomeState.navIdx === 2) { // Series
+          openCatalog('series');
+        } else if (HomeState.navIdx === 3) { // Anime
+          openCatalog('anime');
+        } else {
+          const names = ['Inicio', 'Películas', 'Series', 'Anime', 'Historial', 'Colecciones', 'Buscar'];
+          if (window.LatarrNative && window.LatarrNative.showToast) {
+            window.LatarrNative.showToast(names[HomeState.navIdx] + " próximamente");
+          }
+        }
+        e.preventDefault();
+        break;
+    }
+  } else if (HomeState.zone === 'shelf') {
+    const s = HomeState.shelfIdx;
+    const maxCards = HomeState.data[s].length;
+
+    switch (key) {
+      case 'ArrowRight':
+        if (HomeState.cardIdx[s] < maxCards - 1) {
+          HomeState.cardIdx[s]++;
+          updateHomeShelfFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowLeft':
+        if (HomeState.cardIdx[s] > 0) {
+          HomeState.cardIdx[s]--;
+          updateHomeShelfFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowDown':
+        if (HomeState.shelfIdx < 2) {
+          HomeState.shelfIdx++;
+          updateHomeShelfFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowUp':
+        if (HomeState.shelfIdx > 0) {
+          HomeState.shelfIdx--;
+          updateHomeShelfFocus();
+        } else {
+          HomeState.zone = 'nav';
+          updateHomeNavFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'Enter':
+        const item = HomeState.data[s][HomeState.cardIdx[s]];
+        if (item) {
+          const types = ['movies', 'series', 'anime'];
+          openDetails(item, 'home', types[s]);
+        }
+        e.preventDefault();
+        break;
+
+      case 'Backspace':
+      case 'Escape':
+        HomeState.zone = 'nav';
+        updateHomeNavFocus();
+        e.preventDefault();
+        break;
+    }
+  }
+}
+
+function handleCatKeys(e) {
+  const key = e.key;
+
+  if (CatState.zone === 'modal') {
+    const options = CatState.modalType === 'year' ? CatState.yearsList : CatState.genresList;
+    switch (key) {
+      case 'ArrowDown':
+        if (CatState.modalIdx < options.length - 1) {
+          CatState.modalIdx++;
+          updateModalFocus();
+        }
+        e.preventDefault();
+        break;
+      case 'ArrowUp':
+        if (CatState.modalIdx > 0) {
+          CatState.modalIdx--;
+          updateModalFocus();
+        }
+        e.preventDefault();
+        break;
+      case 'Enter':
+        selectCurrentModalOption();
+        e.preventDefault();
+        break;
+      case 'Backspace':
+      case 'Escape':
+        closeFilterModal();
+        e.preventDefault();
+        break;
+    }
+    return;
+  }
+
+  if (CatState.zone === 'filters') {
+    switch (key) {
+      case 'ArrowRight':
+        if (CatState.filterIdx < 2) {
+          CatState.filterIdx++;
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowLeft':
+        if (CatState.filterIdx > 0) {
+          CatState.filterIdx--;
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowDown':
+        // XML: ondown baja a la cuadrícula de pósters
+        CatState.zone = 'grid';
+        updateCatFocus();
+        e.preventDefault();
+        break;
+
+      case 'Enter':
+        if (CatState.filterIdx === 0) {
+          openFilterModal('year');
+        } else if (CatState.filterIdx === 1) {
+          openFilterModal('genre');
+        } else if (CatState.filterIdx === 2) {
+          closeCatalog();
+        }
+        e.preventDefault();
+        break;
+
+      case 'Backspace':
+      case 'Escape':
+        closeCatalog();
+        e.preventDefault();
+        break;
+    }
+  } else if (CatState.zone === 'grid') {
+    const total = CatState.filtered.length;
+
+    switch (key) {
+      case 'ArrowRight':
+        if (CatState.gridIdx < total - 1) {
+          CatState.gridIdx++;
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowLeft':
+        if (CatState.gridIdx > 0) {
+          CatState.gridIdx--;
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowDown':
+        if (CatState.gridIdx + 7 < total) {
+          CatState.gridIdx += 7;
+          // Paginación continua si nos acercamos al final
+          if (CatState.gridIdx >= CatState.renderedCount - 14) {
+            appendCatBatch();
+          }
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'ArrowUp':
+        if (CatState.gridIdx >= 7) {
+          CatState.gridIdx -= 7;
+          updateCatFocus();
+        } else {
+          // XML: onup desde la primera fila sube a los filtros superiores
+          CatState.zone = 'filters';
+          CatState.filterIdx = Math.min(2, Math.floor(CatState.gridIdx / 2.5));
+          updateCatFocus();
+        }
+        e.preventDefault();
+        break;
+
+      case 'Enter':
+        const item = CatState.filtered[CatState.gridIdx];
+        if (item) {
+          openDetails(item, 'catalog', CatState.currentType);
+        }
+        e.preventDefault();
+        break;
+
+      case 'Backspace':
+      case 'Escape':
+        closeCatalog();
+        e.preventDefault();
+        break;
+    }
+  }
+}
+
+// Inicializar
+window.addEventListener('DOMContentLoaded', initApp);
+</script>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATARR TV PRO — +2.400 Canales en Vivo para Kodi</title>
+    <meta name="description" content="Latarr TV PRO: Addon independiente de televisión en vivo para Kodi con interfaz moderna estilo Apple TV. Deportes en directo, Cine 24/7, canales de Chile y el mundo.">
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-body: #07090e;
+            --bg-surface: #0e121d;
+            --bg-card: #131826;
+            --bg-card-hover: #1b2337;
+            --cyan: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.35);
+            --orange: #ff5722;
+            --orange-glow: rgba(255, 87, 34, 0.35);
+            --green: #10b981;
+            --text-title: #ffffff;
+            --text-body: #cbd5e1;
+            --text-muted: #8292a6;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(0, 229, 255, 0.4);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-title);
+            font-weight: 800;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            height: 600px;
+            background: radial-gradient(ellipse at top, rgba(0, 229, 255, 0.12) 0%, rgba(123, 47, 255, 0.06) 40%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px var(--cyan-glow);
+            border: 1px solid rgba(0, 229, 255, 0.5);
+        }
+
+        .brand-name {
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span {
+            color: var(--cyan);
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: var(--cyan);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: -3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        .btn-cinema-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 87, 34, 0.12);
+            color: var(--orange) !important;
+            border: 1px solid rgba(255, 87, 34, 0.35);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-cinema-switch:hover {
+            background: var(--orange);
+            color: #fff !important;
+            box-shadow: 0 0 20px var(--orange-glow);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid var(--cyan-glow);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--cyan);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 70px 0 40px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 4.2vw, 54px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--cyan);
+            text-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-body);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 28px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-item h3 {
+            font-size: 28px;
+            color: var(--cyan);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-media {
+            position: relative;
+        }
+
+        .hero-card-preview {
+            background: var(--bg-surface);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 229, 255, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-card-preview:hover {
+            transform: translateY(-4px);
+        }
+
+        .hero-card-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Golden Download Section (3 Passive Banners Zone) */
+        .download-box-section {
+            padding: 50px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(14, 18, 29, 0.7) 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .download-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Banner 1: Top 728x90 */
+        .banner-slot-728 {
+            margin: 0 auto 30px;
+            min-height: 90px;
+            max-width: 728px;
+            width: 100%;
+            background: rgba(14, 18, 29, 0.85);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Central Download Card */
+        .download-card {
+            background: linear-gradient(145deg, #101624 0%, #172033 100%);
+            border: 1px solid rgba(0, 229, 255, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 229, 255, 0.18);
+            margin-bottom: 30px;
+        }
+
+        .btn-download-tv {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: linear-gradient(135deg, #00e5ff 0%, #0088cc 100%);
+            color: #000;
+            font-size: 19px;
+            font-weight: 800;
+            padding: 18px 42px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            box-shadow: 0 10px 35px rgba(0, 229, 255, 0.45);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-download-tv:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 45px rgba(0, 229, 255, 0.65);
+        }
+
+        .download-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .download-meta span {
+            color: var(--cyan);
+        }
+
+        /* Banners 2 & 3: Bottom 300x250 Side-by-Side */
+        .banners-bottom-row {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .banner-slot-300 {
+            width: 300px;
+            min-height: 250px;
+            background: rgba(14, 18, 29, 0.85);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Feature Cards */
+        .features-section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 32px 26px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-hover);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Steps */
+        .steps-section {
+            padding: 60px 0;
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .step-card {
+            background: var(--bg-body);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            position: relative;
+        }
+
+        .step-num {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 32px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            color: rgba(0, 229, 255, 0.25);
+        }
+
+        .step-card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Disclaimer Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .disclaimer-box {
+            max-width: 820px;
+            margin: 0 auto 24px;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-md);
+            font-size: 12px;
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-row {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Navegación Superior -->
+    <header class="container">
+        <a href="index.html" class="brand-logo">
+            <img src="icon.png" alt="Logo Latarr TV PRO">
+            <div>
+                <span class="brand-font brand-name">LATARR <span>TV PRO</span></span>
+                <span class="brand-sub">Televisión en Vivo para Kodi</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="../" class="btn-cinema-switch">🎬 Ir a Latarr Cinema</a>
+            <a href="https://paypal.me/multicajafull" target="_blank" style="color: var(--orange); font-weight: 700;">❤️ Donar</a>
+        </nav>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <section class="hero container">
+        <div class="hero-grid">
+            <div>
+                <div class="pill">🔥 Lanzamiento Oficial · Addon v1.0.0</div>
+                <h1>La Televisión en Vivo en Kodi.<br><span>+2.400 Canales sin Cortes.</span></h1>
+                <p>
+                    Transmisiones en vivo organizadas por categorías: <strong>Deportes en directo, Cine 24/7, canales chilenos y señales de más de 20 países</strong>.
+                    Con una interfaz moderna de ventanas oscuras estilo Apple TV y sin necesidad de listas m3u feas de texto.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <h3>+2.400</h3>
+                        <p>Canales en Vivo</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>23</h3>
+                        <p>Países Incluidos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Gratis y Autónomo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="hero-card-preview">
+                    <img src="fanart.jpg" alt="Latarr TV PRO Interface Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONA DORADA DE MONETIZACIÓN Y DESCARGAS (3 BANNERS PASIVOS) -->
+    <section class="download-box-section">
+        <div class="container download-wrapper">
+            
+            <!-- BANNER 1: SUPERIOR (300x250 Centrado - HilltopAds Activo) -->
+            <div style="display: flex; justify-content: center; margin: 0 auto 30px;">
+                <div class="banner-slot-300" id="banner-tv-top" style="border: none; background: transparent;">
+                    <script>
+                    (function(vnzid){
+                    var d = document,
+                        s = d.createElement('script'),
+                        l = d.currentScript || d.scripts[d.scripts.length - 1];
+                    s.settings = vnzid || {};
+                    s.src = "\/\/massivesalad.com\/btX.VmsKdvG\/l\/0UYJW\/cc\/Ne_m\/9\/ulZTUKlBkVPdTMcf2qMOznMM2nNGjGESt\/Nvz\/YFzOMWzqYj2\/N\/QH";
+                    s.async = true;
+                    s.referrerPolicy = 'no-referrer-when-downgrade';
+                    l.parentNode.insertBefore(s, l);
+                    })({})
+                    </script>
+                </div>
+            </div>
+
+            <!-- TARJETA CENTRAL DE DESCARGA -->
+            <div class="download-card">
+                <div style="font-size: 13px; color: var(--cyan); font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">
+                    ⚡ Descarga Directa para Kodi
+                </div>
+                <h2 style="font-size: 28px; margin-bottom: 20px;">Instala LATARR TV PRO en tu TV Box o PC</h2>
+
+                <a href="../descargas/plugin.video.latarr.tv-1.0.0.zip" class="btn-download-tv" download>
+                    <span style="font-size: 24px;">📦</span> Descargar Addon ZIP (v1.0.0)
+                </a>
+
+                <div class="download-meta">
+                    <div>Archivo: <span>plugin.video.latarr.tv-1.0.0.zip</span></div>
+                    <div>Tamaño: <span>1.2 MB</span></div>
+                    <div>Compatibilidad: <span>Kodi 19, 20 & 21 (Nexus/Omega)</span></div>
+                </div>
+            </div>
+
+            <!-- BANNERS 2 Y 3: INFERIORES EN PARALELO (300x250) -->
+            <div class="banners-bottom-row">
+                <!-- BANNER 2: 300x250 IZQUIERDO (HilltopAds Activo) -->
+                <div class="banner-slot-300" id="banner-tv-left" style="border: none; background: transparent;">
+                    <script>
+                    (function(jko){
+                    var d = document,
+                        s = d.createElement('script'),
+                        l = d.currentScript || d.scripts[d.scripts.length - 1];
+                    s.settings = jko || {};
+                    s.src = "\/\/massivesalad.com\/bcXYV.s_d\/GGlw0QYTWVcn\/qefmP9NuvZ-UTljkiP\/TLcL2lMyzaMX2WMoD\/U\/tgNnz\/YMztMJzyY\/wJO\/QD";
+                    s.async = true;
+                    s.referrerPolicy = 'no-referrer-when-downgrade';
+                    l.parentNode.insertBefore(s, l);
+                    })({})
+                    </script>
+                </div>
+
+                <!-- BANNER 3: 300x250 DERECHO (HilltopAds Activo) -->
+                <div class="banner-slot-300" id="banner-tv-right" style="border: none; background: transparent;">
+                    <script>
+                    (function(zlhv){
+                    var d = document,
+                        s = d.createElement('script'),
+                        l = d.currentScript || d.scripts[d.scripts.length - 1];
+                    s.settings = zlhv || {};
+                    s.src = "\/\/massivesalad.com\/b.XUVSspd\/GglQ0WYhW\/cp\/Ie-mb9ouQZXUXlSkyPhTOco2XMezrMC2dMSzScCtsNdz_Y\/zTMCzrYe0mMkQo";
+                    s.async = true;
+                    s.referrerPolicy = 'no-referrer-when-downgrade';
+                    l.parentNode.insertBefore(s, l);
+                    })({})
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS / ARGUMENTOS DE VENTA -->
+    <section class="features-section container">
+        <div class="section-header">
+            <div class="pill">💎 Experiencia Incomparable</div>
+            <h2>¿Por qué LATARR TV PRO es diferente?</h2>
+            <p style="color: var(--text-muted); font-size: 15px;">Olvídate de los complementos obsoletos llenos de enlaces caídos y configuraciones engorrosas.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">⚽</span>
+                <h3>Deportes en Vivo</h3>
+                <p>Las principales transmisiones de fútbol, tenis, básquetbol y motorsport sin cortes. ESPN, Fox, TNT, DAZN y eventos mundiales listos.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">📺</span>
+                <h3>Diseño Gráfico Moderno</h3>
+                <p>Grilla de tarjetas oscuras con logos oficiales en alta resolución y navegación fluida por mando a distancia. Cero listas feas de texto.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🇨🇱</span>
+                <h3>Chile y Latinoamérica</h3>
+                <p>Todas las señales abiertas de Chile, canales regionales y más de 20 países como Argentina, México, Colombia, España y USA Latino.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3>Totalmente Autónomo</h3>
+                <p>No requiere servidores externos ni cuentas de pago. El catálogo de canales vive dentro del addon y se abre al instante.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASOS DE INSTALACIÓN RÁPIDA -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <h2>Cómo instalar en Kodi en 3 pasos</h2>
+                <p style="color: var(--text-muted); font-size: 15px;">Listo para funcionar en menos de 1 minuto en cualquier dispositivo.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-num">01</span>
+                    <h4>Descarga el ZIP</h4>
+                    <p>Haz clic en el botón superior y guarda el archivo <code>plugin.video.latarr.tv-1.0.0.zip</code> en tu equipo o TV Box.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-num">02</span>
+                    <h4>Instalar en Kodi</h4>
+                    <p>En Kodi ve a <strong>Ajustes → Complementos → Instalar desde un archivo .zip</strong> y selecciona el archivo descargado.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-num">03</span>
+                    <h4>Abre y Disfruta</h4>
+                    <p>Ve a <strong>Complementos de Video → Latarr TV PRO</strong>, acepta el descargo de responsabilidad y empieza a mirar televisión en vivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / AVISO LEGAL -->
+    <footer class="container">
+        <div class="disclaimer-box">
+            <strong>Aviso Legal / Descargo de Responsabilidad:</strong><br>
+            LATARR TV PRO es un complemento de software libre y gratuito que recopila y organiza hipervínculos de transmisiones IPTV disponibles públicamente en repositorios abiertos de GitHub. Latarr no aloja, retransmite, emite ni controla ningún flujo de audio o video. El acceso y uso de las señales es bajo la exclusiva responsabilidad de cada usuario final.
+        </div>
+        <p>&copy; 2026 LATARR. Todos los derechos reservados. <a href="../" style="color: var(--cyan); text-decoration: none; margin-left: 8px;">Volver a Latarr Cinema</a></p>
+    </footer>
+
+</body>
+</html>

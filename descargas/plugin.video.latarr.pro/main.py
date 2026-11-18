@@ -397,6 +397,37 @@ def launch_cinema():
                 else:
                     continue
 
+            # CASO 4d: Reanudar en Zapping TV
+            elif resume_data and resume_data.get('section') == 'zapping':
+                from resources.lib.windows.tv_win import LatarrTVDialog
+                tv_country = resume_data.get('country')
+                tv_cat = resume_data.get('category', 'Todas')
+                tv_pos = resume_data.get('pos', 0)
+                resume_data = None
+
+                dlg = LatarrTVDialog(
+                    'script-latarr-tv.xml',
+                    addon.getAddonInfo('path'),
+                    defaultSkin='Default',
+                    defaultRes='1080i',
+                    addon_path=addon.getAddonInfo('path'),
+                    initial_country=tv_country,
+                    initial_category=tv_cat,
+                    initial_pos=tv_pos,
+                    is_zapping=True,
+                )
+                dlg.doModal()
+                was_played = getattr(dlg, 'played', False)
+                if was_played:
+                    resume_data = getattr(dlg, 'resume_data', None)
+                del dlg
+
+                if was_played:
+                    wait_for_playback(player, monitor)
+                    continue
+                else:
+                    continue
+
             # CASO 4d: Reanudar en Televisión en Vivo
             elif resume_data and resume_data.get('section') == 'tv':
                 from resources.lib.windows.tv_win import LatarrTVDialog
@@ -476,4 +507,12 @@ if __name__ == '__main__':
     xbmc.executebuiltin("Dialog.Close(busydialog)")
     xbmc.executebuiltin("Dialog.Close(busydialognocancel)")
     xbmc.executebuiltin("Dialog.Close(all, true)")
+
+    # Salida rápida estilo Netflix (Atrás / Esc / Backspace detiene el video)
+    try:
+        from resources.lib import keymap
+        keymap.ensure_netflix_keymap()
+    except Exception as _km_err:
+        xbmc.log(f"[LATARR] Error iniciando keymap: {_km_err}", xbmc.LOGWARNING)
+
     launch_cinema()

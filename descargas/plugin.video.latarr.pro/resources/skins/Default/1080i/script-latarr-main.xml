@@ -126,7 +126,7 @@
                 <texturefocus border="12">button_focus.png</texturefocus>
                 <texturenofocus border="12">button_normal.png</texturenofocus>
                 <onleft>104</onleft>
-                <onright>107</onright>
+                <onright>111</onright>
             </control>
         <!-- Botón RETRO ARCADE (ID 110) -->
         

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "actualizado": "2026-11-09T02:10:20",
   "total_canales": 2457,
   "total_paises": 23,
@@ -50,10 +51,21 @@
         "Regionales": 167,
         "Radios con cámara": 1
       }
+=======
+  "actualizado": "2026-11-09 22:05:33",
+  "total_canales": 1855,
+  "total_paises": 23,
+  "paises": [
+    {
+      "codigo": "DEP",
+      "nombre": "⚽ Deportes LATAM & Premium",
+      "total": 55
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "CL",
       "nombre": "Chile",
+<<<<<<< HEAD
       "archivo": "tv_CL.json",
       "total": 169,
       "categorias": {
@@ -85,10 +97,14 @@
         "Regionales": 121,
         "Radios con cámara": 4
       }
+=======
+      "total": 167
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "AR",
       "nombre": "Argentina",
+<<<<<<< HEAD
       "archivo": "tv_AR.json",
       "total": 147,
       "categorias": {
@@ -103,10 +119,14 @@
         "Regionales": 91,
         "Radios con cámara": 9
       }
+=======
+      "total": 140
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "PE",
       "nombre": "Perú",
+<<<<<<< HEAD
       "archivo": "tv_PE.json",
       "total": 124,
       "categorias": {
@@ -120,10 +140,14 @@
         "Regionales": 92,
         "Radios con cámara": 5
       }
+=======
+      "total": 120
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "MX",
       "nombre": "México",
+<<<<<<< HEAD
       "archivo": "tv_MX.json",
       "total": 121,
       "categorias": {
@@ -137,10 +161,14 @@
         "Regionales": 90,
         "Radios con cámara": 1
       }
+=======
+      "total": 118
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "CO",
       "nombre": "Colombia",
+<<<<<<< HEAD
       "archivo": "tv_CO.json",
       "total": 98,
       "categorias": {
@@ -192,10 +220,34 @@
         "Regionales": 37,
         "Radios con cámara": 3
       }
+=======
+      "total": 103
+    },
+    {
+      "codigo": "ES",
+      "nombre": "España",
+      "total": 156
+    },
+    {
+      "codigo": "US",
+      "nombre": "Estados Unidos / Hispano",
+      "total": 260
+    },
+    {
+      "codigo": "INT",
+      "nombre": "Internacional & Variedades",
+      "total": 165
+    },
+    {
+      "codigo": "DO",
+      "nombre": "República Dominicana",
+      "total": 182
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "EC",
       "nombre": "Ecuador",
+<<<<<<< HEAD
       "archivo": "tv_EC.json",
       "total": 51,
       "categorias": {
@@ -219,10 +271,14 @@
         "Regionales": 35,
         "Radios con cámara": 3
       }
+=======
+      "total": 51
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "BO",
       "nombre": "Bolivia",
+<<<<<<< HEAD
       "archivo": "tv_BO.json",
       "total": 39,
       "categorias": {
@@ -277,10 +333,19 @@
       "categorias": {
         "Regionales": 14
       }
+=======
+      "total": 39
+    },
+    {
+      "codigo": "VE",
+      "nombre": "Venezuela",
+      "total": 51
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "UY",
       "nombre": "Uruguay",
+<<<<<<< HEAD
       "archivo": "tv_UY.json",
       "total": 7,
       "categorias": {
@@ -310,15 +375,62 @@
         "Música": 2,
         "Radios con cámara": 1
       }
+=======
+      "total": 7
+    },
+    {
+      "codigo": "PY",
+      "nombre": "Paraguay",
+      "total": 57
+    },
+    {
+      "codigo": "CR",
+      "nombre": "Costa Rica",
+      "total": 53
+    },
+    {
+      "codigo": "PA",
+      "nombre": "Panamá",
+      "total": 16
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     },
     {
       "codigo": "CU",
       "nombre": "Cuba",
+<<<<<<< HEAD
       "archivo": "tv_CU.json",
       "total": 1,
       "categorias": {
         "Noticias": 1
       }
+=======
+      "total": 1
+    },
+    {
+      "codigo": "GT",
+      "nombre": "Guatemala",
+      "total": 29
+    },
+    {
+      "codigo": "SV",
+      "nombre": "El Salvador",
+      "total": 14
+    },
+    {
+      "codigo": "HN",
+      "nombre": "Honduras",
+      "total": 44
+    },
+    {
+      "codigo": "NI",
+      "nombre": "Nicaragua",
+      "total": 7
+    },
+    {
+      "codigo": "PR",
+      "nombre": "Puerto Rico",
+      "total": 20
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     }
   ]
 }

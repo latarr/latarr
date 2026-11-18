@@ -1,13 +1,19 @@
 {
+<<<<<<< HEAD
   "pais": "CU",
   "nombre_pais": "Cuba",
   "actualizado": "2026-11-09T02:10:20",
+=======
+  "pais": "Cuba",
+  "codigo": "CU",
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
   "total": 1,
   "categorias": [
     "Noticias"
   ],
   "canales": [
     {
+<<<<<<< HEAD
       "id": "cu-prensa-latina-tv",
       "nombre": "Prensa Latina TV",
       "pais": "CU",
@@ -17,6 +23,15 @@
       "alternativas": [],
       "tvg_id": "PrensaLatinaTV.cu@SD",
       "destacado": false
+=======
+      "nombre": "Prensa Latina TV",
+      "categoria": "Noticias",
+      "subtitulo": "Noticias",
+      "logo": "https://i.imgur.com/jbm2S9O.jpg",
+      "destacado": false,
+      "url": "https://eu1.servers10.com:8081/8192/index.m3u8",
+      "alternativas": []
+>>>>>>> db79b56bc72f7ed611dd94f6b28bcca3b260fb39
     }
   ]
 }
