@@ -1,0 +1,22 @@
+{
+  "pais": "CU",
+  "nombre_pais": "Cuba",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 1,
+  "categorias": [
+    "Noticias"
+  ],
+  "canales": [
+    {
+      "id": "cu-prensa-latina-tv",
+      "nombre": "Prensa Latina TV",
+      "pais": "CU",
+      "categoria": "Noticias",
+      "logo": "https://i.imgur.com/jbm2S9O.jpg",
+      "url": "https://eu1.servers10.com:8081/8192/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "PrensaLatinaTV.cu@SD",
+      "destacado": false
+    }
+  ]
+}

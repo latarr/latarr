@@ -479,9 +479,48 @@
                 justify-content: space-between;
             }
         }
+
+        .side-banner-right {
+            position: fixed;
+            top: 140px;
+            right: calc(50% - 620px - 175px);
+            width: 160px;
+            min-height: 300px;
+            z-index: 99;
+            display: none;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(10, 14, 23, 0.8);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+        @media (min-width: 1600px) {
+            .side-banner-right {
+                display: block;
+            }
+        }
+        @media (min-width: 1360px) and (max-width: 1599px) {
+            .side-banner-right {
+                display: block;
+                right: 12px;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Banner Lateral Derecho (160x300 Adsterra) -->
+    <div class="side-banner-right">
+        <script>
+            atOptions = {
+                'key' : 'd2eb92159cc3b65609fd112bc728495f',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://bancadeltempoidea.org/22/d2eb92159cc3b65609fd112bc728495f"></script>
+    </div>
 
     <div class="ambient-glow"></div>
 
@@ -540,22 +579,18 @@
     <section class="download-box-section">
         <div class="container download-wrapper">
             
-            <!-- BANNER 1: SUPERIOR (300x250 Centrado - HilltopAds Activo) -->
-            <div style="display: flex; justify-content: center; margin: 0 auto 30px;">
-                <div class="banner-slot-300" id="banner-tv-top" style="border: none; background: transparent;">
-                    <script>
-                    (function(vnzid){
-                    var d = document,
-                        s = d.createElement('script'),
-                        l = d.currentScript || d.scripts[d.scripts.length - 1];
-                    s.settings = vnzid || {};
-                    s.src = "\/\/massivesalad.com\/btX.VmsKdvG\/l\/0UYJW\/cc\/Ne_m\/9\/ulZTUKlBkVPdTMcf2qMOznMM2nNGjGESt\/Nvz\/YFzOMWzqYj2\/N\/QH";
-                    s.async = true;
-                    s.referrerPolicy = 'no-referrer-when-downgrade';
-                    l.parentNode.insertBefore(s, l);
-                    })({})
-                    </script>
-                </div>
+            <!-- BANNER ADSTERRA: SUPERIOR (728x90 Horizontal) -->
+            <div style="display: flex; justify-content: center; margin: 0 auto 30px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                <script>
+                    atOptions = {
+                        'key' : 'e8f305343da91a6af9ad6896860e348d',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bancadeltempoidea.org/22/e8f305343da91a6af9ad6896860e348d"></script>
             </div>
 
             <!-- TARJETA CENTRAL DE DESCARGA -->
@@ -576,39 +611,18 @@
                 </div>
             </div>
 
-            <!-- BANNERS 2 Y 3: INFERIORES EN PARALELO (300x250) -->
-            <div class="banners-bottom-row">
-                <!-- BANNER 2: 300x250 IZQUIERDO (HilltopAds Activo) -->
-                <div class="banner-slot-300" id="banner-tv-left" style="border: none; background: transparent;">
-                    <script>
-                    (function(jko){
-                    var d = document,
-                        s = d.createElement('script'),
-                        l = d.currentScript || d.scripts[d.scripts.length - 1];
-                    s.settings = jko || {};
-                    s.src = "\/\/massivesalad.com\/bcXYV.s_d\/GGlw0QYTWVcn\/qefmP9NuvZ-UTljkiP\/TLcL2lMyzaMX2WMoD\/U\/tgNnz\/YMztMJzyY\/wJO\/QD";
-                    s.async = true;
-                    s.referrerPolicy = 'no-referrer-when-downgrade';
-                    l.parentNode.insertBefore(s, l);
-                    })({})
-                    </script>
-                </div>
-
-                <!-- BANNER 3: 300x250 DERECHO (HilltopAds Activo) -->
-                <div class="banner-slot-300" id="banner-tv-right" style="border: none; background: transparent;">
-                    <script>
-                    (function(zlhv){
-                    var d = document,
-                        s = d.createElement('script'),
-                        l = d.currentScript || d.scripts[d.scripts.length - 1];
-                    s.settings = zlhv || {};
-                    s.src = "\/\/massivesalad.com\/b.XUVSspd\/GglQ0WYhW\/cp\/Ie-mb9ouQZXUXlSkyPhTOco2XMezrMC2dMSzScCtsNdz_Y\/zTMCzrYe0mMkQo";
-                    s.async = true;
-                    s.referrerPolicy = 'no-referrer-when-downgrade';
-                    l.parentNode.insertBefore(s, l);
-                    })({})
-                    </script>
-                </div>
+            <!-- BANNER ADSTERRA: INFERIOR (300x250 Cuadrado) -->
+            <div style="display: flex; justify-content: center; margin: 30px auto 0; width: 300px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                <script>
+                    atOptions = {
+                        'key' : 'b376103ec1c5c370c5316173b26a3ada',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bancadeltempoidea.org/22/b376103ec1c5c370c5316173b26a3ada"></script>
             </div>
 
         </div>

@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda y Preguntas Frecuentes | LATARR</title>
+    <meta name="description" content="Preguntas frecuentes, guías de instalación para Smart TV y comunidad de dudas y sugerencias para Latarr Cinema y Latarr TV PRO en Kodi.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: #0d121d;
+            --bg-card-hover: #131a29;
+            --cyan: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.4);
+            --purple: #8a2be2;
+            --purple-glow: rgba(138, 43, 226, 0.3);
+            --text-main: #f0f4fc;
+            --text-muted: #8e9bb0;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(0, 229, 255, 0.35);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1100px;
+            height: 600px;
+            background: radial-gradient(ellipse at top, rgba(0, 229, 255, 0.1) 0%, rgba(138, 43, 226, 0.06) 45%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .brand-logo img {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 229, 255, 0.5);
+            box-shadow: 0 0 20px var(--cyan-glow);
+        }
+
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .btn-back-home:hover {
+            background: rgba(0, 229, 255, 0.15);
+            border-color: var(--cyan);
+            color: var(--cyan);
+            transform: translateX(-2px);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            color: var(--cyan);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 14px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 17px;
+            max-width: 680px;
+            margin: 0 auto 28px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 580px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius-md);
+            padding: 16px 20px 16px 48px;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 229, 255, 0.1);
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px var(--cyan-glow);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--cyan);
+            font-size: 18px;
+        }
+
+        /* Zona de Anuncios Pasivos */
+        .ads-banner-top {
+            display: flex;
+            justify-content: center;
+            margin: 36px auto 10px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .ads-banner-mid {
+            display: flex;
+            justify-content: center;
+            margin: 40px auto 20px;
+            width: 300px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Side Banner */
+        .side-banner-right {
+            position: fixed;
+            top: 140px;
+            right: calc(50% - 570px - 175px);
+            width: 160px;
+            min-height: 300px;
+            z-index: 99;
+            display: none;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(10, 14, 23, 0.85);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        @media (min-width: 1540px) {
+            .side-banner-right { display: block; }
+        }
+
+        /* Categorías Pills */
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 34px 0 24px;
+        }
+
+        .cat-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: rgba(0, 229, 255, 0.15);
+            border-color: var(--cyan);
+            color: #fff;
+        }
+
+        /* FAQ Accordion */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .faq-item.active {
+            border-color: var(--cyan);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .faq-header {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .faq-icon-tag {
+            font-size: 20px;
+        }
+
+        .faq-toggle-icon {
+            font-size: 20px;
+            color: var(--cyan);
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item.active .faq-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 24px;
+            color: #d1d8e6;
+            font-size: 15px;
+            line-height: 1.7;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item.active .faq-content {
+            padding: 16px 24px 24px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-content p {
+            margin-bottom: 12px;
+        }
+
+        .faq-content ol, .faq-content ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+        }
+
+        .faq-content li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.07);
+            border-left: 3px solid var(--cyan);
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin: 14px 0;
+            font-size: 14px;
+            color: #d8f5fc;
+        }
+
+        /* Sección de Preguntas de la Comunidad y Sugerencias */
+        .community-section {
+            margin: 70px 0 50px;
+            padding: 40px;
+            background: linear-gradient(145deg, #0b0f19 0%, #111726 100%);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        }
+
+        .community-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .community-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .community-header p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Formulario para Dejar Pregunta */
+        .comment-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 640px) {
+            .form-grid { grid-template-columns: 1fr; }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            background: #080c14;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+            color: #fff;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--cyan);
+        }
+
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--cyan) 0%, #0088cc 100%);
+            color: #000;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 20px var(--cyan-glow);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 229, 255, 0.6);
+        }
+
+        /* Lista de Comentarios y Respuestas */
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .comment-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px 22px;
+        }
+
+        .comment-user-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .comment-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .user-device-badge {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .comment-date {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .comment-body {
+            color: #d1d8e6;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Respuesta Oficial del Admin */
+        .admin-reply {
+            margin-top: 14px;
+            padding: 16px;
+            background: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: var(--radius-sm);
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .admin-reply::before {
+            content: "↳";
+            position: absolute;
+            left: -16px;
+            top: 14px;
+            color: var(--cyan);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--cyan);
+            color: #000;
+            font-weight: 800;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .admin-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .admin-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+
+        .admin-text {
+            color: #e5f4fa;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Banner Lateral Derecho Pasivo (160x300 Adsterra) -->
+    <div class="side-banner-right">
+        <script>
+            atOptions = {
+                'key' : 'd2eb92159cc3b65609fd112bc728495f',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://bancadeltempoidea.org/22/d2eb92159cc3b65609fd112bc728495f"></script>
+    </div>
+
+    <!-- Navegación -->
+    <header class="container">
+        <a href="../index.html" class="brand-logo">
+            <img src="../descargas/icon.png" alt="Latarr Logo">
+            <span>LATARR</span>
+        </a>
+        <a href="../index.html" class="btn-back-home">
+            <span>←</span> Volver al Inicio
+        </a>
+    </header>
+
+    <main class="container">
+
+        <!-- BANNER ADSTERRA SUPERIOR (728x90) -->
+        <div class="ads-banner-top">
+            <script>
+                atOptions = {
+                    'key' : 'e8f305343da91a6af9ad6896860e348d',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://bancadeltempoidea.org/22/e8f305343da91a6af9ad6896860e348d"></script>
+        </div>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="badge">💡 Soporte & Preguntas Frecuentes</div>
+            <h1>¿Cómo podemos ayudarte hoy?</h1>
+            <p>Encuentra soluciones rápidas para Smart TV, Fire Stick, PC y Kodi, o déjanos tu consulta para responderte directamente.</p>
+        </section>
+
+        <!-- Filtros Rápidos -->
+        <div class="category-filter">
+            <button class="cat-btn active" onclick="filterFaq('all')">Todas</button>
+            <button class="cat-btn" onclick="filterFaq('control')">🎮 Control Remoto & Tele</button>
+            <button class="cat-btn" onclick="filterFaq('instalacion')">📥 Instalación</button>
+            <button class="cat-btn" onclick="filterFaq('cine')">🎬 Películas & Series</button>
+            <button class="cat-btn" onclick="filterFaq('tv')">📺 Canales en Vivo</button>
+            <button class="cat-btn" onclick="filterFaq('general')">⚙️ General</button>
+        </div>
+
+        <!-- Lista Acordeón de FAQs -->
+        <div class="faq-list" id="faqList">
+
+            <!-- FAQ 1: Control Remoto Botón Atrás (Estilo Netflix) -->
+            <div class="faq-item" data-category="control">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">🎮</span>
+                        <span>¿Cómo salgo de una película o canal con el botón "Atrás" en mi Smart TV?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>En las nuevas versiones de <strong>Latarr Cinema (v2.0.0)</strong> y <strong>Latarr TV PRO (v1.0.0)</strong> incorporamos la <strong>salida rápida estilo Netflix</strong>:</p>
+                    <div class="highlight-box">
+                        ✨ <strong>Novedad automática:</strong> Solo debes presionar una vez el botón <strong>"Atrás" (Back)</strong> en el control remoto de tu Smart TV, TV Box o Fire Stick, y la reproducción se detiene de inmediato.
+                    </div>
+                    <p>Ya no es necesario buscar el botón "Stop" (cuadrado) en los menús de Kodi ni te quedará el audio sonando de fondo. Se activa automáticamente con solo abrir el addon una vez.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2: Instalación en Smart TV / Fire Stick / PC -->
+            <div class="faq-item" data-category="instalacion">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">📥</span>
+                        <span>¿Cómo instalo Latarr en mi TV Box, Fire Stick, Smart TV o PC?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Puedes seguir este tutorial paso a paso en video o revisar la guía escrita a continuación:</p>
+
+                    <!-- Video Tutorial Embebido -->
+                    <div style="margin: 18px 0 14px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 229, 255, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 25px rgba(0,229,255,0.15);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe 
+                                src="https://www.youtube.com/embed/CxBSInBi0QY" 
+                                title="Tutorial de Instalación de Latarr en Kodi" 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <a href="https://www.youtube.com/watch?v=CxBSInBi0QY" target="_blank" rel="noopener" style="color: var(--cyan); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                            <span>▶</span> Ver tutorial directamente en YouTube
+                        </a>
+                    </div>
+
+                    <p><strong>Pasos rápidos de instalación:</strong></p>
+                    <ol>
+                        <li><strong>Descarga los archivos ZIP desde nuestra web (latarr.shop):</strong>
+                            <ul style="margin-top: 6px; margin-bottom: 8px;">
+                                <li>Para <strong>Latarr Cinema (Películas y Series)</strong> requieres descargar <strong>dos archivos</strong>: el complemento <code>plugin.video.latarr-2.0.0.zip</code> y el motor <code>repository.elementumorg-0.0.9.zip</code> (ambos disponibles en el inicio de latarr.shop).</li>
+                                <li>Para <strong>Latarr TV PRO (Televisión en Vivo)</strong>: descargas el ZIP <code>plugin.video.latarr.tv-1.0.0.zip</code> desde la sección de TV.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Activa permisos en Kodi:</strong> Abre Kodi, ve a <strong>Ajustes (ícono de engranaje) &gt; Sistema &gt; Add-ons</strong> y activa la opción <strong>"Orígenes desconocidos"</strong>.</li>
+                        <li><strong>Instala los archivos ZIP:</strong> En el menú principal de Kodi, entra a <strong>Add-ons &gt; Instalar desde un archivo .zip</strong>:
+                            <ul style="margin-top: 6px; margin-bottom: 8px;">
+                                <li>Instala primero el ZIP del repositorio de <strong>Elementum</strong>.</li>
+                                <li>Luego instala el ZIP de <strong>Latarr</strong>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>¡Listo!</strong> Los complementos quedarán instalados en la sección de Vídeos de Kodi, listos para reproducir al instante.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- FAQ 3: Películas lentas o fuentes (Cinema) -->
+            <div class="faq-item" data-category="cine">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">🎬</span>
+                        <span>¿Por qué algunas películas tardan en cargar en Latarr Cinema?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Latarr Cinema utiliza enlaces P2P descentralizados de alta fidelidad (1080p y 4K). Para asegurar una carga al instante:</p>
+                    <ul>
+                        <li><strong>Elige enlaces con punto verde:</strong> Representan fuentes con alta cantidad de semillas (seeds), lo que garantiza velocidad máxima de descarga.</li>
+                        <li><strong>Ten instalado Elementum:</strong> Latarr trabaja en conjunto con el motor Elementum para reproducir torrents al vuelo sin esperar a que se descarguen completos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ 4: Canales de TV no cargan o se cortan -->
+            <div class="faq-item" data-category="tv">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">📺</span>
+                        <span>¿Qué hago si un canal en Latarr TV PRO no abre o se detiene?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Los canales de televisión en vivo provienen de señales públicas y abiertas por internet. Si una señal falla:</p>
+                    <ul>
+                        <li>Espera unos segundos o prueba la <strong>Opción 2 / Opción 3</strong> si el canal tiene enlaces alternativos.</li>
+                        <li>Verifica que tu conexión a internet sea estable (se recomienda cable de red o WiFi 5GHz para Smart TV).</li>
+                        <li>El servidor actualiza y depura automáticamente las listas caídas de forma periódica.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ 5: Subtítulos en español -->
+            <div class="faq-item" data-category="cine">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">💬</span>
+                        <span>¿Cómo activo subtítulos en español latino en las películas en inglés?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p><strong>El 100% de los títulos de nuestro catálogo ya incluyen subtítulos en español incrustados.</strong> Si al reproducir no aparecen en pantalla:</p>
+                    <ol>
+                        <li>Durante la reproducción, presiona <strong>OK</strong> en tu control remoto para abrir la barra de controles de Kodi.</li>
+                        <li>Selecciona el ícono de <strong>Subtítulos</strong> (el bocadillo de diálogo).</li>
+                        <li>Activa la opción <strong>"Habilitar subtítulos"</strong> y selecciona la pista <em>Spanish / Español</em>.</li>
+                    </ol>
+                    <p>No necesitas descargar nada externo ni configurar complementos adicionales, vienen listos dentro de cada video.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 6: Es gratis? -->
+            <div class="faq-item" data-category="general">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span class="faq-icon-tag">💎</span>
+                        <span>¿Latarr es 100% gratuito o requiere suscripción?</span>
+                    </div>
+                    <span class="faq-toggle-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p><strong>Latarr es 100% gratuito y libre de registros.</strong> Nunca te pediremos datos personales, tarjetas de crédito ni pagos de suscripciones obligatorias.</p>
+                    <p>Todo el catálogo de películas, series y canales de televisión es totalmente libre y accesible para toda la comunidad.</p>
+                    
+                    <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
+                            Si disfrutas de la plataforma y te nace apoyar voluntariamente para mantener los servidores activos, puedes aportar aquí:
+                        </p>
+                        <a href="https://paypal.me/multicajafull" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0070ba 0%, #003087 100%); color: #fff; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: var(--radius-sm); text-decoration: none; box-shadow: 0 4px 15px rgba(0, 112, 186, 0.4); transition: transform 0.2s;">
+                            <span>💙</span> Donar voluntariamente con PayPal (multicajafull)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BANNER ADSTERRA INTERMEDIO (300x250) -->
+        <div class="ads-banner-mid">
+            <script>
+                atOptions = {
+                    'key' : 'b376103ec1c5c370c5316173b26a3ada',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://bancadeltempoidea.org/22/b376103ec1c5c370c5316173b26a3ada"></script>
+        </div>
+
+        <!-- SECCIÓN DE COMUNIDAD: PREGUNTAS, DUDAS Y SUGERENCIAS -->
+        <section class="community-section">
+            <div class="community-header">
+                <h2>Comunidad & Soporte Directo</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+                    <p style="color: var(--text-muted); font-size: 15px; margin: 0;">¿Tienes alguna duda o sugerencia? Escríbela aquí y te responderemos directamente.</p>
+                    <button id="btnAdminToggle" onclick="toggleAdminPrompt()" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 14px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                        🔒 Modo Creador
+                    </button>
+                </div>
+                <div id="adminStatusBar" style="display: none; background: rgba(0, 229, 255, 0.1); border: 1px solid var(--cyan); border-radius: var(--radius-sm); padding: 10px 18px; margin-top: 14px; font-size: 13px; color: var(--cyan); font-weight: 700; justify-content: space-between; align-items: center;">
+                    <span>⚡ Modo Administrador Activo (Oscar | Latarr)</span>
+                    <button onclick="logoutAdmin()" style="background: transparent; border: none; color: #ff5252; cursor: pointer; font-size: 12px; font-weight: bold; text-decoration: underline;">Cerrar Sesión</button>
+                </div>
+            </div>
+
+            <!-- Formulario de Entrada -->
+            <div class="comment-form">
+                <form id="qaForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="userName">Tu Nombre o Alias</label>
+                            <input type="text" id="userName" class="form-control" placeholder="Ej: Carlos_TV" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userDevice">Dispositivo</label>
+                            <select id="userDevice" class="form-control">
+                                <option value="Smart TV">Smart TV (Android TV / Google TV)</option>
+                                <option value="Fire TV Stick">Amazon Fire TV Stick</option>
+                                <option value="TV Box">TV Box (Xiaomi, Mecool, etc.)</option>
+                                <option value="PC / Laptop">PC Windows / Mac</option>
+                                <option value="Celular / Tablet">Celular / Tablet Android</option>
+                                <option value="Otro">Otro Dispositivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="userMessage">Tu Pregunta o Sugerencia</label>
+                        <textarea id="userMessage" class="form-control" placeholder="Escribe tu consulta detallada para que podamos orientarte..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>💬 Publicar Pregunta</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Listado Dinámico de Dudas y Respuestas -->
+            <div class="comments-list" id="commentsContainer">
+                <!-- Se llena automáticamente con JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 LATARR. Todos los derechos reservados. Addons libres y gratuitos para Kodi.</p>
+            <p style="margin-top: 6px;"><a href="../index.html">Inicio</a> • <a href="../tv/">Latarr TV</a> • <a href="./">Centro de Ayuda</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts de Interacción -->
+    <script>
+        // Acordeón interactivo
+        function toggleFaq(header) {
+            const item = header.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Cerrar otros si se prefiere o dejar abiertos varios
+            item.classList.toggle('active', !wasActive);
+            const content = item.querySelector('.faq-content');
+            if (!wasActive) {
+                content.style.maxHeight = content.scrollHeight + 150 + "px";
+            } else {
+                content.style.maxHeight = null;
+            }
+        }
+
+        // Filtro por categorías
+        function filterFaq(category) {
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.faq-item');
+            items.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                if (category === 'all' || cat === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // ==========================================
+        // SISTEMA INTERACTIVO DE COMENTARIOS & ADMIN
+        // ==========================================
+        const ADMIN_PIN = "1983";
+        let isAdminLoggedIn = false;
+
+        // Comentarios iniciales por defecto
+        const DEFAULT_COMMENTS = [
+            {
+                id: "c_1",
+                name: "Rodrigo M.",
+                device: "Fire TV Stick 4K",
+                date: "Hoy a las 14:20",
+                message: "Instalé la actualización en mi Fire Stick y la salida rápida con el botón Atrás funciona increíble, al fin no queda el video sonando de fondo. ¿Tienen pensado agregar más canales de deportes de Chile como TNT Sports Estadio?",
+                reply: {
+                    author: "Oscar | Latarr",
+                    text: "¡Hola Rodrigo! Qué bueno que te sirvió la mejora de salida rápida en el Fire Stick. Sobre tu duda: sí, en Latarr TV PRO ya dejamos incluidas las señales de TNT Sports HD y Premium en la sección Chile y Deportes, con enlaces alternativos por si uno se satura durante los partidos en vivo. ¡Saludos!",
+                    date: "Hoy a las 14:35"
+                }
+            },
+            {
+                id: "c_2",
+                name: "Marcos_Santiago",
+                device: "Smart TV TCL (Google TV)",
+                date: "Ayer a las 20:10",
+                message: "Hola, al instalar el ZIP me decía error de dependencias en Kodi 21. ¿Qué puede ser?",
+                reply: {
+                    author: "Oscar | Latarr",
+                    text: "Hola Marcos. Ese error ocurre cuando Kodi recién se instala y aún no tiene conexión activa con el repositorio oficial de Kodi para descargar los módulos base de Python (como script.module.requests). Asegúrate de que el tele tenga internet al momento de instalar el ZIP y Kodi descargará las dependencias solo.",
+                    date: "Ayer a las 20:40"
+                }
+            }
+        ];
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem("latarr_comentarios_data");
+                if (data) return JSON.parse(data);
+            } catch(e) {}
+            localStorage.setItem("latarr_comentarios_data", JSON.stringify(DEFAULT_COMMENTS));
+            return DEFAULT_COMMENTS;
+        }
+
+        function saveComments(list) {
+            try {
+                localStorage.setItem("latarr_comentarios_data", JSON.stringify(list));
+            } catch(e) {}
+            renderComments();
+        }
+
+        function renderComments() {
+            const container = document.getElementById('commentsContainer');
+            if (!container) return;
+            const list = getComments();
+
+            if (list.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">Aún no hay preguntas. ¡Sé el primero en dejar una!</p>';
+                return;
+            }
+
+            container.innerHTML = list.map(c => `
+                <div class="comment-card" id="card_${c.id}" style="margin-bottom: 16px;">
+                    <div class="comment-user-row">
+                        <div class="comment-author">
+                            <span>${escapeHtml(c.name)}</span>
+                            <span class="user-device-badge">${escapeHtml(c.device || 'Dispositivo')}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span class="comment-date">${escapeHtml(c.date)}</span>
+                            ${isAdminLoggedIn ? `<button onclick="deleteComment('${c.id}')" style="background: transparent; border: none; color: #ff5252; cursor: pointer; font-size: 13px;" title="Eliminar pregunta">🗑️</button>` : ''}
+                        </div>
+                    </div>
+                    <div class="comment-body">
+                        ${escapeHtml(c.message)}
+                    </div>
+
+                    ${c.reply ? `
+                        <div class="admin-reply">
+                            <div class="admin-header">
+                                <span class="admin-badge">Admin</span>
+                                <span class="admin-name">${escapeHtml(c.reply.author || 'Oscar | Latarr')}</span>
+                                <span style="font-size: 11px; color: var(--text-muted); margin-left: 8px;">${escapeHtml(c.reply.date || '')}</span>
+                            </div>
+                            <div class="admin-text">
+                                ${escapeHtml(c.reply.text)}
+                            </div>
+                            ${isAdminLoggedIn ? `
+                                <div style="margin-top: 8px; text-align: right;">
+                                    <button onclick="openReplyForm('${c.id}')" style="background: transparent; border: none; color: var(--cyan); cursor: pointer; font-size: 11px; font-weight: 700;">Editar respuesta</button>
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : `
+                        ${isAdminLoggedIn ? `
+                            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.1);">
+                                <button onclick="openReplyForm('${c.id}')" style="background: rgba(0, 229, 255, 0.12); border: 1px solid var(--cyan); color: var(--cyan); font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 4px; cursor: pointer;">
+                                    💬 Responder como Oscar
+                                </button>
+                            </div>
+                        ` : `
+                            <div class="admin-reply" style="background: rgba(255, 255, 255, 0.02); border-color: rgba(255, 255, 255, 0.08);">
+                                <div class="admin-header">
+                                    <span class="admin-badge" style="background: #444; color: #ccc;">Pendiente</span>
+                                    <span class="admin-name" style="color: var(--text-muted);">Oscar | Latarr</span>
+                                </div>
+                                <div class="admin-text" style="color: var(--text-muted); font-style: italic; font-size: 13px;">
+                                    Pregunta recibida. Te responderemos directamente aquí a la brevedad.
+                                </div>
+                            </div>
+                        `}
+                    `}
+
+                    <!-- Formulario de Respuesta Inline para Admin -->
+                    <div id="replyBox_${c.id}" style="display: none; margin-top: 14px; padding: 14px; background: rgba(0,0,0,0.4); border: 1px solid var(--cyan); border-radius: 8px;">
+                        <label style="font-size: 12px; font-weight: 700; color: var(--cyan); display: block; margin-bottom: 6px;">Tu respuesta como Oscar | Latarr:</label>
+                        <textarea id="replyText_${c.id}" class="form-control" style="min-height: 70px; margin-bottom: 10px;" placeholder="Escribe tu respuesta oficial...">${c.reply ? escapeHtml(c.reply.text) : ''}</textarea>
+                        <div style="display: flex; gap: 8px;">
+                            <button onclick="submitReply('${c.id}')" class="btn-submit" style="padding: 8px 18px; font-size: 13px;">Publicar Respuesta</button>
+                            <button onclick="closeReplyForm('${c.id}')" style="background: transparent; border: 1px solid var(--border); color: #fff; padding: 8px 14px; border-radius: 4px; font-size: 12px; cursor: pointer;">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Enviar Nueva Pregunta por Usuario
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value.trim();
+            const device = document.getElementById('userDevice').value;
+            const message = document.getElementById('userMessage').value.trim();
+
+            if (!name || !message) return;
+
+            const list = getComments();
+            const now = new Date();
+            const timeStr = "Hoy a las " + now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+
+            const newComment = {
+                id: "c_" + Date.now(),
+                name: name,
+                device: device,
+                date: timeStr,
+                message: message,
+                reply: null
+            };
+
+            list.unshift(newComment);
+            saveComments(list);
+
+            document.getElementById('qaForm').reset();
+            alert('¡Gracias por tu pregunta! Ha sido publicada con éxito.');
+        }
+
+        // Lógica de Autenticación Admin (PIN 1983)
+        function toggleAdminPrompt() {
+            if (isAdminLoggedIn) {
+                logoutAdmin();
+                return;
+            }
+            const pin = prompt("Ingresa el PIN de Administrador (Oscar):");
+            if (pin === ADMIN_PIN) {
+                isAdminLoggedIn = true;
+                sessionStorage.setItem("latarr_admin_auth", "true");
+                updateAdminUI();
+                renderComments();
+                alert("¡Bienvenido, Oscar! Modo Administrador activado. Ahora puedes responder directamente a las preguntas.");
+            } else if (pin !== null) {
+                alert("PIN incorrecto.");
+            }
+        }
+
+        function updateAdminUI() {
+            const bar = document.getElementById('adminStatusBar');
+            const btn = document.getElementById('btnAdminToggle');
+            if (isAdminLoggedIn) {
+                if (bar) bar.style.display = 'flex';
+                if (btn) btn.innerHTML = '🔓 Salir Admin';
+            } else {
+                if (bar) bar.style.display = 'none';
+                if (btn) btn.innerHTML = '🔒 Modo Creador';
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            sessionStorage.removeItem("latarr_admin_auth");
+            updateAdminUI();
+            renderComments();
+            alert("Sesión de administrador cerrada.");
+        }
+
+        // Acciones de Respuesta Admin
+        function openReplyForm(id) {
+            const box = document.getElementById(`replyBox_${id}`);
+            if (box) box.style.display = 'block';
+        }
+
+        function closeReplyForm(id) {
+            const box = document.getElementById(`replyBox_${id}`);
+            if (box) box.style.display = 'none';
+        }
+
+        function submitReply(id) {
+            const textarea = document.getElementById(`replyText_${id}`);
+            const text = textarea ? textarea.value.trim() : '';
+            if (!text) {
+                alert("Por favor escribe una respuesta.");
+                return;
+            }
+
+            const list = getComments();
+            const item = list.find(c => c.id === id);
+            if (item) {
+                const now = new Date();
+                const timeStr = "Hoy a las " + now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+                item.reply = {
+                    author: "Oscar | Latarr",
+                    text: text,
+                    date: timeStr
+                };
+                saveComments(list);
+                alert("¡Respuesta publicada con éxito!");
+            }
+        }
+
+        function deleteComment(id) {
+            if (!confirm("¿Seguro que deseas eliminar esta pregunta?")) return;
+            let list = getComments();
+            list = list.filter(c => c.id !== id);
+            saveComments(list);
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return String(text).replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        // Inicializar al cargar la página
+        window.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem("latarr_admin_auth") === "true") {
+                isAdminLoggedIn = true;
+                updateAdminUI();
+            }
+            renderComments();
+        });
+    </script>
+</body>
+</html>

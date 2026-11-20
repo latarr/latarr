@@ -1,0 +1,89 @@
+{
+  "pais": "NI",
+  "nombre_pais": "Nicaragua",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 7,
+  "categorias": [
+    "Música",
+    "Regionales"
+  ],
+  "canales": [
+    {
+      "id": "ni-megabox",
+      "nombre": "MegaBox",
+      "pais": "NI",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/JqaW7Ei.png",
+      "url": "https://hdbox.chunklistv.com/live?stream=megabox",
+      "alternativas": [],
+      "tvg_id": "MegaBox.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-tvone-nicaragua",
+      "nombre": "TVONE Nicaragua",
+      "pais": "NI",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/FNk6rdz.png",
+      "url": "https://hdbox.chunklistv.com/live?stream=tvone",
+      "alternativas": [],
+      "tvg_id": "TVONENicaragua.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-canal-10",
+      "nombre": "Canal 10",
+      "pais": "NI",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/ztp781b.png",
+      "url": "https://ddycmnicl95kp.cloudfront.net/live/ja5k3h31wv9r/master.m3u8",
+      "alternativas": [],
+      "tvg_id": "Canal10.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-canal-12",
+      "nombre": "Canal 12",
+      "pais": "NI",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/UhEW8cj.png",
+      "url": "http://45.228.234.9:8000/play/a06s/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "Canal12.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-olam-metro-tv",
+      "nombre": "Olam Metro TV",
+      "pais": "NI",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/dDZnyUA.jpeg",
+      "url": "https://netzerstreaming.com:4433/hls/olammetro/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "OlamMetroTV.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-tn8",
+      "nombre": "TN8",
+      "pais": "NI",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/m0Zdxiz.png",
+      "url": "https://streamingcws30.com/tn8/videotn8/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "TN8.ni@SD",
+      "destacado": false
+    },
+    {
+      "id": "ni-tv-45",
+      "nombre": "TV 45",
+      "pais": "NI",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/sI0msrn.png",
+      "url": "https://hdbox.chunklistv.com/live?stream=3abn-nicaragua",
+      "alternativas": [],
+      "tvg_id": "TV45.ni@SD",
+      "destacado": false
+    }
+  ]
+}

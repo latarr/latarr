@@ -1,0 +1,190 @@
+{
+  "pais": "PA",
+  "nombre_pais": "Panamá",
+  "actualizado": "2026-11-09T02:10:20",
+  "total": 16,
+  "categorias": [
+    "Música",
+    "Cultura",
+    "Regionales",
+    "Radios con cámara"
+  ],
+  "canales": [
+    {
+      "id": "pa-corazon-tv",
+      "nombre": "Corazon TV",
+      "pais": "PA",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/HVdbXku.png",
+      "url": "http://181.79.86.130:8000/play/a05d/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "CorazonTV.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-mas23-tv",
+      "nombre": "Mas23 TV",
+      "pais": "PA",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/y0h8dlX.png",
+      "url": "https://movil.ejeserver.com/live/mas23tv.m3u8",
+      "alternativas": [],
+      "tvg_id": "Mas23TV.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-pindin-tv",
+      "nombre": "Pindin TV",
+      "pais": "PA",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/UaQC0l8.jpeg",
+      "url": "https://sistemastr.tropicalmoonmedia.com/live/7C452409423F57ADC960F6405635267F/7.m3u8",
+      "alternativas": [],
+      "tvg_id": "PindinTV.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-super-q-panama",
+      "nombre": "Super Q Panama",
+      "pais": "PA",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/ocTnqi7.png",
+      "url": "https://vcp8.myplaytv.com:1936/superq/superq/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "SuperQPanama.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-tropical-moon-urban-tv",
+      "nombre": "Tropical Moon Urban TV",
+      "pais": "PA",
+      "categoria": "Música",
+      "logo": "https://i.imgur.com/WcM7BP5.png",
+      "url": "https://sistemastr.tropicalmoonmedia.com/live/D8E123ACA054EF85B153C354A481A406/4.m3u8",
+      "alternativas": [],
+      "tvg_id": "TropicalMoonUrbanTV.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-radio-hogar",
+      "nombre": "Radio Hogar",
+      "pais": "PA",
+      "categoria": "Cultura",
+      "logo": "https://i.imgur.com/P4A1Zwl.jpg",
+      "url": "https://www.streaming507.net:19360/videoradiohogar/videoradiohogar.m3u8",
+      "alternativas": [],
+      "tvg_id": "RadioHogar.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-a-r-canal",
+      "nombre": "A&R Canal",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/ejRJqSI.png",
+      "url": "http://51.222.9.192:3589/stream/play.m3u8",
+      "alternativas": [],
+      "tvg_id": "ARCanal.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-dreiko-tv",
+      "nombre": "Dreiko TV",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/k8U0e0b.png",
+      "url": "https://cloudvideo.servers10.com:8081/8020/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "DreikoTV.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-hosanna-vision",
+      "nombre": "Hosanna Vision",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/v0tc51l.png",
+      "url": "https://1206618505.rsc.cdn77.org/LS-ATL-59020-1/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "HosannaVision.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-nex-tv-canal-21",
+      "nombre": "Nex TV Canal 21",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/QQBd052.png",
+      "url": "https://movil.ejeserver.com/live/nextv.m3u8",
+      "alternativas": [],
+      "tvg_id": "NexTVCanal21.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-telemetro",
+      "nombre": "Telemetro",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/vJJrGgV.png",
+      "url": "http://181.78.121.15:8000/play/a001/index.m3u8",
+      "alternativas": [],
+      "tvg_id": "Telemetro.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-vision-latina",
+      "nombre": "Vision Latina",
+      "pais": "PA",
+      "categoria": "Regionales",
+      "logo": "https://i.imgur.com/TG30lWA.jpg",
+      "url": "https://cdn-cloudfront.us-east-1.prod.ingest.aws-infra.dacast.com/live/64917431-2f51-0a46-d4d0-04d111b2393f/master.m3u8",
+      "alternativas": [],
+      "tvg_id": "VisionLatina.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-fabulosa-estereo-100-5-fm",
+      "nombre": "Fabulosa Estereo 100.5 FM",
+      "pais": "PA",
+      "categoria": "Radios con cámara",
+      "logo": "https://i.imgur.com/YFmzkOp.png",
+      "url": "https://www.streaming507.net:19360/videofabulosa/videofabulosa.m3u8",
+      "alternativas": [],
+      "tvg_id": "FabulosaEstereo1005FM.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-planet-100-9-fm",
+      "nombre": "Planet 100.9 FM",
+      "pais": "PA",
+      "categoria": "Radios con cámara",
+      "logo": "https://i.imgur.com/8ZIBs8l.png",
+      "url": "https://streamlov.alsolnet.com/planet1009fm/live/playlist.m3u8",
+      "alternativas": [],
+      "tvg_id": "Planet1009FM.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-radio-ancon",
+      "nombre": "Radio Ancon",
+      "pais": "PA",
+      "categoria": "Radios con cámara",
+      "logo": "https://i.imgur.com/xum8PNe.jpg",
+      "url": "https://www.streaming507.net:19360/anconvideo/anconvideo.m3u8",
+      "alternativas": [],
+      "tvg_id": "RadioAncon.pa@SD",
+      "destacado": false
+    },
+    {
+      "id": "pa-tropi-q-99-7-fm",
+      "nombre": "Tropi Q 99.7 FM",
+      "pais": "PA",
+      "categoria": "Radios con cámara",
+      "logo": "https://i.imgur.com/5rPdHhb.png",
+      "url": "https://www.streaming507.net:19360/videotropiq/videotropiq.m3u8",
+      "alternativas": [],
+      "tvg_id": "TropiQ997FM.pa@SD",
+      "destacado": false
+    }
+  ]
+}

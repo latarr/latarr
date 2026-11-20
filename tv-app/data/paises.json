@@ -1,0 +1,324 @@
+{
+  "actualizado": "2026-11-09T02:10:20",
+  "total_canales": 2457,
+  "total_paises": 23,
+  "paises": [
+    {
+      "codigo": "INT",
+      "nombre": "Internacional / Deportes",
+      "archivo": "tv_INT.json",
+      "total": 666,
+      "categorias": {
+        "Noticias": 3,
+        "Cine y Series": 10,
+        "Deportes": 205,
+        "Música": 361,
+        "Infantil": 3,
+        "Cultura": 2,
+        "Religión": 4,
+        "Radios con cámara": 51,
+        "Variedad": 27
+      }
+    },
+    {
+      "codigo": "US",
+      "nombre": "Estados Unidos / Latino",
+      "archivo": "tv_US.json",
+      "total": 391,
+      "categorias": {
+        "Noticias": 5,
+        "Cine y Series": 85,
+        "Deportes": 77,
+        "Música": 65,
+        "Infantil": 24,
+        "Cultura": 9,
+        "Religión": 3,
+        "Radios con cámara": 4,
+        "Variedad": 119
+      }
+    },
+    {
+      "codigo": "DO",
+      "nombre": "República Dominicana",
+      "archivo": "tv_DO.json",
+      "total": 183,
+      "categorias": {
+        "Cine y Series": 3,
+        "Deportes": 2,
+        "Música": 8,
+        "Religión": 2,
+        "Regionales": 167,
+        "Radios con cámara": 1
+      }
+    },
+    {
+      "codigo": "CL",
+      "nombre": "Chile",
+      "archivo": "tv_CL.json",
+      "total": 169,
+      "categorias": {
+        "Nacionales": 6,
+        "Noticias": 2,
+        "Cine y Series": 4,
+        "Deportes": 2,
+        "Música": 12,
+        "Infantil": 1,
+        "Cultura": 1,
+        "Regionales": 113,
+        "Radios con cámara": 26,
+        "Variedad": 2
+      }
+    },
+    {
+      "codigo": "ES",
+      "nombre": "España",
+      "archivo": "tv_ES.json",
+      "total": 157,
+      "categorias": {
+        "Noticias": 3,
+        "Cine y Series": 7,
+        "Deportes": 2,
+        "Música": 12,
+        "Infantil": 2,
+        "Cultura": 3,
+        "Religión": 3,
+        "Regionales": 121,
+        "Radios con cámara": 4
+      }
+    },
+    {
+      "codigo": "AR",
+      "nombre": "Argentina",
+      "archivo": "tv_AR.json",
+      "total": 147,
+      "categorias": {
+        "Nacionales": 6,
+        "Noticias": 2,
+        "Cine y Series": 7,
+        "Deportes": 7,
+        "Música": 11,
+        "Infantil": 10,
+        "Cultura": 1,
+        "Religión": 3,
+        "Regionales": 91,
+        "Radios con cámara": 9
+      }
+    },
+    {
+      "codigo": "PE",
+      "nombre": "Perú",
+      "archivo": "tv_PE.json",
+      "total": 124,
+      "categorias": {
+        "Nacionales": 6,
+        "Noticias": 2,
+        "Deportes": 6,
+        "Música": 10,
+        "Infantil": 1,
+        "Cultura": 1,
+        "Religión": 1,
+        "Regionales": 92,
+        "Radios con cámara": 5
+      }
+    },
+    {
+      "codigo": "MX",
+      "nombre": "México",
+      "archivo": "tv_MX.json",
+      "total": 121,
+      "categorias": {
+        "Nacionales": 4,
+        "Noticias": 2,
+        "Cine y Series": 11,
+        "Deportes": 5,
+        "Música": 6,
+        "Infantil": 1,
+        "Cultura": 1,
+        "Regionales": 90,
+        "Radios con cámara": 1
+      }
+    },
+    {
+      "codigo": "CO",
+      "nombre": "Colombia",
+      "archivo": "tv_CO.json",
+      "total": 98,
+      "categorias": {
+        "Nacionales": 5,
+        "Noticias": 3,
+        "Cine y Series": 3,
+        "Deportes": 4,
+        "Música": 8,
+        "Cultura": 1,
+        "Religión": 4,
+        "Regionales": 64,
+        "Radios con cámara": 6
+      }
+    },
+    {
+      "codigo": "PY",
+      "nombre": "Paraguay",
+      "archivo": "tv_PY.json",
+      "total": 57,
+      "categorias": {
+        "Música": 5,
+        "Religión": 1,
+        "Regionales": 43,
+        "Radios con cámara": 8
+      }
+    },
+    {
+      "codigo": "VE",
+      "nombre": "Venezuela",
+      "archivo": "tv_VE.json",
+      "total": 56,
+      "categorias": {
+        "Deportes": 3,
+        "Música": 3,
+        "Regionales": 50
+      }
+    },
+    {
+      "codigo": "CR",
+      "nombre": "Costa Rica",
+      "archivo": "tv_CR.json",
+      "total": 54,
+      "categorias": {
+        "Noticias": 1,
+        "Deportes": 1,
+        "Música": 8,
+        "Infantil": 1,
+        "Religión": 3,
+        "Regionales": 37,
+        "Radios con cámara": 3
+      }
+    },
+    {
+      "codigo": "EC",
+      "nombre": "Ecuador",
+      "archivo": "tv_EC.json",
+      "total": 51,
+      "categorias": {
+        "Nacionales": 3,
+        "Cine y Series": 1,
+        "Música": 3,
+        "Cultura": 1,
+        "Regionales": 36,
+        "Radios con cámara": 7
+      }
+    },
+    {
+      "codigo": "HN",
+      "nombre": "Honduras",
+      "archivo": "tv_HN.json",
+      "total": 44,
+      "categorias": {
+        "Música": 3,
+        "Infantil": 1,
+        "Religión": 2,
+        "Regionales": 35,
+        "Radios con cámara": 3
+      }
+    },
+    {
+      "codigo": "BO",
+      "nombre": "Bolivia",
+      "archivo": "tv_BO.json",
+      "total": 39,
+      "categorias": {
+        "Deportes": 1,
+        "Música": 1,
+        "Religión": 1,
+        "Regionales": 31,
+        "Radios con cámara": 5
+      }
+    },
+    {
+      "codigo": "GT",
+      "nombre": "Guatemala",
+      "archivo": "tv_GT.json",
+      "total": 29,
+      "categorias": {
+        "Cine y Series": 1,
+        "Música": 2,
+        "Religión": 4,
+        "Regionales": 20,
+        "Radios con cámara": 2
+      }
+    },
+    {
+      "codigo": "PR",
+      "nombre": "Puerto Rico",
+      "archivo": "tv_PR.json",
+      "total": 20,
+      "categorias": {
+        "Deportes": 1,
+        "Música": 1,
+        "Regionales": 18
+      }
+    },
+    {
+      "codigo": "PA",
+      "nombre": "Panamá",
+      "archivo": "tv_PA.json",
+      "total": 16,
+      "categorias": {
+        "Música": 5,
+        "Cultura": 1,
+        "Regionales": 6,
+        "Radios con cámara": 4
+      }
+    },
+    {
+      "codigo": "SV",
+      "nombre": "El Salvador",
+      "archivo": "tv_SV.json",
+      "total": 14,
+      "categorias": {
+        "Regionales": 14
+      }
+    },
+    {
+      "codigo": "UY",
+      "nombre": "Uruguay",
+      "archivo": "tv_UY.json",
+      "total": 7,
+      "categorias": {
+        "Cine y Series": 1,
+        "Deportes": 1,
+        "Música": 1,
+        "Regionales": 4
+      }
+    },
+    {
+      "codigo": "NI",
+      "nombre": "Nicaragua",
+      "archivo": "tv_NI.json",
+      "total": 7,
+      "categorias": {
+        "Música": 2,
+        "Regionales": 5
+      }
+    },
+    {
+      "codigo": "BR",
+      "nombre": "Brasil",
+      "archivo": "tv_BR.json",
+      "total": 6,
+      "categorias": {
+        "Deportes": 3,
+        "Música": 2,
+        "Radios con cámara": 1
+      }
+    },
+    {
+      "codigo": "CU",
+      "nombre": "Cuba",
+      "archivo": "tv_CU.json",
+      "total": 1,
+      "categorias": {
+        "Noticias": 1
+      }
+    }
+  ]
+}
