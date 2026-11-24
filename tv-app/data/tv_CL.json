@@ -130,7 +130,7 @@
       "id": "cl-tnt-sports",
       "nombre": "TNT Sports",
       "pais": "CL",
-      "categoria": "Cine y Series",
+      "categoria": "Deportes",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
       "url": "http://209.45.101.130:8040/play/a03s/index.m3u8",
       "alternativas": [],
@@ -138,15 +138,15 @@
       "destacado": false
     },
     {
-      "id": "cl-tnt-sports-premium-argentinahd",
-      "nombre": "TNT Sports Premium ArgentinaHD",
+      "id": "cl-tnt-sports-chile-hd",
+      "nombre": "TNT Sports Chile HD",
       "pais": "CL",
-      "categoria": "Cine y Series",
-      "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "categoria": "Deportes",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
       "url": "http://181.78.79.131:8000/play/a0q9",
       "alternativas": [],
-      "tvg_id": "TNTSportsPremium.cl@ArgentinaHD",
-      "destacado": false
+      "tvg_id": "TNTSportsPremium.cl@HD",
+      "destacado": true
     },
     {
       "id": "cl-crtv",

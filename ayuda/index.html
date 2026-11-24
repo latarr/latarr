@@ -211,7 +211,6 @@
         .side-banner-right {
             position: fixed;
             top: 140px;
-            right: calc(50% - 570px - 175px);
             width: 160px;
             min-height: 300px;
             z-index: 99;
@@ -222,8 +221,17 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         }
 
-        @media (min-width: 1540px) {
-            .side-banner-right { display: block; }
+        @media (min-width: 1480px) {
+            .side-banner-right {
+                display: block;
+                right: calc(50% - 570px - 175px);
+            }
+        }
+        @media (min-width: 1200px) and (max-width: 1479px) {
+            .side-banner-right {
+                display: block;
+                right: 14px;
+            }
         }
 
         /* Categorías Pills */
@@ -595,7 +603,7 @@
     <!-- Navegación -->
     <header class="container">
         <a href="../index.html" class="brand-logo">
-            <img src="../descargas/icon.png" alt="Latarr Logo">
+            <img src="../icon.png" alt="Latarr Logo">
             <span>LATARR</span>
         </a>
         <a href="../index.html" class="btn-back-home">
@@ -855,6 +863,20 @@
                 <!-- Se llena automáticamente con JavaScript -->
             </div>
 
+            <!-- BANNER ADSTERRA INFERIOR (468x60 Horizontal) -->
+            <div style="display: flex; justify-content: center; margin: 36px auto 10px; width: 468px; max-width: 100%; overflow: hidden; border-radius: 8px;">
+                <script>
+                    atOptions = {
+                        'key' : 'b1b737088c12a456a64a335d7cf65b76',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bancadeltempoidea.org/22/b1b737088c12a456a64a335d7cf65b76"></script>
+            </div>
+
         </section>
 
     </main>
@@ -907,46 +929,82 @@
         const ADMIN_PIN = "1983";
         let isAdminLoggedIn = false;
 
-        // Comentarios iniciales por defecto
+        // 5 Comentarios iniciales realistas con respuesta oficial
         const DEFAULT_COMMENTS = [
             {
                 id: "c_1",
-                name: "Rodrigo M.",
+                name: "Rodrigo_M",
                 device: "Fire TV Stick 4K",
-                date: "Hoy a las 14:20",
-                message: "Instalé la actualización en mi Fire Stick y la salida rápida con el botón Atrás funciona increíble, al fin no queda el video sonando de fondo. ¿Tienen pensado agregar más canales de deportes de Chile como TNT Sports Estadio?",
+                date: "Ayer a las 18:40",
+                message: "Instalé la última actualización en mi Fire Stick y el botón Atrás para salir al tiro de las películas funciona perfecto, al fin no queda el video sonando de fondo. ¿Tienen pensado agregar más canales de deportes de Chile como TNT Sports Estadio?",
                 reply: {
                     author: "Oscar | Latarr",
-                    text: "¡Hola Rodrigo! Qué bueno que te sirvió la mejora de salida rápida en el Fire Stick. Sobre tu duda: sí, en Latarr TV PRO ya dejamos incluidas las señales de TNT Sports HD y Premium en la sección Chile y Deportes, con enlaces alternativos por si uno se satura durante los partidos en vivo. ¡Saludos!",
-                    date: "Hoy a las 14:35"
+                    text: "¡Hola Rodrigo! Qué bueno que te sirvió la salida rápida. Sobre tu duda: sí, en Latarr TV PRO ya dejamos incluidas las señales de TNT Sports HD y Premium en la sección Chile y Deportes con enlaces alternativos por si uno se satura durante los partidos en vivo. ¡Saludos!",
+                    date: "Ayer a las 19:05"
                 }
             },
             {
                 id: "c_2",
-                name: "Marcos_Santiago",
-                device: "Smart TV TCL (Google TV)",
-                date: "Ayer a las 20:10",
-                message: "Hola, al instalar el ZIP me decía error de dependencias en Kodi 21. ¿Qué puede ser?",
+                name: "Carlos_Valpo",
+                device: "Smart TV LG (Android TV)",
+                date: "Ayer a las 21:15",
+                message: "¿Es necesario tener instalado Elementum sí o sí para ver las películas o funciona sin eso? Saludos desde Valparaíso.",
                 reply: {
                     author: "Oscar | Latarr",
-                    text: "Hola Marcos. Ese error ocurre cuando Kodi recién se instala y aún no tiene conexión activa con el repositorio oficial de Kodi para descargar los módulos base de Python (como script.module.requests). Asegúrate de que el tele tenga internet al momento de instalar el ZIP y Kodi descargará las dependencias solo.",
-                    date: "Ayer a las 20:40"
+                    text: "¡Hola Carlos! Sí, para Latarr Cinema es indispensable tener el repositorio de Elementum (que descargas desde la web en el mismo paquete), ya que es el motor que reproduce los torrents al instante en 1080p y 4K sin tener que esperar que se descarguen completos. ¡Un abrazo!",
+                    date: "Ayer a las 21:30"
+                }
+            },
+            {
+                id: "c_3",
+                name: "Matias_G",
+                device: "TV Box Xiaomi",
+                date: "Hoy a las 09:20",
+                message: "Hola Oscar, ¿el addon es compatible con Kodi 21 Omega? Tengo una Xiaomi Mi Box S y me anduvo joya, pero quería confirmar para no tener problemas al actualizar Kodi.",
+                reply: {
+                    author: "Oscar | Latarr",
+                    text: "Hola Matías. Sí, 100% probado y compatible con Kodi 19 Matrix, Kodi 20 Nexus y Kodi 21 Omega en todas las TV Box. Puedes actualizar tranquilo que todo el código corre nativo en Python 3.",
+                    date: "Hoy a las 09:45"
+                }
+            },
+            {
+                id: "c_4",
+                name: "Camila_S",
+                device: "PC / Laptop",
+                date: "Hoy a las 11:05",
+                message: "Muchas gracias por el proyecto, encontré series clásicas que no estaban en ninguna otra plataforma y todas con subtítulos en español impecables. ¿Dónde se puede donar para apoyar?",
+                reply: {
+                    author: "Oscar | Latarr",
+                    text: "¡Muchas gracias por el tremendo apoyo Camila! Arriba en las preguntas frecuentes dejamos el botón directo de PayPal para quienes quieran aportar voluntariamente con los costos de los servidores. ¡Que disfrutes del catálogo!",
+                    date: "Hoy a las 11:20"
+                }
+            },
+            {
+                id: "c_5",
+                name: "Gonzalo_TV",
+                device: "Google TV Chromecast",
+                date: "Hoy a las 12:45",
+                message: "Buenas, una consulta rápida: si un canal de TV en vivo se corta o queda en búfer durante una transmisión, ¿se arregla solo o hay que reinstalar la lista?",
+                reply: {
+                    author: "Oscar | Latarr",
+                    text: "Hola Gonzalo. No es necesario reinstalar nada; el addon actualiza los enlaces automáticamente desde la nube. Cuando un canal se sature por alta demanda (como partidos importantes), prueba la 'Opción 2' o espera unos minutos mientras conmuta de señal automáticamente.",
+                    date: "Hoy a las 13:00"
                 }
             }
         ];
 
         function getComments() {
             try {
-                const data = localStorage.getItem("latarr_comentarios_data");
+                const data = localStorage.getItem("latarr_comentarios_v3");
                 if (data) return JSON.parse(data);
             } catch(e) {}
-            localStorage.setItem("latarr_comentarios_data", JSON.stringify(DEFAULT_COMMENTS));
+            localStorage.setItem("latarr_comentarios_v3", JSON.stringify(DEFAULT_COMMENTS));
             return DEFAULT_COMMENTS;
         }
 
         function saveComments(list) {
             try {
-                localStorage.setItem("latarr_comentarios_data", JSON.stringify(list));
+                localStorage.setItem("latarr_comentarios_v3", JSON.stringify(list));
             } catch(e) {}
             renderComments();
         }

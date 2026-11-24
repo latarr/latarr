@@ -671,6 +671,7 @@
 
         <nav id="mainNav">
             <a href="app/" style="background: rgba(0, 229, 255, 0.15); color: var(--cyan); border: 1px solid var(--cyan); font-weight: 800; border-radius: 20px; padding: 6px 14px;">🍿 Portal Web P2P</a>
+            <a href="ayuda/" style="background: rgba(138, 43, 226, 0.15); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.5); font-weight: 800; border-radius: 20px; padding: 6px 14px; text-decoration: none;">💡 Centro de Ayuda</a>
             <a href="#top">Inicio</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#catalogo">Catálogo</a>
@@ -717,33 +718,53 @@
         <div class="container" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.07);">
             <div>
                 <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">Descarga para tu Smart TV, TV Box o dispositivo con Kodi:</div>
-                <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px;">
-                    <a href="descargas/plugin.video.latarr-2.0.0.zip" class="btn-download-primary" download>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; align-items: center;">
+                    <a href="descargas/plugin.video.latarr-2.0.0.zip" class="btn-download-primary" download style="padding: 12px 20px; font-size: 14px;">
                         <span>📦</span> Addon Latarr v2.0
                     </a>
-                    <a href="descargas/repository.elementumorg-0.0.9.zip" class="btn-download-secondary" download>
+                    <a href="descargas/repository.elementumorg-0.0.9.zip" class="btn-download-secondary" download style="padding: 12px 20px; font-size: 14px;">
                         <span>⚡</span> Repositorio Elementum
                     </a>
-                    <a href="tv/" class="btn-download-secondary" style="border-color: rgba(0, 229, 255, 0.4); color: var(--cyan);">
-                        <span>📺</span> Addon Latarr TV PRO (Nuevo)
+                    <a href="tv/" class="btn-download-secondary" style="border-color: rgba(0, 229, 255, 0.35); color: #d0d8e8; padding: 12px 20px; font-size: 14px;">
+                        <span>📺</span> Addon Latarr TV PRO (Kodi)
+                    </a>
+                    <a href="apk/" class="btn-download-secondary" style="border: 2px solid var(--cyan); background: linear-gradient(135deg, rgba(0, 229, 255, 0.18) 0%, rgba(0, 145, 234, 0.28) 100%); color: #ffffff; padding: 12px 22px; font-size: 14px; font-weight: 800; box-shadow: 0 0 20px rgba(0, 229, 255, 0.35);">
+                        <span>🤖</span> Latarr TV PRO (APK Android)
                     </a>
                 </div>
             </div>
 
-            <!-- FILA DE BANNERS: 728x90 y 300x250 a la derecha -->
+            <!-- FILA DE BANNERS: Horizontales (728x90 y 468x60) + Cuadrado (300x250) -->
             <div style="display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap;">
-                <!-- Banner 728x90 -->
-                <div style="display: flex; align-items: center; justify-content: center; min-height: 90px; max-width: 100%; overflow: hidden; border-radius: 10px;">
-                    <script>
-                        atOptions = {
-                            'key' : 'e8f305343da91a6af9ad6896860e348d',
-                            'format' : 'iframe',
-                            'height' : 90,
-                            'width' : 728,
-                            'params' : {}
-                        };
-                    </script>
-                    <script src="https://bancadeltempoidea.org/22/e8f305343da91a6af9ad6896860e348d"></script>
+                <!-- Columna Banners Horizontales -->
+                <div style="display: flex; flex-direction: column; gap: 14px; max-width: 100%;">
+                    <!-- Banner 728x90 -->
+                    <div style="display: flex; align-items: center; justify-content: center; min-height: 90px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                        <script>
+                            atOptions = {
+                                'key' : 'e8f305343da91a6af9ad6896860e348d',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                            };
+                        </script>
+                        <script src="https://bancadeltempoidea.org/22/e8f305343da91a6af9ad6896860e348d"></script>
+                    </div>
+
+                    <!-- Banner 468x60 Pequeño -->
+                    <div style="display: flex; align-items: center; justify-content: center; min-height: 60px; max-width: 100%; overflow: hidden; border-radius: 10px;">
+                        <script>
+                            atOptions = {
+                                'key' : 'b1b737088c12a456a64a335d7cf65b76',
+                                'format' : 'iframe',
+                                'height' : 60,
+                                'width' : 468,
+                                'params' : {}
+                            };
+                        </script>
+                        <script src="https://bancadeltempoidea.org/22/b1b737088c12a456a64a335d7cf65b76"></script>
+                    </div>
                 </div>
 
                 <!-- Banner 300x250 Cuadrado (Rellena el espacio a la derecha) -->
